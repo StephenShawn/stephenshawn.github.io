@@ -136,18 +136,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-count">26</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -177,6 +177,137 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://stephenshawn.github.io/2022/08/07/winodws%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Stephen Shawn">
+      <meta itemprop="description" content="码农 程序猿 开发者">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shawn's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/08/07/winodws%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" class="post-title-link" itemprop="url">winodws包管理工具</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-08-07 17:15:16 / 修改时间：17:43:12" itemprop="dateCreated datePublished" datetime="2022-08-07T17:15:16+08:00">2022-08-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">包管理工具</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Scoop安装配置教程"><a href="#Scoop安装配置教程" class="headerlink" title="Scoop安装配置教程"></a>Scoop安装配置教程</h1><h2 id="一、安装环境"><a href="#一、安装环境" class="headerlink" title="一、安装环境"></a>一、安装环境</h2><ol>
+<li><p> Windows 10 专业版 </p>
+</li>
+<li><p> 确保是powershell 5（及其以上） PowerShell  5  查看当前版本    $PSVersionTable.PSVersion</p>
+</li>
+<li><p> 更改脚本执行的策略    set-executionpolicy remotesigned -s cu</p>
+</li>
+</ol>
+<h2 id="二、安装"><a href="#二、安装" class="headerlink" title="二、安装"></a>二、安装</h2><ol>
+<li><p>设置scoop环境变量（备注：这里设置环境变量第三个参数User表示用户级别，Machine表示系统级别。Machine没权限的话，可以手动去环境变量设置。）</p>
+<ul>
+<li><code>$env:SCOOP=&#39;E:\scoop&#39;</code></li>
+<li><code>[Environment]::SetEnvironmentVariable(&#39;SCOOP&#39;,$env:SCOOP,&#39;User&#39;)</code></li>
+</ul>
+</li>
+<li><p>设置scoop global 环境变量</p>
+<ul>
+<li><p><code>$env:SCOOP_GLOBAL=&#39;D:\ScoopGlobalApps&#39;</code></p>
+</li>
+<li><p><code>[Environment]::SetEnvironmentVariable(&#39;SCOOP_GLOBAL&#39;,$env:SCOOP_GLOBAL,&#39;User&#39;)</code></p>
+</li>
+</ul>
+</li>
+<li><p>安装命令</p>
+</li>
+</ol>
+<ul>
+<li><code>iex (new-object net.webclient).downloadstring(&#39;https://get.scoop.sh&#39;)</code>  或者  <code>iwr-useb get.scoop.sh|iex</code>  （但是两个都不行emm）</li>
+<li>别急有办法打开电脑的hosts<br><code>C:\Windows\System32\drivers\etc</code> 找到 <code>hosts</code>  输入 <code>199.232.4.133 raw.githubusercontent.com</code>  在保存<br>执行 <code>iex (new-object net.webclient).downloadstring(&#39;https://raw.githubusercontent.com/lukesampson/scoop/master/bin/install.ps1&#39;)</code><br><code>iex (new-object net.webclient).downloadstring(&#39;https://raw.githubusercontent.com/lukesampson/scoop/master/bin/install.ps1&#39;</code></li>
+<li>测试有没有安装成功 输入 scoop help 看就可以了  输入一下信息就可以了</li>
+</ul>
+<ol start="4">
+<li>安装好之后推荐 换成国内的安装源  因为访问githup的话速度太慢 先更换源<br><code>scoop config SCOOP_REPO https://gitee.com/squallliu/scoop</code><br><code>scoop update</code></li>
+<li>更换 bucket 源</li>
+</ol>
+<ul>
+<li><p><code>scoop install git</code></p>
+</li>
+<li><p><code>git -C &quot;E:\scoop\buckets\main&quot; remote set-url origin https://hub.fastgit.org/ScoopInstaller/Main.git</code></p>
+</li>
+<li><p>如果要加行新的源  <code>scoop bucket add extras https://hub.fastgit.org/lukesampson/scoop-extras.git </code></p>
+</li>
+<li><p>获取修改原来的      <code>git -C &quot;E:\scoop\buckets\main&quot; remote set-url origin https://hub.fastgit.org/lukesampson/scoop-extras.git </code>  都可以好吧</p>
+</li>
+<li><p>如果 你输入  <code>git -C &quot;E:\scoop\buckets\main&quot; remote set-url origin https://hub.fastgit.org/ScoopInstaller/Main.git</code>  有问题 </p>
+</li>
+<li><p>先进入  <code>E:\scoop\buckets\main</code> </p>
+</li>
+<li><p>初始化一下在运行 <code>git -C &quot;E:\scoop\buckets\main&quot; remote set-url origin https://hub.fastgit.org/ScoopInstaller/Main.git</code></p>
+</li>
+<li><p>如果还是报错也别急 <code>git remote add origin &quot;https://hub.fastgit.org/ScoopInstaller/Main.git&quot;</code> 然后再<br><code>git -C &quot;E:\scoop\buckets\main&quot; remote set-url origin https://hub.fastgit.org/ScoopInstaller/Main.git</code> </p>
+</li>
+</ul>
+<h2 id="三、scoop命令"><a href="#三、scoop命令" class="headerlink" title="三、scoop命令"></a>三、scoop命令</h2><p><a target="_blank" rel="noopener" href="https://scoop.sh/">scoop快速开始</a></p>
+<h1 id="choco-安装"><a href="#choco-安装" class="headerlink" title="choco 安装"></a>choco 安装</h1><ul>
+<li><code>Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;))</code></li>
+<li><a target="_blank" rel="noopener" href="https://docs.chocolatey.org/en-us/choco/commands/">常用命令</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1144,90 +1275,6 @@
 <p>When using streams in parallel mode, avoid blocking operations. It is also best to use parallel mode when tasks need a similar amount of time to execute. If one task lasts much longer than the other, it can slow down the complete app’s workflow.</p>
 <p>The stream in parallel mode can be converted back to the sequential mode by using the sequential() method:</p>
 <p>IntStream intStreamSequential = intStreamParallel.sequential();<br>boolean isParallel = intStreamSequential.isParallel();</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://stephenshawn.github.io/2022/07/11/idea%E5%BF%AB%E6%8D%B7%E9%94%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Stephen Shawn">
-      <meta itemprop="description" content="码农 程序猿 开发者">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Shawn's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/07/11/idea%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="post-title-link" itemprop="url">idea快捷键</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-07-11 20:35:02" itemprop="dateCreated datePublished" datetime="2022-07-11T20:35:02+08:00">2022-07-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-08-01 18:56:01" itemprop="dateModified" datetime="2022-08-01T18:56:01+08:00">2022-08-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/IDE/" itemprop="url" rel="index"><span itemprop="name">IDE</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <ul>
-<li>ctrl+shift+(+/-) 展开全部折叠全部</li>
-<li>ctrl+（+/-） 展开折叠当前方法</li>
-<li>shift + f6 重命名<br>[1]* alt + insert 创建内容<br>[2] psvm main方法<br>[3] sout 输出语句<br>[4] Ctrl + d 复制一行<br>[5] Ctrl + y 删除一行<br>[6] Ctrl + Shift + Up/Down 代码向上/下移动<br>[7] * Ctrl + n 搜索类<br>[8] alt + insert 生成代码<br>[9] alt + Enter 导包，生成变量<br>[10] Ctrl + / 或 Ctrl + Shift+ / 单行注释或多行注释<br>[12] fori 回车即可 for循环<br>[13] * ctrl + alt + t  代码包围try-catch,if,while等<br>[14]  ctrl + alt + -&gt; 向后 ctrl + alt + &lt;- 向前<br>[15] 显示代码结构：alt + 7<br>[16] 显示导航栏：alt + 1<br>[17] 撤销 ctrl + Z<br>[18] REDO 操作 ctrl + shif + z<br>[19] Tab 缩进  shift+Tab 撤销缩进<br>[20] Ctrl + u 选择行<br>[21] alt + f8 查看变量值<br>[22] * ctrl + alt +B 查找接口实现类<br>[23] * ctrl + h 查看类或接口的继承关系<br>[24] * ctrl + o 覆写方法</li>
-</ul>
 
       
     </div>
