@@ -217,7 +217,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-09-13 08:59:47" itemprop="dateModified" datetime="2022-09-13T08:59:47+08:00">2022-09-13</time>
+        <time title="修改时间：2022-09-13 09:36:23" itemprop="dateModified" datetime="2022-09-13T09:36:23+08:00">2022-09-13</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -240,8 +240,17 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="安装、网络、包源配置"><a href="#安装、网络、包源配置" class="headerlink" title="安装、网络、包源配置"></a><a target="_blank" rel="noopener" href="https://blog.csdn.net/dreamerrrrrr/article/details/119837681">安装、网络、包源配置</a></h1><h2 id="阿里镜像"><a href="#阿里镜像" class="headerlink" title="阿里镜像"></a>阿里镜像</h2><ul>
-<li>rockylinux下载地址<code>https://mirrors.aliyun.com/rockylinux</code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sed -e &#x27;s|^mirrorlist=|#mirrorlist=|g&#x27; \</span><br><span class="line">    -e &#x27;s|^#baseurl=http://dl.rockylinux.org/$contentdir|baseurl=https://mirrors.aliyun.com/rockylinux|g&#x27; \</span><br><span class="line">    -i.bak \</span><br><span class="line">    /etc/yum.repos.d/Rocky-*.repo</span><br><span class="line"></span><br><span class="line">dnf makecache</span><br></pre></td></tr></table></figure></li>
-<li>almalinux下载地址<code>https://mirrors.aliyun.com/almalinux</code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sed -e &#x27;s|^mirrorlist=|#mirrorlist=|g&#x27; \</span><br><span class="line">      -e &#x27;s|^# baseurl=https://repo.almalinux.org|baseurl=https://mirrors.aliyun.com|g&#x27; \</span><br><span class="line">      -i.bak \</span><br><span class="line">      /etc/yum.repos.d/almalinux*.repo</span><br><span class="line">dnf makecache</span><br></pre></td></tr></table></figure></li>
+<li><p>rockylinux下载地址<code>https://mirrors.aliyun.com/rockylinux</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sed -e &#x27;s|^mirrorlist=|#mirrorlist=|g&#x27; \</span><br><span class="line">    -e &#x27;s|^#baseurl=http://dl.rockylinux.org/$contentdir|baseurl=https://mirrors.aliyun.com/rockylinux|g&#x27; \</span><br><span class="line">    -i.bak \</span><br><span class="line">    /etc/yum.repos.d/Rocky-*.repo</span><br><span class="line"></span><br><span class="line">dnf makecache</span><br></pre></td></tr></table></figure></li>
+<li><p>almalinux下载地址<code>https://mirrors.aliyun.com/almalinux</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sed -e &#x27;s|^mirrorlist=|#mirrorlist=|g&#x27; \</span><br><span class="line">      -e &#x27;s|^# baseurl=https://repo.almalinux.org|baseurl=https://mirrors.aliyun.com|g&#x27; \</span><br><span class="line">      -i.bak \</span><br><span class="line">      /etc/yum.repos.d/almalinux*.repo</span><br><span class="line">dnf makecache</span><br></pre></td></tr></table></figure>
+<h1 id="RHEL常用命令"><a href="#RHEL常用命令" class="headerlink" title="RHEL常用命令"></a>RHEL常用命令</h1></li>
+<li><p><a target="_blank" rel="noopener" href="https://wangchujiang.com/linux-command/c/dnf.html">DNF</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/yangshihuz/article/details/106643970">NetworkManager</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://linux265.com/news/3385.html">sytemctl</a></p>
+</li>
 </ul>
 
       
