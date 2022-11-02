@@ -136,7 +136,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">46</span>
+          <span class="site-state-item-count">48</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -177,6 +177,399 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://projectforweb.gitee.io/2022/06/03/markdown%E8%AF%AD%E6%B3%95%E4%B8%8E%E6%8A%80%E5%B7%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="StephenShawn">
+      <meta itemprop="description" content="Web学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Web">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/06/03/markdown%E8%AF%AD%E6%B3%95%E4%B8%8E%E6%8A%80%E5%B7%A7/" class="post-title-link" itemprop="url">markdown语法与技巧</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-06-03 11:11:23 / 修改时间：11:11:58" itemprop="dateCreated datePublished" datetime="2022-06-03T11:11:23+08:00">2022-06-03</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="markdown-更简洁、更高效"><a href="#markdown-更简洁、更高效" class="headerlink" title="markdown - 更简洁、更高效"></a>markdown - 更简洁、更高效</h1><p>=================================================</p>
+<p><em>窄屏幕下，可按Alt+滚轮横向滚动</em></p>
+<p>markdown不止是HTML的简化版，更重要的是txt的升级版、word的轻量版、笔记的最佳载体。<br>作为一种简单的格式标记语言，不同于txt的无格式，不同于HTML的复杂标记，也不同于word的鼠标调整样式。markdown通过简单的几个字符键入，就可以快捷的定义文档的样式。<br>比如在行首敲一个“#”，就把这行定义为了1级标题，并且在HBuilderX里有直观完善的着色，这样无需发布为web页面，可直接当word用。</p>
+<p>开始前，可以先按下文档结构图的快捷键Alt+w（Mac是Ctrl+w），浏览本文的大纲。</p>
+<h1 id="标题语法"><a href="#标题语法" class="headerlink" title="标题语法"></a>标题语法</h1><p>markdown的标题是行首以#号开头，空格分割的，不同级别的标题，在HX里着色也不同。如下：</p>
+<h1 id="标题1"><a href="#标题1" class="headerlink" title="标题1"></a>标题1</h1><h2 id="标题2"><a href="#标题2" class="headerlink" title="标题2"></a>标题2</h2><h3 id="标题3"><a href="#标题3" class="headerlink" title="标题3"></a>标题3</h3><h4 id="标题4"><a href="#标题4" class="headerlink" title="标题4"></a>标题4</h4><h5 id="标题5"><a href="#标题5" class="headerlink" title="标题5"></a>标题5</h5><h6 id="标题6"><a href="#标题6" class="headerlink" title="标题6"></a>标题6</h6><p>标题使用技巧：</p>
+<ol>
+<li>Emmet快速输入：敲h2+Tab即可生成二级标题【同HTML里的emmet写法，不止标题，HX里所有可对应tag的markdown语法均支持emmet写法】。仅行首生效</li>
+<li>智能双击：双击#号可选中整个标题段落</li>
+<li>智能回车：行尾回车或行中Ctrl+Enter强制换行后会自动在下一行补#。而连续2次回车后将自动补的#去掉。(体验同word)</li>
+<li>回车后再次按Tab可递进一层标题，再按Tab切换列表符</li>
+<li>在# 后回车，可上插一个空标题行【同word】，或任意位置按Ctrl+Shift+Enter也可以上插空标题行</li>
+<li>折叠：<ul>
+<li>点标题前的-号可折叠该标题段落，快捷键是Alt+-（展开折叠是Alt+=）</li>
+<li>多层折叠时折叠或展开子节点，快捷键是Alt+Shift+-或=</li>
+<li>全文全部折叠或展开，快捷键是Ctrl+Alt+Shift+-或=</li>
+<li>折叠其他区域，快捷键是Alt+Shift+o。这对长文档管理非常有用，可以专注于当前章节</li>
+<li>可以在菜单-跳转-折叠中随时找到这些功能</li>
+</ul>
+</li>
+</ol>
+<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><p>markdown的列表支持有序列表、无序列表以及特殊的任务列表。<br>同样也是在行前加一个特殊符号，并空格后再跟列表文字内容。</p>
+<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><p>有序列表就是有顺序的列表，依靠行前的数字标记顺序。</p>
+<ol>
+<li>有序列表1 【设置或取消有序列表符的快捷键：Ctrl+Alt+1，可选中多行批量设置序号；支持多光标批量设置列表符，即按Ctrl+鼠标左键添加多光标】</li>
+<li>有序列表2 【列表后回车会自动补序号】</li>
+<li>有序列表3 【智能双击：双击前面的数字，可重新对数字排序，修正序号错误，并选中有序列表段落（左边的4是故意写错让你体验的）】</li>
+</ol>
+<h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><p>无序列表就是列表不排序，无序列表因书写随意而被更广泛的使用。<br>无序列表有3种前缀，HX里分别用于表示1级列表、2级列表、3级列表。</p>
+<ul>
+<li>无序列表1 【快捷键：Ctrl+Alt+-；智能双击：双击-号可选中整段无序列表；再次按Tab会更换二级列表符】</li>
+</ul>
+<ul>
+<li>无序列表2    <ul>
+<li>Emmet：li后敲Tab可生成*号列表符，行首生效</li>
+<li>快捷键：Ctrl+Alt+8【8即*对应的数字】，支持多光标批量设置列表符，即按Ctrl+鼠标左键添加多光标</li>
+<li>智能双击：双击*号可选中整段无序列表</li>
+<li>智能回车：行尾回车或行中Ctrl+Enter强制换行后会自动续列表；连续按回车会清除列表符；再次按Tab会更换列表符；在列表符后回车或行尾Shift+回车，上一行留出列表符</li>
+<li>*号常用于二级列表，列表符后继续Tab，可切换列表符</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>无序列表3 【快捷键：Ctrl+Alt+=；常用于三级列表；其他同上】</li>
+</ul>
+<h2 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h2><p>任务列表非常实用，管理待办、已办非常便利。<br>[ ] 任务列表-未完成任务 【快捷键：Ctrl+Alt+[】<br>[x] 任务列表-已完成任务 【快捷键：Ctrl+Alt+]】<br>    1. 智能双击：双击方括号内可切换勾选状态，把任务标记为完成或未完成；双击方括号右侧可选中任务列表段落<br>    2. 智能回车：回车后自动补任务列表前缀符号；连续按回车清除前缀符号；在列表符后回车或行尾Shift+回车，上一行留出列表符</p>
+<ul>
+<li><input disabled="" type="checkbox"> 如需发布到web渲染，需增加无序列表- 的前缀</li>
+</ul>
+<p>以上三种列表，均支持批量修改列表符，有如下方式建议依次学习尝试：</p>
+<ol>
+<li>选中多行，按快捷键Ctrl+Alt+“1”或“-”或“[”或“]”，批量设置列表符</li>
+<li>如果需要跳行设置有序或无序列表，通过Ctrl+鼠标左键点中目标多行（可不连续），产生多光标，然后按快捷键Ctrl+Alt+“1”或“-”或“[”或“]”，可跳行设置列表符，尤其是有序列表，数字也会跳行加1</li>
+<li>按Alt+鼠标选中行首那列（列选择），这样每行行首都有光标，然后再键入或删除列表符即可批量操作</li>
+<li>选中多行，按快捷键Ctrl+Shift+\（其实就是Ctrl+|），可以在每行行首添加一个光标</li>
+</ol>
+<h2 id="引用列表"><a href="#引用列表" class="headerlink" title="引用列表"></a>引用列表</h2><blockquote>
+<p>引用1<br>引用2<br>快捷键：Ctrl+Alt+Shift+.<br>智能双击：双击&gt;号可选中整段引用列表<br>智能回车：行尾回车或行中Ctrl+Enter强制换行后会自动续列表；连续按回车会清除列表符；在列表符后回车或行尾Shift+回车，上一行留出列表符</p>
+</blockquote>
+<h1 id="文字样式语法"><a href="#文字样式语法" class="headerlink" title="文字样式语法"></a>文字样式语法</h1><p><strong>加粗</strong> 【快捷键：Ctrl+B，支持多光标；Emmet：b后敲Tab】<br><strong>加粗2</strong><br><em>倾斜_【Emmet：i后敲Tab；前后包围：选中文字按Ctrl+\是在选区两侧添加光标，可以继续输入_】<br><em>倾斜</em><br><del>删除线</del><br><code>单行代码</code><br>包围插入：先选中文字内容，然后按</em>*~`等符号，会自动在2侧加包围<br>智能双击：双击语法区前面的定义符号，选中包含定义符的整段文字<br>去包围：选中整段文字后，按Ctrl+Shift+]，可去除2侧包围符号</p>
+<p>引号括号虽然不属于markdown语法，但也支持相同的包围、选择、去包围操作。<br>引号括号智能双击选择时略特殊的是：双击引号括号内侧，选中引号括号里的内容(不含引号括号)；按下Alt+双击引号括号内侧，则选中包含符号的整段文字</p>
+<p>HBuilderX还支持以下对2侧文本高效处理的手段</p>
+<ol>
+<li>选中文字按Ctrl+\是在选区两侧添加光标，可以继续输入~~，会在2侧同时输入</li>
+<li>向2侧扩大选择：【Win:Alt+Shit+→ 、Mac:Ctrl++Shit+→】；由2侧向内减少选择：【Win:Alt+Shit+← 、Mac:Ctrl++Shit+←】</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="http://dcloud.io/">链接文字</a></p>
+<ol>
+<li>Emmet：a后敲Tab</li>
+<li>打开链接：Alt+鼠标单击；如果是本地文件，可通过Shift+Alt+单击，在另一分栏打开文件</li>
+<li>智能粘贴：粘贴URL会自动变成超链接格式；粘贴本地文件进来也会自动创建引用链接</li>
+<li>智能双击：双击语法区开头，即[左侧，选中包含定义符的整段文字</li>
+</ol>
+<p><img src="logo.jpg" alt="图片描述文字"></p>
+<ol>
+<li>Emmet：img后敲Tab</li>
+<li>智能粘贴：粘贴剪切板里的图形时会自动保存为本md文档的附件；删除文档中的图片语法，保存md文档时会自动删除对应的图片附件；粘贴图片文件时自动变成链接引用格式；</li>
+<li>悬浮预览：鼠标移到图片语法上，本地图片会自动显示出来</li>
+<li>智能双击：双击语法区开头，即!左侧，选中包含定义符的整段文字</li>
+</ol>
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<ol>
+<li>Emmet：table3*3后敲Tab，表示生成3行3列的表格，行首生效</li>
+<li>md表格对齐是传统md的痛点，按下Ctrl+K可以自动整理表格格式（暂未兼容不同缩放模式和字体的情况）</li>
+<li>支持从excel、wps、word、number的表格中复制粘贴表格进来（不支持合并单元格和单元格换行）</li>
+</ol>
+<h1 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h1><p>————- 【Emmet：hr后敲Tab】</p>
+<hr>
+<p>=============</p>
+<h1 id="代码区"><a href="#代码区" class="headerlink" title="代码区"></a>代码区</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="built_in">document</span></span><br></pre></td></tr></table></figure>
+<p>Emmet：code后敲Tab，行首生效<br>智能双击：双击语法区开头，即!左侧，选中包含定义符的整段文字<br>支持代码直接高亮着色，这应该是只有HBuilderX才有的功能。注意需要在代码区开头指定语言类型</p>
+<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><!--注释--> 
+<p>快捷键：Ctrl+/<br>智能双击：双击注释首尾的定义符，选中整段注释</p>
+<h1 id="其他emmet快捷输入"><a href="#其他emmet快捷输入" class="headerlink" title="其他emmet快捷输入"></a>其他emmet快捷输入</h1><p>day后敲Tab，当前日期。注意day需在行首或前面有空格<br>time后敲Tab，当前时间。注意time需在行首或前面有空格</p>
+<h1 id="文档结构图"><a href="#文档结构图" class="headerlink" title="文档结构图"></a>文档结构图</h1><p>文章很长时，word里有文档结构图，HBuilderX也有。<br>菜单视图-文档结构图，快捷键Alt+W(mac是ctrl+W)，轻松管理长文档</p>
+<h1 id="运行、预览和打印PDF"><a href="#运行、预览和打印PDF" class="headerlink" title="运行、预览和打印PDF"></a>运行、预览和打印PDF</h1><p>对md文件点工具栏或菜单里的浏览器运行，可以使用外部浏览器预览此md文件，会自动渲染为HTML。<br>点右上角的预览【快捷键Alt+p】，可在HBuilderX右侧预览该md文档的HTML渲染结果。<br>在浏览器中点打印，选择打印到PDF，可将md输出为PDF格式。（注意在打印选项里去掉页眉页脚）</p>
+<h1 id="一键分享"><a href="#一键分享" class="headerlink" title="一键分享"></a>一键分享</h1><p>markdown拥有迷人的输入体验，但分享并不方便，尤其是缺少免费、稳定、高速的图床。<br><a target="_blank" rel="noopener" href="https://unicloud.dcloud.net.cn/">uniCloud</a>提供了免费、稳定、高速的服务器和cdn。<br>HBuilderX，基于uniCloud，提供了markdown的一键分享功能。</p>
+<p>利用uniCloud的前端网页托管，将markdown稳定转成了HTML网页，并发布为在线的URL。您可以把URL发送给任何想要分享的人。<br>同时markdown里涉及的图片也会自动上传到前端网页托管里免费cdn中。</p>
+<p>更多见: <a target="_blank" rel="noopener" href="https://ask.dcloud.net.cn/article/37573">MarkDown一键分享使用说明</a></p>
+<h1 id="其他常用但你可能不知道的快捷操作技巧"><a href="#其他常用但你可能不知道的快捷操作技巧" class="headerlink" title="其他常用但你可能不知道的快捷操作技巧"></a>其他常用但你可能不知道的快捷操作技巧</h1><ul>
+<li>Ctrl+鼠标左键添加多光标，然后敲字或粘贴，可批量处理。Ctrl+鼠标左键拖选，可选中多个选区。</li>
+<li>Ctrl+鼠标右键删除多光标</li>
+<li>不选内容按Ctrl+C或X可复制或剪切整行</li>
+<li>选中2个选区后，按Ctrl+Shift+X，可互换选区内容。如无选区，只是2个光标，则互换2行</li>
+<li>Ctrl+上下键可上下移动行</li>
+<li>Ctrl+Insert可重复插入当前行，如果有选中内容，可重复插入选中内容</li>
+<li>Ctrl+Shift+K可合并多行（是格式化Ctrl+K的反操作）</li>
+<li>删除<ul>
+<li>按Ctrl+D可删除选中行，支持多光标</li>
+<li>Shift+Del删除到行尾</li>
+<li>Shift+Backspace删除到行首</li>
+</ul>
+</li>
+<li>选择<ul>
+<li>Ctrl+E选相同词(mac是Command+D)，连续按可选中多词进一步操作，比替换更方便</li>
+<li>Ctrl+L可连选多行，Ctrl+Shift+L也是选择行，但不选行首尾的空白字符</li>
+<li>Ctrl+=可逐级放大选区</li>
+<li>双击标题、列表符可选中相应段落</li>
+<li>双击英文引号、括号内侧，可选中内部内容</li>
+<li>双击缩进符，可选中同缩进段落</li>
+<li>双击连字符比如-或_，可选中相连的词，比如双击这里试试，uni-app</li>
+</ul>
+</li>
+<li>查找<ul>
+<li>Ctrl+P查找文件</li>
+<li>Ctrl+Alt+F可在当前目录的所有文档中搜索指定关键字(mac是Command+Shift+f)</li>
+<li>选中文字按F3，查找下一个，Shift+F3找上一个</li>
+</ul>
+</li>
+<li>云同步：HBuilderX+markdown用于云同步笔记的技巧，请参考<a target="_blank" rel="noopener" href="http://ask.dcloud.net.cn/article/13097">http://ask.dcloud.net.cn/article/13097</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://projectforweb.gitee.io/2022/06/03/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="StephenShawn">
+      <meta itemprop="description" content="Web学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Web">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/06/03/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/" class="post-title-link" itemprop="url">搜索引擎高级搜索技巧</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-06-03 10:44:16 / 修改时间：17:58:19" itemprop="dateCreated datePublished" datetime="2022-06-03T10:44:16+08:00">2022-06-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%90%9C%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">搜索</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h5 id="逻辑与-或"><a href="#逻辑与-或" class="headerlink" title="逻辑与/或"></a><em><strong>逻辑与/或</strong></em></h5><hr>
+<ul>
+<li>注意AND、OR必须大写，否则会被认为是普通的单词，而不是搜索指令</li>
+<li>与普通编程语言不一样的是，OR指令优先于AND指令</li>
+<li>简写：AND指令一般以空格代替，不明确写出。另外AND指令还可以用+代替。OR指令可用|代替</li>
+</ul>
+<h5 id="逻辑非："><a href="#逻辑非：" class="headerlink" title="逻辑非：-"></a><em><strong>逻辑非：-</strong></em></h5><hr>
+<ul>
+<li>样例：搜索引擎 历史 -文化 -中国历史 -世界历史</li>
+</ul>
+<h5 id="完整匹配-“-“"><a href="#完整匹配-“-“" class="headerlink" title="完整匹配 “ “"></a><em><strong>完整匹配 “ “</strong></em></h5><hr>
+<ul>
+<li>样例：”world war I” 表示搜索一次世界大战</li>
+</ul>
+<h5 id="通配符："><a href="#通配符：" class="headerlink" title="通配符：*?"></a><em><strong>通配符：*?</strong></em></h5><hr>
+<ul>
+<li>与我们通常的习惯一致，“*”代表一连串字符，“?”代表单个字符</li>
+</ul>
+<h5 id="site-在某个网站或域名下搜索"><a href="#site-在某个网站或域名下搜索" class="headerlink" title="site: 在某个网站或域名下搜索"></a><em><strong>site: 在某个网站或域名下搜索</strong></em></h5><hr>
+<ul>
+<li>样例：搜索引擎 技巧 site:edu.cn</li>
+<li>这表示要在中文教育科研网站（edu.cn）上关于搜索引擎技巧的页面</li>
+</ul>
+<h5 id="filetype-搜索某种类型的文件"><a href="#filetype-搜索某种类型的文件" class="headerlink" title="filetype: 搜索某种类型的文件"></a><em><strong>filetype: 搜索某种类型的文件</strong></em></h5><hr>
+<ul>
+<li>样例：天文学 filetype:pdf </li>
+<li>简写: 天文学:pdf</li>
+<li>这表示只搜索pdf文件</li>
+<li>tips：样例 天文学三个字位置任意写 </li>
+</ul>
+<h5 id="in指令-位置关键词查找"><a href="#in指令-位置关键词查找" class="headerlink" title="in指令: 位置关键词查找"></a><em><strong>in指令: 位置关键词查找</strong></em></h5><hr>
+<ul>
+<li>intitle: 在网页标题中查找。这通常对讨论比较多的热门话题很有效。例如：intitle:”GeForce 7800”+测试</li>
+<li>例如：allintitile:”GeForce 7800” 测试 与 intitle:”GeForce 7800”+测试 的含义一致。但是，allintitile是排他的，不能加上其他非intitle方面的限制条件</li>
+<li>inurl: 在网页的url地址中查找。例如：inurl:dowload 表示查找url中包含download的网页</li>
+<li>allinurl: inurl的排他指令</li>
+<li>inanchor: 在网页的链接锚中查找</li>
+</ul>
+<h5 id="link-搜索所有链接到某个URL地址的网页"><a href="#link-搜索所有链接到某个URL地址的网页" class="headerlink" title="link: 搜索所有链接到某个URL地址的网页"></a><em><strong>link: 搜索所有链接到某个URL地址的网页</strong></em></h5><hr>
+<ul>
+<li>例如：link:<a target="_blank" rel="noopener" href="http://www.newhua.com/">www.newhua.com</a> 表示所有指向“华军软件园”外部链接。</li>
+</ul>
+<h5 id="related-寻找某网页的“类似网页”"><a href="#related-寻找某网页的“类似网页”" class="headerlink" title="related: 寻找某网页的“类似网页”"></a><em><strong>related: 寻找某网页的“类似网页”</strong></em></h5><hr>
+<ul>
+<li>例如：related:<a target="_blank" rel="noopener" href="http://www.newhua.com/">www.newhua.com</a> 表示找和“华军软件园”类似的网页。</li>
+</ul>
+<h5 id="cache-网页快照（略"><a href="#cache-网页快照（略" class="headerlink" title="cache: 网页快照（略)"></a><em><strong>cache: 网页快照（略)</strong></em></h5><hr>
+<ul>
+<li>查看网站的 Google 缓存版本，会直接显示缓存页面    </li>
+<li>cache:weibo.com    查看微博的谷歌快照</li>
+</ul>
+<h5 id="daterange-查找特定时间网页"><a href="#daterange-查找特定时间网页" class="headerlink" title="daterange 查找特定时间网页"></a><em><strong>daterange 查找特定时间网页</strong></em></h5><hr>
+<ul>
+<li>例如：”Spice Girls“ daterange:2450958-2450968。这里时间日期的格式是按天文学的儒略日</li>
+<li>儒略日数（Julian Day Number，JDN）的计算是从格林威治标准时间的中午开始，包含一个整天的时间，起点的时间（0日）回溯至儒略历的公元前4713年1月1日中午12点（在格里历是公元前4714年11月24日），这个日期是三种多年周期的共同起点，且是历史上最接近现代的一个起点。例如，2000年1月1日的UT12:00是儒略日2,451,545。</li>
+<li>世界时UT即格林尼治平太阳时间，是指格林尼治所在地的标准时间，也是表示地球自转速率的一种形式。以地球自转为基础的时间计量系统。</li>
+<li>格林尼治（Greenwich），是英国伦敦的一个区，位于伦敦东南、泰晤士河南岸</li>
+</ul>
+<h5 id="表示数值范围"><a href="#表示数值范围" class="headerlink" title=".. 表示数值范围"></a><em><strong>.. 表示数值范围</strong></em></h5><hr>
+<ul>
+<li>例如：数码相机 600..900 万像素 3000..4000 元</li>
+<li>注意：“900”与“万”之间必须有空格。</li>
+</ul>
+<h5 id=""><a href="#" class="headerlink" title="@"></a><em><strong>@</strong></em></h5><hr>
+<ul>
+<li>在用于搜索社交媒体的字词前加上@    trump @twitter    搜索trump的twitter</li>
+</ul>
+<h5 id="-1"><a href="#-1" class="headerlink" title="$"></a><em><strong>$</strong></em></h5><hr>
+<ul>
+<li>在数字前加上$搜索特定价格    camera $400    搜索400$的camera</li>
+</ul>
+<h5 id="-2"><a href="#-2" class="headerlink" title="#"></a><em><strong>#</strong></em></h5><hr>
+<ul>
+<li>搜索 # 标签    #throwbackthursday    </li>
+<li>搜索标签throwbackthursday</li>
+</ul>
+<h5 id="info"><a href="#info" class="headerlink" title="info"></a><em><strong>info</strong></em></h5><hr>
+<ul>
+<li>在网址前加info:，获取网站详情    info:github.com    搜索github网站详情</li>
+</ul>
+<h5 id="intext"><a href="#intext" class="headerlink" title="intext"></a><em><strong>intext</strong></em></h5><hr>
+<ul>
+<li>搜索查询词出现在页面正文(title)中的页面，支持中文和英文    SEO intext:搜索引擎    在正文包含【搜索引擎】的网页中搜索【SEO】</li>
+</ul>
+<h5 id="allintext"><a href="#allintext" class="headerlink" title="allintext"></a><em><strong>allintext</strong></em></h5><hr>
+<ul>
+<li>即all+inanchor 页面正文包含多个关键词的页面    allintext:SEO 搜索引擎优化    相当于：intext:SEO intext:搜索引擎优化</li>
+</ul>
+<h5 id="inanchor"><a href="#inanchor" class="headerlink" title="inanchor"></a><em><strong>inanchor</strong></em></h5><hr>
+<ul>
+<li>搜索链接锚文字(即链接显示的文字)中包含搜索词的页面    inanchor:前端    搜索链接锚文字中包含【前端】的页面</li>
+</ul>
+<h5 id="allinanchor"><a href="#allinanchor" class="headerlink" title="allinanchor"></a><em><strong>allinanchor</strong></em></h5><hr>
+<ul>
+<li><pre><code>即all+inanchor 页面链接锚文字包含多个关键词的页面    allinanchor:SEO 搜索引擎优化    相当于：inanchor:SEO inanchor:搜索引擎优化
+</code></pre>
+</li>
+</ul>
+<h5 id="weather"><a href="#weather" class="headerlink" title="weather"></a><em><strong>weather</strong></em></h5><hr>
+<ul>
+<li>weather/time/sunrise/sundown+城市名，返回城市的天气/时间/日出时间/日落时间</li>
+<li>weather:beijing    显示北京的天气</li>
+</ul>
+<h5 id="music"><a href="#music" class="headerlink" title="music"></a><em><strong>music</strong></em></h5><hr>
+<ul>
+<li>music或者用songs，歌手名字+music/songs    周杰伦 music    返回周杰伦的各首歌曲</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 

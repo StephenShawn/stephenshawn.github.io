@@ -136,7 +136,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">46</span>
+          <span class="site-state-item-count">48</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -177,6 +177,153 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://projectforweb.gitee.io/2022/11/02/my-tips/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="StephenShawn">
+      <meta itemprop="description" content="Web学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Web">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/11/02/my-tips/" class="post-title-link" itemprop="url">my-tips</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-11-02 19:52:43 / 修改时间：19:56:30" itemprop="dateCreated datePublished" datetime="2022-11-02T19:52:43+08:00">2022-11-02</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="个人备忘录"><a href="#个人备忘录" class="headerlink" title="个人备忘录"></a>个人备忘录</h3><ol>
+<li>记得联系徐诗诗</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://projectforweb.gitee.io/2022/10/24/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%AD%98%E5%82%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="StephenShawn">
+      <meta itemprop="description" content="Web学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Web">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/10/24/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%AD%98%E5%82%A8/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-10-24 16:32:57 / 修改时间：16:33:36" itemprop="dateCreated datePublished" datetime="2022-10-24T16:32:57+08:00">2022-10-24</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="IEEE-754标准的浮点数存储"><a href="#IEEE-754标准的浮点数存储" class="headerlink" title="IEEE 754标准的浮点数存储"></a>IEEE 754标准的浮点数存储</h1><p>事实上，在浮点数的存储过程中，为了运算方便和尽可能多的提高存储存储空间的利用效率，往往不会直接存储各部分的二进制原码。</p>
+<p>例如，指数部分存储的是实际指数值得移码，而尾数部分存储的是规约化后的尾数的补码。</p>
+<p>所谓移码，就是将实际的指数值加上一个固定的数值而得到的数。在单精度浮点数中这个数是127，在双精度浮点数中这个数是1024。假设这个数是e，则e的计算公式如下：</p>
+<p>e=2n−1−1<br>e=2n−1−1<br>其中nn是指数部分的长度。</p>
+<p>如此一来，即使是最小的指数（例如单精度浮点数是-126），在存储的时候也会存储为1（-126+127）。这样，就方便了指数的大小比较也省了一个符号位。</p>
+<p>现在，上面的浮点数的计算公式就变成了下面的样子：</p>
+<p><code>(−1)**sign*2**(exponent−e)*fraction2</code><br>(−1)sign×2exponent−e×fraction2<br>当然，这还不是计算公式的最终形态，因为我们还有尾数没有说。</p>
+<p>刚刚在上面提到过定点数的表示其实就是在这里做一下铺垫。因为，尾数部分实际上存储的就是一个定点数。</p>
+<p>这里的定点数需要时一个以1开头的二进制数并且小数点位于第一位数的后面。</p>
+<p>拿(0.5)10(0.5)10来说，把它转换成二进制是(0.1)2=(−1)0×(1.0)2×2−1(0.1)2=(−1)0×(1.0)2×2−1<br>把指数部分用移码表示就是−1+127=126−1+127=126,所以，0.5的就存储为：</p>
+<p>0 01111110 1000000000000000000000</p>
+<p>现在我们又发现，既然尾数部分的定点数都是1开头，那就把这个1给省略掉好了。这样就又多出一位来保存尾数，提高精度了（当然，省略开头的第一个1后，默认小数点的位置就变成现在的第一位数之前了）。</p>
+<p>于是乎，上面的0.5在实际存储中就变成了</p>
+<p>0 01111110 0000000000000000000000</p>
+<p>此时，最终形态的计算公式就是：</p>
+<p><code>(−1)**sign*2**(exponent−e)*(fraction2+1)</code><br>(−1)sign×2exponent−e×(fraction2+1)<br>当指数部分为0，而尾数部分不为0（指数、尾数同时为0表示的当然是数字0）时，这个浮点数称为非规约形式浮点数。IEEE 754标准规定：非规约形式的浮点数的指数偏移值比规约形式的浮点数的指数偏移值大1。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -714,143 +861,6 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="什么是RPC"><a href="#什么是RPC" class="headerlink" title="什么是RPC"></a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/139688497">什么是RPC</a></h1>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://projectforweb.gitee.io/2022/09/16/%E5%8A%A0%E5%AF%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="StephenShawn">
-      <meta itemprop="description" content="Web学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Web">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/16/%E5%8A%A0%E5%AF%86/" class="post-title-link" itemprop="url">加密</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-09-16 20:16:21 / 修改时间：20:17:42" itemprop="dateCreated datePublished" datetime="2022-09-16T20:16:21+08:00">2022-09-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%8A%A0%E5%AF%86/" itemprop="url" rel="index"><span itemprop="name">加密</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="MD5是32位的，也就是说理论上是有限的，而世界上的数据是无限的，那会不会生成重复的MD5值"><a href="#MD5是32位的，也就是说理论上是有限的，而世界上的数据是无限的，那会不会生成重复的MD5值" class="headerlink" title="MD5是32位的，也就是说理论上是有限的，而世界上的数据是无限的，那会不会生成重复的MD5值?"></a><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/365544497/answer/2251328732">MD5是32位的，也就是说理论上是有限的，而世界上的数据是无限的，那会不会生成重复的MD5值?</a></h1><h1 id="为什么说-MD5-是不可逆的？"><a href="#为什么说-MD5-是不可逆的？" class="headerlink" title="为什么说 MD5 是不可逆的？"></a><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/22651987/answer/968239218">为什么说 MD5 是不可逆的？</a></h1>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://projectforweb.gitee.io/2022/09/16/MVC%E6%A8%A1%E5%BC%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="StephenShawn">
-      <meta itemprop="description" content="Web学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Web">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/16/MVC%E6%A8%A1%E5%BC%8F/" class="post-title-link" itemprop="url">MVC模式</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-09-16 20:13:55 / 修改时间：20:14:44" itemprop="dateCreated datePublished" datetime="2022-09-16T20:13:55+08:00">2022-09-16</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="PO-BO-VO-DTO-POJO-DAO-DO这些Java中的概念分别指一些什么？"><a href="#PO-BO-VO-DTO-POJO-DAO-DO这些Java中的概念分别指一些什么？" class="headerlink" title="PO BO VO DTO POJO DAO DO这些Java中的概念分别指一些什么？"></a><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/39651928/answer/2490565983">PO BO VO DTO POJO DAO DO这些Java中的概念分别指一些什么？</a></h1>
       
     </div>
 
