@@ -147,7 +147,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-count">38</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -177,86 +177,6 @@
 
 
     <div class="main-inner index posts-expand">
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://projectforweb.gitee.io/2022/10/24/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%AD%98%E5%82%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ShawnYoung">
-      <meta itemprop="description" content="Web学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Web">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/24/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%AD%98%E5%82%A8/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-10-24 16:32:57 / 修改时间：16:33:36" itemprop="dateCreated datePublished" datetime="2022-10-24T16:32:57+08:00">2022-10-24</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="IEEE-754标准的浮点数存储"><a href="#IEEE-754标准的浮点数存储" class="headerlink" title="IEEE 754标准的浮点数存储"></a>IEEE 754标准的浮点数存储</h1><p>事实上，在浮点数的存储过程中，为了运算方便和尽可能多的提高存储存储空间的利用效率，往往不会直接存储各部分的二进制原码。</p>
-<p>例如，指数部分存储的是实际指数值得移码，而尾数部分存储的是规约化后的尾数的补码。</p>
-<p>所谓移码，就是将实际的指数值加上一个固定的数值而得到的数。在单精度浮点数中这个数是127，在双精度浮点数中这个数是1024。假设这个数是e，则e的计算公式如下：</p>
-<p>e=2n−1−1<br>e=2n−1−1<br>其中nn是指数部分的长度。</p>
-<p>如此一来，即使是最小的指数（例如单精度浮点数是-126），在存储的时候也会存储为1（-126+127）。这样，就方便了指数的大小比较也省了一个符号位。</p>
-<p>现在，上面的浮点数的计算公式就变成了下面的样子：</p>
-<p><code>(−1)**sign*2**(exponent−e)*fraction2</code><br>(−1)sign×2exponent−e×fraction2<br>当然，这还不是计算公式的最终形态，因为我们还有尾数没有说。</p>
-<p>刚刚在上面提到过定点数的表示其实就是在这里做一下铺垫。因为，尾数部分实际上存储的就是一个定点数。</p>
-<p>这里的定点数需要时一个以1开头的二进制数并且小数点位于第一位数的后面。</p>
-<p>拿(0.5)10(0.5)10来说，把它转换成二进制是(0.1)2=(−1)0×(1.0)2×2−1(0.1)2=(−1)0×(1.0)2×2−1<br>把指数部分用移码表示就是−1+127=126−1+127=126,所以，0.5的就存储为：</p>
-<p>0 01111110 1000000000000000000000</p>
-<p>现在我们又发现，既然尾数部分的定点数都是1开头，那就把这个1给省略掉好了。这样就又多出一位来保存尾数，提高精度了（当然，省略开头的第一个1后，默认小数点的位置就变成现在的第一位数之前了）。</p>
-<p>于是乎，上面的0.5在实际存储中就变成了</p>
-<p>0 01111110 0000000000000000000000</p>
-<p>此时，最终形态的计算公式就是：</p>
-<p><code>(−1)**sign*2**(exponent−e)*(fraction2+1)</code><br>(−1)sign×2exponent−e×(fraction2+1)<br>当指数部分为0，而尾数部分不为0（指数、尾数同时为0表示的当然是数字0）时，这个浮点数称为非规约形式浮点数。IEEE 754标准规定：非规约形式的浮点数的指数偏移值比规约形式的浮点数的指数偏移值大1。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
 
     
 
@@ -314,6 +234,101 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="bat脚本学习"><a href="#bat脚本学习" class="headerlink" title="bat脚本学习"></a><a target="_blank" rel="noopener" href="http://xstarcd.github.io/wiki/windows/windows_cmd_syntax.html">bat脚本学习</a></h1><h1 id="bat常用命令"><a href="#bat常用命令" class="headerlink" title="bat常用命令"></a><a target="_blank" rel="noopener" href="https://blog.csdn.net/changanyi/article/details/78974273">bat常用命令</a></h1>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://projectforweb.gitee.io/2022/10/13/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%AD%98%E5%82%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ShawnYoung">
+      <meta itemprop="description" content="Web学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Web">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/10/13/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%AD%98%E5%82%A8/" class="post-title-link" itemprop="url">计算机浮点数存储</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-10-13 22:09:36" itemprop="dateCreated datePublished" datetime="2022-10-13T22:09:36+08:00">2022-10-13</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2022-11-18 11:46:07" itemprop="dateModified" datetime="2022-11-18T11:46:07+08:00">2022-11-18</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%98%E5%82%A8/" itemprop="url" rel="index"><span itemprop="name">存储</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="IEEE-754标准的浮点数存储"><a href="#IEEE-754标准的浮点数存储" class="headerlink" title="IEEE 754标准的浮点数存储"></a>IEEE 754标准的浮点数存储</h1><p>事实上，在浮点数的存储过程中，为了运算方便和尽可能多的提高存储存储空间的利用效率，往往不会直接存储各部分的二进制原码。</p>
+<p>例如，指数部分存储的是实际指数值得移码，而尾数部分存储的是规约化后的尾数的补码。</p>
+<p>所谓移码，就是将实际的指数值加上一个固定的数值而得到的数。在单精度浮点数中这个数是127，在双精度浮点数中这个数是1024。假设这个数是e，则e的计算公式如下：</p>
+<p>e=2n−1−1<br>e=2n−1−1<br>其中nn是指数部分的长度。</p>
+<p>如此一来，即使是最小的指数（例如单精度浮点数是-126），在存储的时候也会存储为1（-126+127）。这样，就方便了指数的大小比较也省了一个符号位。</p>
+<p>现在，上面的浮点数的计算公式就变成了下面的样子：</p>
+<p><code>(−1)**sign*2**(exponent−e)*fraction2</code><br>(−1)sign×2exponent−e×fraction2<br>当然，这还不是计算公式的最终形态，因为我们还有尾数没有说。</p>
+<p>刚刚在上面提到过定点数的表示其实就是在这里做一下铺垫。因为，尾数部分实际上存储的就是一个定点数。</p>
+<p>这里的定点数需要时一个以1开头的二进制数并且小数点位于第一位数的后面。</p>
+<p>拿(0.5)10(0.5)10来说，把它转换成二进制是(0.1)2=(−1)0×(1.0)2×2−1(0.1)2=(−1)0×(1.0)2×2−1<br>把指数部分用移码表示就是−1+127=126−1+127=126,所以，0.5的就存储为：</p>
+<p>0 01111110 1000000000000000000000</p>
+<p>现在我们又发现，既然尾数部分的定点数都是1开头，那就把这个1给省略掉好了。这样就又多出一位来保存尾数，提高精度了（当然，省略开头的第一个1后，默认小数点的位置就变成现在的第一位数之前了）。</p>
+<p>于是乎，上面的0.5在实际存储中就变成了</p>
+<p>0 01111110 0000000000000000000000</p>
+<p>此时，最终形态的计算公式就是：</p>
+<p><code>(−1)**sign*2**(exponent−e)*(fraction2+1)</code><br>(−1)sign×2exponent−e×(fraction2+1)<br>当指数部分为0，而尾数部分不为0（指数、尾数同时为0表示的当然是数字0）时，这个浮点数称为非规约形式浮点数。IEEE 754标准规定：非规约形式的浮点数的指数偏移值比规约形式的浮点数的指数偏移值大1。</p>
+
       
     </div>
 
