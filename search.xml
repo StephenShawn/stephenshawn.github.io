@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>MVC模式</title>
+    <url>/2022/09/16/MVC%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<h1 id="PO-BO-VO-DTO-POJO-DAO-DO这些Java中的概念分别指一些什么？"><a href="#PO-BO-VO-DTO-POJO-DAO-DO这些Java中的概念分别指一些什么？" class="headerlink" title="PO BO VO DTO POJO DAO DO这些Java中的概念分别指一些什么？"></a><a href="https://www.zhihu.com/question/39651928/answer/2490565983">PO BO VO DTO POJO DAO DO这些Java中的概念分别指一些什么？</a></h1>]]></content>
+  </entry>
+  <entry>
     <title>Java_Stream_API</title>
     <url>/2022/07/13/Java-Stream-API/</url>
     <content><![CDATA[<p>2.1. Empty Stream<br>We should use the empty() method in case of the creation of an empty stream:</p>
@@ -142,6 +147,21 @@
     <content><![CDATA[<h1 id="什么是RPC"><a href="#什么是RPC" class="headerlink" title="什么是RPC"></a><a href="https://zhuanlan.zhihu.com/p/139688497">什么是RPC</a></h1>]]></content>
   </entry>
   <entry>
+    <title>electronAPI文档</title>
+    <url>/2022/08/17/electronAPI%E6%96%87%E6%A1%A3/</url>
+    <content><![CDATA[<h1 id="electron-文档"><a href="#electron-文档" class="headerlink" title="electron 文档"></a>electron 文档</h1><h2 id="electron"><a href="#electron" class="headerlink" title=" electron"></a> <a href="https://www.electronjs.org/zh/docs/latest/tutorial/tutorial-first-app">electron</a></h2><h2 id="electron中文文档"><a href="#electron中文文档" class="headerlink" title="electron中文文档"></a>electron中文文档</h2><h2 id="electron中文文档-1"><a href="#electron中文文档-1" class="headerlink" title="electron中文文档"></a><a href="https://www.wenjiangs.com/doc/s3ivxhuv">electron中文文档</a></h2><h2 id="electron-Vue"><a href="#electron-Vue" class="headerlink" title="electron + Vue"></a>electron + Vue</h2><p><a href="https://simulatedgreg.gitbooks.io/electron-vue/content/cn/">electron-vue</a></p>
+<p>vue init simulatedgreg&#x2F;electron-vue electron-vue</p>
+<p>sudo npm –vs2015 install –global windows-build-tools<br><a href="https://www.cnblogs.com/yunjiao/p/16491092.html">安装卡顿</a></p>
+<h2 id="electron-vue学习之环境搭建"><a href="#electron-vue学习之环境搭建" class="headerlink" title="electron-vue学习之环境搭建"></a><a href="https://dxsm.github.io/p/electron-learning-chp1.html">electron-vue学习之环境搭建</a></h2><h2 id="electron-React"><a href="#electron-React" class="headerlink" title="electron + React"></a>electron + React</h2><p><a href="https://electron-react-boilerplate.js.org/docs/installation">electron-react</a></p>
+<h2 id="git-clone-–depth-1-https-github-com-electron-react-boilerplate-electron-react-boilerplate-electron-react"><a href="#git-clone-–depth-1-https-github-com-electron-react-boilerplate-electron-react-boilerplate-electron-react" class="headerlink" title="git clone –depth&#x3D;1  https://github.com/electron-react-boilerplate/electron-react-boilerplate  electron-react"></a>git clone –depth&#x3D;1  <a href="https://github.com/electron-react-boilerplate/electron-react-boilerplate">https://github.com/electron-react-boilerplate/electron-react-boilerplate</a>  electron-react</h2>]]></content>
+      <categories>
+        <category>electron</category>
+      </categories>
+      <tags>
+        <tag>electronAPI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>TS的!和?用法</title>
     <url>/2022/09/11/TS%E7%9A%84!%E5%92%8C%E9%97%AE%E5%8F%B7/</url>
     <content><![CDATA[<h2 id="用法"><a href="#用法" class="headerlink" title="!用法"></a>!用法</h2><ul>
@@ -165,29 +185,9 @@
       </tags>
   </entry>
   <entry>
-    <title>MVC模式</title>
-    <url>/2022/09/16/MVC%E6%A8%A1%E5%BC%8F/</url>
-    <content><![CDATA[<h1 id="PO-BO-VO-DTO-POJO-DAO-DO这些Java中的概念分别指一些什么？"><a href="#PO-BO-VO-DTO-POJO-DAO-DO这些Java中的概念分别指一些什么？" class="headerlink" title="PO BO VO DTO POJO DAO DO这些Java中的概念分别指一些什么？"></a><a href="https://www.zhihu.com/question/39651928/answer/2490565983">PO BO VO DTO POJO DAO DO这些Java中的概念分别指一些什么？</a></h1>]]></content>
-  </entry>
-  <entry>
     <title>UML</title>
     <url>/2022/09/16/UML/</url>
     <content><![CDATA[<h1 id="掌握UML类图"><a href="#掌握UML类图" class="headerlink" title="掌握UML类图"></a><a href="https://zhuanlan.zhihu.com/p/267298708">掌握UML类图</a></h1><h2 id="UML-Unified-Modeling-Language-统一建模语言"><a href="#UML-Unified-Modeling-Language-统一建模语言" class="headerlink" title="UML(Unified Modeling Language)统一建模语言"></a>UML(Unified Modeling Language)统一建模语言</h2>]]></content>
-  </entry>
-  <entry>
-    <title>electronAPI文档</title>
-    <url>/2022/08/17/electronAPI%E6%96%87%E6%A1%A3/</url>
-    <content><![CDATA[<h1 id="electron-文档"><a href="#electron-文档" class="headerlink" title="electron 文档"></a>electron 文档</h1><h2 id="electron"><a href="#electron" class="headerlink" title=" electron"></a> <a href="https://www.electronjs.org/zh/docs/latest/tutorial/tutorial-first-app">electron</a></h2><h2 id="electron中文文档"><a href="#electron中文文档" class="headerlink" title="electron中文文档"></a>electron中文文档</h2><h2 id="electron中文文档-1"><a href="#electron中文文档-1" class="headerlink" title="electron中文文档"></a><a href="https://www.wenjiangs.com/doc/s3ivxhuv">electron中文文档</a></h2><h2 id="electron-Vue"><a href="#electron-Vue" class="headerlink" title="electron + Vue"></a>electron + Vue</h2><p><a href="https://simulatedgreg.gitbooks.io/electron-vue/content/cn/">electron-vue</a></p>
-<p>vue init simulatedgreg&#x2F;electron-vue electron-vue</p>
-<p>sudo npm –vs2015 install –global windows-build-tools<br><a href="https://www.cnblogs.com/yunjiao/p/16491092.html">安装卡顿</a></p>
-<h2 id="electron-vue学习之环境搭建"><a href="#electron-vue学习之环境搭建" class="headerlink" title="electron-vue学习之环境搭建"></a><a href="https://dxsm.github.io/p/electron-learning-chp1.html">electron-vue学习之环境搭建</a></h2><h2 id="electron-React"><a href="#electron-React" class="headerlink" title="electron + React"></a>electron + React</h2><p><a href="https://electron-react-boilerplate.js.org/docs/installation">electron-react</a></p>
-<h2 id="git-clone-–depth-1-https-github-com-electron-react-boilerplate-electron-react-boilerplate-electron-react"><a href="#git-clone-–depth-1-https-github-com-electron-react-boilerplate-electron-react-boilerplate-electron-react" class="headerlink" title="git clone –depth&#x3D;1  https://github.com/electron-react-boilerplate/electron-react-boilerplate  electron-react"></a>git clone –depth&#x3D;1  <a href="https://github.com/electron-react-boilerplate/electron-react-boilerplate">https://github.com/electron-react-boilerplate/electron-react-boilerplate</a>  electron-react</h2>]]></content>
-      <categories>
-        <category>electron</category>
-      </categories>
-      <tags>
-        <tag>electronAPI</tag>
-      </tags>
   </entry>
   <entry>
     <title>编码与解码</title>
@@ -227,6 +227,55 @@
       </categories>
       <tags>
         <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>idea快捷键</title>
+    <url>/2022/07/11/idea-shortcut-key/</url>
+    <content><![CDATA[<h2 id="常用快捷键1"><a href="#常用快捷键1" class="headerlink" title="常用快捷键1"></a><a href="https://zhuanlan.zhihu.com/p/410613271">常用快捷键1</a></h2><h2 id="常用快捷键2"><a href="#常用快捷键2" class="headerlink" title="常用快捷键2"></a><a href="https://blog.csdn.net/weixin_45395059/article/details/125591122">常用快捷键2</a></h2><ul>
+<li>ctrl + alt + o 代码优化(自动删除多余的包与变量)</li>
+<li>Alt + F12 打开terminal(终端) </li>
+<li>ctrl+shift+(+&#x2F;-) 展开全部折叠全部</li>
+<li>ctrl+（+&#x2F;-） 展开折叠当前方法</li>
+<li>shift + f6 重命名(重构)</li>
+<li>ctrl + alt + l 代码格式化</li>
+<li>alt + insert 创建内容</li>
+<li>psvm main方法</li>
+<li>sout 输出语句</li>
+<li>Ctrl + d 复制一行</li>
+<li>Ctrl + y 删除一行</li>
+<li>Ctrl + Shift + Up&#x2F;Down 代码向上&#x2F;下移动</li>
+<li>Ctrl + n 搜索类</li>
+<li>alt + insert 生成代码</li>
+<li>alt + Enter 导包，生成变量</li>
+<li>Ctrl + &#x2F; 或 Ctrl + Shift+ &#x2F; 单行注释或多行注释</li>
+<li>fori 回车即可 for循环</li>
+<li>ctrl + alt + t 代码包围try-catch,if,while等</li>
+<li>ctrl + alt + -&gt; 向后 ctrl + alt + &lt;- 向前</li>
+<li>显示代码结构：alt + 7</li>
+<li>显示导航栏：alt + 1</li>
+<li>撤销 ctrl + Z</li>
+<li>REDO 操作 ctrl + shif + z</li>
+<li>Tab 缩进 shift+Tab 撤销缩进</li>
+<li>Ctrl + u 选择行</li>
+<li>alt + f8 查看变量值</li>
+<li>ctrl + alt +B 查找接口实现类</li>
+<li>ctrl + h 查看类或接口的继承关系</li>
+<li>ctrl + o 覆写方法</li>
+</ul>
+<h3 id="替换"><a href="#替换" class="headerlink" title="替换"></a>替换</h3><ul>
+<li>ctrl + r 替换</li>
+<li>ctrl + shift + r 路径中替换</li>
+</ul>
+<h2 id="调试debug"><a href="#调试debug" class="headerlink" title="调试debug"></a>调试<a href="https://blog.csdn.net/m0_37154839/article/details/107617122">debug</a></h2><ul>
+<li>F9 调试</li>
+</ul>
+]]></content>
+      <categories>
+        <category>IDE</category>
+      </categories>
+      <tags>
+        <tag>IntelliJ IDEA</tag>
       </tags>
   </entry>
   <entry>
@@ -282,55 +331,6 @@
       </categories>
       <tags>
         <tag>博客框架</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>idea快捷键</title>
-    <url>/2022/07/11/idea-shortcut-key/</url>
-    <content><![CDATA[<h2 id="常用快捷键1"><a href="#常用快捷键1" class="headerlink" title="常用快捷键1"></a><a href="https://zhuanlan.zhihu.com/p/410613271">常用快捷键1</a></h2><h2 id="常用快捷键2"><a href="#常用快捷键2" class="headerlink" title="常用快捷键2"></a><a href="https://blog.csdn.net/weixin_45395059/article/details/125591122">常用快捷键2</a></h2><ul>
-<li>ctrl + alt + o 代码优化(自动删除多余的包与变量)</li>
-<li>Alt + F12 打开terminal(终端) </li>
-<li>ctrl+shift+(+&#x2F;-) 展开全部折叠全部</li>
-<li>ctrl+（+&#x2F;-） 展开折叠当前方法</li>
-<li>shift + f6 重命名(重构)</li>
-<li>ctrl + alt + l 代码格式化</li>
-<li>alt + insert 创建内容</li>
-<li>psvm main方法</li>
-<li>sout 输出语句</li>
-<li>Ctrl + d 复制一行</li>
-<li>Ctrl + y 删除一行</li>
-<li>Ctrl + Shift + Up&#x2F;Down 代码向上&#x2F;下移动</li>
-<li>Ctrl + n 搜索类</li>
-<li>alt + insert 生成代码</li>
-<li>alt + Enter 导包，生成变量</li>
-<li>Ctrl + &#x2F; 或 Ctrl + Shift+ &#x2F; 单行注释或多行注释</li>
-<li>fori 回车即可 for循环</li>
-<li>ctrl + alt + t 代码包围try-catch,if,while等</li>
-<li>ctrl + alt + -&gt; 向后 ctrl + alt + &lt;- 向前</li>
-<li>显示代码结构：alt + 7</li>
-<li>显示导航栏：alt + 1</li>
-<li>撤销 ctrl + Z</li>
-<li>REDO 操作 ctrl + shif + z</li>
-<li>Tab 缩进 shift+Tab 撤销缩进</li>
-<li>Ctrl + u 选择行</li>
-<li>alt + f8 查看变量值</li>
-<li>ctrl + alt +B 查找接口实现类</li>
-<li>ctrl + h 查看类或接口的继承关系</li>
-<li>ctrl + o 覆写方法</li>
-</ul>
-<h3 id="替换"><a href="#替换" class="headerlink" title="替换"></a>替换</h3><ul>
-<li>ctrl + r 替换</li>
-<li>ctrl + shift + r 路径中替换</li>
-</ul>
-<h2 id="调试debug"><a href="#调试debug" class="headerlink" title="调试debug"></a>调试<a href="https://blog.csdn.net/m0_37154839/article/details/107617122">debug</a></h2><ul>
-<li>F9 调试</li>
-</ul>
-]]></content>
-      <categories>
-        <category>IDE</category>
-      </categories>
-      <tags>
-        <tag>IntelliJ IDEA</tag>
       </tags>
   </entry>
   <entry>
@@ -420,6 +420,17 @@
       </tags>
   </entry>
   <entry>
+    <title>java提高</title>
+    <url>/2021/11/11/java%E6%8F%90%E9%AB%98/</url>
+    <content><![CDATA[<h3 id="垃圾收集器有几种"><a href="#垃圾收集器有几种" class="headerlink" title="垃圾收集器有几种"></a>垃圾收集器有几种</h3><h3 id="垃圾收集器低层原理剖析"><a href="#垃圾收集器低层原理剖析" class="headerlink" title="垃圾收集器低层原理剖析"></a>垃圾收集器低层原理剖析</h3><h3 id="垃圾收集器算法优化"><a href="#垃圾收集器算法优化" class="headerlink" title="垃圾收集器算法优化"></a>垃圾收集器算法优化</h3>]]></content>
+      <categories>
+        <category>java垃圾回收机制</category>
+      </categories>
+      <tags>
+        <tag>垃圾收集</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>jdbc连接数据库SSL</title>
     <url>/2022/07/17/jdbc%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93SSL/</url>
     <content><![CDATA[<h4 id="在Java8及高版本以上的版本在调用ssl时会出现javax-net-ssl-SSLHandshakeException-No-appropriate-protocol的异常。"><a href="#在Java8及高版本以上的版本在调用ssl时会出现javax-net-ssl-SSLHandshakeException-No-appropriate-protocol的异常。" class="headerlink" title="在Java8及高版本以上的版本在调用ssl时会出现javax.net.ssl.SSLHandshakeException: No appropriate protocol的异常。"></a>在Java8及高版本以上的版本在调用ssl时会出现<code>javax.net.ssl.SSLHandshakeException: No appropriate protocol</code>的异常。</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">javax.net.ssl.SSLHandshakeException: No appropriate <span class="title function_">protocol</span> <span class="params">(protocol is disabled or cipher suites are inappropriate)</span></span><br><span class="line">	at sun.security.ssl.HandshakeContext.&lt;init&gt;(HandshakeContext.java:<span class="number">171</span>) ~[na:<span class="number">1.8</span><span class="number">.0_292</span>]</span><br><span class="line">	at sun.security.ssl.ClientHandshakeContext.&lt;init&gt;(ClientHandshakeContext.java:<span class="number">98</span>) ~[na:<span class="number">1.8</span><span class="number">.0_292</span>]</span><br><span class="line">	at sun.security.ssl.TransportContext.kickstart(TransportContext.java:<span class="number">220</span>) ~[na:<span class="number">1.8</span><span class="number">.0_292</span>]</span><br><span class="line">	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:<span class="number">428</span>) ~[na:<span class="number">1.8</span><span class="number">.0_292</span>]</span><br><span class="line">	at com.mysql.cj.protocol.ExportControlled.performTlsHandshake(ExportControlled.java:<span class="number">316</span>) ~[mysql-connector-java-<span class="number">8.0</span><span class="number">.17</span>.jar:<span class="number">8.0</span><span class="number">.17</span>]</span><br><span class="line">	at com.mysql.cj.protocol.StandardSocketFactory.performTlsHandshake(StandardSocketFactory.java:<span class="number">188</span>) ~[mysql-connector-java-<span class="number">8.0</span><span class="number">.17</span>.jar:<span class="number">8.0</span><span class="number">.17</span>]</span><br><span class="line">	at com.mysql.cj.protocol.a.NativeSocketConnection.performTlsHandshake(NativeSocketConnection.java:<span class="number">99</span>) ~[mysql-connector-java-<span class="number">8.0</span><span class="number">.17</span>.jar:<span class="number">8.0</span><span class="number">.17</span>]</span><br><span class="line">	at com.mysql.cj.protocol.a.NativeProtocol.negotiateSSLConnection(NativeProtocol.java:<span class="number">331</span>) ~[mysql-connector-java-<span class="number">8.0</span><span class="number">.17</span>.jar:<span class="number">8.0</span><span class="number">.17</span>]</span><br><span class="line">	... <span class="number">68</span> common frames omitted</span><br></pre></td></tr></table></figure>
@@ -447,17 +458,6 @@
       </categories>
       <tags>
         <tag>jdbc的SSL问题</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java提高</title>
-    <url>/2021/11/11/java%E6%8F%90%E9%AB%98/</url>
-    <content><![CDATA[<h3 id="垃圾收集器有几种"><a href="#垃圾收集器有几种" class="headerlink" title="垃圾收集器有几种"></a>垃圾收集器有几种</h3><h3 id="垃圾收集器低层原理剖析"><a href="#垃圾收集器低层原理剖析" class="headerlink" title="垃圾收集器低层原理剖析"></a>垃圾收集器低层原理剖析</h3><h3 id="垃圾收集器算法优化"><a href="#垃圾收集器算法优化" class="headerlink" title="垃圾收集器算法优化"></a>垃圾收集器算法优化</h3>]]></content>
-      <categories>
-        <category>java垃圾回收机制</category>
-      </categories>
-      <tags>
-        <tag>垃圾收集</tag>
       </tags>
   </entry>
   <entry>
@@ -574,6 +574,22 @@
       </tags>
   </entry>
   <entry>
+    <title>rockylinux8-network-config</title>
+    <url>/2023/12/17/rockylinux8-network-config/</url>
+    <content><![CDATA[<h4 id="查看linux内核信息"><a href="#查看linux内核信息" class="headerlink" title="查看linux内核信息"></a>查看linux内核信息</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">uname</span> -a</span><br></pre></td></tr></table></figure>
+<h4 id="查看linux发行版信息"><a href="#查看linux发行版信息" class="headerlink" title="查看linux发行版信息"></a>查看linux发行版信息</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> /etc/os-release</span><br></pre></td></tr></table></figure>
+<h4 id="配置静态网路"><a href="#配置静态网路" class="headerlink" title="配置静态网路"></a>配置静态网路</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/sysconfig/network-scripts/ifcfg-ens160</span><br><span class="line"></span><br><span class="line">TYPE=Ethernet</span><br><span class="line">PROXY_METHOD=none</span><br><span class="line">BROWSER_ONLY=no</span><br><span class="line"><span class="comment"># 静态IP地址</span></span><br><span class="line">BOOTPROTO=static</span><br><span class="line">DEFROUTE=<span class="built_in">yes</span></span><br><span class="line">IPV4_FAILURE_FATAL=no</span><br><span class="line">IPV6INIT=<span class="built_in">yes</span></span><br><span class="line">IPV6_AUTOCONF=<span class="built_in">yes</span></span><br><span class="line">IPV6_DEFROUTE=<span class="built_in">yes</span></span><br><span class="line">IPV6_FAILURE_FATAL=no</span><br><span class="line">NAME=ens160</span><br><span class="line">UUID=293f1d04-332e-4de2-8f19-4910bca6672c</span><br><span class="line">DEVICE=ens160</span><br><span class="line"><span class="comment"># 开启</span></span><br><span class="line">ONBOOT=<span class="built_in">yes</span></span><br><span class="line"><span class="comment"># 本机地址</span></span><br><span class="line">IPADDR=192.168.166.6</span><br><span class="line"><span class="comment"># 子网掩码</span></span><br><span class="line">NETMASK=255.255.255.0</span><br><span class="line"><span class="comment"># 虚拟VM8网卡 NAT 网关</span></span><br><span class="line">GATEWAY=192.168.166.2</span><br><span class="line"><span class="comment"># DNS 域名解析服务器IP地址</span></span><br><span class="line">DNS1=114.114.114.114</span><br><span class="line">DNS2=223.5.5.5</span><br><span class="line">DNS3=8.8.8.8</span><br></pre></td></tr></table></figure>
+<h4 id="重启网络"><a href="#重启网络" class="headerlink" title="重启网络"></a>重启网络</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nmcli c reload</span><br></pre></td></tr></table></figure>
+<h4 id="SSH连接问题-网络不可达-怀疑是VMware软件问题，配置SSH映射就好了"><a href="#SSH连接问题-网络不可达-怀疑是VMware软件问题，配置SSH映射就好了" class="headerlink" title="SSH连接问题 网络不可达(怀疑是VMware软件问题，配置SSH映射就好了)"></a>SSH连接问题 网络不可达(怀疑是VMware软件问题，配置SSH映射就好了)</h4><p>网络也能ping外网了，具体操作见<a href="https://blog.csdn.net/YiRan_Zhao/article/details/110121526">地址</a></p>
+]]></content>
+      <categories>
+        <category>rockylinux8</category>
+      </categories>
+      <tags>
+        <tag>rockylinux8-network-config</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>oracleSQL</title>
     <url>/2022/07/14/oracleSQL/</url>
     <content><![CDATA[<p><strong>查询Oracle中所有用户信息</strong></p>
@@ -654,22 +670,6 @@ dnf makecache
       </categories>
       <tags>
         <tag>兼容centos的社区实现</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>rockylinux8-network-config</title>
-    <url>/2023/12/17/rockylinux8-network-config/</url>
-    <content><![CDATA[<h4 id="查看linux内核信息"><a href="#查看linux内核信息" class="headerlink" title="查看linux内核信息"></a>查看linux内核信息</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">uname</span> -a</span><br></pre></td></tr></table></figure>
-<h4 id="查看linux发行版信息"><a href="#查看linux发行版信息" class="headerlink" title="查看linux发行版信息"></a>查看linux发行版信息</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> /etc/os-release</span><br></pre></td></tr></table></figure>
-<h4 id="配置静态网路"><a href="#配置静态网路" class="headerlink" title="配置静态网路"></a>配置静态网路</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/sysconfig/network-scripts/ifcfg-ens160</span><br><span class="line"></span><br><span class="line">TYPE=Ethernet</span><br><span class="line">PROXY_METHOD=none</span><br><span class="line">BROWSER_ONLY=no</span><br><span class="line"><span class="comment"># 静态IP地址</span></span><br><span class="line">BOOTPROTO=static</span><br><span class="line">DEFROUTE=<span class="built_in">yes</span></span><br><span class="line">IPV4_FAILURE_FATAL=no</span><br><span class="line">IPV6INIT=<span class="built_in">yes</span></span><br><span class="line">IPV6_AUTOCONF=<span class="built_in">yes</span></span><br><span class="line">IPV6_DEFROUTE=<span class="built_in">yes</span></span><br><span class="line">IPV6_FAILURE_FATAL=no</span><br><span class="line">NAME=ens160</span><br><span class="line">UUID=293f1d04-332e-4de2-8f19-4910bca6672c</span><br><span class="line">DEVICE=ens160</span><br><span class="line"><span class="comment"># 开启</span></span><br><span class="line">ONBOOT=<span class="built_in">yes</span></span><br><span class="line"><span class="comment"># 本机地址</span></span><br><span class="line">IPADDR=192.168.166.6</span><br><span class="line"><span class="comment"># 子网掩码</span></span><br><span class="line">NETMASK=255.255.255.0</span><br><span class="line"><span class="comment"># 虚拟VM8网卡 NAT 网关</span></span><br><span class="line">GATEWAY=192.168.166.2</span><br><span class="line"><span class="comment"># DNS 域名解析服务器IP地址</span></span><br><span class="line">DNS1=114.114.114.114</span><br><span class="line">DNS2=223.5.5.5</span><br><span class="line">DNS3=8.8.8.8</span><br></pre></td></tr></table></figure>
-<h4 id="重启网络"><a href="#重启网络" class="headerlink" title="重启网络"></a>重启网络</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nmcli c reload</span><br></pre></td></tr></table></figure>
-<h4 id="SSH连接问题-网络不可达-怀疑是VMware软件问题，配置SSH映射就好了"><a href="#SSH连接问题-网络不可达-怀疑是VMware软件问题，配置SSH映射就好了" class="headerlink" title="SSH连接问题 网络不可达(怀疑是VMware软件问题，配置SSH映射就好了)"></a>SSH连接问题 网络不可达(怀疑是VMware软件问题，配置SSH映射就好了)</h4><p>网络也能ping外网了，具体操作见<a href="https://blog.csdn.net/YiRan_Zhao/article/details/110121526">地址</a></p>
-]]></content>
-      <categories>
-        <category>rockylinux8</category>
-      </categories>
-      <tags>
-        <tag>rockylinux8-network-config</tag>
       </tags>
   </entry>
   <entry>
@@ -821,6 +821,66 @@ dnf makecache
       </tags>
   </entry>
   <entry>
+    <title>计算机浮点数存储</title>
+    <url>/2022/10/13/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%AD%98%E5%82%A8/</url>
+    <content><![CDATA[<h1 id="IEEE-754标准的浮点数存储"><a href="#IEEE-754标准的浮点数存储" class="headerlink" title="IEEE 754标准的浮点数存储"></a>IEEE 754标准的浮点数存储</h1><p>事实上，在浮点数的存储过程中，为了运算方便和尽可能多的提高存储存储空间的利用效率，往往不会直接存储各部分的二进制原码。</p>
+<p>例如，指数部分存储的是实际指数值得移码，而尾数部分存储的是规约化后的尾数的补码。</p>
+<p>所谓移码，就是将实际的指数值加上一个固定的数值而得到的数。在单精度浮点数中这个数是127，在双精度浮点数中这个数是1024。假设这个数是e，则e的计算公式如下：</p>
+<p>e&#x3D;2n−1−1<br>e&#x3D;2n−1−1<br>其中nn是指数部分的长度。</p>
+<p>如此一来，即使是最小的指数（例如单精度浮点数是-126），在存储的时候也会存储为1（-126+127）。这样，就方便了指数的大小比较也省了一个符号位。</p>
+<p>现在，上面的浮点数的计算公式就变成了下面的样子：</p>
+<p><code>(−1)**sign*2**(exponent−e)*fraction2</code><br>(−1)sign×2exponent−e×fraction2<br>当然，这还不是计算公式的最终形态，因为我们还有尾数没有说。</p>
+<p>刚刚在上面提到过定点数的表示其实就是在这里做一下铺垫。因为，尾数部分实际上存储的就是一个定点数。</p>
+<p>这里的定点数需要时一个以1开头的二进制数并且小数点位于第一位数的后面。</p>
+<p>拿(0.5)10(0.5)10来说，把它转换成二进制是(0.1)2&#x3D;(−1)0×(1.0)2×2−1(0.1)2&#x3D;(−1)0×(1.0)2×2−1<br>把指数部分用移码表示就是−1+127&#x3D;126−1+127&#x3D;126,所以，0.5的就存储为：</p>
+<p>0 01111110 1000000000000000000000</p>
+<p>现在我们又发现，既然尾数部分的定点数都是1开头，那就把这个1给省略掉好了。这样就又多出一位来保存尾数，提高精度了（当然，省略开头的第一个1后，默认小数点的位置就变成现在的第一位数之前了）。</p>
+<p>于是乎，上面的0.5在实际存储中就变成了</p>
+<p>0 01111110 0000000000000000000000</p>
+<p>此时，最终形态的计算公式就是：</p>
+<p><code>(−1)**sign*2**(exponent−e)*(fraction2+1)</code><br>(−1)sign×2exponent−e×(fraction2+1)<br>当指数部分为0，而尾数部分不为0（指数、尾数同时为0表示的当然是数字0）时，这个浮点数称为非规约形式浮点数。IEEE 754标准规定：非规约形式的浮点数的指数偏移值比规约形式的浮点数的指数偏移值大1。</p>
+]]></content>
+      <categories>
+        <category>存储</category>
+      </categories>
+      <tags>
+        <tag>浮点数存储</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>码制与位运算</title>
+    <url>/2021/11/10/%E7%A0%81%E5%88%B6%E4%B8%8E%E4%BD%8D%E8%BF%90%E7%AE%97/</url>
+    <content><![CDATA[<h3 id="二进制"><a href="#二进制" class="headerlink" title="二进制"></a>二进制</h3><p>0b00000001</p>
+<h3 id="八进制"><a href="#八进制" class="headerlink" title="八进制"></a>八进制</h3><p>0o001(python)</p>
+<h3 id="十六进制"><a href="#十六进制" class="headerlink" title="十六进制"></a>十六进制</h3><p>0xFE</p>
+<h3 id="原码"><a href="#原码" class="headerlink" title="原码"></a>原码</h3><blockquote>
+<p>将数字表述为二进制数，方便人看</p>
+</blockquote>
+<h3 id="反码"><a href="#反码" class="headerlink" title="反码"></a>反码</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">正数与原码相同</span><br><span class="line">负数符号位不变，其余位取反</span><br></pre></td></tr></table></figure>
+<h3 id="补码"><a href="#补码" class="headerlink" title="补码"></a>补码</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">正数与原码相同</span><br><span class="line">反码符号位不变其余位取反加一</span><br><span class="line">补码的补码是原码</span><br></pre></td></tr></table></figure>
+<h3 id="浮点数存储方式"><a href="#浮点数存储方式" class="headerlink" title="浮点数存储方式"></a>浮点数存储方式</h3><h3 id="算术运算"><a href="#算术运算" class="headerlink" title="算术运算"></a>算术运算</h3><h3 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h3><h3 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h3><ul>
+<li>&amp;&amp; </li>
+<li>|| </li>
+<li>！</li>
+</ul>
+<h3 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h3><ul>
+<li>&amp; 乘法</li>
+<li>| 加法</li>
+<li>~ 取反 包括符号位</li>
+<li>^ 异或</li>
+<li>&gt;&gt; 右移</li>
+<li>&lt;&lt; 左移</li>
+</ul>
+]]></content>
+      <categories>
+        <category>进制与编码</category>
+      </categories>
+      <tags>
+        <tag>编码</tag>
+        <tag>进制</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>搜索引擎高级搜索技巧</title>
     <url>/2022/06/03/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/</url>
     <content><![CDATA[<h5 id="逻辑与-或"><a href="#逻辑与-或" class="headerlink" title="逻辑与&#x2F;或"></a><em><strong>逻辑与&#x2F;或</strong></em></h5><hr>
@@ -939,70 +999,15 @@ dnf makecache
       </tags>
   </entry>
   <entry>
-    <title>计算机浮点数存储</title>
-    <url>/2022/10/13/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%AD%98%E5%82%A8/</url>
-    <content><![CDATA[<h1 id="IEEE-754标准的浮点数存储"><a href="#IEEE-754标准的浮点数存储" class="headerlink" title="IEEE 754标准的浮点数存储"></a>IEEE 754标准的浮点数存储</h1><p>事实上，在浮点数的存储过程中，为了运算方便和尽可能多的提高存储存储空间的利用效率，往往不会直接存储各部分的二进制原码。</p>
-<p>例如，指数部分存储的是实际指数值得移码，而尾数部分存储的是规约化后的尾数的补码。</p>
-<p>所谓移码，就是将实际的指数值加上一个固定的数值而得到的数。在单精度浮点数中这个数是127，在双精度浮点数中这个数是1024。假设这个数是e，则e的计算公式如下：</p>
-<p>e&#x3D;2n−1−1<br>e&#x3D;2n−1−1<br>其中nn是指数部分的长度。</p>
-<p>如此一来，即使是最小的指数（例如单精度浮点数是-126），在存储的时候也会存储为1（-126+127）。这样，就方便了指数的大小比较也省了一个符号位。</p>
-<p>现在，上面的浮点数的计算公式就变成了下面的样子：</p>
-<p><code>(−1)**sign*2**(exponent−e)*fraction2</code><br>(−1)sign×2exponent−e×fraction2<br>当然，这还不是计算公式的最终形态，因为我们还有尾数没有说。</p>
-<p>刚刚在上面提到过定点数的表示其实就是在这里做一下铺垫。因为，尾数部分实际上存储的就是一个定点数。</p>
-<p>这里的定点数需要时一个以1开头的二进制数并且小数点位于第一位数的后面。</p>
-<p>拿(0.5)10(0.5)10来说，把它转换成二进制是(0.1)2&#x3D;(−1)0×(1.0)2×2−1(0.1)2&#x3D;(−1)0×(1.0)2×2−1<br>把指数部分用移码表示就是−1+127&#x3D;126−1+127&#x3D;126,所以，0.5的就存储为：</p>
-<p>0 01111110 1000000000000000000000</p>
-<p>现在我们又发现，既然尾数部分的定点数都是1开头，那就把这个1给省略掉好了。这样就又多出一位来保存尾数，提高精度了（当然，省略开头的第一个1后，默认小数点的位置就变成现在的第一位数之前了）。</p>
-<p>于是乎，上面的0.5在实际存储中就变成了</p>
-<p>0 01111110 0000000000000000000000</p>
-<p>此时，最终形态的计算公式就是：</p>
-<p><code>(−1)**sign*2**(exponent−e)*(fraction2+1)</code><br>(−1)sign×2exponent−e×(fraction2+1)<br>当指数部分为0，而尾数部分不为0（指数、尾数同时为0表示的当然是数字0）时，这个浮点数称为非规约形式浮点数。IEEE 754标准规定：非规约形式的浮点数的指数偏移值比规约形式的浮点数的指数偏移值大1。</p>
-]]></content>
-      <categories>
-        <category>存储</category>
-      </categories>
-      <tags>
-        <tag>浮点数存储</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>码制与位运算</title>
-    <url>/2021/11/10/%E7%A0%81%E5%88%B6%E4%B8%8E%E4%BD%8D%E8%BF%90%E7%AE%97/</url>
-    <content><![CDATA[<h3 id="二进制"><a href="#二进制" class="headerlink" title="二进制"></a>二进制</h3><p>0b00000001</p>
-<h3 id="八进制"><a href="#八进制" class="headerlink" title="八进制"></a>八进制</h3><p>0o001(python)</p>
-<h3 id="十六进制"><a href="#十六进制" class="headerlink" title="十六进制"></a>十六进制</h3><p>0xFE</p>
-<h3 id="原码"><a href="#原码" class="headerlink" title="原码"></a>原码</h3><blockquote>
-<p>将数字表述为二进制数，方便人看</p>
-</blockquote>
-<h3 id="反码"><a href="#反码" class="headerlink" title="反码"></a>反码</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">正数与原码相同</span><br><span class="line">负数符号位不变，其余位取反</span><br></pre></td></tr></table></figure>
-<h3 id="补码"><a href="#补码" class="headerlink" title="补码"></a>补码</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">正数与原码相同</span><br><span class="line">反码符号位不变其余位取反加一</span><br><span class="line">补码的补码是原码</span><br></pre></td></tr></table></figure>
-<h3 id="浮点数存储方式"><a href="#浮点数存储方式" class="headerlink" title="浮点数存储方式"></a>浮点数存储方式</h3><h3 id="算术运算"><a href="#算术运算" class="headerlink" title="算术运算"></a>算术运算</h3><h3 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h3><h3 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h3><ul>
-<li>&amp;&amp; </li>
-<li>|| </li>
-<li>！</li>
-</ul>
-<h3 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h3><ul>
-<li>&amp; 乘法</li>
-<li>| 加法</li>
-<li>~ 取反 包括符号位</li>
-<li>^ 异或</li>
-<li>&gt;&gt; 右移</li>
-<li>&lt;&lt; 左移</li>
-</ul>
-]]></content>
-      <categories>
-        <category>进制与编码</category>
-      </categories>
-      <tags>
-        <tag>编码</tag>
-        <tag>进制</tag>
-      </tags>
-  </entry>
-  <entry>
     <title></title>
     <url>/2024/01/11/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E5%B8%B8%E7%94%A8%E7%9A%84%E5%8D%8F%E8%AE%AE/</url>
     <content><![CDATA[<p><a href="https://www.cfmem.com/2021/08/vmess-trojan-shadowsocks.html">科学上网常见协议解析 vmess, trojan, shadowsocks 内容解析</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>网络线路</title>
+    <url>/2022/09/16/%E7%BD%91%E7%BB%9C%E7%BA%BF%E8%B7%AF/</url>
+    <content><![CDATA[<h1 id="租服务器时遇到的CN2，GIA，CIA，BGP以及IPLC都是什么意思？"><a href="#租服务器时遇到的CN2，GIA，CIA，BGP以及IPLC都是什么意思？" class="headerlink" title="租服务器时遇到的CN2，GIA，CIA，BGP以及IPLC都是什么意思？"></a><a href="https://zhuanlan.zhihu.com/p/356646013">租服务器时遇到的CN2，GIA，CIA，BGP以及IPLC都是什么意思？</a></h1>]]></content>
   </entry>
   <entry>
     <title></title>
@@ -1016,11 +1021,6 @@ dnf makecache
     <title>视频编码</title>
     <url>/2022/09/16/%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/</url>
     <content><![CDATA[<h1 id="AV1-VS-HEVC-VS-VP9"><a href="#AV1-VS-HEVC-VS-VP9" class="headerlink" title="AV1 VS HEVC VS VP9"></a><a href="https://zhuanlan.zhihu.com/p/50665570">AV1 VS HEVC VS VP9</a></h1><h1 id="ffmpeg怎么实现视频的无损编码"><a href="#ffmpeg怎么实现视频的无损编码" class="headerlink" title="ffmpeg怎么实现视频的无损编码"></a><a href="https://www.zhihu.com/question/66694602/answer/2407223429">ffmpeg怎么实现视频的无损编码</a></h1>]]></content>
-  </entry>
-  <entry>
-    <title>网络线路</title>
-    <url>/2022/09/16/%E7%BD%91%E7%BB%9C%E7%BA%BF%E8%B7%AF/</url>
-    <content><![CDATA[<h1 id="租服务器时遇到的CN2，GIA，CIA，BGP以及IPLC都是什么意思？"><a href="#租服务器时遇到的CN2，GIA，CIA，BGP以及IPLC都是什么意思？" class="headerlink" title="租服务器时遇到的CN2，GIA，CIA，BGP以及IPLC都是什么意思？"></a><a href="https://zhuanlan.zhihu.com/p/356646013">租服务器时遇到的CN2，GIA，CIA，BGP以及IPLC都是什么意思？</a></h1>]]></content>
   </entry>
   <entry>
     <title>数据库SQL语言</title>
@@ -1168,24 +1168,51 @@ dnf makecache
       </tags>
   </entry>
   <entry>
-    <title>Kubernetes</title>
-    <url>/2022/07/17/database/kubernetes/</url>
-    <content><![CDATA[<h1 id="Kubernetes镜像"><a href="#Kubernetes镜像" class="headerlink" title="Kubernetes镜像"></a>Kubernetes镜像</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Kubernetes是一个开源系统，用于容器化应用的自动部署、扩缩和管理。它将构成应用的容器按逻辑单位进行分组以便于管理和发现。</p>
-<p>下载地址：<a href="https://mirrors.aliyun.com/kubernetes/">https://mirrors.aliyun.com/kubernetes/</a></p>
-<h2 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h2><h3 id="Debian-Ubuntu"><a href="#Debian-Ubuntu" class="headerlink" title="Debian &#x2F; Ubuntu"></a>Debian &#x2F; Ubuntu</h3><figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">apt-<span class="built_in">get</span> <span class="keyword">update</span> &amp;&amp; apt-<span class="built_in">get</span> install -<span class="keyword">y</span> apt-transport-https</span><br><span class="line">curl https://mirrors.aliyun.<span class="keyword">com</span>/kubernetes/apt/doc/apt-key.gpg | apt-key <span class="built_in">add</span> - </span><br><span class="line"><span class="keyword">cat</span> &lt;&lt;EOF &gt;/etc/apt/sources.<span class="keyword">list</span>.d/kubernetes.<span class="keyword">list</span></span><br><span class="line"><span class="keyword">deb</span> https://mirrors.aliyun.<span class="keyword">com</span>/kubernetes/apt/ kubernetes-xenial main</span><br><span class="line">EOF</span><br><span class="line">apt-<span class="built_in">get</span> <span class="keyword">update</span></span><br><span class="line">apt-<span class="built_in">get</span> install -<span class="keyword">y</span> kubelet kubeadm kubectl</span><br></pre></td></tr></table></figure>
+    <title>docker的基本命令</title>
+    <url>/2022/06/27/database/docker%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h2 id="Docker的常用命令"><a href="#Docker的常用命令" class="headerlink" title="Docker的常用命令"></a>Docker的常用命令</h2><h3 id="一、帮助命令"><a href="#一、帮助命令" class="headerlink" title="一、帮助命令"></a>一、帮助命令</h3><hr>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker version # 显示docker的版本</span><br><span class="line">docker info </span><br><span class="line">docker 命令 --help # 万能命令</span><br></pre></td></tr></table></figure>
 
-<h3 id="CentOS-RHEL-Fedora"><a href="#CentOS-RHEL-Fedora" class="headerlink" title="CentOS &#x2F; RHEL &#x2F; Fedora"></a>CentOS &#x2F; RHEL &#x2F; Fedora</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">cat &lt;&lt;EOF &gt; <span class="regexp">/etc/yum</span>.repos.d/kubernetes.repo</span><br><span class="line">[kubernetes]</span><br><span class="line">name=Kubernetes</span><br><span class="line">baseurl=https:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/kubernetes/yum</span><span class="regexp">/repos/</span>kubernetes-el7-x86_64/</span><br><span class="line">enabled=<span class="number">1</span></span><br><span class="line">gpgcheck=<span class="number">1</span></span><br><span class="line">repo_gpgcheck=<span class="number">1</span></span><br><span class="line">gpgkey=https:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/kubernetes/yum</span><span class="regexp">/doc/yum</span>-key.gpg https:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/kubernetes/yum</span><span class="regexp">/doc/</span>rpm-package-key.gpg</span><br><span class="line">EOF</span><br><span class="line">setenforce <span class="number">0</span></span><br><span class="line">yum install -y kubelet kubeadm kubectl</span><br><span class="line">systemctl enable kubelet &amp;&amp; systemctl start kubelet</span><br></pre></td></tr></table></figure>
+<h3 id="二、镜像命令"><a href="#二、镜像命令" class="headerlink" title="二、镜像命令"></a>二、镜像命令</h3><hr>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看镜像</span></span><br><span class="line">docker images  # 列出所有镜像</span><br><span class="line">docker images -a</span><br><span class="line">docker images -aq # 只显示镜像id</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">搜索镜像</span></span><br><span class="line">docker search --filter=STARS=3000 #搜索镜像star大于3000</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">下载镜像</span></span><br><span class="line">docker pull 镜像[:tag] # 如果不写tag 默认是 latest</span><br><span class="line">[root@localhost ~]# docker pull mysql</span><br><span class="line">Using default tag: latest</span><br><span class="line">latest: Pulling from library/mysql</span><br><span class="line">72a69066d2fe: Pull complete  # 分层下载，docker image的核心 联合文件系统</span><br><span class="line">93619dbc5b36: Pull complete </span><br><span class="line">99da31dd6142: Pull complete </span><br><span class="line">626033c43d70: Pull complete </span><br><span class="line">37d5d7efb64e: Pull complete </span><br><span class="line">ac563158d721: Pull complete </span><br><span class="line">d2ba16033dad: Pull complete </span><br><span class="line">688ba7d5c01a: Pull complete </span><br><span class="line">00e060b6d11d: Pull complete </span><br><span class="line">1c04857f594f: Pull complete </span><br><span class="line">4d7cfa90e6ea: Pull complete </span><br><span class="line">e0431212d27d: Pull complete </span><br><span class="line">Digest: sha256:e9027fe4d91c0153429607251656806cc784e914937271037f7738bd5b8e7709 #签名</span><br><span class="line">Status: Downloaded newer image for mysql:latest</span><br><span class="line">docker.io/library/mysql:latest #真实地址</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">删除镜像</span></span><br><span class="line">docker rmi -f 容器id # 删除指定的镜像</span><br><span class="line">docker rmi -f 容器id 容器id 容器id # 删除多个的镜像</span><br><span class="line">docker rmi -f $(docker images -aq) # 删除全部镜像</span><br></pre></td></tr></table></figure>
 
-<p>ps: 由于官网未开放同步方式, 可能会有索引gpg检查失败的情况, 这时请用 <code>yum install -y --nogpgcheck kubelet kubeadm kubectl</code> 安装</p>
-<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ul>
-<li>官方主页：<a href="https://kubernetes.io/">https://kubernetes.io/</a></li>
-</ul>
+<h3 id="三、容器命令"><a href="#三、容器命令" class="headerlink" title="三、容器命令"></a>三、容器命令</h3><h4 id="新建容器并启动"><a href="#新建容器并启动" class="headerlink" title="新建容器并启动"></a>新建容器并启动</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run [可选参数] image</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">参数说明</span></span><br><span class="line">--name=&quot;Name&quot; 容器名字 tomcat01 tomcat02 用来区分容器</span><br><span class="line">-d 后台运行方式</span><br><span class="line">-it 使用交互式运行 进入容器查看内容</span><br><span class="line">-p 指定容器的端口 -p 8080:8080</span><br><span class="line">	—P 主机端口：容器端口 </span><br><span class="line">	-p 容器端口</span><br><span class="line">	容器端口</span><br><span class="line">-P 随机端口</span><br></pre></td></tr></table></figure>
+
+<h4 id="列出所有的运行的容器"><a href="#列出所有的运行的容器" class="headerlink" title="列出所有的运行的容器"></a>列出所有的运行的容器</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">docker ps 命令</span></span><br><span class="line"><span class="meta prompt_">   # </span><span class="language-bash">列出当前正在运行的容器</span></span><br><span class="line">-a # 列出当前正在运行的容器+带历史运行过的容器</span><br><span class="line">-n=? # 最近创建过的容器</span><br><span class="line">-q # 只显示容器的编号</span><br><span class="line">[root@localhost ~]# docker ps</span><br><span class="line">CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES</span><br><span class="line">[root@localhost ~]# docker ps -aq</span><br><span class="line">1a8af1ce6330</span><br><span class="line">[root@localhost ~]# docker ps -a</span><br><span class="line">CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS                            PORTS     NAMES</span><br><span class="line">1a8af1ce6330   centos    &quot;/bin/bash&quot;   12 minutes ago   Exited (127) About a minute ago             zealous_bartik</span><br></pre></td></tr></table></figure>
+
+<h4 id="退出容器"><a href="#退出容器" class="headerlink" title="退出容器"></a>退出容器</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">exit #直接容器停止并退出</span><br><span class="line">Ctrl + P + Q #容器不停止退出</span><br></pre></td></tr></table></figure>
+
+<h4 id="删除容器"><a href="#删除容器" class="headerlink" title="删除容器"></a>删除容器</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker rm 容器id       			# 删除指定容器</span><br><span class="line">docker rm -f $(docker ps -aq)	 # 删除全部容器</span><br><span class="line">docker ps -a -q|xargs docker run # 删除全部容器（linux命令）</span><br></pre></td></tr></table></figure>
+
+<h4 id="启动和停止容器的操作"><a href="#启动和停止容器的操作" class="headerlink" title="启动和停止容器的操作"></a>启动和停止容器的操作</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker start 容器id</span><br><span class="line">docker restart 容器id</span><br><span class="line">docker stop 容器id</span><br><span class="line">docker kill 容器id</span><br></pre></td></tr></table></figure>
+
+<h3 id="四、常用其他命令"><a href="#四、常用其他命令" class="headerlink" title="四、常用其他命令"></a>四、常用其他命令</h3><h5 id="后台启动容器"><a href="#后台启动容器" class="headerlink" title="后台启动容器"></a>后台启动容器</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">docker run -d 镜像名</span></span><br><span class="line">[root@localhost ~]# docker run -d centos</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">问题docker ps ，发现 centos 停止了</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">常见的坑， docker 容器使用后台运行，就必须要有一个前台进程，docker 发现没有应用，就会自动停止</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">nginx 容器启动后，发现自己没有提供服务，就会立刻停止，就是没有程序了</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker logs</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">自己编写一段shell脚本</span></span><br><span class="line">[root@localhost ~]# docker run -d centos /bin/sh -c &quot;while true; do echo test;sleep 1;done&quot;</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看当前在运行的容器</span></span><br><span class="line">[root@localhost ~]# docker ps</span><br><span class="line">CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS     NAMES</span><br><span class="line">9916a0298bfd   centos    &quot;/bin/sh -c &#x27;while t…&quot;   19 seconds ago   Up 18 seconds             condescending_curie</span><br><span class="line">113e7bdad55e   centos    &quot;/bin/bash&quot;              12 minutes ago   Up 12 minutes             serene_pasteur</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">显示日志</span></span><br><span class="line">-tf </span><br><span class="line">--tail number # 要显示日志的条数</span><br><span class="line">[root@localhost ~]# docker logs -f -t --tail 10  113e7bdad55e</span><br></pre></td></tr></table></figure>
+
+<h5 id="查看容器中进程信息"><a href="#查看容器中进程信息" class="headerlink" title="查看容器中进程信息"></a>查看容器中进程信息</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">命令 docker top 容器<span class="built_in">id</span></span></span><br><span class="line">[root@localhost ~]# docker top 9916a0298bfd</span><br><span class="line">UID                 PID                 PPID                C                   STIME     </span><br><span class="line">root                180675              180655              0                   20:05      root                183113              180675              0                   20:44     </span><br></pre></td></tr></table></figure>
+
+<h5 id="查看镜像的元数据"><a href="#查看镜像的元数据" class="headerlink" title="查看镜像的元数据"></a>查看镜像的元数据</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">命令 docker inspect 容器<span class="built_in">id</span></span></span><br><span class="line">[root@localhost ~]# docker inspect 9916a0298bfd </span><br><span class="line">[</span><br><span class="line">    &#123;</span><br><span class="line">        &quot;Id&quot;: &quot;9916a0298bfd3fb37d142bdd8bc056a5c943f8aa3c08bc7e1bb75081ee2a3ed0&quot;,</span><br><span class="line">        &quot;Created&quot;: &quot;2022-03-23T00:05:18.49632074Z&quot;,</span><br><span class="line">        &quot;Path&quot;: &quot;/bin/sh&quot;,</span><br><span class="line">        &quot;Args&quot;: [</span><br><span class="line">            &quot;-c&quot;,</span><br><span class="line">            &quot;while true; do echo test;sleep 1;done&quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;State&quot;: &#123;</span><br><span class="line">            &quot;Status&quot;: &quot;running&quot;,</span><br><span class="line">            &quot;Running&quot;: true,</span><br><span class="line">            &quot;Paused&quot;: false,</span><br><span class="line">            &quot;Restarting&quot;: false,</span><br><span class="line">            &quot;OOMKilled&quot;: false,</span><br><span class="line">            &quot;Dead&quot;: false,</span><br><span class="line">            &quot;Pid&quot;: 180675,</span><br><span class="line">            &quot;ExitCode&quot;: 0,</span><br><span class="line">            &quot;Error&quot;: &quot;&quot;,</span><br><span class="line">            &quot;StartedAt&quot;: &quot;2022-03-23T00:05:19.263635448Z&quot;,</span><br><span class="line">            &quot;FinishedAt&quot;: &quot;0001-01-01T00:00:00Z&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;Image&quot;: &quot;sha256:5d0da3dc976460b72c77d94c8a1ad043720b0416bfc16c52c45d4847e53fadb6&quot;,</span><br><span class="line">        &quot;ResolvConfPath&quot;: &quot;/var/lib/docker/containers/9916a0298bfd3fb37d142bdd8bc056a5c943f8aa3c08bc7e1bb75081ee2a3ed0/resolv.conf&quot;,</span><br><span class="line">        &quot;HostnamePath&quot;: &quot;/var/lib/docker/containers/9916a0298bfd3fb37d142bdd8bc056a5c943f8aa3c08bc7e1bb75081ee2a3ed0/hostname&quot;,</span><br><span class="line">        &quot;HostsPath&quot;: &quot;/var/lib/docker/containers/9916a0298bfd3fb37d142bdd8bc056a5c943f8aa3c08bc7e1bb75081ee2a3ed0/hosts&quot;,</span><br><span class="line">        &quot;LogPath&quot;: &quot;/var/lib/docker/containers/9916a0298bfd3fb37d142bdd8bc056a5c943f8aa3c08bc7e1bb75081ee2a3ed0/9916a0298bfd3fb37d142bdd8bc056a5c943f8aa3c08bc7e1bb75081ee2a3ed0-json.log&quot;,</span><br><span class="line">        &quot;Name&quot;: &quot;/condescending_curie&quot;,</span><br><span class="line">        &quot;RestartCount&quot;: 0,</span><br><span class="line">        &quot;Driver&quot;: &quot;overlay2&quot;,</span><br><span class="line">        &quot;Platform&quot;: &quot;linux&quot;,</span><br><span class="line">        &quot;MountLabel&quot;: &quot;&quot;,</span><br><span class="line">        &quot;ProcessLabel&quot;: &quot;&quot;,</span><br><span class="line">        &quot;AppArmorProfile&quot;: &quot;&quot;,</span><br><span class="line">        &quot;ExecIDs&quot;: null,</span><br><span class="line">        &quot;HostConfig&quot;: &#123;</span><br><span class="line">            &quot;Binds&quot;: null,</span><br><span class="line">            &quot;ContainerIDFile&quot;: &quot;&quot;,</span><br><span class="line">            &quot;LogConfig&quot;: &#123;</span><br><span class="line">                &quot;Type&quot;: &quot;json-file&quot;,</span><br><span class="line">                &quot;Config&quot;: &#123;&#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;NetworkMode&quot;: &quot;default&quot;,</span><br><span class="line">            &quot;PortBindings&quot;: &#123;&#125;,</span><br><span class="line">            &quot;RestartPolicy&quot;: &#123;</span><br><span class="line">                &quot;Name&quot;: &quot;no&quot;,</span><br><span class="line">                &quot;MaximumRetryCount&quot;: 0</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;AutoRemove&quot;: false,</span><br><span class="line">            &quot;VolumeDriver&quot;: &quot;&quot;,</span><br><span class="line">            &quot;VolumesFrom&quot;: null,</span><br><span class="line">            &quot;CapAdd&quot;: null,</span><br><span class="line">            &quot;CapDrop&quot;: null,</span><br><span class="line">            &quot;CgroupnsMode&quot;: &quot;host&quot;,</span><br><span class="line">            &quot;Dns&quot;: [],</span><br><span class="line">            &quot;DnsOptions&quot;: [],</span><br><span class="line">            &quot;DnsSearch&quot;: [],</span><br><span class="line">            &quot;ExtraHosts&quot;: null,</span><br><span class="line">            &quot;GroupAdd&quot;: null,</span><br><span class="line">            &quot;IpcMode&quot;: &quot;private&quot;,</span><br><span class="line">            &quot;Cgroup&quot;: &quot;&quot;,</span><br><span class="line">            &quot;Links&quot;: null,</span><br><span class="line">            &quot;OomScoreAdj&quot;: 0,</span><br><span class="line">            &quot;PidMode&quot;: &quot;&quot;,</span><br><span class="line">            &quot;Privileged&quot;: false,</span><br><span class="line">            &quot;PublishAllPorts&quot;: false,</span><br><span class="line">            &quot;ReadonlyRootfs&quot;: false,</span><br><span class="line">            &quot;SecurityOpt&quot;: null,</span><br><span class="line">            &quot;UTSMode&quot;: &quot;&quot;,</span><br><span class="line">            &quot;UsernsMode&quot;: &quot;&quot;,</span><br><span class="line">            &quot;ShmSize&quot;: 67108864,</span><br><span class="line">            &quot;Runtime&quot;: &quot;runc&quot;,</span><br><span class="line">            &quot;ConsoleSize&quot;: [</span><br><span class="line">                0,</span><br><span class="line">                0</span><br><span class="line">            ],</span><br><span class="line">            &quot;Isolation&quot;: &quot;&quot;,</span><br><span class="line">            &quot;CpuShares&quot;: 0,</span><br><span class="line">            &quot;Memory&quot;: 0,</span><br><span class="line">            &quot;NanoCpus&quot;: 0,</span><br><span class="line">            &quot;CgroupParent&quot;: &quot;&quot;,</span><br><span class="line">            &quot;BlkioWeight&quot;: 0,</span><br><span class="line">            &quot;BlkioWeightDevice&quot;: [],</span><br><span class="line">            &quot;BlkioDeviceReadBps&quot;: null,</span><br><span class="line">            &quot;BlkioDeviceWriteBps&quot;: null,</span><br><span class="line">            &quot;BlkioDeviceReadIOps&quot;: null,</span><br><span class="line">            &quot;BlkioDeviceWriteIOps&quot;: null,</span><br><span class="line">            &quot;CpuPeriod&quot;: 0,</span><br><span class="line">            &quot;CpuQuota&quot;: 0,</span><br><span class="line">            &quot;CpuRealtimePeriod&quot;: 0,</span><br><span class="line">            &quot;CpuRealtimeRuntime&quot;: 0,</span><br><span class="line">            &quot;CpusetCpus&quot;: &quot;&quot;,</span><br><span class="line">            &quot;CpusetMems&quot;: &quot;&quot;,</span><br><span class="line">            &quot;Devices&quot;: [],</span><br><span class="line">            &quot;DeviceCgroupRules&quot;: null,</span><br><span class="line">            &quot;DeviceRequests&quot;: null,</span><br><span class="line">            &quot;KernelMemory&quot;: 0,</span><br><span class="line">            &quot;KernelMemoryTCP&quot;: 0,</span><br><span class="line">            &quot;MemoryReservation&quot;: 0,</span><br><span class="line">            &quot;MemorySwap&quot;: 0,</span><br><span class="line">            &quot;MemorySwappiness&quot;: null,</span><br><span class="line">            &quot;OomKillDisable&quot;: false,</span><br><span class="line">            &quot;PidsLimit&quot;: null,</span><br><span class="line">            &quot;Ulimits&quot;: null,</span><br><span class="line">            &quot;CpuCount&quot;: 0,</span><br><span class="line">            &quot;CpuPercent&quot;: 0,</span><br><span class="line">            &quot;IOMaximumIOps&quot;: 0,</span><br><span class="line">            &quot;IOMaximumBandwidth&quot;: 0,</span><br><span class="line">            &quot;MaskedPaths&quot;: [</span><br><span class="line">                &quot;/proc/asound&quot;,</span><br><span class="line">                &quot;/proc/acpi&quot;,</span><br><span class="line">                &quot;/proc/kcore&quot;,</span><br><span class="line">                &quot;/proc/keys&quot;,</span><br><span class="line">                &quot;/proc/latency_stats&quot;,</span><br><span class="line">                &quot;/proc/timer_list&quot;,</span><br><span class="line">                &quot;/proc/timer_stats&quot;,</span><br><span class="line">                &quot;/proc/sched_debug&quot;,</span><br><span class="line">                &quot;/proc/scsi&quot;,</span><br><span class="line">                &quot;/sys/firmware&quot;</span><br><span class="line">            ],</span><br><span class="line">            &quot;ReadonlyPaths&quot;: [</span><br><span class="line">                &quot;/proc/bus&quot;,</span><br><span class="line">                &quot;/proc/fs&quot;,</span><br><span class="line">                &quot;/proc/irq&quot;,</span><br><span class="line">                &quot;/proc/sys&quot;,</span><br><span class="line">                &quot;/proc/sysrq-trigger&quot;</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;GraphDriver&quot;: &#123;</span><br><span class="line">            &quot;Data&quot;: &#123;</span><br><span class="line">                &quot;LowerDir&quot;: &quot;/var/lib/docker/overlay2/2db2e17cdb47f8a05997664e4e31dc8f59b611e2d23388bc52b56c4407d27cc3-init/diff:/var/lib/docker/overlay2/e75ba16da0fef020c7930a9b6190dbd33a83a8324702c144c689c5cd4e323146/diff&quot;,</span><br><span class="line">                &quot;MergedDir&quot;: &quot;/var/lib/docker/overlay2/2db2e17cdb47f8a05997664e4e31dc8f59b611e2d23388bc52b56c4407d27cc3/merged&quot;,</span><br><span class="line">                &quot;UpperDir&quot;: &quot;/var/lib/docker/overlay2/2db2e17cdb47f8a05997664e4e31dc8f59b611e2d23388bc52b56c4407d27cc3/diff&quot;,</span><br><span class="line">                &quot;WorkDir&quot;: &quot;/var/lib/docker/overlay2/2db2e17cdb47f8a05997664e4e31dc8f59b611e2d23388bc52b56c4407d27cc3/work&quot;</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;Name&quot;: &quot;overlay2&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;Mounts&quot;: [],</span><br><span class="line">        &quot;Config&quot;: &#123;</span><br><span class="line">            &quot;Hostname&quot;: &quot;9916a0298bfd&quot;,</span><br><span class="line">            &quot;Domainname&quot;: &quot;&quot;,</span><br><span class="line">            &quot;User&quot;: &quot;&quot;,</span><br><span class="line">            &quot;AttachStdin&quot;: false,</span><br><span class="line">            &quot;AttachStdout&quot;: false,</span><br><span class="line">            &quot;AttachStderr&quot;: false,</span><br><span class="line">            &quot;Tty&quot;: false,</span><br><span class="line">            &quot;OpenStdin&quot;: false,</span><br><span class="line">            &quot;StdinOnce&quot;: false,</span><br><span class="line">            &quot;Env&quot;: [</span><br><span class="line">                &quot;PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;</span><br><span class="line">            ],</span><br><span class="line">            &quot;Cmd&quot;: [</span><br><span class="line">                &quot;/bin/sh&quot;,</span><br><span class="line">                &quot;-c&quot;,</span><br><span class="line">                &quot;while true; do echo test;sleep 1;done&quot;</span><br><span class="line">            ],</span><br><span class="line">            &quot;Image&quot;: &quot;centos&quot;,</span><br><span class="line">            &quot;Volumes&quot;: null,</span><br><span class="line">            &quot;WorkingDir&quot;: &quot;&quot;,</span><br><span class="line">            &quot;Entrypoint&quot;: null,</span><br><span class="line">            &quot;OnBuild&quot;: null,</span><br><span class="line">            &quot;Labels&quot;: &#123;</span><br><span class="line">                &quot;org.label-schema.build-date&quot;: &quot;20210915&quot;,</span><br><span class="line">                &quot;org.label-schema.license&quot;: &quot;GPLv2&quot;,</span><br><span class="line">                &quot;org.label-schema.name&quot;: &quot;CentOS Base Image&quot;,</span><br><span class="line">                &quot;org.label-schema.schema-version&quot;: &quot;1.0&quot;,</span><br><span class="line">                &quot;org.label-schema.vendor&quot;: &quot;CentOS&quot;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;NetworkSettings&quot;: &#123;</span><br><span class="line">            &quot;Bridge&quot;: &quot;&quot;,</span><br><span class="line">            &quot;SandboxID&quot;: &quot;f28f51fd2c85ab7e8ba88827ec901c9ef4b517428747bd1cdf5196810db622c7&quot;,</span><br><span class="line">            &quot;HairpinMode&quot;: false,</span><br><span class="line">            &quot;LinkLocalIPv6Address&quot;: &quot;&quot;,</span><br><span class="line">            &quot;LinkLocalIPv6PrefixLen&quot;: 0,</span><br><span class="line">            &quot;Ports&quot;: &#123;&#125;,</span><br><span class="line">            &quot;SandboxKey&quot;: &quot;/var/run/docker/netns/f28f51fd2c85&quot;,</span><br><span class="line">            &quot;SecondaryIPAddresses&quot;: null,</span><br><span class="line">            &quot;SecondaryIPv6Addresses&quot;: null,</span><br><span class="line">            &quot;EndpointID&quot;: &quot;41b020afb72dc9602f5a030e56d816692170c2f0427377829da822e62976732a&quot;,</span><br><span class="line">            &quot;Gateway&quot;: &quot;172.17.0.1&quot;,</span><br><span class="line">            &quot;GlobalIPv6Address&quot;: &quot;&quot;,</span><br><span class="line">            &quot;GlobalIPv6PrefixLen&quot;: 0,</span><br><span class="line">            &quot;IPAddress&quot;: &quot;172.17.0.3&quot;,</span><br><span class="line">            &quot;IPPrefixLen&quot;: 16,</span><br><span class="line">            &quot;IPv6Gateway&quot;: &quot;&quot;,</span><br><span class="line">            &quot;MacAddress&quot;: &quot;02:42:ac:11:00:03&quot;,</span><br><span class="line">            &quot;Networks&quot;: &#123;</span><br><span class="line">                &quot;bridge&quot;: &#123;</span><br><span class="line">                    &quot;IPAMConfig&quot;: null,</span><br><span class="line">                    &quot;Links&quot;: null,</span><br><span class="line">                    &quot;Aliases&quot;: null,</span><br><span class="line">                    &quot;NetworkID&quot;: &quot;d91d646c67beba9f1d4aa5cfa191bad1f24cf153ae1c6e3a37cf34599502a27f&quot;,</span><br><span class="line">                    &quot;EndpointID&quot;: &quot;41b020afb72dc9602f5a030e56d816692170c2f0427377829da822e62976732a&quot;,</span><br><span class="line">                    &quot;Gateway&quot;: &quot;172.17.0.1&quot;,</span><br><span class="line">                    &quot;IPAddress&quot;: &quot;172.17.0.3&quot;,</span><br><span class="line">                    &quot;IPPrefixLen&quot;: 16,</span><br><span class="line">                    &quot;IPv6Gateway&quot;: &quot;&quot;,</span><br><span class="line">                    &quot;GlobalIPv6Address&quot;: &quot;&quot;,</span><br><span class="line">                    &quot;GlobalIPv6PrefixLen&quot;: 0,</span><br><span class="line">                    &quot;MacAddress&quot;: &quot;02:42:ac:11:00:03&quot;,</span><br><span class="line">                    &quot;DriverOpts&quot;: null</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<h5 id="进入当前正在运行的容器"><a href="#进入当前正在运行的容器" class="headerlink" title="进入当前正在运行的容器"></a>进入当前正在运行的容器</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">我们通常容器都是使用后台方式运行的，需要进入容器，修改一些配置</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">命令</span></span><br><span class="line">docker exec -it 容器id bashShell</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">测试</span></span><br><span class="line">[root@localhost ~]# docker ps</span><br><span class="line">CONTAINER ID   IMAGE     COMMAND                  CREATED             STATUS             PORTS     NAMES</span><br><span class="line">9916a0298bfd   centos    &quot;/bin/sh -c &#x27;while t…&quot;   About an hour ago   Up About an hour             condescending_curie</span><br><span class="line">113e7bdad55e   centos    &quot;/bin/bash&quot;              About an hour ago   Up About an hour             serene_pasteur</span><br><span class="line">[root@localhost ~]# docker exec -it 9916a0298bfd /bin/bash</span><br><span class="line">[root@9916a0298bfd /]# ps -ef</span><br><span class="line">UID          PID    PPID  C STIME TTY          TIME CMD</span><br><span class="line">root           1       0  0 00:05 ?        00:00:01 /bin/sh -c while true; do echo test;sleep 1;done</span><br><span class="line">root        4061       0  0 01:12 pts/0    00:00:00 /bin/bash</span><br><span class="line">root        4088       1  0 01:12 ?        00:00:00 /usr/bin/coreutils --coreutils-prog-shebang=sleep /usr/bin/sleep 1</span><br><span class="line">root        4089    4061  0 01:12 pts/0    00:00:00 ps -ef</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">方式二</span></span><br><span class="line">docker attach 容器id</span><br><span class="line">正在执行当前的代码...</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">docker <span class="built_in">exec</span>     <span class="comment"># 进入容器后开启一个新的终端，可以在里面操作（常用）</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">docker attach	  <span class="comment"># 进入容器正在执行的终端，不会启动新的进程</span></span></span><br></pre></td></tr></table></figure>
+
+<h5 id="从容器内烤贝文件到主机上"><a href="#从容器内烤贝文件到主机上" class="headerlink" title="从容器内烤贝文件到主机上"></a>从容器内烤贝文件到主机上</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">docker cp  b4bb1f3f7685:/home/test.java /home</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">进入docker容器内</span></span><br><span class="line">[root@b4bb1f3f7685 /]# cd /home</span><br><span class="line">[root@b4bb1f3f7685 home]# ls</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建java文件</span></span><br><span class="line">[root@b4bb1f3f7685 home]# touch test.java</span><br><span class="line">[root@b4bb1f3f7685 home]# ls</span><br><span class="line">test.java</span><br><span class="line">[root@b4bb1f3f7685 home]# exit</span><br><span class="line">exit</span><br><span class="line">docker cp 容器id:容器内部路径 目的的主路径</span><br><span class="line">[root@localhost home]# docker cp  b4bb1f3f7685:/home/test.java /home</span><br><span class="line">[root@localhost home]# ls</span><br><span class="line">shawn  test.java</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="五、安装服务器软件"><a href="#五、安装服务器软件" class="headerlink" title="五、安装服务器软件"></a>五、安装服务器软件</h3><h5 id="安装Tomcat"><a href="#安装Tomcat" class="headerlink" title="安装Tomcat"></a>安装Tomcat</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 官方的使用</span></span><br><span class="line">docker run -it --<span class="built_in">rm</span> tomcat:9.0</span><br><span class="line"><span class="comment"># 我们之前的启动都是后台，停止了容器之后，容器还是可以查到 docker run -it --rm 一般用来测试，用完就删除</span></span><br><span class="line"><span class="comment">#下载在启动</span></span><br><span class="line">docker pull tomcat:9.0</span><br></pre></td></tr></table></figure>
+
+<h5 id="安装es-kibana"><a href="#安装es-kibana" class="headerlink" title="安装es+kibana"></a>安装es+kibana</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">es 暴露的端口很多</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">es 十分的耗内存</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">es 的数据一般需要放置到安全目录 挂载</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">--net somenetwork 网路配置</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动 elasticsearch</span></span><br><span class="line">[root@localhost ~]# docker run -d --name elasticsearch01 -p 9200:9200 -p 9300:9300 -e &quot;discovery.type=single-node&quot; elasticsearch:7.6.2</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动了 linux就卡住了 docker stats 查看cpu的状态</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">es 是十分耗内存的 1.xG   1核2G</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看 docker stats</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">测试一下es是否成功了</span></span><br><span class="line">[root@localhost ~]# curl localhost:9200</span><br><span class="line">&#123;</span><br><span class="line">  &quot;name&quot; : &quot;6620e2b536c4&quot;,</span><br><span class="line">  &quot;cluster_name&quot; : &quot;docker-cluster&quot;,</span><br><span class="line">  &quot;cluster_uuid&quot; : &quot;9i4LLjxvTVKf46Hp1qHkqA&quot;,</span><br><span class="line">  &quot;version&quot; : &#123;</span><br><span class="line">    &quot;number&quot; : &quot;7.6.2&quot;,</span><br><span class="line">    &quot;build_flavor&quot; : &quot;default&quot;,</span><br><span class="line">    &quot;build_type&quot; : &quot;docker&quot;,</span><br><span class="line">    &quot;build_hash&quot; : &quot;ef48eb35cf30adf4db14086e8aabd07ef6fb113f&quot;,</span><br><span class="line">    &quot;build_date&quot; : &quot;2020-03-26T06:34:37.794943Z&quot;,</span><br><span class="line">    &quot;build_snapshot&quot; : false,</span><br><span class="line">    &quot;lucene_version&quot; : &quot;8.4.0&quot;,</span><br><span class="line">    &quot;minimum_wire_compatibility_version&quot; : &quot;6.8.0&quot;,</span><br><span class="line">    &quot;minimum_index_compatibility_version&quot; : &quot;6.0.0-beta1&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;tagline&quot; : &quot;You Know, for Search&quot;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">赶紧关闭，增加内存的限制,修改配置文件 -e 环境配置修改</span></span><br><span class="line">docker run -d --name elasticsearch02 -p 9200:9200 -p 9300:9300 -e ES_JAVA_OPTS=&quot;-Xms64m -Xmx512m&quot; -e &quot;discovery.type=single-node&quot; elasticsearch:7.6.2</span><br></pre></td></tr></table></figure>
+
+<h5 id="可视化"><a href="#可视化" class="headerlink" title="可视化"></a>可视化</h5><blockquote>
+<p>docker 图形化界面管理工具！提供一个后台供我们操作</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@localhost ~]# docker run -d -p 8090:9000 --restart=always -v /var/run/docker.sock:/var/run/docker.sock --privileged=true portainer/portainer</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
-        <category>container</category>
+        <category>docker</category>
       </categories>
       <tags>
-        <tag>kubernetes</tag>
+        <tag>docker的基本命令</tag>
       </tags>
   </entry>
   <entry>
@@ -1254,51 +1281,24 @@ dnf makecache
       </tags>
   </entry>
   <entry>
-    <title>docker的基本命令</title>
-    <url>/2022/06/27/database/docker%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h2 id="Docker的常用命令"><a href="#Docker的常用命令" class="headerlink" title="Docker的常用命令"></a>Docker的常用命令</h2><h3 id="一、帮助命令"><a href="#一、帮助命令" class="headerlink" title="一、帮助命令"></a>一、帮助命令</h3><hr>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker version # 显示docker的版本</span><br><span class="line">docker info </span><br><span class="line">docker 命令 --help # 万能命令</span><br></pre></td></tr></table></figure>
+    <title>Kubernetes</title>
+    <url>/2022/07/17/database/kubernetes/</url>
+    <content><![CDATA[<h1 id="Kubernetes镜像"><a href="#Kubernetes镜像" class="headerlink" title="Kubernetes镜像"></a>Kubernetes镜像</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Kubernetes是一个开源系统，用于容器化应用的自动部署、扩缩和管理。它将构成应用的容器按逻辑单位进行分组以便于管理和发现。</p>
+<p>下载地址：<a href="https://mirrors.aliyun.com/kubernetes/">https://mirrors.aliyun.com/kubernetes/</a></p>
+<h2 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h2><h3 id="Debian-Ubuntu"><a href="#Debian-Ubuntu" class="headerlink" title="Debian &#x2F; Ubuntu"></a>Debian &#x2F; Ubuntu</h3><figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">apt-<span class="built_in">get</span> <span class="keyword">update</span> &amp;&amp; apt-<span class="built_in">get</span> install -<span class="keyword">y</span> apt-transport-https</span><br><span class="line">curl https://mirrors.aliyun.<span class="keyword">com</span>/kubernetes/apt/doc/apt-key.gpg | apt-key <span class="built_in">add</span> - </span><br><span class="line"><span class="keyword">cat</span> &lt;&lt;EOF &gt;/etc/apt/sources.<span class="keyword">list</span>.d/kubernetes.<span class="keyword">list</span></span><br><span class="line"><span class="keyword">deb</span> https://mirrors.aliyun.<span class="keyword">com</span>/kubernetes/apt/ kubernetes-xenial main</span><br><span class="line">EOF</span><br><span class="line">apt-<span class="built_in">get</span> <span class="keyword">update</span></span><br><span class="line">apt-<span class="built_in">get</span> install -<span class="keyword">y</span> kubelet kubeadm kubectl</span><br></pre></td></tr></table></figure>
 
-<h3 id="二、镜像命令"><a href="#二、镜像命令" class="headerlink" title="二、镜像命令"></a>二、镜像命令</h3><hr>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看镜像</span></span><br><span class="line">docker images  # 列出所有镜像</span><br><span class="line">docker images -a</span><br><span class="line">docker images -aq # 只显示镜像id</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">搜索镜像</span></span><br><span class="line">docker search --filter=STARS=3000 #搜索镜像star大于3000</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">下载镜像</span></span><br><span class="line">docker pull 镜像[:tag] # 如果不写tag 默认是 latest</span><br><span class="line">[root@localhost ~]# docker pull mysql</span><br><span class="line">Using default tag: latest</span><br><span class="line">latest: Pulling from library/mysql</span><br><span class="line">72a69066d2fe: Pull complete  # 分层下载，docker image的核心 联合文件系统</span><br><span class="line">93619dbc5b36: Pull complete </span><br><span class="line">99da31dd6142: Pull complete </span><br><span class="line">626033c43d70: Pull complete </span><br><span class="line">37d5d7efb64e: Pull complete </span><br><span class="line">ac563158d721: Pull complete </span><br><span class="line">d2ba16033dad: Pull complete </span><br><span class="line">688ba7d5c01a: Pull complete </span><br><span class="line">00e060b6d11d: Pull complete </span><br><span class="line">1c04857f594f: Pull complete </span><br><span class="line">4d7cfa90e6ea: Pull complete </span><br><span class="line">e0431212d27d: Pull complete </span><br><span class="line">Digest: sha256:e9027fe4d91c0153429607251656806cc784e914937271037f7738bd5b8e7709 #签名</span><br><span class="line">Status: Downloaded newer image for mysql:latest</span><br><span class="line">docker.io/library/mysql:latest #真实地址</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">删除镜像</span></span><br><span class="line">docker rmi -f 容器id # 删除指定的镜像</span><br><span class="line">docker rmi -f 容器id 容器id 容器id # 删除多个的镜像</span><br><span class="line">docker rmi -f $(docker images -aq) # 删除全部镜像</span><br></pre></td></tr></table></figure>
+<h3 id="CentOS-RHEL-Fedora"><a href="#CentOS-RHEL-Fedora" class="headerlink" title="CentOS &#x2F; RHEL &#x2F; Fedora"></a>CentOS &#x2F; RHEL &#x2F; Fedora</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">cat &lt;&lt;EOF &gt; <span class="regexp">/etc/yum</span>.repos.d/kubernetes.repo</span><br><span class="line">[kubernetes]</span><br><span class="line">name=Kubernetes</span><br><span class="line">baseurl=https:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/kubernetes/yum</span><span class="regexp">/repos/</span>kubernetes-el7-x86_64/</span><br><span class="line">enabled=<span class="number">1</span></span><br><span class="line">gpgcheck=<span class="number">1</span></span><br><span class="line">repo_gpgcheck=<span class="number">1</span></span><br><span class="line">gpgkey=https:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/kubernetes/yum</span><span class="regexp">/doc/yum</span>-key.gpg https:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/kubernetes/yum</span><span class="regexp">/doc/</span>rpm-package-key.gpg</span><br><span class="line">EOF</span><br><span class="line">setenforce <span class="number">0</span></span><br><span class="line">yum install -y kubelet kubeadm kubectl</span><br><span class="line">systemctl enable kubelet &amp;&amp; systemctl start kubelet</span><br></pre></td></tr></table></figure>
 
-<h3 id="三、容器命令"><a href="#三、容器命令" class="headerlink" title="三、容器命令"></a>三、容器命令</h3><h4 id="新建容器并启动"><a href="#新建容器并启动" class="headerlink" title="新建容器并启动"></a>新建容器并启动</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run [可选参数] image</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">参数说明</span></span><br><span class="line">--name=&quot;Name&quot; 容器名字 tomcat01 tomcat02 用来区分容器</span><br><span class="line">-d 后台运行方式</span><br><span class="line">-it 使用交互式运行 进入容器查看内容</span><br><span class="line">-p 指定容器的端口 -p 8080:8080</span><br><span class="line">	—P 主机端口：容器端口 </span><br><span class="line">	-p 容器端口</span><br><span class="line">	容器端口</span><br><span class="line">-P 随机端口</span><br></pre></td></tr></table></figure>
-
-<h4 id="列出所有的运行的容器"><a href="#列出所有的运行的容器" class="headerlink" title="列出所有的运行的容器"></a>列出所有的运行的容器</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">docker ps 命令</span></span><br><span class="line"><span class="meta prompt_">   # </span><span class="language-bash">列出当前正在运行的容器</span></span><br><span class="line">-a # 列出当前正在运行的容器+带历史运行过的容器</span><br><span class="line">-n=? # 最近创建过的容器</span><br><span class="line">-q # 只显示容器的编号</span><br><span class="line">[root@localhost ~]# docker ps</span><br><span class="line">CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES</span><br><span class="line">[root@localhost ~]# docker ps -aq</span><br><span class="line">1a8af1ce6330</span><br><span class="line">[root@localhost ~]# docker ps -a</span><br><span class="line">CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS                            PORTS     NAMES</span><br><span class="line">1a8af1ce6330   centos    &quot;/bin/bash&quot;   12 minutes ago   Exited (127) About a minute ago             zealous_bartik</span><br></pre></td></tr></table></figure>
-
-<h4 id="退出容器"><a href="#退出容器" class="headerlink" title="退出容器"></a>退出容器</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">exit #直接容器停止并退出</span><br><span class="line">Ctrl + P + Q #容器不停止退出</span><br></pre></td></tr></table></figure>
-
-<h4 id="删除容器"><a href="#删除容器" class="headerlink" title="删除容器"></a>删除容器</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker rm 容器id       			# 删除指定容器</span><br><span class="line">docker rm -f $(docker ps -aq)	 # 删除全部容器</span><br><span class="line">docker ps -a -q|xargs docker run # 删除全部容器（linux命令）</span><br></pre></td></tr></table></figure>
-
-<h4 id="启动和停止容器的操作"><a href="#启动和停止容器的操作" class="headerlink" title="启动和停止容器的操作"></a>启动和停止容器的操作</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker start 容器id</span><br><span class="line">docker restart 容器id</span><br><span class="line">docker stop 容器id</span><br><span class="line">docker kill 容器id</span><br></pre></td></tr></table></figure>
-
-<h3 id="四、常用其他命令"><a href="#四、常用其他命令" class="headerlink" title="四、常用其他命令"></a>四、常用其他命令</h3><h5 id="后台启动容器"><a href="#后台启动容器" class="headerlink" title="后台启动容器"></a>后台启动容器</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">docker run -d 镜像名</span></span><br><span class="line">[root@localhost ~]# docker run -d centos</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">问题docker ps ，发现 centos 停止了</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">常见的坑， docker 容器使用后台运行，就必须要有一个前台进程，docker 发现没有应用，就会自动停止</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">nginx 容器启动后，发现自己没有提供服务，就会立刻停止，就是没有程序了</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker logs</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">自己编写一段shell脚本</span></span><br><span class="line">[root@localhost ~]# docker run -d centos /bin/sh -c &quot;while true; do echo test;sleep 1;done&quot;</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看当前在运行的容器</span></span><br><span class="line">[root@localhost ~]# docker ps</span><br><span class="line">CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS     NAMES</span><br><span class="line">9916a0298bfd   centos    &quot;/bin/sh -c &#x27;while t…&quot;   19 seconds ago   Up 18 seconds             condescending_curie</span><br><span class="line">113e7bdad55e   centos    &quot;/bin/bash&quot;              12 minutes ago   Up 12 minutes             serene_pasteur</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">显示日志</span></span><br><span class="line">-tf </span><br><span class="line">--tail number # 要显示日志的条数</span><br><span class="line">[root@localhost ~]# docker logs -f -t --tail 10  113e7bdad55e</span><br></pre></td></tr></table></figure>
-
-<h5 id="查看容器中进程信息"><a href="#查看容器中进程信息" class="headerlink" title="查看容器中进程信息"></a>查看容器中进程信息</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">命令 docker top 容器<span class="built_in">id</span></span></span><br><span class="line">[root@localhost ~]# docker top 9916a0298bfd</span><br><span class="line">UID                 PID                 PPID                C                   STIME     </span><br><span class="line">root                180675              180655              0                   20:05      root                183113              180675              0                   20:44     </span><br></pre></td></tr></table></figure>
-
-<h5 id="查看镜像的元数据"><a href="#查看镜像的元数据" class="headerlink" title="查看镜像的元数据"></a>查看镜像的元数据</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">命令 docker inspect 容器<span class="built_in">id</span></span></span><br><span class="line">[root@localhost ~]# docker inspect 9916a0298bfd </span><br><span class="line">[</span><br><span class="line">    &#123;</span><br><span class="line">        &quot;Id&quot;: &quot;9916a0298bfd3fb37d142bdd8bc056a5c943f8aa3c08bc7e1bb75081ee2a3ed0&quot;,</span><br><span class="line">        &quot;Created&quot;: &quot;2022-03-23T00:05:18.49632074Z&quot;,</span><br><span class="line">        &quot;Path&quot;: &quot;/bin/sh&quot;,</span><br><span class="line">        &quot;Args&quot;: [</span><br><span class="line">            &quot;-c&quot;,</span><br><span class="line">            &quot;while true; do echo test;sleep 1;done&quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;State&quot;: &#123;</span><br><span class="line">            &quot;Status&quot;: &quot;running&quot;,</span><br><span class="line">            &quot;Running&quot;: true,</span><br><span class="line">            &quot;Paused&quot;: false,</span><br><span class="line">            &quot;Restarting&quot;: false,</span><br><span class="line">            &quot;OOMKilled&quot;: false,</span><br><span class="line">            &quot;Dead&quot;: false,</span><br><span class="line">            &quot;Pid&quot;: 180675,</span><br><span class="line">            &quot;ExitCode&quot;: 0,</span><br><span class="line">            &quot;Error&quot;: &quot;&quot;,</span><br><span class="line">            &quot;StartedAt&quot;: &quot;2022-03-23T00:05:19.263635448Z&quot;,</span><br><span class="line">            &quot;FinishedAt&quot;: &quot;0001-01-01T00:00:00Z&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;Image&quot;: &quot;sha256:5d0da3dc976460b72c77d94c8a1ad043720b0416bfc16c52c45d4847e53fadb6&quot;,</span><br><span class="line">        &quot;ResolvConfPath&quot;: &quot;/var/lib/docker/containers/9916a0298bfd3fb37d142bdd8bc056a5c943f8aa3c08bc7e1bb75081ee2a3ed0/resolv.conf&quot;,</span><br><span class="line">        &quot;HostnamePath&quot;: &quot;/var/lib/docker/containers/9916a0298bfd3fb37d142bdd8bc056a5c943f8aa3c08bc7e1bb75081ee2a3ed0/hostname&quot;,</span><br><span class="line">        &quot;HostsPath&quot;: &quot;/var/lib/docker/containers/9916a0298bfd3fb37d142bdd8bc056a5c943f8aa3c08bc7e1bb75081ee2a3ed0/hosts&quot;,</span><br><span class="line">        &quot;LogPath&quot;: &quot;/var/lib/docker/containers/9916a0298bfd3fb37d142bdd8bc056a5c943f8aa3c08bc7e1bb75081ee2a3ed0/9916a0298bfd3fb37d142bdd8bc056a5c943f8aa3c08bc7e1bb75081ee2a3ed0-json.log&quot;,</span><br><span class="line">        &quot;Name&quot;: &quot;/condescending_curie&quot;,</span><br><span class="line">        &quot;RestartCount&quot;: 0,</span><br><span class="line">        &quot;Driver&quot;: &quot;overlay2&quot;,</span><br><span class="line">        &quot;Platform&quot;: &quot;linux&quot;,</span><br><span class="line">        &quot;MountLabel&quot;: &quot;&quot;,</span><br><span class="line">        &quot;ProcessLabel&quot;: &quot;&quot;,</span><br><span class="line">        &quot;AppArmorProfile&quot;: &quot;&quot;,</span><br><span class="line">        &quot;ExecIDs&quot;: null,</span><br><span class="line">        &quot;HostConfig&quot;: &#123;</span><br><span class="line">            &quot;Binds&quot;: null,</span><br><span class="line">            &quot;ContainerIDFile&quot;: &quot;&quot;,</span><br><span class="line">            &quot;LogConfig&quot;: &#123;</span><br><span class="line">                &quot;Type&quot;: &quot;json-file&quot;,</span><br><span class="line">                &quot;Config&quot;: &#123;&#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;NetworkMode&quot;: &quot;default&quot;,</span><br><span class="line">            &quot;PortBindings&quot;: &#123;&#125;,</span><br><span class="line">            &quot;RestartPolicy&quot;: &#123;</span><br><span class="line">                &quot;Name&quot;: &quot;no&quot;,</span><br><span class="line">                &quot;MaximumRetryCount&quot;: 0</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;AutoRemove&quot;: false,</span><br><span class="line">            &quot;VolumeDriver&quot;: &quot;&quot;,</span><br><span class="line">            &quot;VolumesFrom&quot;: null,</span><br><span class="line">            &quot;CapAdd&quot;: null,</span><br><span class="line">            &quot;CapDrop&quot;: null,</span><br><span class="line">            &quot;CgroupnsMode&quot;: &quot;host&quot;,</span><br><span class="line">            &quot;Dns&quot;: [],</span><br><span class="line">            &quot;DnsOptions&quot;: [],</span><br><span class="line">            &quot;DnsSearch&quot;: [],</span><br><span class="line">            &quot;ExtraHosts&quot;: null,</span><br><span class="line">            &quot;GroupAdd&quot;: null,</span><br><span class="line">            &quot;IpcMode&quot;: &quot;private&quot;,</span><br><span class="line">            &quot;Cgroup&quot;: &quot;&quot;,</span><br><span class="line">            &quot;Links&quot;: null,</span><br><span class="line">            &quot;OomScoreAdj&quot;: 0,</span><br><span class="line">            &quot;PidMode&quot;: &quot;&quot;,</span><br><span class="line">            &quot;Privileged&quot;: false,</span><br><span class="line">            &quot;PublishAllPorts&quot;: false,</span><br><span class="line">            &quot;ReadonlyRootfs&quot;: false,</span><br><span class="line">            &quot;SecurityOpt&quot;: null,</span><br><span class="line">            &quot;UTSMode&quot;: &quot;&quot;,</span><br><span class="line">            &quot;UsernsMode&quot;: &quot;&quot;,</span><br><span class="line">            &quot;ShmSize&quot;: 67108864,</span><br><span class="line">            &quot;Runtime&quot;: &quot;runc&quot;,</span><br><span class="line">            &quot;ConsoleSize&quot;: [</span><br><span class="line">                0,</span><br><span class="line">                0</span><br><span class="line">            ],</span><br><span class="line">            &quot;Isolation&quot;: &quot;&quot;,</span><br><span class="line">            &quot;CpuShares&quot;: 0,</span><br><span class="line">            &quot;Memory&quot;: 0,</span><br><span class="line">            &quot;NanoCpus&quot;: 0,</span><br><span class="line">            &quot;CgroupParent&quot;: &quot;&quot;,</span><br><span class="line">            &quot;BlkioWeight&quot;: 0,</span><br><span class="line">            &quot;BlkioWeightDevice&quot;: [],</span><br><span class="line">            &quot;BlkioDeviceReadBps&quot;: null,</span><br><span class="line">            &quot;BlkioDeviceWriteBps&quot;: null,</span><br><span class="line">            &quot;BlkioDeviceReadIOps&quot;: null,</span><br><span class="line">            &quot;BlkioDeviceWriteIOps&quot;: null,</span><br><span class="line">            &quot;CpuPeriod&quot;: 0,</span><br><span class="line">            &quot;CpuQuota&quot;: 0,</span><br><span class="line">            &quot;CpuRealtimePeriod&quot;: 0,</span><br><span class="line">            &quot;CpuRealtimeRuntime&quot;: 0,</span><br><span class="line">            &quot;CpusetCpus&quot;: &quot;&quot;,</span><br><span class="line">            &quot;CpusetMems&quot;: &quot;&quot;,</span><br><span class="line">            &quot;Devices&quot;: [],</span><br><span class="line">            &quot;DeviceCgroupRules&quot;: null,</span><br><span class="line">            &quot;DeviceRequests&quot;: null,</span><br><span class="line">            &quot;KernelMemory&quot;: 0,</span><br><span class="line">            &quot;KernelMemoryTCP&quot;: 0,</span><br><span class="line">            &quot;MemoryReservation&quot;: 0,</span><br><span class="line">            &quot;MemorySwap&quot;: 0,</span><br><span class="line">            &quot;MemorySwappiness&quot;: null,</span><br><span class="line">            &quot;OomKillDisable&quot;: false,</span><br><span class="line">            &quot;PidsLimit&quot;: null,</span><br><span class="line">            &quot;Ulimits&quot;: null,</span><br><span class="line">            &quot;CpuCount&quot;: 0,</span><br><span class="line">            &quot;CpuPercent&quot;: 0,</span><br><span class="line">            &quot;IOMaximumIOps&quot;: 0,</span><br><span class="line">            &quot;IOMaximumBandwidth&quot;: 0,</span><br><span class="line">            &quot;MaskedPaths&quot;: [</span><br><span class="line">                &quot;/proc/asound&quot;,</span><br><span class="line">                &quot;/proc/acpi&quot;,</span><br><span class="line">                &quot;/proc/kcore&quot;,</span><br><span class="line">                &quot;/proc/keys&quot;,</span><br><span class="line">                &quot;/proc/latency_stats&quot;,</span><br><span class="line">                &quot;/proc/timer_list&quot;,</span><br><span class="line">                &quot;/proc/timer_stats&quot;,</span><br><span class="line">                &quot;/proc/sched_debug&quot;,</span><br><span class="line">                &quot;/proc/scsi&quot;,</span><br><span class="line">                &quot;/sys/firmware&quot;</span><br><span class="line">            ],</span><br><span class="line">            &quot;ReadonlyPaths&quot;: [</span><br><span class="line">                &quot;/proc/bus&quot;,</span><br><span class="line">                &quot;/proc/fs&quot;,</span><br><span class="line">                &quot;/proc/irq&quot;,</span><br><span class="line">                &quot;/proc/sys&quot;,</span><br><span class="line">                &quot;/proc/sysrq-trigger&quot;</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;GraphDriver&quot;: &#123;</span><br><span class="line">            &quot;Data&quot;: &#123;</span><br><span class="line">                &quot;LowerDir&quot;: &quot;/var/lib/docker/overlay2/2db2e17cdb47f8a05997664e4e31dc8f59b611e2d23388bc52b56c4407d27cc3-init/diff:/var/lib/docker/overlay2/e75ba16da0fef020c7930a9b6190dbd33a83a8324702c144c689c5cd4e323146/diff&quot;,</span><br><span class="line">                &quot;MergedDir&quot;: &quot;/var/lib/docker/overlay2/2db2e17cdb47f8a05997664e4e31dc8f59b611e2d23388bc52b56c4407d27cc3/merged&quot;,</span><br><span class="line">                &quot;UpperDir&quot;: &quot;/var/lib/docker/overlay2/2db2e17cdb47f8a05997664e4e31dc8f59b611e2d23388bc52b56c4407d27cc3/diff&quot;,</span><br><span class="line">                &quot;WorkDir&quot;: &quot;/var/lib/docker/overlay2/2db2e17cdb47f8a05997664e4e31dc8f59b611e2d23388bc52b56c4407d27cc3/work&quot;</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;Name&quot;: &quot;overlay2&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;Mounts&quot;: [],</span><br><span class="line">        &quot;Config&quot;: &#123;</span><br><span class="line">            &quot;Hostname&quot;: &quot;9916a0298bfd&quot;,</span><br><span class="line">            &quot;Domainname&quot;: &quot;&quot;,</span><br><span class="line">            &quot;User&quot;: &quot;&quot;,</span><br><span class="line">            &quot;AttachStdin&quot;: false,</span><br><span class="line">            &quot;AttachStdout&quot;: false,</span><br><span class="line">            &quot;AttachStderr&quot;: false,</span><br><span class="line">            &quot;Tty&quot;: false,</span><br><span class="line">            &quot;OpenStdin&quot;: false,</span><br><span class="line">            &quot;StdinOnce&quot;: false,</span><br><span class="line">            &quot;Env&quot;: [</span><br><span class="line">                &quot;PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;</span><br><span class="line">            ],</span><br><span class="line">            &quot;Cmd&quot;: [</span><br><span class="line">                &quot;/bin/sh&quot;,</span><br><span class="line">                &quot;-c&quot;,</span><br><span class="line">                &quot;while true; do echo test;sleep 1;done&quot;</span><br><span class="line">            ],</span><br><span class="line">            &quot;Image&quot;: &quot;centos&quot;,</span><br><span class="line">            &quot;Volumes&quot;: null,</span><br><span class="line">            &quot;WorkingDir&quot;: &quot;&quot;,</span><br><span class="line">            &quot;Entrypoint&quot;: null,</span><br><span class="line">            &quot;OnBuild&quot;: null,</span><br><span class="line">            &quot;Labels&quot;: &#123;</span><br><span class="line">                &quot;org.label-schema.build-date&quot;: &quot;20210915&quot;,</span><br><span class="line">                &quot;org.label-schema.license&quot;: &quot;GPLv2&quot;,</span><br><span class="line">                &quot;org.label-schema.name&quot;: &quot;CentOS Base Image&quot;,</span><br><span class="line">                &quot;org.label-schema.schema-version&quot;: &quot;1.0&quot;,</span><br><span class="line">                &quot;org.label-schema.vendor&quot;: &quot;CentOS&quot;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;NetworkSettings&quot;: &#123;</span><br><span class="line">            &quot;Bridge&quot;: &quot;&quot;,</span><br><span class="line">            &quot;SandboxID&quot;: &quot;f28f51fd2c85ab7e8ba88827ec901c9ef4b517428747bd1cdf5196810db622c7&quot;,</span><br><span class="line">            &quot;HairpinMode&quot;: false,</span><br><span class="line">            &quot;LinkLocalIPv6Address&quot;: &quot;&quot;,</span><br><span class="line">            &quot;LinkLocalIPv6PrefixLen&quot;: 0,</span><br><span class="line">            &quot;Ports&quot;: &#123;&#125;,</span><br><span class="line">            &quot;SandboxKey&quot;: &quot;/var/run/docker/netns/f28f51fd2c85&quot;,</span><br><span class="line">            &quot;SecondaryIPAddresses&quot;: null,</span><br><span class="line">            &quot;SecondaryIPv6Addresses&quot;: null,</span><br><span class="line">            &quot;EndpointID&quot;: &quot;41b020afb72dc9602f5a030e56d816692170c2f0427377829da822e62976732a&quot;,</span><br><span class="line">            &quot;Gateway&quot;: &quot;172.17.0.1&quot;,</span><br><span class="line">            &quot;GlobalIPv6Address&quot;: &quot;&quot;,</span><br><span class="line">            &quot;GlobalIPv6PrefixLen&quot;: 0,</span><br><span class="line">            &quot;IPAddress&quot;: &quot;172.17.0.3&quot;,</span><br><span class="line">            &quot;IPPrefixLen&quot;: 16,</span><br><span class="line">            &quot;IPv6Gateway&quot;: &quot;&quot;,</span><br><span class="line">            &quot;MacAddress&quot;: &quot;02:42:ac:11:00:03&quot;,</span><br><span class="line">            &quot;Networks&quot;: &#123;</span><br><span class="line">                &quot;bridge&quot;: &#123;</span><br><span class="line">                    &quot;IPAMConfig&quot;: null,</span><br><span class="line">                    &quot;Links&quot;: null,</span><br><span class="line">                    &quot;Aliases&quot;: null,</span><br><span class="line">                    &quot;NetworkID&quot;: &quot;d91d646c67beba9f1d4aa5cfa191bad1f24cf153ae1c6e3a37cf34599502a27f&quot;,</span><br><span class="line">                    &quot;EndpointID&quot;: &quot;41b020afb72dc9602f5a030e56d816692170c2f0427377829da822e62976732a&quot;,</span><br><span class="line">                    &quot;Gateway&quot;: &quot;172.17.0.1&quot;,</span><br><span class="line">                    &quot;IPAddress&quot;: &quot;172.17.0.3&quot;,</span><br><span class="line">                    &quot;IPPrefixLen&quot;: 16,</span><br><span class="line">                    &quot;IPv6Gateway&quot;: &quot;&quot;,</span><br><span class="line">                    &quot;GlobalIPv6Address&quot;: &quot;&quot;,</span><br><span class="line">                    &quot;GlobalIPv6PrefixLen&quot;: 0,</span><br><span class="line">                    &quot;MacAddress&quot;: &quot;02:42:ac:11:00:03&quot;,</span><br><span class="line">                    &quot;DriverOpts&quot;: null</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-
-<h5 id="进入当前正在运行的容器"><a href="#进入当前正在运行的容器" class="headerlink" title="进入当前正在运行的容器"></a>进入当前正在运行的容器</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">我们通常容器都是使用后台方式运行的，需要进入容器，修改一些配置</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">命令</span></span><br><span class="line">docker exec -it 容器id bashShell</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">测试</span></span><br><span class="line">[root@localhost ~]# docker ps</span><br><span class="line">CONTAINER ID   IMAGE     COMMAND                  CREATED             STATUS             PORTS     NAMES</span><br><span class="line">9916a0298bfd   centos    &quot;/bin/sh -c &#x27;while t…&quot;   About an hour ago   Up About an hour             condescending_curie</span><br><span class="line">113e7bdad55e   centos    &quot;/bin/bash&quot;              About an hour ago   Up About an hour             serene_pasteur</span><br><span class="line">[root@localhost ~]# docker exec -it 9916a0298bfd /bin/bash</span><br><span class="line">[root@9916a0298bfd /]# ps -ef</span><br><span class="line">UID          PID    PPID  C STIME TTY          TIME CMD</span><br><span class="line">root           1       0  0 00:05 ?        00:00:01 /bin/sh -c while true; do echo test;sleep 1;done</span><br><span class="line">root        4061       0  0 01:12 pts/0    00:00:00 /bin/bash</span><br><span class="line">root        4088       1  0 01:12 ?        00:00:00 /usr/bin/coreutils --coreutils-prog-shebang=sleep /usr/bin/sleep 1</span><br><span class="line">root        4089    4061  0 01:12 pts/0    00:00:00 ps -ef</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">方式二</span></span><br><span class="line">docker attach 容器id</span><br><span class="line">正在执行当前的代码...</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">docker <span class="built_in">exec</span>     <span class="comment"># 进入容器后开启一个新的终端，可以在里面操作（常用）</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">docker attach	  <span class="comment"># 进入容器正在执行的终端，不会启动新的进程</span></span></span><br></pre></td></tr></table></figure>
-
-<h5 id="从容器内烤贝文件到主机上"><a href="#从容器内烤贝文件到主机上" class="headerlink" title="从容器内烤贝文件到主机上"></a>从容器内烤贝文件到主机上</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">docker cp  b4bb1f3f7685:/home/test.java /home</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">进入docker容器内</span></span><br><span class="line">[root@b4bb1f3f7685 /]# cd /home</span><br><span class="line">[root@b4bb1f3f7685 home]# ls</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建java文件</span></span><br><span class="line">[root@b4bb1f3f7685 home]# touch test.java</span><br><span class="line">[root@b4bb1f3f7685 home]# ls</span><br><span class="line">test.java</span><br><span class="line">[root@b4bb1f3f7685 home]# exit</span><br><span class="line">exit</span><br><span class="line">docker cp 容器id:容器内部路径 目的的主路径</span><br><span class="line">[root@localhost home]# docker cp  b4bb1f3f7685:/home/test.java /home</span><br><span class="line">[root@localhost home]# ls</span><br><span class="line">shawn  test.java</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="五、安装服务器软件"><a href="#五、安装服务器软件" class="headerlink" title="五、安装服务器软件"></a>五、安装服务器软件</h3><h5 id="安装Tomcat"><a href="#安装Tomcat" class="headerlink" title="安装Tomcat"></a>安装Tomcat</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 官方的使用</span></span><br><span class="line">docker run -it --<span class="built_in">rm</span> tomcat:9.0</span><br><span class="line"><span class="comment"># 我们之前的启动都是后台，停止了容器之后，容器还是可以查到 docker run -it --rm 一般用来测试，用完就删除</span></span><br><span class="line"><span class="comment">#下载在启动</span></span><br><span class="line">docker pull tomcat:9.0</span><br></pre></td></tr></table></figure>
-
-<h5 id="安装es-kibana"><a href="#安装es-kibana" class="headerlink" title="安装es+kibana"></a>安装es+kibana</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">es 暴露的端口很多</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">es 十分的耗内存</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">es 的数据一般需要放置到安全目录 挂载</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">--net somenetwork 网路配置</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动 elasticsearch</span></span><br><span class="line">[root@localhost ~]# docker run -d --name elasticsearch01 -p 9200:9200 -p 9300:9300 -e &quot;discovery.type=single-node&quot; elasticsearch:7.6.2</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动了 linux就卡住了 docker stats 查看cpu的状态</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">es 是十分耗内存的 1.xG   1核2G</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看 docker stats</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">测试一下es是否成功了</span></span><br><span class="line">[root@localhost ~]# curl localhost:9200</span><br><span class="line">&#123;</span><br><span class="line">  &quot;name&quot; : &quot;6620e2b536c4&quot;,</span><br><span class="line">  &quot;cluster_name&quot; : &quot;docker-cluster&quot;,</span><br><span class="line">  &quot;cluster_uuid&quot; : &quot;9i4LLjxvTVKf46Hp1qHkqA&quot;,</span><br><span class="line">  &quot;version&quot; : &#123;</span><br><span class="line">    &quot;number&quot; : &quot;7.6.2&quot;,</span><br><span class="line">    &quot;build_flavor&quot; : &quot;default&quot;,</span><br><span class="line">    &quot;build_type&quot; : &quot;docker&quot;,</span><br><span class="line">    &quot;build_hash&quot; : &quot;ef48eb35cf30adf4db14086e8aabd07ef6fb113f&quot;,</span><br><span class="line">    &quot;build_date&quot; : &quot;2020-03-26T06:34:37.794943Z&quot;,</span><br><span class="line">    &quot;build_snapshot&quot; : false,</span><br><span class="line">    &quot;lucene_version&quot; : &quot;8.4.0&quot;,</span><br><span class="line">    &quot;minimum_wire_compatibility_version&quot; : &quot;6.8.0&quot;,</span><br><span class="line">    &quot;minimum_index_compatibility_version&quot; : &quot;6.0.0-beta1&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;tagline&quot; : &quot;You Know, for Search&quot;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">赶紧关闭，增加内存的限制,修改配置文件 -e 环境配置修改</span></span><br><span class="line">docker run -d --name elasticsearch02 -p 9200:9200 -p 9300:9300 -e ES_JAVA_OPTS=&quot;-Xms64m -Xmx512m&quot; -e &quot;discovery.type=single-node&quot; elasticsearch:7.6.2</span><br></pre></td></tr></table></figure>
-
-<h5 id="可视化"><a href="#可视化" class="headerlink" title="可视化"></a>可视化</h5><blockquote>
-<p>docker 图形化界面管理工具！提供一个后台供我们操作</p>
-</blockquote>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@localhost ~]# docker run -d -p 8090:9000 --restart=always -v /var/run/docker.sock:/var/run/docker.sock --privileged=true portainer/portainer</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<p>ps: 由于官网未开放同步方式, 可能会有索引gpg检查失败的情况, 这时请用 <code>yum install -y --nogpgcheck kubelet kubeadm kubectl</code> 安装</p>
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ul>
+<li>官方主页：<a href="https://kubernetes.io/">https://kubernetes.io/</a></li>
+</ul>
 ]]></content>
       <categories>
-        <category>docker</category>
+        <category>container</category>
       </categories>
       <tags>
-        <tag>docker的基本命令</tag>
+        <tag>kubernetes</tag>
       </tags>
   </entry>
   <entry>
