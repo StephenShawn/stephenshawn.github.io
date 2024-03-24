@@ -147,6 +147,11 @@
     <content><![CDATA[<h1 id="什么是RPC"><a href="#什么是RPC" class="headerlink" title="什么是RPC"></a><a href="https://zhuanlan.zhihu.com/p/139688497">什么是RPC</a></h1>]]></content>
   </entry>
   <entry>
+    <title>UML</title>
+    <url>/2022/09/16/UML/</url>
+    <content><![CDATA[<h1 id="掌握UML类图"><a href="#掌握UML类图" class="headerlink" title="掌握UML类图"></a><a href="https://zhuanlan.zhihu.com/p/267298708">掌握UML类图</a></h1><h2 id="UML-Unified-Modeling-Language-统一建模语言"><a href="#UML-Unified-Modeling-Language-统一建模语言" class="headerlink" title="UML(Unified Modeling Language)统一建模语言"></a>UML(Unified Modeling Language)统一建模语言</h2>]]></content>
+  </entry>
+  <entry>
     <title>TS的!和?用法</title>
     <url>/2022/09/11/TS%E7%9A%84!%E5%92%8C%E9%97%AE%E5%8F%B7/</url>
     <content><![CDATA[<h2 id="用法"><a href="#用法" class="headerlink" title="!用法"></a>!用法</h2><ul>
@@ -170,9 +175,19 @@
       </tags>
   </entry>
   <entry>
-    <title>UML</title>
-    <url>/2022/09/16/UML/</url>
-    <content><![CDATA[<h1 id="掌握UML类图"><a href="#掌握UML类图" class="headerlink" title="掌握UML类图"></a><a href="https://zhuanlan.zhihu.com/p/267298708">掌握UML类图</a></h1><h2 id="UML-Unified-Modeling-Language-统一建模语言"><a href="#UML-Unified-Modeling-Language-统一建模语言" class="headerlink" title="UML(Unified Modeling Language)统一建模语言"></a>UML(Unified Modeling Language)统一建模语言</h2>]]></content>
+    <title>electronAPI文档</title>
+    <url>/2022/08/17/electronAPI%E6%96%87%E6%A1%A3/</url>
+    <content><![CDATA[<h1 id="electron-文档"><a href="#electron-文档" class="headerlink" title="electron 文档"></a>electron 文档</h1><h2 id="electron"><a href="#electron" class="headerlink" title=" electron"></a> <a href="https://www.electronjs.org/zh/docs/latest/tutorial/tutorial-first-app">electron</a></h2><h2 id="electron中文文档"><a href="#electron中文文档" class="headerlink" title="electron中文文档"></a>electron中文文档</h2><h2 id="electron中文文档-1"><a href="#electron中文文档-1" class="headerlink" title="electron中文文档"></a><a href="https://www.wenjiangs.com/doc/s3ivxhuv">electron中文文档</a></h2><h2 id="electron-Vue"><a href="#electron-Vue" class="headerlink" title="electron + Vue"></a>electron + Vue</h2><p><a href="https://simulatedgreg.gitbooks.io/electron-vue/content/cn/">electron-vue</a></p>
+<p>vue init simulatedgreg&#x2F;electron-vue electron-vue</p>
+<p>sudo npm –vs2015 install –global windows-build-tools<br><a href="https://www.cnblogs.com/yunjiao/p/16491092.html">安装卡顿</a></p>
+<h2 id="electron-vue学习之环境搭建"><a href="#electron-vue学习之环境搭建" class="headerlink" title="electron-vue学习之环境搭建"></a><a href="https://dxsm.github.io/p/electron-learning-chp1.html">electron-vue学习之环境搭建</a></h2><h2 id="electron-React"><a href="#electron-React" class="headerlink" title="electron + React"></a>electron + React</h2><p><a href="https://electron-react-boilerplate.js.org/docs/installation">electron-react</a></p>
+<h2 id="git-clone-–depth-1-https-github-com-electron-react-boilerplate-electron-react-boilerplate-electron-react"><a href="#git-clone-–depth-1-https-github-com-electron-react-boilerplate-electron-react-boilerplate-electron-react" class="headerlink" title="git clone –depth&#x3D;1  https://github.com/electron-react-boilerplate/electron-react-boilerplate  electron-react"></a>git clone –depth&#x3D;1  <a href="https://github.com/electron-react-boilerplate/electron-react-boilerplate">https://github.com/electron-react-boilerplate/electron-react-boilerplate</a>  electron-react</h2>]]></content>
+      <categories>
+        <category>electron</category>
+      </categories>
+      <tags>
+        <tag>electronAPI</tag>
+      </tags>
   </entry>
   <entry>
     <title>编码与解码</title>
@@ -200,21 +215,6 @@
       </categories>
       <tags>
         <tag>编码</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>electronAPI文档</title>
-    <url>/2022/08/17/electronAPI%E6%96%87%E6%A1%A3/</url>
-    <content><![CDATA[<h1 id="electron-文档"><a href="#electron-文档" class="headerlink" title="electron 文档"></a>electron 文档</h1><h2 id="electron"><a href="#electron" class="headerlink" title=" electron"></a> <a href="https://www.electronjs.org/zh/docs/latest/tutorial/tutorial-first-app">electron</a></h2><h2 id="electron中文文档"><a href="#electron中文文档" class="headerlink" title="electron中文文档"></a>electron中文文档</h2><h2 id="electron中文文档-1"><a href="#electron中文文档-1" class="headerlink" title="electron中文文档"></a><a href="https://www.wenjiangs.com/doc/s3ivxhuv">electron中文文档</a></h2><h2 id="electron-Vue"><a href="#electron-Vue" class="headerlink" title="electron + Vue"></a>electron + Vue</h2><p><a href="https://simulatedgreg.gitbooks.io/electron-vue/content/cn/">electron-vue</a></p>
-<p>vue init simulatedgreg&#x2F;electron-vue electron-vue</p>
-<p>sudo npm –vs2015 install –global windows-build-tools<br><a href="https://www.cnblogs.com/yunjiao/p/16491092.html">安装卡顿</a></p>
-<h2 id="electron-vue学习之环境搭建"><a href="#electron-vue学习之环境搭建" class="headerlink" title="electron-vue学习之环境搭建"></a><a href="https://dxsm.github.io/p/electron-learning-chp1.html">electron-vue学习之环境搭建</a></h2><h2 id="electron-React"><a href="#electron-React" class="headerlink" title="electron + React"></a>electron + React</h2><p><a href="https://electron-react-boilerplate.js.org/docs/installation">electron-react</a></p>
-<h2 id="git-clone-–depth-1-https-github-com-electron-react-boilerplate-electron-react-boilerplate-electron-react"><a href="#git-clone-–depth-1-https-github-com-electron-react-boilerplate-electron-react-boilerplate-electron-react" class="headerlink" title="git clone –depth&#x3D;1  https://github.com/electron-react-boilerplate/electron-react-boilerplate  electron-react"></a>git clone –depth&#x3D;1  <a href="https://github.com/electron-react-boilerplate/electron-react-boilerplate">https://github.com/electron-react-boilerplate/electron-react-boilerplate</a>  electron-react</h2>]]></content>
-      <categories>
-        <category>electron</category>
-      </categories>
-      <tags>
-        <tag>electronAPI</tag>
       </tags>
   </entry>
   <entry>
@@ -334,6 +334,17 @@
       </tags>
   </entry>
   <entry>
+    <title>java提高</title>
+    <url>/2021/11/11/java%E6%8F%90%E9%AB%98/</url>
+    <content><![CDATA[<h3 id="垃圾收集器有几种"><a href="#垃圾收集器有几种" class="headerlink" title="垃圾收集器有几种"></a>垃圾收集器有几种</h3><h3 id="垃圾收集器低层原理剖析"><a href="#垃圾收集器低层原理剖析" class="headerlink" title="垃圾收集器低层原理剖析"></a>垃圾收集器低层原理剖析</h3><h3 id="垃圾收集器算法优化"><a href="#垃圾收集器算法优化" class="headerlink" title="垃圾收集器算法优化"></a>垃圾收集器算法优化</h3>]]></content>
+      <categories>
+        <category>java垃圾回收机制</category>
+      </categories>
+      <tags>
+        <tag>垃圾收集</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java爬虫</title>
     <url>/2023/09/25/java-spider/</url>
     <content><![CDATA[<p>Java编写的开源Web爬虫<br>10. Apache Nutch<br>实现语言： Java<br>GitHub星标数： 1743<br>官方支持链接</p>
@@ -420,17 +431,6 @@
       </tags>
   </entry>
   <entry>
-    <title>java提高</title>
-    <url>/2021/11/11/java%E6%8F%90%E9%AB%98/</url>
-    <content><![CDATA[<h3 id="垃圾收集器有几种"><a href="#垃圾收集器有几种" class="headerlink" title="垃圾收集器有几种"></a>垃圾收集器有几种</h3><h3 id="垃圾收集器低层原理剖析"><a href="#垃圾收集器低层原理剖析" class="headerlink" title="垃圾收集器低层原理剖析"></a>垃圾收集器低层原理剖析</h3><h3 id="垃圾收集器算法优化"><a href="#垃圾收集器算法优化" class="headerlink" title="垃圾收集器算法优化"></a>垃圾收集器算法优化</h3>]]></content>
-      <categories>
-        <category>java垃圾回收机制</category>
-      </categories>
-      <tags>
-        <tag>垃圾收集</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>jdbc连接数据库SSL</title>
     <url>/2022/07/17/jdbc%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93SSL/</url>
     <content><![CDATA[<h4 id="在Java8及高版本以上的版本在调用ssl时会出现javax-net-ssl-SSLHandshakeException-No-appropriate-protocol的异常。"><a href="#在Java8及高版本以上的版本在调用ssl时会出现javax-net-ssl-SSLHandshakeException-No-appropriate-protocol的异常。" class="headerlink" title="在Java8及高版本以上的版本在调用ssl时会出现javax.net.ssl.SSLHandshakeException: No appropriate protocol的异常。"></a>在Java8及高版本以上的版本在调用ssl时会出现<code>javax.net.ssl.SSLHandshakeException: No appropriate protocol</code>的异常。</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">javax.net.ssl.SSLHandshakeException: No appropriate <span class="title function_">protocol</span> <span class="params">(protocol is disabled or cipher suites are inappropriate)</span></span><br><span class="line">	at sun.security.ssl.HandshakeContext.&lt;init&gt;(HandshakeContext.java:<span class="number">171</span>) ~[na:<span class="number">1.8</span><span class="number">.0_292</span>]</span><br><span class="line">	at sun.security.ssl.ClientHandshakeContext.&lt;init&gt;(ClientHandshakeContext.java:<span class="number">98</span>) ~[na:<span class="number">1.8</span><span class="number">.0_292</span>]</span><br><span class="line">	at sun.security.ssl.TransportContext.kickstart(TransportContext.java:<span class="number">220</span>) ~[na:<span class="number">1.8</span><span class="number">.0_292</span>]</span><br><span class="line">	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:<span class="number">428</span>) ~[na:<span class="number">1.8</span><span class="number">.0_292</span>]</span><br><span class="line">	at com.mysql.cj.protocol.ExportControlled.performTlsHandshake(ExportControlled.java:<span class="number">316</span>) ~[mysql-connector-java-<span class="number">8.0</span><span class="number">.17</span>.jar:<span class="number">8.0</span><span class="number">.17</span>]</span><br><span class="line">	at com.mysql.cj.protocol.StandardSocketFactory.performTlsHandshake(StandardSocketFactory.java:<span class="number">188</span>) ~[mysql-connector-java-<span class="number">8.0</span><span class="number">.17</span>.jar:<span class="number">8.0</span><span class="number">.17</span>]</span><br><span class="line">	at com.mysql.cj.protocol.a.NativeSocketConnection.performTlsHandshake(NativeSocketConnection.java:<span class="number">99</span>) ~[mysql-connector-java-<span class="number">8.0</span><span class="number">.17</span>.jar:<span class="number">8.0</span><span class="number">.17</span>]</span><br><span class="line">	at com.mysql.cj.protocol.a.NativeProtocol.negotiateSSLConnection(NativeProtocol.java:<span class="number">331</span>) ~[mysql-connector-java-<span class="number">8.0</span><span class="number">.17</span>.jar:<span class="number">8.0</span><span class="number">.17</span>]</span><br><span class="line">	... <span class="number">68</span> common frames omitted</span><br></pre></td></tr></table></figure>
@@ -461,6 +461,17 @@
       </tags>
   </entry>
   <entry>
+    <title>js模块化</title>
+    <url>/2022/08/14/js%E6%A8%A1%E5%9D%97%E5%8C%96/</url>
+    <content><![CDATA[<h2 id="CommonJS"><a href="#CommonJS" class="headerlink" title="CommonJS"></a>CommonJS</h2><h2 id="ESM"><a href="#ESM" class="headerlink" title="ESM"></a>ESM</h2>]]></content>
+      <categories>
+        <category>模块化</category>
+      </categories>
+      <tags>
+        <tag>js模块化</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown Syntax</title>
     <url>/2023/09/24/markdown-syntax/</url>
     <content><![CDATA[<h2 id="Markdown-基础语法"><a href="#Markdown-基础语法" class="headerlink" title="Markdown 基础语法"></a>Markdown 基础语法</h2><p> <strong>语法文档</strong> <a href="http://markdown.p2hp.com/extended-syntax/">中文</a> <a href="https://www.markdownguide.org/">英文</a></p>
@@ -478,17 +489,6 @@
       </categories>
       <tags>
         <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>js模块化</title>
-    <url>/2022/08/14/js%E6%A8%A1%E5%9D%97%E5%8C%96/</url>
-    <content><![CDATA[<h2 id="CommonJS"><a href="#CommonJS" class="headerlink" title="CommonJS"></a>CommonJS</h2><h2 id="ESM"><a href="#ESM" class="headerlink" title="ESM"></a>ESM</h2>]]></content>
-      <categories>
-        <category>模块化</category>
-      </categories>
-      <tags>
-        <tag>js模块化</tag>
       </tags>
   </entry>
   <entry>
@@ -759,14 +759,27 @@ dnf makecache
       </tags>
   </entry>
   <entry>
-    <title>加密</title>
-    <url>/2022/09/16/%E5%8A%A0%E5%AF%86/</url>
-    <content><![CDATA[<h1 id="MD5是32位的，也就是说理论上是有限的，而世界上的数据是无限的，那会不会生成重复的MD5值"><a href="#MD5是32位的，也就是说理论上是有限的，而世界上的数据是无限的，那会不会生成重复的MD5值" class="headerlink" title="MD5是32位的，也就是说理论上是有限的，而世界上的数据是无限的，那会不会生成重复的MD5值?"></a><a href="https://www.zhihu.com/question/365544497/answer/2251328732">MD5是32位的，也就是说理论上是有限的，而世界上的数据是无限的，那会不会生成重复的MD5值?</a></h1><h1 id="为什么说-MD5-是不可逆的？"><a href="#为什么说-MD5-是不可逆的？" class="headerlink" title="为什么说 MD5 是不可逆的？"></a><a href="https://www.zhihu.com/question/22651987/answer/968239218">为什么说 MD5 是不可逆的？</a></h1>]]></content>
-      <categories>
-        <category>加密</category>
-      </categories>
+    <title>个人独立的见解</title>
+    <url>/2024/03/24/%E4%B8%AA%E4%BA%BA%E7%8B%AC%E7%AB%8B%E7%9A%84%E8%A7%81%E8%A7%A3/</url>
+    <content><![CDATA[<h3 id="如何形成个人独立的见解"><a href="#如何形成个人独立的见解" class="headerlink" title="如何形成个人独立的见解"></a>如何形成个人独立的见解</h3><ol>
+<li><p>深度了解自我：首先，深入理解自己的价值观、兴趣爱好、优势与不足，明确自己的生活目标和理想状态。这需要你投入时间进行自我反思和内省。</p>
+</li>
+<li><p>广泛阅读和学习：通过阅读书籍、文章等多种方式获取知识，不断丰富自己的视野和阅历。不同领域的信息能帮助你建立多元视角，为形成独立见解提供素材。</p>
+<span id="more"></span></li>
+<li><p>实践经验积累：实习是很好的实践平台，通过实际工作中的问题解决和人际交往，你可以亲身体验和感知社会，从而提炼出属于自己的经验和观点。</p>
+</li>
+<li><p>批判性思维：对于他人的见解，要保持开放接纳但不盲目跟从的态度。学会用批判性思维去分析和评估，结合自身实际情况，看是否适用于自己，能否为自己所用。</p>
+</li>
+<li><p>勇于表达和实践：形成个人观点后，要有勇气表达和坚持，即使面临质疑或挑战也不退缩。同时，将这些见解转化为实际行动，真正做到知行合一。</p>
+</li>
+<li><p>保持心态平和与乐观：在追求自我见解的过程中，可能会遇到挫折和困扰，保持一颗豁达开朗的心，接纳自己的不完美，享受过程，这样才能活得开心洒脱。</p>
+</li>
+<li><p>持续迭代更新：世界在变，我们也在成长，所以个人见解也需要与时俱进，持续修正和完善。永远保持好奇心和求知欲，乐于接受新事物，敢于挑战旧观念。</p>
+</li>
+</ol>
+]]></content>
       <tags>
-        <tag>加密</tag>
+        <tag>感想</tag>
       </tags>
   </entry>
   <entry>
@@ -818,6 +831,17 @@ dnf makecache
       </categories>
       <tags>
         <tag>docker容器数据卷</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>加密</title>
+    <url>/2022/09/16/%E5%8A%A0%E5%AF%86/</url>
+    <content><![CDATA[<h1 id="MD5是32位的，也就是说理论上是有限的，而世界上的数据是无限的，那会不会生成重复的MD5值"><a href="#MD5是32位的，也就是说理论上是有限的，而世界上的数据是无限的，那会不会生成重复的MD5值" class="headerlink" title="MD5是32位的，也就是说理论上是有限的，而世界上的数据是无限的，那会不会生成重复的MD5值?"></a><a href="https://www.zhihu.com/question/365544497/answer/2251328732">MD5是32位的，也就是说理论上是有限的，而世界上的数据是无限的，那会不会生成重复的MD5值?</a></h1><h1 id="为什么说-MD5-是不可逆的？"><a href="#为什么说-MD5-是不可逆的？" class="headerlink" title="为什么说 MD5 是不可逆的？"></a><a href="https://www.zhihu.com/question/22651987/answer/968239218">为什么说 MD5 是不可逆的？</a></h1>]]></content>
+      <categories>
+        <category>加密</category>
+      </categories>
+      <tags>
+        <tag>加密</tag>
       </tags>
   </entry>
   <entry>
@@ -939,6 +963,18 @@ dnf makecache
       </tags>
   </entry>
   <entry>
+    <title>科学上网协议介绍</title>
+    <url>/2022/09/16/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E5%B8%B8%E7%94%A8%E7%9A%84%E5%8D%8F%E8%AE%AE/</url>
+    <content><![CDATA[<p><a href="https://www.cfmem.com/2021/08/vmess-trojan-shadowsocks.html">科学上网常见协议解析 vmess, trojan, shadowsocks 内容解析</a></p>
+]]></content>
+      <categories>
+        <category>网络</category>
+      </categories>
+      <tags>
+        <tag>协议</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计算机浮点数存储</title>
     <url>/2022/10/13/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%AD%98%E5%82%A8/</url>
     <content><![CDATA[<h1 id="IEEE-754标准的浮点数存储"><a href="#IEEE-754标准的浮点数存储" class="headerlink" title="IEEE 754标准的浮点数存储"></a>IEEE 754标准的浮点数存储</h1><p>事实上，在浮点数的存储过程中，为了运算方便和尽可能多的提高存储存储空间的利用效率，往往不会直接存储各部分的二进制原码。</p>
@@ -999,21 +1035,14 @@ dnf makecache
       </tags>
   </entry>
   <entry>
-    <title>科学上网协议介绍</title>
-    <url>/2022/09/16/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E5%B8%B8%E7%94%A8%E7%9A%84%E5%8D%8F%E8%AE%AE/</url>
-    <content><![CDATA[<p><a href="https://www.cfmem.com/2021/08/vmess-trojan-shadowsocks.html">科学上网常见协议解析 vmess, trojan, shadowsocks 内容解析</a></p>
-]]></content>
-      <categories>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>协议</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>网络线路</title>
     <url>/2022/09/16/%E7%BD%91%E7%BB%9C%E7%BA%BF%E8%B7%AF/</url>
     <content><![CDATA[<h1 id="租服务器时遇到的CN2，GIA，CIA，BGP以及IPLC都是什么意思？"><a href="#租服务器时遇到的CN2，GIA，CIA，BGP以及IPLC都是什么意思？" class="headerlink" title="租服务器时遇到的CN2，GIA，CIA，BGP以及IPLC都是什么意思？"></a><a href="https://zhuanlan.zhihu.com/p/356646013">租服务器时遇到的CN2，GIA，CIA，BGP以及IPLC都是什么意思？</a></h1>]]></content>
+  </entry>
+  <entry>
+    <title>视频编码</title>
+    <url>/2022/09/16/%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/</url>
+    <content><![CDATA[<h1 id="AV1-VS-HEVC-VS-VP9"><a href="#AV1-VS-HEVC-VS-VP9" class="headerlink" title="AV1 VS HEVC VS VP9"></a><a href="https://zhuanlan.zhihu.com/p/50665570">AV1 VS HEVC VS VP9</a></h1><h1 id="ffmpeg怎么实现视频的无损编码"><a href="#ffmpeg怎么实现视频的无损编码" class="headerlink" title="ffmpeg怎么实现视频的无损编码"></a><a href="https://www.zhihu.com/question/66694602/answer/2407223429">ffmpeg怎么实现视频的无损编码</a></h1>]]></content>
   </entry>
   <entry>
     <title>资讯、多媒体订阅</title>
@@ -1028,11 +1057,6 @@ dnf makecache
       <tags>
         <tag>订阅</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>视频编码</title>
-    <url>/2022/09/16/%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/</url>
-    <content><![CDATA[<h1 id="AV1-VS-HEVC-VS-VP9"><a href="#AV1-VS-HEVC-VS-VP9" class="headerlink" title="AV1 VS HEVC VS VP9"></a><a href="https://zhuanlan.zhihu.com/p/50665570">AV1 VS HEVC VS VP9</a></h1><h1 id="ffmpeg怎么实现视频的无损编码"><a href="#ffmpeg怎么实现视频的无损编码" class="headerlink" title="ffmpeg怎么实现视频的无损编码"></a><a href="https://www.zhihu.com/question/66694602/answer/2407223429">ffmpeg怎么实现视频的无损编码</a></h1>]]></content>
   </entry>
   <entry>
     <title>数据库SQL语言</title>
