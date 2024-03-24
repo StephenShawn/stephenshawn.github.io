@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>MVC模式</title>
-    <url>/2022/09/16/MVC%E6%A8%A1%E5%BC%8F/</url>
-    <content><![CDATA[<h1 id="PO-BO-VO-DTO-POJO-DAO-DO这些Java中的概念分别指一些什么？"><a href="#PO-BO-VO-DTO-POJO-DAO-DO这些Java中的概念分别指一些什么？" class="headerlink" title="PO BO VO DTO POJO DAO DO这些Java中的概念分别指一些什么？"></a><a href="https://www.zhihu.com/question/39651928/answer/2490565983">PO BO VO DTO POJO DAO DO这些Java中的概念分别指一些什么？</a></h1>]]></content>
-  </entry>
-  <entry>
     <title>Java_Stream_API</title>
     <url>/2022/07/13/Java-Stream-API/</url>
     <content><![CDATA[<p>2.1. Empty Stream<br>We should use the empty() method in case of the creation of an empty stream:</p>
@@ -99,15 +94,9 @@
 ]]></content>
   </entry>
   <entry>
-    <title>PWA相关知识</title>
-    <url>/2022/09/16/PWA%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/</url>
-    <content><![CDATA[<h1 id="Web-在继续离我们远去"><a href="#Web-在继续离我们远去" class="headerlink" title="Web 在继续离我们远去"></a><a href="https://zhuanlan.zhihu.com/p/22561084">Web 在继续离我们远去</a></h1><h1 id="下一代-Web-应用模型-—-Progressive-Web-Ap"><a href="#下一代-Web-应用模型-—-Progressive-Web-Ap" class="headerlink" title="下一代 Web 应用模型 — Progressive Web Ap"></a><a href="https://zhuanlan.zhihu.com/p/25167289">下一代 Web 应用模型 — Progressive Web Ap</a></h1>]]></content>
-      <categories>
-        <category>PWA</category>
-      </categories>
-      <tags>
-        <tag>PWA</tag>
-      </tags>
+    <title>MVC模式</title>
+    <url>/2022/09/16/MVC%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<h1 id="PO-BO-VO-DTO-POJO-DAO-DO这些Java中的概念分别指一些什么？"><a href="#PO-BO-VO-DTO-POJO-DAO-DO这些Java中的概念分别指一些什么？" class="headerlink" title="PO BO VO DTO POJO DAO DO这些Java中的概念分别指一些什么？"></a><a href="https://www.zhihu.com/question/39651928/answer/2490565983">PO BO VO DTO POJO DAO DO这些Java中的概念分别指一些什么？</a></h1>]]></content>
   </entry>
   <entry>
     <title>markdown-math</title>
@@ -139,6 +128,17 @@
       </categories>
       <tags>
         <tag>markdown-math</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PWA相关知识</title>
+    <url>/2022/09/16/PWA%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/</url>
+    <content><![CDATA[<h1 id="Web-在继续离我们远去"><a href="#Web-在继续离我们远去" class="headerlink" title="Web 在继续离我们远去"></a><a href="https://zhuanlan.zhihu.com/p/22561084">Web 在继续离我们远去</a></h1><h1 id="下一代-Web-应用模型-—-Progressive-Web-Ap"><a href="#下一代-Web-应用模型-—-Progressive-Web-Ap" class="headerlink" title="下一代 Web 应用模型 — Progressive Web Ap"></a><a href="https://zhuanlan.zhihu.com/p/25167289">下一代 Web 应用模型 — Progressive Web Ap</a></h1>]]></content>
+      <categories>
+        <category>PWA</category>
+      </categories>
+      <tags>
+        <tag>PWA</tag>
       </tags>
   </entry>
   <entry>
@@ -175,33 +175,6 @@
     <content><![CDATA[<h1 id="掌握UML类图"><a href="#掌握UML类图" class="headerlink" title="掌握UML类图"></a><a href="https://zhuanlan.zhihu.com/p/267298708">掌握UML类图</a></h1><h2 id="UML-Unified-Modeling-Language-统一建模语言"><a href="#UML-Unified-Modeling-Language-统一建模语言" class="headerlink" title="UML(Unified Modeling Language)统一建模语言"></a>UML(Unified Modeling Language)统一建模语言</h2>]]></content>
   </entry>
   <entry>
-    <title>electronAPI文档</title>
-    <url>/2022/08/17/electronAPI%E6%96%87%E6%A1%A3/</url>
-    <content><![CDATA[<h1 id="electron-文档"><a href="#electron-文档" class="headerlink" title="electron 文档"></a>electron 文档</h1><h2 id="electron"><a href="#electron" class="headerlink" title=" electron"></a> <a href="https://www.electronjs.org/zh/docs/latest/tutorial/tutorial-first-app">electron</a></h2><h2 id="electron中文文档"><a href="#electron中文文档" class="headerlink" title="electron中文文档"></a>electron中文文档</h2><h2 id="electron中文文档-1"><a href="#electron中文文档-1" class="headerlink" title="electron中文文档"></a><a href="https://www.wenjiangs.com/doc/s3ivxhuv">electron中文文档</a></h2><h2 id="electron-Vue"><a href="#electron-Vue" class="headerlink" title="electron + Vue"></a>electron + Vue</h2><p><a href="https://simulatedgreg.gitbooks.io/electron-vue/content/cn/">electron-vue</a></p>
-<p>vue init simulatedgreg&#x2F;electron-vue electron-vue</p>
-<p>sudo npm –vs2015 install –global windows-build-tools<br><a href="https://www.cnblogs.com/yunjiao/p/16491092.html">安装卡顿</a></p>
-<h2 id="electron-vue学习之环境搭建"><a href="#electron-vue学习之环境搭建" class="headerlink" title="electron-vue学习之环境搭建"></a><a href="https://dxsm.github.io/p/electron-learning-chp1.html">electron-vue学习之环境搭建</a></h2><h2 id="electron-React"><a href="#electron-React" class="headerlink" title="electron + React"></a>electron + React</h2><p><a href="https://electron-react-boilerplate.js.org/docs/installation">electron-react</a></p>
-<h2 id="git-clone-–depth-1-https-github-com-electron-react-boilerplate-electron-react-boilerplate-electron-react"><a href="#git-clone-–depth-1-https-github-com-electron-react-boilerplate-electron-react-boilerplate-electron-react" class="headerlink" title="git clone –depth&#x3D;1  https://github.com/electron-react-boilerplate/electron-react-boilerplate  electron-react"></a>git clone –depth&#x3D;1  <a href="https://github.com/electron-react-boilerplate/electron-react-boilerplate">https://github.com/electron-react-boilerplate/electron-react-boilerplate</a>  electron-react</h2>]]></content>
-      <categories>
-        <category>electron</category>
-      </categories>
-      <tags>
-        <tag>electronAPI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git 基本使用</title>
-    <url>/2022/05/14/git-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<p><a href="https://www.liaoxuefeng.com/wiki/896043488029600/898732864121440">廖雪峰</a></p>
-<h1 id="Git-config-查看和设置配置信息-慕城南风的博客-CSDN博客-查看git配置信息"><a href="#Git-config-查看和设置配置信息-慕城南风的博客-CSDN博客-查看git配置信息" class="headerlink" title="Git config 查看和设置配置信息_慕城南风的博客-CSDN博客_查看git配置信息"></a><a href="https://blog.csdn.net/lovedingd/article/details/121288974">Git config 查看和设置配置信息_慕城南风的博客-CSDN博客_查看git配置信息</a></h1>]]></content>
-      <categories>
-        <category>版本控制器</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>编码与解码</title>
     <url>/2021/11/10/encode&amp;decode/</url>
     <content><![CDATA[<h2 id="Unicode-和-UTF-8-有什么区别？"><a href="#Unicode-和-UTF-8-有什么区别？" class="headerlink" title="Unicode 和 UTF-8 有什么区别？"></a>Unicode 和 UTF-8 有什么区别？</h2><p>  中国人民通过对 ASCII 编码的中文扩充改造，产生了 GB2312 编码，可以表示6000多个常用汉字。汉字实在是太多了，包括繁体和各种字符，于是产生了 GBK 编码，它包括了 GB2312 中的编码，同时扩充了很多。中国是个多民族国家，各个民族几乎都有自己独立的语言系统，为了表示那些字符，继续把 GBK 编码扩充为 GB18030 编码。每个国家都像中国一样，把自己的语言编码，于是出现了各种各样的编码，如果你不安装相应的编码，就无法解释相应编码想表达的内容。终于，有个叫 ISO 的组织看不下去了。他们一起创造了一种编码 UNICODE ，这种编码非常大，大到可以容纳世界上任何一个文字和标志。所以只要电脑上有 UNICODE 这种编码系统，无论是全球哪种文字，只需要保存文件的时候，保存成 UNICODE 编码就可以被其他电脑正常解释。UNICODE 在网络传输中，出现了两个标准 UTF-8 和 UTF-16，分别每次传输 8个位和 16个位。于是就会有人产生疑问，UTF-8 既然能保存那么多文字、符号，为什么国内还有这么多使用 GBK 等编码的人？因为 UTF-8 等编码体积比较大，占电脑空间比较多，如果面向的使用人群绝大部分都是中国人，用 GBK 等编码也可以。</p>
@@ -227,6 +200,33 @@
       </categories>
       <tags>
         <tag>编码</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>electronAPI文档</title>
+    <url>/2022/08/17/electronAPI%E6%96%87%E6%A1%A3/</url>
+    <content><![CDATA[<h1 id="electron-文档"><a href="#electron-文档" class="headerlink" title="electron 文档"></a>electron 文档</h1><h2 id="electron"><a href="#electron" class="headerlink" title=" electron"></a> <a href="https://www.electronjs.org/zh/docs/latest/tutorial/tutorial-first-app">electron</a></h2><h2 id="electron中文文档"><a href="#electron中文文档" class="headerlink" title="electron中文文档"></a>electron中文文档</h2><h2 id="electron中文文档-1"><a href="#electron中文文档-1" class="headerlink" title="electron中文文档"></a><a href="https://www.wenjiangs.com/doc/s3ivxhuv">electron中文文档</a></h2><h2 id="electron-Vue"><a href="#electron-Vue" class="headerlink" title="electron + Vue"></a>electron + Vue</h2><p><a href="https://simulatedgreg.gitbooks.io/electron-vue/content/cn/">electron-vue</a></p>
+<p>vue init simulatedgreg&#x2F;electron-vue electron-vue</p>
+<p>sudo npm –vs2015 install –global windows-build-tools<br><a href="https://www.cnblogs.com/yunjiao/p/16491092.html">安装卡顿</a></p>
+<h2 id="electron-vue学习之环境搭建"><a href="#electron-vue学习之环境搭建" class="headerlink" title="electron-vue学习之环境搭建"></a><a href="https://dxsm.github.io/p/electron-learning-chp1.html">electron-vue学习之环境搭建</a></h2><h2 id="electron-React"><a href="#electron-React" class="headerlink" title="electron + React"></a>electron + React</h2><p><a href="https://electron-react-boilerplate.js.org/docs/installation">electron-react</a></p>
+<h2 id="git-clone-–depth-1-https-github-com-electron-react-boilerplate-electron-react-boilerplate-electron-react"><a href="#git-clone-–depth-1-https-github-com-electron-react-boilerplate-electron-react-boilerplate-electron-react" class="headerlink" title="git clone –depth&#x3D;1  https://github.com/electron-react-boilerplate/electron-react-boilerplate  electron-react"></a>git clone –depth&#x3D;1  <a href="https://github.com/electron-react-boilerplate/electron-react-boilerplate">https://github.com/electron-react-boilerplate/electron-react-boilerplate</a>  electron-react</h2>]]></content>
+      <categories>
+        <category>electron</category>
+      </categories>
+      <tags>
+        <tag>electronAPI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git 基本使用</title>
+    <url>/2022/05/14/git-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p><a href="https://www.liaoxuefeng.com/wiki/896043488029600/898732864121440">廖雪峰</a></p>
+<h1 id="Git-config-查看和设置配置信息-慕城南风的博客-CSDN博客-查看git配置信息"><a href="#Git-config-查看和设置配置信息-慕城南风的博客-CSDN博客-查看git配置信息" class="headerlink" title="Git config 查看和设置配置信息_慕城南风的博客-CSDN博客_查看git配置信息"></a><a href="https://blog.csdn.net/lovedingd/article/details/121288974">Git config 查看和设置配置信息_慕城南风的博客-CSDN博客_查看git配置信息</a></h1>]]></content>
+      <categories>
+        <category>版本控制器</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -431,17 +431,6 @@
       </tags>
   </entry>
   <entry>
-    <title>js模块化</title>
-    <url>/2022/08/14/js%E6%A8%A1%E5%9D%97%E5%8C%96/</url>
-    <content><![CDATA[<h2 id="CommonJS"><a href="#CommonJS" class="headerlink" title="CommonJS"></a>CommonJS</h2><h2 id="ESM"><a href="#ESM" class="headerlink" title="ESM"></a>ESM</h2>]]></content>
-      <categories>
-        <category>模块化</category>
-      </categories>
-      <tags>
-        <tag>js模块化</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>jdbc连接数据库SSL</title>
     <url>/2022/07/17/jdbc%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93SSL/</url>
     <content><![CDATA[<h4 id="在Java8及高版本以上的版本在调用ssl时会出现javax-net-ssl-SSLHandshakeException-No-appropriate-protocol的异常。"><a href="#在Java8及高版本以上的版本在调用ssl时会出现javax-net-ssl-SSLHandshakeException-No-appropriate-protocol的异常。" class="headerlink" title="在Java8及高版本以上的版本在调用ssl时会出现javax.net.ssl.SSLHandshakeException: No appropriate protocol的异常。"></a>在Java8及高版本以上的版本在调用ssl时会出现<code>javax.net.ssl.SSLHandshakeException: No appropriate protocol</code>的异常。</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">javax.net.ssl.SSLHandshakeException: No appropriate <span class="title function_">protocol</span> <span class="params">(protocol is disabled or cipher suites are inappropriate)</span></span><br><span class="line">	at sun.security.ssl.HandshakeContext.&lt;init&gt;(HandshakeContext.java:<span class="number">171</span>) ~[na:<span class="number">1.8</span><span class="number">.0_292</span>]</span><br><span class="line">	at sun.security.ssl.ClientHandshakeContext.&lt;init&gt;(ClientHandshakeContext.java:<span class="number">98</span>) ~[na:<span class="number">1.8</span><span class="number">.0_292</span>]</span><br><span class="line">	at sun.security.ssl.TransportContext.kickstart(TransportContext.java:<span class="number">220</span>) ~[na:<span class="number">1.8</span><span class="number">.0_292</span>]</span><br><span class="line">	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:<span class="number">428</span>) ~[na:<span class="number">1.8</span><span class="number">.0_292</span>]</span><br><span class="line">	at com.mysql.cj.protocol.ExportControlled.performTlsHandshake(ExportControlled.java:<span class="number">316</span>) ~[mysql-connector-java-<span class="number">8.0</span><span class="number">.17</span>.jar:<span class="number">8.0</span><span class="number">.17</span>]</span><br><span class="line">	at com.mysql.cj.protocol.StandardSocketFactory.performTlsHandshake(StandardSocketFactory.java:<span class="number">188</span>) ~[mysql-connector-java-<span class="number">8.0</span><span class="number">.17</span>.jar:<span class="number">8.0</span><span class="number">.17</span>]</span><br><span class="line">	at com.mysql.cj.protocol.a.NativeSocketConnection.performTlsHandshake(NativeSocketConnection.java:<span class="number">99</span>) ~[mysql-connector-java-<span class="number">8.0</span><span class="number">.17</span>.jar:<span class="number">8.0</span><span class="number">.17</span>]</span><br><span class="line">	at com.mysql.cj.protocol.a.NativeProtocol.negotiateSSLConnection(NativeProtocol.java:<span class="number">331</span>) ~[mysql-connector-java-<span class="number">8.0</span><span class="number">.17</span>.jar:<span class="number">8.0</span><span class="number">.17</span>]</span><br><span class="line">	... <span class="number">68</span> common frames omitted</span><br></pre></td></tr></table></figure>
@@ -489,6 +478,17 @@
       </categories>
       <tags>
         <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>js模块化</title>
+    <url>/2022/08/14/js%E6%A8%A1%E5%9D%97%E5%8C%96/</url>
+    <content><![CDATA[<h2 id="CommonJS"><a href="#CommonJS" class="headerlink" title="CommonJS"></a>CommonJS</h2><h2 id="ESM"><a href="#ESM" class="headerlink" title="ESM"></a>ESM</h2>]]></content>
+      <categories>
+        <category>模块化</category>
+      </categories>
+      <tags>
+        <tag>js模块化</tag>
       </tags>
   </entry>
   <entry>
@@ -673,6 +673,30 @@ dnf makecache
       </tags>
   </entry>
   <entry>
+    <title>centos安装docker</title>
+    <url>/2022/06/06/rockylinx-install-docker/</url>
+    <content><![CDATA[<h3 id="rockylinux安装教程"><a href="#rockylinux安装教程" class="headerlink" title="rockylinux安装教程"></a><a href="https://blog.csdn.net/dreamerrrrrr/article/details/119837681">rockylinux安装教程</a></h3><h1 id="install-on-CentOS-Install-Docker-Engine-on-CentOS-Docker-Documentation"><a href="#install-on-CentOS-Install-Docker-Engine-on-CentOS-Docker-Documentation" class="headerlink" title="[install on CentOS](Install Docker Engine on CentOS | Docker Documentation)"></a>[install on CentOS](<a href="https://docs.docker.com/engine/install/centos/">Install Docker Engine on CentOS | Docker Documentation</a>)</h1><h3 id="Uninstall-old-versions"><a href="#Uninstall-old-versions" class="headerlink" title="Uninstall old versions"></a>Uninstall old versions</h3><hr>
+<figure class="highlight livescript"><table><tr><td class="code"><pre><span class="line">sudo yum remove docker <span class="string">\</span></span><br><span class="line">                  docker-client <span class="string">\</span></span><br><span class="line">                  docker-client-latest <span class="string">\</span></span><br><span class="line">                  docker-common <span class="string">\</span></span><br><span class="line">                  docker-latest <span class="string">\</span></span><br><span class="line">                  docker-latest-logrotate <span class="string">\</span></span><br><span class="line">                  docker-logrotate <span class="string">\</span></span><br><span class="line">                  docker-engine </span><br></pre></td></tr></table></figure>
+<h3 id="Install-using-the-repository"><a href="#Install-using-the-repository" class="headerlink" title="Install using the repository"></a>Install using the repository</h3><hr>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo yum install -y yum-utils</span><br><span class="line"> sudo yum-config-manager \</span><br><span class="line">    --add-repo \</span><br><span class="line">    http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
+<h3 id="Install-Docker-Engine"><a href="#Install-Docker-Engine" class="headerlink" title="Install Docker Engine"></a>Install Docker Engine</h3><hr>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo yum update</span><br><span class="line">sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin</span><br></pre></td></tr></table></figure>
+
+<h3 id="Start-Docker"><a href="#Start-Docker" class="headerlink" title="Start Docker"></a>Start Docker</h3><hr>
+<figure class="highlight crmsh"><table><tr><td class="code"><pre><span class="line">sudo systemctl <span class="literal">start</span> docker</span><br></pre></td></tr></table></figure>
+
+<h3 id="Uninstall-Docker-Engine"><a href="#Uninstall-Docker-Engine" class="headerlink" title="Uninstall Docker Engine"></a>Uninstall Docker Engine</h3><figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">sudo yum remove docker-ce docker-ce-<span class="keyword">cli</span> containerd.io docker-compose-<span class="keyword">plugin</span></span><br><span class="line">sudo <span class="keyword">rm</span> -rf /<span class="keyword">var</span>/lib/docker</span><br><span class="line">sudo <span class="keyword">rm</span> -rf /<span class="keyword">var</span>/lib/containerd</span><br></pre></td></tr></table></figure>
+
+<h3 id="var-lib-docker-为默认工作目录"><a href="#var-lib-docker-为默认工作目录" class="headerlink" title="&#x2F;var&#x2F;lib&#x2F;docker 为默认工作目录"></a>&#x2F;var&#x2F;lib&#x2F;docker 为默认工作目录</h3><h3 id="阿里云镜像加速"><a href="#阿里云镜像加速" class="headerlink" title="阿里云镜像加速"></a>阿里云镜像加速</h3><hr>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">mkdir</span> -p /etc/docker</span><br><span class="line">sudo <span class="built_in">tee</span> /etc/docker/daemon.json &lt;&lt;-<span class="string">&#x27;EOF&#x27;</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;registry-mirrors&quot;</span>: [<span class="string">&quot;https://rz9fml8b.mirror.aliyuncs.com&quot;</span>]</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>docker</category>
+      </categories>
+      <tags>
+        <tag>centos安装docker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>http-framework</title>
     <url>/2023/12/17/web-http/</url>
     <content><![CDATA[<p>web 框架指的是处理 http、https 的服务端框架，Node.js 提供了 http、https 模块用于处理协议数据，这是 web 框架的基础。</p>
@@ -735,30 +759,6 @@ dnf makecache
       </tags>
   </entry>
   <entry>
-    <title>centos安装docker</title>
-    <url>/2022/06/06/rockylinx-install-docker/</url>
-    <content><![CDATA[<h3 id="rockylinux安装教程"><a href="#rockylinux安装教程" class="headerlink" title="rockylinux安装教程"></a><a href="https://blog.csdn.net/dreamerrrrrr/article/details/119837681">rockylinux安装教程</a></h3><h1 id="install-on-CentOS-Install-Docker-Engine-on-CentOS-Docker-Documentation"><a href="#install-on-CentOS-Install-Docker-Engine-on-CentOS-Docker-Documentation" class="headerlink" title="[install on CentOS](Install Docker Engine on CentOS | Docker Documentation)"></a>[install on CentOS](<a href="https://docs.docker.com/engine/install/centos/">Install Docker Engine on CentOS | Docker Documentation</a>)</h1><h3 id="Uninstall-old-versions"><a href="#Uninstall-old-versions" class="headerlink" title="Uninstall old versions"></a>Uninstall old versions</h3><hr>
-<figure class="highlight livescript"><table><tr><td class="code"><pre><span class="line">sudo yum remove docker <span class="string">\</span></span><br><span class="line">                  docker-client <span class="string">\</span></span><br><span class="line">                  docker-client-latest <span class="string">\</span></span><br><span class="line">                  docker-common <span class="string">\</span></span><br><span class="line">                  docker-latest <span class="string">\</span></span><br><span class="line">                  docker-latest-logrotate <span class="string">\</span></span><br><span class="line">                  docker-logrotate <span class="string">\</span></span><br><span class="line">                  docker-engine </span><br></pre></td></tr></table></figure>
-<h3 id="Install-using-the-repository"><a href="#Install-using-the-repository" class="headerlink" title="Install using the repository"></a>Install using the repository</h3><hr>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo yum install -y yum-utils</span><br><span class="line"> sudo yum-config-manager \</span><br><span class="line">    --add-repo \</span><br><span class="line">    http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
-<h3 id="Install-Docker-Engine"><a href="#Install-Docker-Engine" class="headerlink" title="Install Docker Engine"></a>Install Docker Engine</h3><hr>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo yum update</span><br><span class="line">sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin</span><br></pre></td></tr></table></figure>
-
-<h3 id="Start-Docker"><a href="#Start-Docker" class="headerlink" title="Start Docker"></a>Start Docker</h3><hr>
-<figure class="highlight crmsh"><table><tr><td class="code"><pre><span class="line">sudo systemctl <span class="literal">start</span> docker</span><br></pre></td></tr></table></figure>
-
-<h3 id="Uninstall-Docker-Engine"><a href="#Uninstall-Docker-Engine" class="headerlink" title="Uninstall Docker Engine"></a>Uninstall Docker Engine</h3><figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">sudo yum remove docker-ce docker-ce-<span class="keyword">cli</span> containerd.io docker-compose-<span class="keyword">plugin</span></span><br><span class="line">sudo <span class="keyword">rm</span> -rf /<span class="keyword">var</span>/lib/docker</span><br><span class="line">sudo <span class="keyword">rm</span> -rf /<span class="keyword">var</span>/lib/containerd</span><br></pre></td></tr></table></figure>
-
-<h3 id="var-lib-docker-为默认工作目录"><a href="#var-lib-docker-为默认工作目录" class="headerlink" title="&#x2F;var&#x2F;lib&#x2F;docker 为默认工作目录"></a>&#x2F;var&#x2F;lib&#x2F;docker 为默认工作目录</h3><h3 id="阿里云镜像加速"><a href="#阿里云镜像加速" class="headerlink" title="阿里云镜像加速"></a>阿里云镜像加速</h3><hr>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">mkdir</span> -p /etc/docker</span><br><span class="line">sudo <span class="built_in">tee</span> /etc/docker/daemon.json &lt;&lt;-<span class="string">&#x27;EOF&#x27;</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;registry-mirrors&quot;</span>: [<span class="string">&quot;https://rz9fml8b.mirror.aliyuncs.com&quot;</span>]</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>docker</category>
-      </categories>
-      <tags>
-        <tag>centos安装docker</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>加密</title>
     <url>/2022/09/16/%E5%8A%A0%E5%AF%86/</url>
     <content><![CDATA[<h1 id="MD5是32位的，也就是说理论上是有限的，而世界上的数据是无限的，那会不会生成重复的MD5值"><a href="#MD5是32位的，也就是说理论上是有限的，而世界上的数据是无限的，那会不会生成重复的MD5值" class="headerlink" title="MD5是32位的，也就是说理论上是有限的，而世界上的数据是无限的，那会不会生成重复的MD5值?"></a><a href="https://www.zhihu.com/question/365544497/answer/2251328732">MD5是32位的，也就是说理论上是有限的，而世界上的数据是无限的，那会不会生成重复的MD5值?</a></h1><h1 id="为什么说-MD5-是不可逆的？"><a href="#为什么说-MD5-是不可逆的？" class="headerlink" title="为什么说 MD5 是不可逆的？"></a><a href="https://www.zhihu.com/question/22651987/answer/968239218">为什么说 MD5 是不可逆的？</a></h1>]]></content>
@@ -818,33 +818,6 @@ dnf makecache
       </categories>
       <tags>
         <tag>docker容器数据卷</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计算机浮点数存储</title>
-    <url>/2022/10/13/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%AD%98%E5%82%A8/</url>
-    <content><![CDATA[<h1 id="IEEE-754标准的浮点数存储"><a href="#IEEE-754标准的浮点数存储" class="headerlink" title="IEEE 754标准的浮点数存储"></a>IEEE 754标准的浮点数存储</h1><p>事实上，在浮点数的存储过程中，为了运算方便和尽可能多的提高存储存储空间的利用效率，往往不会直接存储各部分的二进制原码。</p>
-<p>例如，指数部分存储的是实际指数值得移码，而尾数部分存储的是规约化后的尾数的补码。</p>
-<p>所谓移码，就是将实际的指数值加上一个固定的数值而得到的数。在单精度浮点数中这个数是127，在双精度浮点数中这个数是1024。假设这个数是e，则e的计算公式如下：</p>
-<p>e&#x3D;2n−1−1<br>e&#x3D;2n−1−1<br>其中nn是指数部分的长度。</p>
-<p>如此一来，即使是最小的指数（例如单精度浮点数是-126），在存储的时候也会存储为1（-126+127）。这样，就方便了指数的大小比较也省了一个符号位。</p>
-<p>现在，上面的浮点数的计算公式就变成了下面的样子：</p>
-<p><code>(−1)**sign*2**(exponent−e)*fraction2</code><br>(−1)sign×2exponent−e×fraction2<br>当然，这还不是计算公式的最终形态，因为我们还有尾数没有说。</p>
-<p>刚刚在上面提到过定点数的表示其实就是在这里做一下铺垫。因为，尾数部分实际上存储的就是一个定点数。</p>
-<p>这里的定点数需要时一个以1开头的二进制数并且小数点位于第一位数的后面。</p>
-<p>拿(0.5)10(0.5)10来说，把它转换成二进制是(0.1)2&#x3D;(−1)0×(1.0)2×2−1(0.1)2&#x3D;(−1)0×(1.0)2×2−1<br>把指数部分用移码表示就是−1+127&#x3D;126−1+127&#x3D;126,所以，0.5的就存储为：</p>
-<p>0 01111110 1000000000000000000000</p>
-<p>现在我们又发现，既然尾数部分的定点数都是1开头，那就把这个1给省略掉好了。这样就又多出一位来保存尾数，提高精度了（当然，省略开头的第一个1后，默认小数点的位置就变成现在的第一位数之前了）。</p>
-<p>于是乎，上面的0.5在实际存储中就变成了</p>
-<p>0 01111110 0000000000000000000000</p>
-<p>此时，最终形态的计算公式就是：</p>
-<p><code>(−1)**sign*2**(exponent−e)*(fraction2+1)</code><br>(−1)sign×2exponent−e×(fraction2+1)<br>当指数部分为0，而尾数部分不为0（指数、尾数同时为0表示的当然是数字0）时，这个浮点数称为非规约形式浮点数。IEEE 754标准规定：非规约形式的浮点数的指数偏移值比规约形式的浮点数的指数偏移值大1。</p>
-]]></content>
-      <categories>
-        <category>存储</category>
-      </categories>
-      <tags>
-        <tag>浮点数存储</tag>
       </tags>
   </entry>
   <entry>
@@ -966,10 +939,31 @@ dnf makecache
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2024/01/11/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E5%B8%B8%E7%94%A8%E7%9A%84%E5%8D%8F%E8%AE%AE/</url>
-    <content><![CDATA[<p><a href="https://www.cfmem.com/2021/08/vmess-trojan-shadowsocks.html">科学上网常见协议解析 vmess, trojan, shadowsocks 内容解析</a></p>
+    <title>计算机浮点数存储</title>
+    <url>/2022/10/13/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%AD%98%E5%82%A8/</url>
+    <content><![CDATA[<h1 id="IEEE-754标准的浮点数存储"><a href="#IEEE-754标准的浮点数存储" class="headerlink" title="IEEE 754标准的浮点数存储"></a>IEEE 754标准的浮点数存储</h1><p>事实上，在浮点数的存储过程中，为了运算方便和尽可能多的提高存储存储空间的利用效率，往往不会直接存储各部分的二进制原码。</p>
+<p>例如，指数部分存储的是实际指数值得移码，而尾数部分存储的是规约化后的尾数的补码。</p>
+<p>所谓移码，就是将实际的指数值加上一个固定的数值而得到的数。在单精度浮点数中这个数是127，在双精度浮点数中这个数是1024。假设这个数是e，则e的计算公式如下：</p>
+<p>e&#x3D;2n−1−1<br>e&#x3D;2n−1−1<br>其中nn是指数部分的长度。</p>
+<p>如此一来，即使是最小的指数（例如单精度浮点数是-126），在存储的时候也会存储为1（-126+127）。这样，就方便了指数的大小比较也省了一个符号位。</p>
+<p>现在，上面的浮点数的计算公式就变成了下面的样子：</p>
+<p><code>(−1)**sign*2**(exponent−e)*fraction2</code><br>(−1)sign×2exponent−e×fraction2<br>当然，这还不是计算公式的最终形态，因为我们还有尾数没有说。</p>
+<p>刚刚在上面提到过定点数的表示其实就是在这里做一下铺垫。因为，尾数部分实际上存储的就是一个定点数。</p>
+<p>这里的定点数需要时一个以1开头的二进制数并且小数点位于第一位数的后面。</p>
+<p>拿(0.5)10(0.5)10来说，把它转换成二进制是(0.1)2&#x3D;(−1)0×(1.0)2×2−1(0.1)2&#x3D;(−1)0×(1.0)2×2−1<br>把指数部分用移码表示就是−1+127&#x3D;126−1+127&#x3D;126,所以，0.5的就存储为：</p>
+<p>0 01111110 1000000000000000000000</p>
+<p>现在我们又发现，既然尾数部分的定点数都是1开头，那就把这个1给省略掉好了。这样就又多出一位来保存尾数，提高精度了（当然，省略开头的第一个1后，默认小数点的位置就变成现在的第一位数之前了）。</p>
+<p>于是乎，上面的0.5在实际存储中就变成了</p>
+<p>0 01111110 0000000000000000000000</p>
+<p>此时，最终形态的计算公式就是：</p>
+<p><code>(−1)**sign*2**(exponent−e)*(fraction2+1)</code><br>(−1)sign×2exponent−e×(fraction2+1)<br>当指数部分为0，而尾数部分不为0（指数、尾数同时为0表示的当然是数字0）时，这个浮点数称为非规约形式浮点数。IEEE 754标准规定：非规约形式的浮点数的指数偏移值比规约形式的浮点数的指数偏移值大1。</p>
 ]]></content>
+      <categories>
+        <category>存储</category>
+      </categories>
+      <tags>
+        <tag>浮点数存储</tag>
+      </tags>
   </entry>
   <entry>
     <title>码制与位运算</title>
@@ -1005,17 +999,35 @@ dnf makecache
       </tags>
   </entry>
   <entry>
+    <title>科学上网协议介绍</title>
+    <url>/2022/09/16/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E5%B8%B8%E7%94%A8%E7%9A%84%E5%8D%8F%E8%AE%AE/</url>
+    <content><![CDATA[<p><a href="https://www.cfmem.com/2021/08/vmess-trojan-shadowsocks.html">科学上网常见协议解析 vmess, trojan, shadowsocks 内容解析</a></p>
+]]></content>
+      <categories>
+        <category>网络</category>
+      </categories>
+      <tags>
+        <tag>协议</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>网络线路</title>
     <url>/2022/09/16/%E7%BD%91%E7%BB%9C%E7%BA%BF%E8%B7%AF/</url>
     <content><![CDATA[<h1 id="租服务器时遇到的CN2，GIA，CIA，BGP以及IPLC都是什么意思？"><a href="#租服务器时遇到的CN2，GIA，CIA，BGP以及IPLC都是什么意思？" class="headerlink" title="租服务器时遇到的CN2，GIA，CIA，BGP以及IPLC都是什么意思？"></a><a href="https://zhuanlan.zhihu.com/p/356646013">租服务器时遇到的CN2，GIA，CIA，BGP以及IPLC都是什么意思？</a></h1>]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/2024/01/11/%E8%B5%84%E8%AE%AF%E3%80%81%E5%8D%9A%E5%AE%A2%E8%AE%A2%E9%98%85/</url>
+    <title>资讯、多媒体订阅</title>
+    <url>/2023/09/25/%E8%B5%84%E8%AE%AF%E3%80%81%E5%8D%9A%E5%AE%A2%E8%AE%A2%E9%98%85/</url>
     <content><![CDATA[<h3 id="消息-资讯-订阅"><a href="#消息-资讯-订阅" class="headerlink" title="消息|资讯 订阅"></a>消息|资讯 订阅</h3><p><a href="https://sspai.com/post/57498">Tiny Tiny RSS 部署</a></p>
 <hr>
 <h3 id="多媒体-播客订阅服务"><a href="#多媒体-播客订阅服务" class="headerlink" title="多媒体 播客订阅服务"></a>多媒体 播客订阅服务</h3><p><a href="https://sspai.com/post/63610">Airsonic 部署</a></p>
 ]]></content>
+      <categories>
+        <category>订阅</category>
+      </categories>
+      <tags>
+        <tag>订阅</tag>
+      </tags>
   </entry>
   <entry>
     <title>视频编码</title>
@@ -1144,6 +1156,17 @@ dnf makecache
       </tags>
   </entry>
   <entry>
+    <title>docker学习大纲</title>
+    <url>/2022/06/28/database/docker%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2/</url>
+    <content><![CDATA[<h3 id="Docker-network-（容器网络）"><a href="#Docker-network-（容器网络）" class="headerlink" title="Docker network （容器网络）"></a>Docker network （容器网络）</h3><h3 id="Docker-compose（容器编排）"><a href="#Docker-compose（容器编排）" class="headerlink" title="Docker compose（容器编排）"></a>Docker compose（容器编排）</h3><h3 id="Docker-Swarm（集群）"><a href="#Docker-Swarm（集群）" class="headerlink" title="Docker Swarm（集群）"></a>Docker Swarm（集群）</h3><h3 id="CI-CD-jenkins-流水线"><a href="#CI-CD-jenkins-流水线" class="headerlink" title="CI&#x2F;CD jenkins (流水线)"></a>CI&#x2F;CD jenkins (流水线)</h3><h3 id="ansible-自动化工具，部署"><a href="#ansible-自动化工具，部署" class="headerlink" title="ansible (自动化工具，部署)"></a><a href="http://ansible.com.cn/docs">ansible</a> (自动化工具，部署)</h3>]]></content>
+      <categories>
+        <category>docker</category>
+      </categories>
+      <tags>
+        <tag>docker学习大纲</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>docker安装mysql</title>
     <url>/2022/07/15/database/docker%E5%AE%89%E8%A3%85mysql/</url>
     <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> docker run -d -p 3306:3306 \</span><br><span class="line">--privileged=<span class="literal">true</span> \</span><br><span class="line">-v /opt/mysql/conf:/etc/mysql/conf.d \</span><br><span class="line">-v /opt/mysql/data:/var/lib/mysql \</span><br><span class="line">-v /opt/mysql/log:/var/log/mysql \</span><br><span class="line">-e MYSQL_ROOT_PASSWORD=123456 \</span><br><span class="line">--name mysql01 mysql:5.7 \</span><br><span class="line">--character-set-server=utf8mb4 \</span><br><span class="line">--collation-server=utf8mb4_unicode_ci</span><br></pre></td></tr></table></figure>
@@ -1154,17 +1177,6 @@ dnf makecache
       </categories>
       <tags>
         <tag>mysql</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>docker学习大纲</title>
-    <url>/2022/06/28/database/docker%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2/</url>
-    <content><![CDATA[<h3 id="Docker-network-（容器网络）"><a href="#Docker-network-（容器网络）" class="headerlink" title="Docker network （容器网络）"></a>Docker network （容器网络）</h3><h3 id="Docker-compose（容器编排）"><a href="#Docker-compose（容器编排）" class="headerlink" title="Docker compose（容器编排）"></a>Docker compose（容器编排）</h3><h3 id="Docker-Swarm（集群）"><a href="#Docker-Swarm（集群）" class="headerlink" title="Docker Swarm（集群）"></a>Docker Swarm（集群）</h3><h3 id="CI-CD-jenkins-流水线"><a href="#CI-CD-jenkins-流水线" class="headerlink" title="CI&#x2F;CD jenkins (流水线)"></a>CI&#x2F;CD jenkins (流水线)</h3><h3 id="ansible-自动化工具，部署"><a href="#ansible-自动化工具，部署" class="headerlink" title="ansible (自动化工具，部署)"></a><a href="http://ansible.com.cn/docs">ansible</a> (自动化工具，部署)</h3>]]></content>
-      <categories>
-        <category>docker</category>
-      </categories>
-      <tags>
-        <tag>docker学习大纲</tag>
       </tags>
   </entry>
   <entry>
@@ -1281,27 +1293,6 @@ dnf makecache
       </tags>
   </entry>
   <entry>
-    <title>Kubernetes</title>
-    <url>/2022/07/17/database/kubernetes/</url>
-    <content><![CDATA[<h1 id="Kubernetes镜像"><a href="#Kubernetes镜像" class="headerlink" title="Kubernetes镜像"></a>Kubernetes镜像</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Kubernetes是一个开源系统，用于容器化应用的自动部署、扩缩和管理。它将构成应用的容器按逻辑单位进行分组以便于管理和发现。</p>
-<p>下载地址：<a href="https://mirrors.aliyun.com/kubernetes/">https://mirrors.aliyun.com/kubernetes/</a></p>
-<h2 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h2><h3 id="Debian-Ubuntu"><a href="#Debian-Ubuntu" class="headerlink" title="Debian &#x2F; Ubuntu"></a>Debian &#x2F; Ubuntu</h3><figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">apt-<span class="built_in">get</span> <span class="keyword">update</span> &amp;&amp; apt-<span class="built_in">get</span> install -<span class="keyword">y</span> apt-transport-https</span><br><span class="line">curl https://mirrors.aliyun.<span class="keyword">com</span>/kubernetes/apt/doc/apt-key.gpg | apt-key <span class="built_in">add</span> - </span><br><span class="line"><span class="keyword">cat</span> &lt;&lt;EOF &gt;/etc/apt/sources.<span class="keyword">list</span>.d/kubernetes.<span class="keyword">list</span></span><br><span class="line"><span class="keyword">deb</span> https://mirrors.aliyun.<span class="keyword">com</span>/kubernetes/apt/ kubernetes-xenial main</span><br><span class="line">EOF</span><br><span class="line">apt-<span class="built_in">get</span> <span class="keyword">update</span></span><br><span class="line">apt-<span class="built_in">get</span> install -<span class="keyword">y</span> kubelet kubeadm kubectl</span><br></pre></td></tr></table></figure>
-
-<h3 id="CentOS-RHEL-Fedora"><a href="#CentOS-RHEL-Fedora" class="headerlink" title="CentOS &#x2F; RHEL &#x2F; Fedora"></a>CentOS &#x2F; RHEL &#x2F; Fedora</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">cat &lt;&lt;EOF &gt; <span class="regexp">/etc/yum</span>.repos.d/kubernetes.repo</span><br><span class="line">[kubernetes]</span><br><span class="line">name=Kubernetes</span><br><span class="line">baseurl=https:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/kubernetes/yum</span><span class="regexp">/repos/</span>kubernetes-el7-x86_64/</span><br><span class="line">enabled=<span class="number">1</span></span><br><span class="line">gpgcheck=<span class="number">1</span></span><br><span class="line">repo_gpgcheck=<span class="number">1</span></span><br><span class="line">gpgkey=https:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/kubernetes/yum</span><span class="regexp">/doc/yum</span>-key.gpg https:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/kubernetes/yum</span><span class="regexp">/doc/</span>rpm-package-key.gpg</span><br><span class="line">EOF</span><br><span class="line">setenforce <span class="number">0</span></span><br><span class="line">yum install -y kubelet kubeadm kubectl</span><br><span class="line">systemctl enable kubelet &amp;&amp; systemctl start kubelet</span><br></pre></td></tr></table></figure>
-
-<p>ps: 由于官网未开放同步方式, 可能会有索引gpg检查失败的情况, 这时请用 <code>yum install -y --nogpgcheck kubelet kubeadm kubectl</code> 安装</p>
-<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ul>
-<li>官方主页：<a href="https://kubernetes.io/">https://kubernetes.io/</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>container</category>
-      </categories>
-      <tags>
-        <tag>kubernetes</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>docker镜像讲解</title>
     <url>/2022/06/28/database/docker%E9%95%9C%E5%83%8F%E8%AE%B2%E8%A7%A3/</url>
     <content><![CDATA[<h1 id="Docker镜像讲解"><a href="#Docker镜像讲解" class="headerlink" title="Docker镜像讲解"></a>Docker镜像讲解</h1><h2 id="镜像是什么"><a href="#镜像是什么" class="headerlink" title="镜像是什么"></a>镜像是什么</h2><ul>
@@ -1344,6 +1335,27 @@ dnf makecache
       </categories>
       <tags>
         <tag>dokcer镜像</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Kubernetes</title>
+    <url>/2022/07/17/database/kubernetes/</url>
+    <content><![CDATA[<h1 id="Kubernetes镜像"><a href="#Kubernetes镜像" class="headerlink" title="Kubernetes镜像"></a>Kubernetes镜像</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Kubernetes是一个开源系统，用于容器化应用的自动部署、扩缩和管理。它将构成应用的容器按逻辑单位进行分组以便于管理和发现。</p>
+<p>下载地址：<a href="https://mirrors.aliyun.com/kubernetes/">https://mirrors.aliyun.com/kubernetes/</a></p>
+<h2 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h2><h3 id="Debian-Ubuntu"><a href="#Debian-Ubuntu" class="headerlink" title="Debian &#x2F; Ubuntu"></a>Debian &#x2F; Ubuntu</h3><figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">apt-<span class="built_in">get</span> <span class="keyword">update</span> &amp;&amp; apt-<span class="built_in">get</span> install -<span class="keyword">y</span> apt-transport-https</span><br><span class="line">curl https://mirrors.aliyun.<span class="keyword">com</span>/kubernetes/apt/doc/apt-key.gpg | apt-key <span class="built_in">add</span> - </span><br><span class="line"><span class="keyword">cat</span> &lt;&lt;EOF &gt;/etc/apt/sources.<span class="keyword">list</span>.d/kubernetes.<span class="keyword">list</span></span><br><span class="line"><span class="keyword">deb</span> https://mirrors.aliyun.<span class="keyword">com</span>/kubernetes/apt/ kubernetes-xenial main</span><br><span class="line">EOF</span><br><span class="line">apt-<span class="built_in">get</span> <span class="keyword">update</span></span><br><span class="line">apt-<span class="built_in">get</span> install -<span class="keyword">y</span> kubelet kubeadm kubectl</span><br></pre></td></tr></table></figure>
+
+<h3 id="CentOS-RHEL-Fedora"><a href="#CentOS-RHEL-Fedora" class="headerlink" title="CentOS &#x2F; RHEL &#x2F; Fedora"></a>CentOS &#x2F; RHEL &#x2F; Fedora</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">cat &lt;&lt;EOF &gt; <span class="regexp">/etc/yum</span>.repos.d/kubernetes.repo</span><br><span class="line">[kubernetes]</span><br><span class="line">name=Kubernetes</span><br><span class="line">baseurl=https:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/kubernetes/yum</span><span class="regexp">/repos/</span>kubernetes-el7-x86_64/</span><br><span class="line">enabled=<span class="number">1</span></span><br><span class="line">gpgcheck=<span class="number">1</span></span><br><span class="line">repo_gpgcheck=<span class="number">1</span></span><br><span class="line">gpgkey=https:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/kubernetes/yum</span><span class="regexp">/doc/yum</span>-key.gpg https:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/kubernetes/yum</span><span class="regexp">/doc/</span>rpm-package-key.gpg</span><br><span class="line">EOF</span><br><span class="line">setenforce <span class="number">0</span></span><br><span class="line">yum install -y kubelet kubeadm kubectl</span><br><span class="line">systemctl enable kubelet &amp;&amp; systemctl start kubelet</span><br></pre></td></tr></table></figure>
+
+<p>ps: 由于官网未开放同步方式, 可能会有索引gpg检查失败的情况, 这时请用 <code>yum install -y --nogpgcheck kubelet kubeadm kubectl</code> 安装</p>
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ul>
+<li>官方主页：<a href="https://kubernetes.io/">https://kubernetes.io/</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>container</category>
+      </categories>
+      <tags>
+        <tag>kubernetes</tag>
       </tags>
   </entry>
 </search>
