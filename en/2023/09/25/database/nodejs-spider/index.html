@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/silver/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"stephenshawn.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"Pisces | Gemini":240,"width":300},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Node.js常用爬虫框架与无头浏览器  NodeCrawlerSimplecrawler puppeteer JavaScript编写的开源Web爬虫  NodeCrawler实现语言： JavaScriptGitHub星标数： 3999官方支持链接  简介： NodeCrawler是一种广为使用的Web爬虫，它基于NodeJS实现，具有非常快的爬取速度。Nodecrawler非常适用于偏爱使">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Node.js爬虫">
+<meta property="og:url" content="https://stephenshawn.github.io/en/2023/09/25/database/nodejs-spider/index.html">
+<meta property="og:site_name" content="StephenShawn&#39;s Blog">
+<meta property="og:description" content="Node.js常用爬虫框架与无头浏览器  NodeCrawlerSimplecrawler puppeteer JavaScript编写的开源Web爬虫  NodeCrawler实现语言： JavaScriptGitHub星标数： 3999官方支持链接  简介： NodeCrawler是一种广为使用的Web爬虫，它基于NodeJS实现，具有非常快的爬取速度。Nodecrawler非常适用于偏爱使">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-09-25T14:28:18.000Z">
+<meta property="article:modified_time" content="2024-04-29T13:46:25.547Z">
+<meta property="article:author" content="StephenShawn">
+<meta property="article:tag" content="Node.js爬虫">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://stephenshawn.github.io/en/2023/09/25/database/nodejs-spider/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://stephenshawn.github.io/2023/09/25/database/nodejs-spider/","path":"en/2023/09/25/database/nodejs-spider/","title":"Node.js爬虫"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Node.js爬虫 | StephenShawn's Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">StephenShawn's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">love&&curiosity</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">25</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">17</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">26</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="StephenShawn"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">StephenShawn</p>
+  <div class="site-description" itemprop="description">陌上花开</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/StephenShawn" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;StephenShawn" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:theemailforjohnny@gmail.com" title="E-Mail → mailto:theemailforjohnny@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN,en" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+          Links
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://www.shawnyoung.top/" title="https:&#x2F;&#x2F;www.shawnyoung.top" rel="noopener" target="_blank">音乐</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://stephenshawn.github.io/2023/09/25/database/nodejs-spider/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="StephenShawn">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="StephenShawn's Blog">
+      <meta itemprop="description" content="陌上花开">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Node.js爬虫 | StephenShawn's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Node.js爬虫
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-09-25 22:28:18" itemprop="dateCreated datePublished" datetime="2023-09-25T22:28:18+08:00">2023-09-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-04-29 21:46:25" itemprop="dateModified" datetime="2024-04-29T21:46:25+08:00">2024-04-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%88%AC%E8%99%AB/" itemprop="url" rel="index"><span itemprop="name">爬虫</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan: </span>
+    
+    <a title="Node.js爬虫" href="/en/2023/09/25/database/nodejs-spider/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::06624ac8e6f599f56b411849a5df668e" class="cy_cmt_count" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span>3.6k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>3 mins.</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><ul>
+<li>Node.js常用爬虫框架与无头浏览器</li>
+</ul>
+<p><strong>NodeCrawler</strong><br><strong>Simplecrawler</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/puppeteer"><strong>puppeteer</strong></a></p>
+<p>JavaScript编写的开源Web爬虫</p>
+<ol>
+<li>NodeCrawler<br>实现语言： JavaScript<br>GitHub星标数： 3999<br>官方支持链接</li>
+</ol>
+<p>简介：</p>
+<p>NodeCrawler是一种广为使用的Web爬虫，它基于NodeJS实现，具有非常快的爬取速度。<br>Nodecrawler非常适用于偏爱使用JavaScript编程或者致力于JavaScript项目的开发人员。其安装也非常简单。<br>JSDOM和Cheerio（用于HTML解析）实现服务器端渲染。其中，JSDOM更为稳定。<br>特性：</p>
+<p>使用 Cheerio（默认）或JSDOM实现服务端DOM和自动jQuery插入。<br>可配置池子规模和重试次数。<br>控制爬取率限制。<br>请求的优先队列。<br>支持forceUTF8模式，使得爬虫可以检测并转换字符集。<br>与4.x乃至更新版本兼容。<br>– 官方文档：<a target="_blank" rel="noopener" href="https://github.com/bda-research/node-crawler">https://github.com/bda-research/node-crawler</a></p>
+<p>– 官方网站：<a target="_blank" rel="noopener" href="http://nodecrawler.org/">http://nodecrawler.org/</a></p>
+<span id="more"></span>
+<ol start="2">
+<li>Simplecrawler<br>实现语言： JavaScript<br>GitHub星标数：1764<br>官方支持链接<br>简介：</li>
+</ol>
+<p>Simplecrawler设计提供基本的、灵活且稳定的网站爬取API。<br>Simplecrawler在实现上考虑了针对特大型Web站点的归档、分析和搜索。它可爬取上百万页面，并毫无问题地向磁盘写入数十GB数据。<br>特性：</p>
+<p>提供了用于自动检测链接资源的一些简单逻辑，用户可自行替换和添加。<br>自动请求任何robots.txt禁止规则。<br>具有灵活的队列系统，可在磁盘上冻结和解冻。<br>– 官方文档： <a target="_blank" rel="noopener" href="https://github.com/simplecrawler/simplecrawler">https://github.com/simplecrawler/simplecrawler</a></p>
+<p>– 官方网站： <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/simplecrawler">https://www.npmjs.com/package/simplecrawler</a></p>
+<ol start="3">
+<li>Js-crawler :<br>实现语言： JavaScript<br>GitHub星标数： 167<br>官方支持链接)<br>简介：</li>
+</ol>
+<p>使用NodeJS实现的Web爬虫，支持HTTP和HTTPS<br>– 官方文档： <a target="_blank" rel="noopener" href="https://github.com/antivanov/js-crawler">https://github.com/antivanov/js-crawler</a></p>
+<p>– 官方网站： <a target="_blank" rel="noopener" href="https://github.com/antivanov/js-crawler">https://github.com/antivanov/js-crawler</a></p>
+<ol start="4">
+<li>Webster<br>实现语言： JavaScript<br>GitHub星标数： 201<br>官方支持链接<br>简介：</li>
+</ol>
+<p>Webster是一种使用NodeJS编写的可靠Web爬取和采集框架，用于爬取Web站点并从页面中抽取结构化数据。<br>与其他爬取框架的不同之处在于，Webster可以抓取浏览器客户端的JavaScript和Ajax请求呈现的内容。<br>– 官方文档： <a target="_blank" rel="noopener" href="http://webster.zhuyingda.com/">http://webster.zhuyingda.com/</a></p>
+<p>– 官方网站： <a target="_blank" rel="noopener" href="https://github.com/zhuyingda/webster">https://github.com/zhuyingda/webster</a></p>
+<ol start="5">
+<li>Node-osmosis<br>实现语言：JavaScript<br>GitHub星标数： 3630<br>**官方支持链接<br>简介：</li>
+</ol>
+<ul>
+<li>一种使用NodeJS实现的HTML&#x2F;XML解析器和Web爬虫。</li>
+</ul>
+<p>特性：</p>
+<p>使用原生libxml的C绑定。<br>干净的Promise类接口。<br>支持CSS 3.0和XPath 1.0选择器的混合。<br>Sizzle选择器、Slick选择器以及更多。<br>不具有像jQuery、cheerio或jsdom那样的大型依赖。<br>构成深度和复杂的数据结构。<br>HTML解析器特性：<br>快速解析；<br>高速搜索；<br>内存占用小。<br>HTML DOM特性：<br>加载和搜索ajax内容；<br>DOM交互和事件；<br>执行嵌入和远程脚本；<br>在DOM中执行代码。<br>HTTP请求特性：<br>日志记录URL，重定向和错误；<br>Cookie的jar包，以及自定义Cookie&#x2F;头部&#x2F;用户代理；<br>登录&#x2F;表单提交、会话Cookie，基本的认证；<br>单代理、多代理，处理代理失败情况；<br>限制重试和重定向。<br>– 官方文档： <a target="_blank" rel="noopener" href="https://rchipka.github.io/node-osmosis/global.html">https://rchipka.github.io/node-osmosis/global.html</a></p>
+<p>– 官方网站： <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/osmosis">https://www.npmjs.com/package/osmosis</a></p>
+<ol start="6">
+<li>Supercrawler<br>实现语言：JavaScript<br>GitHub星标数： 4341<br>官方支持链接<br>简介：</li>
+</ol>
+<p>Supercrawler是一种使用NodeJS实现的Web爬虫，在设计上支持高度可配置和易用性。<br>一旦成功爬取一个网页（可以是图像、文本文档或其他任何文件），Supercrawler将会触发用户自定义的内容类型（content-type）处理器，处理页面解析、保存数据以及其它一些用户定义的功能。<br>特性：</p>
+<p>链接检测：Supercrawler会解析所爬取的HTML文档，识别其中链接并添加到队列中。<br>机器人解析：在爬取前Supercrawler会请求robots.txt并检查其中的禁止规则。它也可识别站点地图。<br>站点地图解析：Supercrawler可以从XML站点地图文件中读取链接，并将链接添加到队列中。<br>并发限制：Supercrawler可限制在任一时间发出的请求数。<br>速率限制：Supercrawler可添加请求的时延，以免对服务器产生轰炸。<br>指数补偿（Exponential backoff）重试：Supercrawler将依此在一小时、两小时、四小时乃至更多时间后重试请求。要使用该特性，爬取队列必须使用数据库或Redis作为后端。<br>主机名均衡：Supercrawler可在不同主机名间平均分割请求量。要使用该特性，爬取队列必须以Redis为后端。<br>– 官方文档： <a target="_blank" rel="noopener" href="https://github.com/brendonboshell/supercrawler">https://github.com/brendonboshell/supercrawler</a></p>
+<p>– 官方网站： <a target="_blank" rel="noopener" href="https://github.com/brendonboshell/supercrawler">https://github.com/brendonboshell/supercrawler</a></p>
+<ol start="7">
+<li>Web scraper的Chrome扩展<br>实现语言：JavaScript<br>GitHub星标数： 775<br>官方支持链接<br>简介：</li>
+</ol>
+<p>Web Scraper是一种Chrome浏览器扩展，构建用于从Web页面抽取数据。<br>用户可以使用该扩展创建计划（站点地图），定义如何遍历一个Web网站，以及如何从中抽取数据。<br>Web Scraper使用站点地图相应地遍历网站，并从中抽取数据。<br>支持以CSV格式导出所抽取的数据。<br>特性：</p>
+<p>抽取多个页面。<br>站点地图和抽取的数据存储在浏览器的本地存储，也可存储在CouchDB中。<br>多种数据类型选取。<br>支持从动态网页（JavaScript+AJAX）抽取数据。<br>浏览抽取的数据。<br>以CSV格式导出抽取的数据。<br>导入、导出站点地图。<br>只依赖于Chrome浏览器。<br>– 官方文档： <a target="_blank" rel="noopener" href="https://www.webscraper.io/documentation">https://www.webscraper.io/documentation</a></p>
+<p>– 官方网站： <a target="_blank" rel="noopener" href="https://www.webscraper.io/">https://www.webscraper.io</a></p>
+<ol start="8">
+<li>Headless Chrome爬虫<br>实现语言：JavaScript<br>GitHub星标数： 3256<br>官方支持链接</li>
+</ol>
+<p>简介：</p>
+<p>使用基本HTML文件请求的爬虫，通常速度很快。但这样的爬虫往往会抽取到空白内容，尤其是在爬取使用AngularJS、React和Vue.js等现代前端框架构建的网站时。<br>特性：</p>
+<p>分布式爬取。<br>可配置并发、延迟和重试。<br>支持深度优先搜索和广度优先搜索算法。<br>支持插拔缓存存储，例如Redis。<br>支持导出CSV和JSON。<br>在达到最大请求时暂停爬取，并可在任一时刻恢复。<br>自动插入用于抽取的jQuery。<br>保存屏幕截图，用于证实爬取过程。<br>模拟设备和用户代理。<br>具有优先队列，可提高爬取效率。<br>– 官方文档： <a target="_blank" rel="noopener" href="https://github.com/yujiosaka/headless-chrome-crawler/blob/master/docs/API.md">https://github.com/yujiosaka/headless-chrome-crawler/blob/master/docs/API.md</a></p>
+<p>– 官方网站： <a target="_blank" rel="noopener" href="https://github.com/yujiosaka/headless-chrome-crawler">https://github.com/yujiosaka/headless-chrome-crawler</a></p>
+<ol start="9">
+<li>X-ray<br>实现语言：JavaScript<br>GitHub星标数： 4464<br>官方支持链接</li>
+</ol>
+<p>特性：</p>
+<p>模式灵活：支持字符串、数组、对象以及嵌套对象结构。模式并非绑定于所抽取的页面结构，支持用户获取选定结构中的数据。<br>可组合（Composable）：API是完全可组合的，赋予用户抽取每个页面的极大灵活性。<br>分页支持：爬取页面在Web站点上的所有分页。X-ray还支持请求延迟和分页限制，并支持将爬取页面导入到单个文件中。这样一旦单个页面产生错误，用户不会失去所有已爬取的数据。<br>爬虫支持：从一个页面开始，轻易跳转另一个页面。页面跳转是可预测的，按深度优先爬取所有页面。<br>负责任的爬取：X-ray支持并发、限制、延迟、超时和限制，实现负责任地爬取任何页面。<br>可插拔驱动：可按用户需求置换不同的爬虫。<br>– 官方文档： <a target="_blank" rel="noopener" href="https://github.com/matthewmueller/x-ray">https://github.com/matthewmueller/x-ray</a></p>
+<p>– 官方网站： <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/x-ray-scraper">https://www.npmjs.com/package/x-ray-scraper</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>StephenShawn
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="https://stephenshawn.github.io/2023/09/25/database/nodejs-spider/" title="Node.js爬虫">https://stephenshawn.github.io/2023/09/25/database/nodejs-spider/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN,en" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Node-js%E7%88%AC%E8%99%AB/" rel="tag"># Node.js爬虫</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/09/25/java/java-spider/" rel="prev" title="Java爬虫">
+                  <i class="fa fa-angle-left"></i> Java爬虫
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/12/17/database/rockylinux8-network-config/" rel="next" title="rockylinux8-network-config">
+                  rockylinux8-network-config <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="SOHUCS" sid="06624ac8e6f599f56b411849a5df668e"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+  <div class="languages">
+    <label class="lang-select-label">
+      <i class="fa fa-language"></i>
+      <span>English</span>
+      <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </label>
+    <select class="lang-select" data-canonical="" aria-label="Select language">
+      
+        <option value="zh-CN" data-href="/2023/09/25/database/nodejs-spider/" selected="">
+          简体中文
+        </option>
+      
+        <option value="en" data-href="/en/2023/09/25/database/nodejs-spider/" selected="">
+          English
+        </option>
+      
+    </select>
+  </div>
+
+  <div class="copyright">
+    &copy; 2021 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">StephenShawn</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="Word count total">65k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">59 mins.</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/StephenShawn" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<script class="next-config" data-name="changyan" type="application/json">{"enable":true,"appid":"cyxcvD5pF","appkey":"3edc83e5e55c16f45643d8c7cb557b13","count":true}</script>
+<script src="/js/third-party/comments/changyan.js"></script>
+
+</body>
+</html>
