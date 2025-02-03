@@ -1,6 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>在Nodejs中使用 Playwright</title>
+    <url>/2025/02/03/automate/Playwright/</url>
+    <content><![CDATA[<p>首先，确保你已经安装了 <strong>Node.js</strong>。可以通过以下命令来检查是否已经安装 Node.js：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<p>如果没有安装 Node.js，你可以从 <a href="https://nodejs.org/">Node.js 官网</a> 下载并安装最新版本的 Node.js。</p>
+<h3 id="2-初始化-Node-js-项目"><a href="#2-初始化-Node-js-项目" class="headerlink" title="2. 初始化 Node.js 项目"></a>2. <strong>初始化 Node.js 项目</strong></h3><p>如果你还没有创建 Node.js 项目，可以通过以下命令初始化一个新的 Node.js 项目：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> my-playwright-project</span><br><span class="line"><span class="built_in">cd</span> my-playwright-project</span><br><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
+
+<p>这将会创建一个 <code>package.json</code> 文件，管理你的项目依赖。</p>
+<h3 id="3-安装-Playwright"><a href="#3-安装-Playwright" class="headerlink" title="3. 安装 Playwright"></a>3. <strong>安装 Playwright</strong></h3><p>你可以使用 <strong>npm</strong> 或 <strong>yarn</strong> 来安装 Playwright。执行以下命令安装 Playwright 和浏览器依赖：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright</span><br></pre></td></tr></table></figure>
+
+<p>默认情况下，Playwright 会安装必要的浏览器二进制文件（Chromium、Firefox 和 WebKit），因此它会比较大。如果你只需要安装特定的浏览器，你可以选择安装指定的浏览器包：</p>
+<ul>
+<li><p><strong>只安装 Chromium</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-chromium</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>只安装 Firefox</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-firefox</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>只安装 WebKit</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-webkit</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="4-验证安装"><a href="#4-验证安装" class="headerlink" title="4. 验证安装"></a>4. <strong>验证安装</strong></h3><p>安装完成后，你可以创建一个简单的脚本来测试 Playwright 是否工作正常：</p>
+<p>创建一个文件 <code>test.js</code>，并添加以下内容：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; chromium &#125; = <span class="built_in">require</span>(<span class="string">&quot;playwright&quot;</span>);</span><br><span class="line"></span><br><span class="line">(<span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="comment">// 启动浏览器</span></span><br><span class="line">  <span class="keyword">const</span> browser = <span class="keyword">await</span> chromium.<span class="title function_">launch</span>(&#123; <span class="attr">headless</span>: <span class="literal">false</span> &#125;);</span><br><span class="line">  <span class="keyword">const</span> page = <span class="keyword">await</span> browser.<span class="title function_">newPage</span>();</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 打开一个页面</span></span><br><span class="line">  <span class="keyword">await</span> page.<span class="title function_">goto</span>(<span class="string">&quot;https://example.com&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 截图保存</span></span><br><span class="line">  <span class="keyword">await</span> page.<span class="title function_">screenshot</span>(&#123; <span class="attr">path</span>: <span class="string">&quot;example.png&quot;</span> &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 关闭浏览器</span></span><br><span class="line">  <span class="keyword">await</span> browser.<span class="title function_">close</span>();</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+<p>然后，运行脚本：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node test.js</span><br></pre></td></tr></table></figure>
+
+<p>如果一切正常，Playwright 会启动一个 Chromium 浏览器实例并打开 <code>https://example.com</code>，然后保存页面截图为 <code>example.png</code>。</p>
+<h3 id="5-常见问题"><a href="#5-常见问题" class="headerlink" title="5. 常见问题"></a>5. <strong>常见问题</strong></h3><ul>
+<li>如果你在安装过程中遇到浏览器二进制文件下载失败的情况，确保你的网络连接正常，并且没有防火墙或代理阻止下载。</li>
+<li>Playwright 会在安装时自动下载 Chromium、Firefox 和 WebKit。如果你不需要某个浏览器，可以手动卸载它们，或者仅安装你需要的特定浏览器。</li>
+</ul>
+<hr>
+<p>通过这些步骤，你就可以在 Node.js 环境中成功安装并使用 Playwright 进行浏览器自动化操作。</p>
+]]></content>
+      <categories>
+        <category>broswer-automate</category>
+      </categories>
+      <tags>
+        <tag>Playwright</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>浏览器自动化测试</title>
+    <url>/2025/02/03/automate/automates/</url>
+    <content><![CDATA[<h3 id="一、Playwright"><a href="#一、Playwright" class="headerlink" title="一、Playwright"></a>一、Playwright</h3><p>Playwright 是用 <strong>TypeScript</strong>（JavaScript 的超集）编写的。TypeScript 提供了静态类型检查，增强了 Playwright 的可维护性和开发体验。Playwright 的核心代码和 API 基于 Node.js 环境，因此它是一个主要面向 <strong>JavaScript&#x2F;TypeScript</strong> 开发者的工具。</p>
+<p>然而，Playwright 并不仅仅限于 JavaScript 和 TypeScript，它提供了 <strong>多语言绑定</strong>，使得开发者可以使用其他编程语言来操作 Playwright。除了 TypeScript 和 JavaScript，Playwright 还支持以下语言：</p>
+<ul>
+<li><strong>Python</strong>：通过 Playwright 的 Python 库，你可以使用 Python 编写自动化脚本。</li>
+<li>**C#**：Playwright 为 C# 开发者提供了相应的库和接口。</li>
+<li><strong>Java</strong>：Playwright 也提供了 Java 语言的绑定，允许 Java 开发者使用 Playwright 进行浏览器自动化。</li>
+</ul>
+<h3 id="语言支持的绑定："><a href="#语言支持的绑定：" class="headerlink" title="语言支持的绑定："></a>语言支持的绑定：</h3><ol>
+<li><strong>TypeScript&#x2F;JavaScript</strong>：最原生的支持，因为 Playwright 本身是用 TypeScript 开发的。</li>
+<li><strong>Python</strong>：提供了 Python 绑定，可以方便地在 Python 环境中使用 Playwright。</li>
+<li>**C#**：Playwright 为 C# 开发者提供了 SDK 和 API。</li>
+<li><strong>Java</strong>：Playwright 同样支持 Java 环境的使用，提供了相应的 API。</li>
+</ol>
+<p>总结来说，Playwright 的核心是使用 <strong>TypeScript</strong> 编写的，但它的多语言支持使得开发者可以根据自己的需求选择不同的编程语言来使用该工具。</p>
+<h3 id="二、Selenium"><a href="#二、Selenium" class="headerlink" title="二、Selenium"></a>二、Selenium</h3><p>Selenium 是用 <strong>Java</strong> 编写的核心库，但它支持多种编程语言，包括 Java、Python、C#、Ruby、JavaScript（Node.js）等。Selenium 提供了多种语言的绑定（API），这样开发者可以使用自己熟悉的编程语言与 Selenium 进行交互。</p>
+<h3 id="主要组成部分："><a href="#主要组成部分：" class="headerlink" title="主要组成部分："></a>主要组成部分：</h3><ol>
+<li><strong>Selenium WebDriver</strong>：<ul>
+<li>这是 Selenium 最核心的部分，负责与浏览器进行交互。</li>
+<li>WebDriver 本身是用 Java 编写的，但可以通过语言绑定支持多种编程语言。</li>
+</ul>
+</li>
+<li><strong>Selenium Grid</strong>：<ul>
+<li>用于并行化测试和跨多个机器执行。</li>
+<li>Selenium Grid 也是用 Java 编写的。</li>
+</ul>
+</li>
+<li><strong>Selenium IDE</strong>：<ul>
+<li>一个用于录制和回放测试脚本的工具，最初是作为 Firefox 插件开发的，后来支持 Chrome。</li>
+<li>IDE 也是基于 JavaScript 和其他前端技术的。</li>
+</ul>
+</li>
+</ol>
+<h3 id="支持的编程语言："><a href="#支持的编程语言：" class="headerlink" title="支持的编程语言："></a>支持的编程语言：</h3><ul>
+<li><strong>Java</strong>：最早的 Selenium 版本是用 Java 开发的，提供了最完整的功能和最广泛的社区支持。</li>
+<li><strong>Python</strong>：提供了 Python 语言的绑定，适用于使用 Python 编写自动化脚本的开发者。</li>
+<li>**C#**：C# 开发者可以使用 Selenium 提供的 C# 语言绑定进行自动化操作。</li>
+<li><strong>Ruby</strong>：Selenium 同样提供了 Ruby 绑定，适合 Ruby 开发者。</li>
+<li>**JavaScript (Node.js)**：Selenium 也支持 JavaScript 和 Node.js 环境，适合现代 Web 开发的自动化测试。</li>
+</ul>
+<p>总结来说，<strong>Selenium WebDriver</strong> 的核心部分是用 Java 编写的，但它提供了多种语言的接口，使得开发者可以使用不同的编程语言进行自动化测试或爬虫开发。</p>
+]]></content>
+      <categories>
+        <category>broswer-automate</category>
+      </categories>
+      <tags>
+        <tag>浏览器自动化测试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据库SQL语言</title>
     <url>/2022/07/14/database/MysqlSQL/</url>
     <content><![CDATA[<ol>
@@ -146,6 +244,54 @@
       </tags>
   </entry>
   <entry>
+    <title>docker的基本命令</title>
+    <url>/2022/06/27/database/docker%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h2 id="Docker的常用命令"><a href="#Docker的常用命令" class="headerlink" title="Docker的常用命令"></a>Docker的常用命令</h2><h3 id="一、帮助命令"><a href="#一、帮助命令" class="headerlink" title="一、帮助命令"></a>一、帮助命令</h3><hr>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker version # 显示docker的版本</span><br><span class="line">docker info </span><br><span class="line">docker 命令 --help # 万能命令</span><br></pre></td></tr></table></figure>
+
+<h3 id="二、镜像命令"><a href="#二、镜像命令" class="headerlink" title="二、镜像命令"></a>二、镜像命令</h3><hr>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看镜像</span></span><br><span class="line">docker images  # 列出所有镜像</span><br><span class="line">docker images -a</span><br><span class="line">docker images -aq # 只显示镜像id</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">搜索镜像</span></span><br><span class="line">docker search --filter=STARS=3000 #搜索镜像star大于3000</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">下载镜像</span></span><br><span class="line">docker pull 镜像[:tag] # 如果不写tag 默认是 latest</span><br><span class="line">[root@localhost ~]# docker pull mysql</span><br><span class="line">Using default tag: latest</span><br><span class="line">latest: Pulling from library/mysql</span><br><span class="line">72a69066d2fe: Pull complete  # 分层下载，docker image的核心 联合文件系统</span><br><span class="line">93619dbc5b36: Pull complete </span><br><span class="line">99da31dd6142: Pull complete </span><br><span class="line">626033c43d70: Pull complete </span><br><span class="line">37d5d7efb64e: Pull complete </span><br><span class="line">ac563158d721: Pull complete </span><br><span class="line">d2ba16033dad: Pull complete </span><br><span class="line">688ba7d5c01a: Pull complete </span><br><span class="line">00e060b6d11d: Pull complete </span><br><span class="line">1c04857f594f: Pull complete </span><br><span class="line">4d7cfa90e6ea: Pull complete </span><br><span class="line">e0431212d27d: Pull complete </span><br><span class="line">Digest: sha256:e9027fe4d91c0153429607251656806cc784e914937271037f7738bd5b8e7709 #签名</span><br><span class="line">Status: Downloaded newer image for mysql:latest</span><br><span class="line">docker.io/library/mysql:latest #真实地址</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">删除镜像</span></span><br><span class="line">docker rmi -f 容器id # 删除指定的镜像</span><br><span class="line">docker rmi -f 容器id 容器id 容器id # 删除多个的镜像</span><br><span class="line">docker rmi -f $(docker images -aq) # 删除全部镜像</span><br></pre></td></tr></table></figure>
+
+<h3 id="三、容器命令"><a href="#三、容器命令" class="headerlink" title="三、容器命令"></a>三、容器命令</h3><h4 id="新建容器并启动"><a href="#新建容器并启动" class="headerlink" title="新建容器并启动"></a>新建容器并启动</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run [可选参数] image</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">参数说明</span></span><br><span class="line">--name=&quot;Name&quot; 容器名字 tomcat01 tomcat02 用来区分容器</span><br><span class="line">-d 后台运行方式</span><br><span class="line">-it 使用交互式运行 进入容器查看内容</span><br><span class="line">-p 指定容器的端口 -p 8080:8080</span><br><span class="line">	—P 主机端口：容器端口 </span><br><span class="line">	-p 容器端口</span><br><span class="line">	容器端口</span><br><span class="line">-P 随机端口</span><br></pre></td></tr></table></figure>
+
+<h4 id="列出所有的运行的容器"><a href="#列出所有的运行的容器" class="headerlink" title="列出所有的运行的容器"></a>列出所有的运行的容器</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">docker ps 命令</span></span><br><span class="line"><span class="meta prompt_">   # </span><span class="language-bash">列出当前正在运行的容器</span></span><br><span class="line">-a # 列出当前正在运行的容器+带历史运行过的容器</span><br><span class="line">-n=? # 最近创建过的容器</span><br><span class="line">-q # 只显示容器的编号</span><br><span class="line">[root@localhost ~]# docker ps</span><br><span class="line">CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES</span><br><span class="line">[root@localhost ~]# docker ps -aq</span><br><span class="line">1a8af1ce6330</span><br><span class="line">[root@localhost ~]# docker ps -a</span><br><span class="line">CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS                            PORTS     NAMES</span><br><span class="line">1a8af1ce6330   centos    &quot;/bin/bash&quot;   12 minutes ago   Exited (127) About a minute ago             zealous_bartik</span><br></pre></td></tr></table></figure>
+
+<h4 id="退出容器"><a href="#退出容器" class="headerlink" title="退出容器"></a>退出容器</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">exit #直接容器停止并退出</span><br><span class="line">Ctrl + P + Q #容器不停止退出</span><br></pre></td></tr></table></figure>
+
+<h4 id="删除容器"><a href="#删除容器" class="headerlink" title="删除容器"></a>删除容器</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker rm 容器id       			# 删除指定容器</span><br><span class="line">docker rm -f $(docker ps -aq)	 # 删除全部容器</span><br><span class="line">docker ps -a -q|xargs docker run # 删除全部容器（linux命令）</span><br></pre></td></tr></table></figure>
+
+<h4 id="启动和停止容器的操作"><a href="#启动和停止容器的操作" class="headerlink" title="启动和停止容器的操作"></a>启动和停止容器的操作</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker start 容器id</span><br><span class="line">docker restart 容器id</span><br><span class="line">docker stop 容器id</span><br><span class="line">docker kill 容器id</span><br></pre></td></tr></table></figure>
+
+<h3 id="四、常用其他命令"><a href="#四、常用其他命令" class="headerlink" title="四、常用其他命令"></a>四、常用其他命令</h3><h5 id="后台启动容器"><a href="#后台启动容器" class="headerlink" title="后台启动容器"></a>后台启动容器</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">docker run -d 镜像名</span></span><br><span class="line">[root@localhost ~]# docker run -d centos</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">问题docker ps ，发现 centos 停止了</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">常见的坑， docker 容器使用后台运行，就必须要有一个前台进程，docker 发现没有应用，就会自动停止</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">nginx 容器启动后，发现自己没有提供服务，就会立刻停止，就是没有程序了</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker logs</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">自己编写一段shell脚本</span></span><br><span class="line">[root@localhost ~]# docker run -d centos /bin/sh -c &quot;while true; do echo test;sleep 1;done&quot;</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看当前在运行的容器</span></span><br><span class="line">[root@localhost ~]# docker ps</span><br><span class="line">CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS     NAMES</span><br><span class="line">9916a0298bfd   centos    &quot;/bin/sh -c &#x27;while t…&quot;   19 seconds ago   Up 18 seconds             condescending_curie</span><br><span class="line">113e7bdad55e   centos    &quot;/bin/bash&quot;              12 minutes ago   Up 12 minutes             serene_pasteur</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">显示日志</span></span><br><span class="line">-tf </span><br><span class="line">--tail number # 要显示日志的条数</span><br><span class="line">[root@localhost ~]# docker logs -f -t --tail 10  113e7bdad55e</span><br></pre></td></tr></table></figure>
+
+<h5 id="查看容器中进程信息"><a href="#查看容器中进程信息" class="headerlink" title="查看容器中进程信息"></a>查看容器中进程信息</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">命令 docker top 容器<span class="built_in">id</span></span></span><br><span class="line">[root@localhost ~]# docker top 9916a0298bfd</span><br><span class="line">UID                 PID                 PPID                C                   STIME     </span><br><span class="line">root                180675              180655              0                   20:05      root                183113              180675              0                   20:44     </span><br></pre></td></tr></table></figure>
+
+<h5 id="查看镜像的元数据"><a href="#查看镜像的元数据" class="headerlink" title="查看镜像的元数据"></a>查看镜像的元数据</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">命令 docker inspect 容器<span class="built_in">id</span></span></span><br><span class="line">[root@localhost ~]# docker inspect 9916a0298bfd </span><br><span class="line">[</span><br><span class="line">    &#123;</span><br><span class="line">        &quot;Id&quot;: &quot;9916a0298bfd3fb37d142bdd8bc056a5c943f8aa3c08bc7e1bb75081ee2a3ed0&quot;,</span><br><span class="line">        &quot;Created&quot;: &quot;2022-03-23T00:05:18.49632074Z&quot;,</span><br><span class="line">        &quot;Path&quot;: &quot;/bin/sh&quot;,</span><br><span class="line">        &quot;Args&quot;: [</span><br><span class="line">            &quot;-c&quot;,</span><br><span class="line">            &quot;while true; do echo test;sleep 1;done&quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;State&quot;: &#123;</span><br><span class="line">            &quot;Status&quot;: &quot;running&quot;,</span><br><span class="line">            &quot;Running&quot;: true,</span><br><span class="line">            &quot;Paused&quot;: false,</span><br><span class="line">            &quot;Restarting&quot;: false,</span><br><span class="line">            &quot;OOMKilled&quot;: false,</span><br><span class="line">            &quot;Dead&quot;: false,</span><br><span class="line">            &quot;Pid&quot;: 180675,</span><br><span class="line">            &quot;ExitCode&quot;: 0,</span><br><span class="line">            &quot;Error&quot;: &quot;&quot;,</span><br><span class="line">            &quot;StartedAt&quot;: &quot;2022-03-23T00:05:19.263635448Z&quot;,</span><br><span class="line">            &quot;FinishedAt&quot;: &quot;0001-01-01T00:00:00Z&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;Image&quot;: &quot;sha256:5d0da3dc976460b72c77d94c8a1ad043720b0416bfc16c52c45d4847e53fadb6&quot;,</span><br><span class="line">        &quot;ResolvConfPath&quot;: &quot;/var/lib/docker/containers/9916a0298bfd3fb37d142bdd8bc056a5c943f8aa3c08bc7e1bb75081ee2a3ed0/resolv.conf&quot;,</span><br><span class="line">        &quot;HostnamePath&quot;: &quot;/var/lib/docker/containers/9916a0298bfd3fb37d142bdd8bc056a5c943f8aa3c08bc7e1bb75081ee2a3ed0/hostname&quot;,</span><br><span class="line">        &quot;HostsPath&quot;: &quot;/var/lib/docker/containers/9916a0298bfd3fb37d142bdd8bc056a5c943f8aa3c08bc7e1bb75081ee2a3ed0/hosts&quot;,</span><br><span class="line">        &quot;LogPath&quot;: &quot;/var/lib/docker/containers/9916a0298bfd3fb37d142bdd8bc056a5c943f8aa3c08bc7e1bb75081ee2a3ed0/9916a0298bfd3fb37d142bdd8bc056a5c943f8aa3c08bc7e1bb75081ee2a3ed0-json.log&quot;,</span><br><span class="line">        &quot;Name&quot;: &quot;/condescending_curie&quot;,</span><br><span class="line">        &quot;RestartCount&quot;: 0,</span><br><span class="line">        &quot;Driver&quot;: &quot;overlay2&quot;,</span><br><span class="line">        &quot;Platform&quot;: &quot;linux&quot;,</span><br><span class="line">        &quot;MountLabel&quot;: &quot;&quot;,</span><br><span class="line">        &quot;ProcessLabel&quot;: &quot;&quot;,</span><br><span class="line">        &quot;AppArmorProfile&quot;: &quot;&quot;,</span><br><span class="line">        &quot;ExecIDs&quot;: null,</span><br><span class="line">        &quot;HostConfig&quot;: &#123;</span><br><span class="line">            &quot;Binds&quot;: null,</span><br><span class="line">            &quot;ContainerIDFile&quot;: &quot;&quot;,</span><br><span class="line">            &quot;LogConfig&quot;: &#123;</span><br><span class="line">                &quot;Type&quot;: &quot;json-file&quot;,</span><br><span class="line">                &quot;Config&quot;: &#123;&#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;NetworkMode&quot;: &quot;default&quot;,</span><br><span class="line">            &quot;PortBindings&quot;: &#123;&#125;,</span><br><span class="line">            &quot;RestartPolicy&quot;: &#123;</span><br><span class="line">                &quot;Name&quot;: &quot;no&quot;,</span><br><span class="line">                &quot;MaximumRetryCount&quot;: 0</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;AutoRemove&quot;: false,</span><br><span class="line">            &quot;VolumeDriver&quot;: &quot;&quot;,</span><br><span class="line">            &quot;VolumesFrom&quot;: null,</span><br><span class="line">            &quot;CapAdd&quot;: null,</span><br><span class="line">            &quot;CapDrop&quot;: null,</span><br><span class="line">            &quot;CgroupnsMode&quot;: &quot;host&quot;,</span><br><span class="line">            &quot;Dns&quot;: [],</span><br><span class="line">            &quot;DnsOptions&quot;: [],</span><br><span class="line">            &quot;DnsSearch&quot;: [],</span><br><span class="line">            &quot;ExtraHosts&quot;: null,</span><br><span class="line">            &quot;GroupAdd&quot;: null,</span><br><span class="line">            &quot;IpcMode&quot;: &quot;private&quot;,</span><br><span class="line">            &quot;Cgroup&quot;: &quot;&quot;,</span><br><span class="line">            &quot;Links&quot;: null,</span><br><span class="line">            &quot;OomScoreAdj&quot;: 0,</span><br><span class="line">            &quot;PidMode&quot;: &quot;&quot;,</span><br><span class="line">            &quot;Privileged&quot;: false,</span><br><span class="line">            &quot;PublishAllPorts&quot;: false,</span><br><span class="line">            &quot;ReadonlyRootfs&quot;: false,</span><br><span class="line">            &quot;SecurityOpt&quot;: null,</span><br><span class="line">            &quot;UTSMode&quot;: &quot;&quot;,</span><br><span class="line">            &quot;UsernsMode&quot;: &quot;&quot;,</span><br><span class="line">            &quot;ShmSize&quot;: 67108864,</span><br><span class="line">            &quot;Runtime&quot;: &quot;runc&quot;,</span><br><span class="line">            &quot;ConsoleSize&quot;: [</span><br><span class="line">                0,</span><br><span class="line">                0</span><br><span class="line">            ],</span><br><span class="line">            &quot;Isolation&quot;: &quot;&quot;,</span><br><span class="line">            &quot;CpuShares&quot;: 0,</span><br><span class="line">            &quot;Memory&quot;: 0,</span><br><span class="line">            &quot;NanoCpus&quot;: 0,</span><br><span class="line">            &quot;CgroupParent&quot;: &quot;&quot;,</span><br><span class="line">            &quot;BlkioWeight&quot;: 0,</span><br><span class="line">            &quot;BlkioWeightDevice&quot;: [],</span><br><span class="line">            &quot;BlkioDeviceReadBps&quot;: null,</span><br><span class="line">            &quot;BlkioDeviceWriteBps&quot;: null,</span><br><span class="line">            &quot;BlkioDeviceReadIOps&quot;: null,</span><br><span class="line">            &quot;BlkioDeviceWriteIOps&quot;: null,</span><br><span class="line">            &quot;CpuPeriod&quot;: 0,</span><br><span class="line">            &quot;CpuQuota&quot;: 0,</span><br><span class="line">            &quot;CpuRealtimePeriod&quot;: 0,</span><br><span class="line">            &quot;CpuRealtimeRuntime&quot;: 0,</span><br><span class="line">            &quot;CpusetCpus&quot;: &quot;&quot;,</span><br><span class="line">            &quot;CpusetMems&quot;: &quot;&quot;,</span><br><span class="line">            &quot;Devices&quot;: [],</span><br><span class="line">            &quot;DeviceCgroupRules&quot;: null,</span><br><span class="line">            &quot;DeviceRequests&quot;: null,</span><br><span class="line">            &quot;KernelMemory&quot;: 0,</span><br><span class="line">            &quot;KernelMemoryTCP&quot;: 0,</span><br><span class="line">            &quot;MemoryReservation&quot;: 0,</span><br><span class="line">            &quot;MemorySwap&quot;: 0,</span><br><span class="line">            &quot;MemorySwappiness&quot;: null,</span><br><span class="line">            &quot;OomKillDisable&quot;: false,</span><br><span class="line">            &quot;PidsLimit&quot;: null,</span><br><span class="line">            &quot;Ulimits&quot;: null,</span><br><span class="line">            &quot;CpuCount&quot;: 0,</span><br><span class="line">            &quot;CpuPercent&quot;: 0,</span><br><span class="line">            &quot;IOMaximumIOps&quot;: 0,</span><br><span class="line">            &quot;IOMaximumBandwidth&quot;: 0,</span><br><span class="line">            &quot;MaskedPaths&quot;: [</span><br><span class="line">                &quot;/proc/asound&quot;,</span><br><span class="line">                &quot;/proc/acpi&quot;,</span><br><span class="line">                &quot;/proc/kcore&quot;,</span><br><span class="line">                &quot;/proc/keys&quot;,</span><br><span class="line">                &quot;/proc/latency_stats&quot;,</span><br><span class="line">                &quot;/proc/timer_list&quot;,</span><br><span class="line">                &quot;/proc/timer_stats&quot;,</span><br><span class="line">                &quot;/proc/sched_debug&quot;,</span><br><span class="line">                &quot;/proc/scsi&quot;,</span><br><span class="line">                &quot;/sys/firmware&quot;</span><br><span class="line">            ],</span><br><span class="line">            &quot;ReadonlyPaths&quot;: [</span><br><span class="line">                &quot;/proc/bus&quot;,</span><br><span class="line">                &quot;/proc/fs&quot;,</span><br><span class="line">                &quot;/proc/irq&quot;,</span><br><span class="line">                &quot;/proc/sys&quot;,</span><br><span class="line">                &quot;/proc/sysrq-trigger&quot;</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;GraphDriver&quot;: &#123;</span><br><span class="line">            &quot;Data&quot;: &#123;</span><br><span class="line">                &quot;LowerDir&quot;: &quot;/var/lib/docker/overlay2/2db2e17cdb47f8a05997664e4e31dc8f59b611e2d23388bc52b56c4407d27cc3-init/diff:/var/lib/docker/overlay2/e75ba16da0fef020c7930a9b6190dbd33a83a8324702c144c689c5cd4e323146/diff&quot;,</span><br><span class="line">                &quot;MergedDir&quot;: &quot;/var/lib/docker/overlay2/2db2e17cdb47f8a05997664e4e31dc8f59b611e2d23388bc52b56c4407d27cc3/merged&quot;,</span><br><span class="line">                &quot;UpperDir&quot;: &quot;/var/lib/docker/overlay2/2db2e17cdb47f8a05997664e4e31dc8f59b611e2d23388bc52b56c4407d27cc3/diff&quot;,</span><br><span class="line">                &quot;WorkDir&quot;: &quot;/var/lib/docker/overlay2/2db2e17cdb47f8a05997664e4e31dc8f59b611e2d23388bc52b56c4407d27cc3/work&quot;</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;Name&quot;: &quot;overlay2&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;Mounts&quot;: [],</span><br><span class="line">        &quot;Config&quot;: &#123;</span><br><span class="line">            &quot;Hostname&quot;: &quot;9916a0298bfd&quot;,</span><br><span class="line">            &quot;Domainname&quot;: &quot;&quot;,</span><br><span class="line">            &quot;User&quot;: &quot;&quot;,</span><br><span class="line">            &quot;AttachStdin&quot;: false,</span><br><span class="line">            &quot;AttachStdout&quot;: false,</span><br><span class="line">            &quot;AttachStderr&quot;: false,</span><br><span class="line">            &quot;Tty&quot;: false,</span><br><span class="line">            &quot;OpenStdin&quot;: false,</span><br><span class="line">            &quot;StdinOnce&quot;: false,</span><br><span class="line">            &quot;Env&quot;: [</span><br><span class="line">                &quot;PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;</span><br><span class="line">            ],</span><br><span class="line">            &quot;Cmd&quot;: [</span><br><span class="line">                &quot;/bin/sh&quot;,</span><br><span class="line">                &quot;-c&quot;,</span><br><span class="line">                &quot;while true; do echo test;sleep 1;done&quot;</span><br><span class="line">            ],</span><br><span class="line">            &quot;Image&quot;: &quot;centos&quot;,</span><br><span class="line">            &quot;Volumes&quot;: null,</span><br><span class="line">            &quot;WorkingDir&quot;: &quot;&quot;,</span><br><span class="line">            &quot;Entrypoint&quot;: null,</span><br><span class="line">            &quot;OnBuild&quot;: null,</span><br><span class="line">            &quot;Labels&quot;: &#123;</span><br><span class="line">                &quot;org.label-schema.build-date&quot;: &quot;20210915&quot;,</span><br><span class="line">                &quot;org.label-schema.license&quot;: &quot;GPLv2&quot;,</span><br><span class="line">                &quot;org.label-schema.name&quot;: &quot;CentOS Base Image&quot;,</span><br><span class="line">                &quot;org.label-schema.schema-version&quot;: &quot;1.0&quot;,</span><br><span class="line">                &quot;org.label-schema.vendor&quot;: &quot;CentOS&quot;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;NetworkSettings&quot;: &#123;</span><br><span class="line">            &quot;Bridge&quot;: &quot;&quot;,</span><br><span class="line">            &quot;SandboxID&quot;: &quot;f28f51fd2c85ab7e8ba88827ec901c9ef4b517428747bd1cdf5196810db622c7&quot;,</span><br><span class="line">            &quot;HairpinMode&quot;: false,</span><br><span class="line">            &quot;LinkLocalIPv6Address&quot;: &quot;&quot;,</span><br><span class="line">            &quot;LinkLocalIPv6PrefixLen&quot;: 0,</span><br><span class="line">            &quot;Ports&quot;: &#123;&#125;,</span><br><span class="line">            &quot;SandboxKey&quot;: &quot;/var/run/docker/netns/f28f51fd2c85&quot;,</span><br><span class="line">            &quot;SecondaryIPAddresses&quot;: null,</span><br><span class="line">            &quot;SecondaryIPv6Addresses&quot;: null,</span><br><span class="line">            &quot;EndpointID&quot;: &quot;41b020afb72dc9602f5a030e56d816692170c2f0427377829da822e62976732a&quot;,</span><br><span class="line">            &quot;Gateway&quot;: &quot;172.17.0.1&quot;,</span><br><span class="line">            &quot;GlobalIPv6Address&quot;: &quot;&quot;,</span><br><span class="line">            &quot;GlobalIPv6PrefixLen&quot;: 0,</span><br><span class="line">            &quot;IPAddress&quot;: &quot;172.17.0.3&quot;,</span><br><span class="line">            &quot;IPPrefixLen&quot;: 16,</span><br><span class="line">            &quot;IPv6Gateway&quot;: &quot;&quot;,</span><br><span class="line">            &quot;MacAddress&quot;: &quot;02:42:ac:11:00:03&quot;,</span><br><span class="line">            &quot;Networks&quot;: &#123;</span><br><span class="line">                &quot;bridge&quot;: &#123;</span><br><span class="line">                    &quot;IPAMConfig&quot;: null,</span><br><span class="line">                    &quot;Links&quot;: null,</span><br><span class="line">                    &quot;Aliases&quot;: null,</span><br><span class="line">                    &quot;NetworkID&quot;: &quot;d91d646c67beba9f1d4aa5cfa191bad1f24cf153ae1c6e3a37cf34599502a27f&quot;,</span><br><span class="line">                    &quot;EndpointID&quot;: &quot;41b020afb72dc9602f5a030e56d816692170c2f0427377829da822e62976732a&quot;,</span><br><span class="line">                    &quot;Gateway&quot;: &quot;172.17.0.1&quot;,</span><br><span class="line">                    &quot;IPAddress&quot;: &quot;172.17.0.3&quot;,</span><br><span class="line">                    &quot;IPPrefixLen&quot;: 16,</span><br><span class="line">                    &quot;IPv6Gateway&quot;: &quot;&quot;,</span><br><span class="line">                    &quot;GlobalIPv6Address&quot;: &quot;&quot;,</span><br><span class="line">                    &quot;GlobalIPv6PrefixLen&quot;: 0,</span><br><span class="line">                    &quot;MacAddress&quot;: &quot;02:42:ac:11:00:03&quot;,</span><br><span class="line">                    &quot;DriverOpts&quot;: null</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<h5 id="进入当前正在运行的容器"><a href="#进入当前正在运行的容器" class="headerlink" title="进入当前正在运行的容器"></a>进入当前正在运行的容器</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">我们通常容器都是使用后台方式运行的，需要进入容器，修改一些配置</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">命令</span></span><br><span class="line">docker exec -it 容器id bashShell</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">测试</span></span><br><span class="line">[root@localhost ~]# docker ps</span><br><span class="line">CONTAINER ID   IMAGE     COMMAND                  CREATED             STATUS             PORTS     NAMES</span><br><span class="line">9916a0298bfd   centos    &quot;/bin/sh -c &#x27;while t…&quot;   About an hour ago   Up About an hour             condescending_curie</span><br><span class="line">113e7bdad55e   centos    &quot;/bin/bash&quot;              About an hour ago   Up About an hour             serene_pasteur</span><br><span class="line">[root@localhost ~]# docker exec -it 9916a0298bfd /bin/bash</span><br><span class="line">[root@9916a0298bfd /]# ps -ef</span><br><span class="line">UID          PID    PPID  C STIME TTY          TIME CMD</span><br><span class="line">root           1       0  0 00:05 ?        00:00:01 /bin/sh -c while true; do echo test;sleep 1;done</span><br><span class="line">root        4061       0  0 01:12 pts/0    00:00:00 /bin/bash</span><br><span class="line">root        4088       1  0 01:12 ?        00:00:00 /usr/bin/coreutils --coreutils-prog-shebang=sleep /usr/bin/sleep 1</span><br><span class="line">root        4089    4061  0 01:12 pts/0    00:00:00 ps -ef</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">方式二</span></span><br><span class="line">docker attach 容器id</span><br><span class="line">正在执行当前的代码...</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">docker <span class="built_in">exec</span>     <span class="comment"># 进入容器后开启一个新的终端，可以在里面操作（常用）</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">docker attach	  <span class="comment"># 进入容器正在执行的终端，不会启动新的进程</span></span></span><br></pre></td></tr></table></figure>
+
+<h5 id="从容器内烤贝文件到主机上"><a href="#从容器内烤贝文件到主机上" class="headerlink" title="从容器内烤贝文件到主机上"></a>从容器内烤贝文件到主机上</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">docker cp  b4bb1f3f7685:/home/test.java /home</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">进入docker容器内</span></span><br><span class="line">[root@b4bb1f3f7685 /]# cd /home</span><br><span class="line">[root@b4bb1f3f7685 home]# ls</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建java文件</span></span><br><span class="line">[root@b4bb1f3f7685 home]# touch test.java</span><br><span class="line">[root@b4bb1f3f7685 home]# ls</span><br><span class="line">test.java</span><br><span class="line">[root@b4bb1f3f7685 home]# exit</span><br><span class="line">exit</span><br><span class="line">docker cp 容器id:容器内部路径 目的的主路径</span><br><span class="line">[root@localhost home]# docker cp  b4bb1f3f7685:/home/test.java /home</span><br><span class="line">[root@localhost home]# ls</span><br><span class="line">shawn  test.java</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="五、安装服务器软件"><a href="#五、安装服务器软件" class="headerlink" title="五、安装服务器软件"></a>五、安装服务器软件</h3><h5 id="安装Tomcat"><a href="#安装Tomcat" class="headerlink" title="安装Tomcat"></a>安装Tomcat</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 官方的使用</span></span><br><span class="line">docker run -it --<span class="built_in">rm</span> tomcat:9.0</span><br><span class="line"><span class="comment"># 我们之前的启动都是后台，停止了容器之后，容器还是可以查到 docker run -it --rm 一般用来测试，用完就删除</span></span><br><span class="line"><span class="comment">#下载在启动</span></span><br><span class="line">docker pull tomcat:9.0</span><br></pre></td></tr></table></figure>
+
+<h5 id="安装es-kibana"><a href="#安装es-kibana" class="headerlink" title="安装es+kibana"></a>安装es+kibana</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">es 暴露的端口很多</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">es 十分的耗内存</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">es 的数据一般需要放置到安全目录 挂载</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">--net somenetwork 网路配置</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动 elasticsearch</span></span><br><span class="line">[root@localhost ~]# docker run -d --name elasticsearch01 -p 9200:9200 -p 9300:9300 -e &quot;discovery.type=single-node&quot; elasticsearch:7.6.2</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动了 linux就卡住了 docker stats 查看cpu的状态</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">es 是十分耗内存的 1.xG   1核2G</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看 docker stats</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">测试一下es是否成功了</span></span><br><span class="line">[root@localhost ~]# curl localhost:9200</span><br><span class="line">&#123;</span><br><span class="line">  &quot;name&quot; : &quot;6620e2b536c4&quot;,</span><br><span class="line">  &quot;cluster_name&quot; : &quot;docker-cluster&quot;,</span><br><span class="line">  &quot;cluster_uuid&quot; : &quot;9i4LLjxvTVKf46Hp1qHkqA&quot;,</span><br><span class="line">  &quot;version&quot; : &#123;</span><br><span class="line">    &quot;number&quot; : &quot;7.6.2&quot;,</span><br><span class="line">    &quot;build_flavor&quot; : &quot;default&quot;,</span><br><span class="line">    &quot;build_type&quot; : &quot;docker&quot;,</span><br><span class="line">    &quot;build_hash&quot; : &quot;ef48eb35cf30adf4db14086e8aabd07ef6fb113f&quot;,</span><br><span class="line">    &quot;build_date&quot; : &quot;2020-03-26T06:34:37.794943Z&quot;,</span><br><span class="line">    &quot;build_snapshot&quot; : false,</span><br><span class="line">    &quot;lucene_version&quot; : &quot;8.4.0&quot;,</span><br><span class="line">    &quot;minimum_wire_compatibility_version&quot; : &quot;6.8.0&quot;,</span><br><span class="line">    &quot;minimum_index_compatibility_version&quot; : &quot;6.0.0-beta1&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;tagline&quot; : &quot;You Know, for Search&quot;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">赶紧关闭，增加内存的限制,修改配置文件 -e 环境配置修改</span></span><br><span class="line">docker run -d --name elasticsearch02 -p 9200:9200 -p 9300:9300 -e ES_JAVA_OPTS=&quot;-Xms64m -Xmx512m&quot; -e &quot;discovery.type=single-node&quot; elasticsearch:7.6.2</span><br></pre></td></tr></table></figure>
+
+<h5 id="可视化"><a href="#可视化" class="headerlink" title="可视化"></a>可视化</h5><blockquote>
+<p>docker 图形化界面管理工具！提供一个后台供我们操作</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@localhost ~]# docker run -d -p 8090:9000 --restart=always -v /var/run/docker.sock:/var/run/docker.sock --privileged=true portainer/portainer</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>docker</category>
+      </categories>
+      <tags>
+        <tag>docker的基本命令</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>docker安装oracle</title>
     <url>/2022/07/15/database/docker%E5%AE%89%E8%A3%85oracle/</url>
     <content><![CDATA[<h1 id="docker安装oracle"><a href="#docker安装oracle" class="headerlink" title="docker安装oracle"></a><a href="https://zhuanlan.zhihu.com/p/443324194">docker安装oracle</a></h1><h3 id="1、安装docker环境。"><a href="#1、安装docker环境。" class="headerlink" title="1、安装docker环境。"></a>1、安装docker环境。</h3><h3 id="2、开始拉取oracle镜像"><a href="#2、开始拉取oracle镜像" class="headerlink" title="2、开始拉取oracle镜像"></a>2、开始拉取oracle镜像</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull registry.cn-hangzhou.aliyuncs.com/helowin/oracle_11g</span><br></pre></td></tr></table></figure>
@@ -211,67 +357,6 @@
       </tags>
   </entry>
   <entry>
-    <title>docker的基本命令</title>
-    <url>/2022/06/27/database/docker%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h2 id="Docker的常用命令"><a href="#Docker的常用命令" class="headerlink" title="Docker的常用命令"></a>Docker的常用命令</h2><h3 id="一、帮助命令"><a href="#一、帮助命令" class="headerlink" title="一、帮助命令"></a>一、帮助命令</h3><hr>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker version # 显示docker的版本</span><br><span class="line">docker info </span><br><span class="line">docker 命令 --help # 万能命令</span><br></pre></td></tr></table></figure>
-
-<h3 id="二、镜像命令"><a href="#二、镜像命令" class="headerlink" title="二、镜像命令"></a>二、镜像命令</h3><hr>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看镜像</span></span><br><span class="line">docker images  # 列出所有镜像</span><br><span class="line">docker images -a</span><br><span class="line">docker images -aq # 只显示镜像id</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">搜索镜像</span></span><br><span class="line">docker search --filter=STARS=3000 #搜索镜像star大于3000</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">下载镜像</span></span><br><span class="line">docker pull 镜像[:tag] # 如果不写tag 默认是 latest</span><br><span class="line">[root@localhost ~]# docker pull mysql</span><br><span class="line">Using default tag: latest</span><br><span class="line">latest: Pulling from library/mysql</span><br><span class="line">72a69066d2fe: Pull complete  # 分层下载，docker image的核心 联合文件系统</span><br><span class="line">93619dbc5b36: Pull complete </span><br><span class="line">99da31dd6142: Pull complete </span><br><span class="line">626033c43d70: Pull complete </span><br><span class="line">37d5d7efb64e: Pull complete </span><br><span class="line">ac563158d721: Pull complete </span><br><span class="line">d2ba16033dad: Pull complete </span><br><span class="line">688ba7d5c01a: Pull complete </span><br><span class="line">00e060b6d11d: Pull complete </span><br><span class="line">1c04857f594f: Pull complete </span><br><span class="line">4d7cfa90e6ea: Pull complete </span><br><span class="line">e0431212d27d: Pull complete </span><br><span class="line">Digest: sha256:e9027fe4d91c0153429607251656806cc784e914937271037f7738bd5b8e7709 #签名</span><br><span class="line">Status: Downloaded newer image for mysql:latest</span><br><span class="line">docker.io/library/mysql:latest #真实地址</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">删除镜像</span></span><br><span class="line">docker rmi -f 容器id # 删除指定的镜像</span><br><span class="line">docker rmi -f 容器id 容器id 容器id # 删除多个的镜像</span><br><span class="line">docker rmi -f $(docker images -aq) # 删除全部镜像</span><br></pre></td></tr></table></figure>
-
-<h3 id="三、容器命令"><a href="#三、容器命令" class="headerlink" title="三、容器命令"></a>三、容器命令</h3><h4 id="新建容器并启动"><a href="#新建容器并启动" class="headerlink" title="新建容器并启动"></a>新建容器并启动</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run [可选参数] image</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">参数说明</span></span><br><span class="line">--name=&quot;Name&quot; 容器名字 tomcat01 tomcat02 用来区分容器</span><br><span class="line">-d 后台运行方式</span><br><span class="line">-it 使用交互式运行 进入容器查看内容</span><br><span class="line">-p 指定容器的端口 -p 8080:8080</span><br><span class="line">	—P 主机端口：容器端口 </span><br><span class="line">	-p 容器端口</span><br><span class="line">	容器端口</span><br><span class="line">-P 随机端口</span><br></pre></td></tr></table></figure>
-
-<h4 id="列出所有的运行的容器"><a href="#列出所有的运行的容器" class="headerlink" title="列出所有的运行的容器"></a>列出所有的运行的容器</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">docker ps 命令</span></span><br><span class="line"><span class="meta prompt_">   # </span><span class="language-bash">列出当前正在运行的容器</span></span><br><span class="line">-a # 列出当前正在运行的容器+带历史运行过的容器</span><br><span class="line">-n=? # 最近创建过的容器</span><br><span class="line">-q # 只显示容器的编号</span><br><span class="line">[root@localhost ~]# docker ps</span><br><span class="line">CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES</span><br><span class="line">[root@localhost ~]# docker ps -aq</span><br><span class="line">1a8af1ce6330</span><br><span class="line">[root@localhost ~]# docker ps -a</span><br><span class="line">CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS                            PORTS     NAMES</span><br><span class="line">1a8af1ce6330   centos    &quot;/bin/bash&quot;   12 minutes ago   Exited (127) About a minute ago             zealous_bartik</span><br></pre></td></tr></table></figure>
-
-<h4 id="退出容器"><a href="#退出容器" class="headerlink" title="退出容器"></a>退出容器</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">exit #直接容器停止并退出</span><br><span class="line">Ctrl + P + Q #容器不停止退出</span><br></pre></td></tr></table></figure>
-
-<h4 id="删除容器"><a href="#删除容器" class="headerlink" title="删除容器"></a>删除容器</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker rm 容器id       			# 删除指定容器</span><br><span class="line">docker rm -f $(docker ps -aq)	 # 删除全部容器</span><br><span class="line">docker ps -a -q|xargs docker run # 删除全部容器（linux命令）</span><br></pre></td></tr></table></figure>
-
-<h4 id="启动和停止容器的操作"><a href="#启动和停止容器的操作" class="headerlink" title="启动和停止容器的操作"></a>启动和停止容器的操作</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker start 容器id</span><br><span class="line">docker restart 容器id</span><br><span class="line">docker stop 容器id</span><br><span class="line">docker kill 容器id</span><br></pre></td></tr></table></figure>
-
-<h3 id="四、常用其他命令"><a href="#四、常用其他命令" class="headerlink" title="四、常用其他命令"></a>四、常用其他命令</h3><h5 id="后台启动容器"><a href="#后台启动容器" class="headerlink" title="后台启动容器"></a>后台启动容器</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">docker run -d 镜像名</span></span><br><span class="line">[root@localhost ~]# docker run -d centos</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">问题docker ps ，发现 centos 停止了</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">常见的坑， docker 容器使用后台运行，就必须要有一个前台进程，docker 发现没有应用，就会自动停止</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">nginx 容器启动后，发现自己没有提供服务，就会立刻停止，就是没有程序了</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker logs</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">自己编写一段shell脚本</span></span><br><span class="line">[root@localhost ~]# docker run -d centos /bin/sh -c &quot;while true; do echo test;sleep 1;done&quot;</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看当前在运行的容器</span></span><br><span class="line">[root@localhost ~]# docker ps</span><br><span class="line">CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS     NAMES</span><br><span class="line">9916a0298bfd   centos    &quot;/bin/sh -c &#x27;while t…&quot;   19 seconds ago   Up 18 seconds             condescending_curie</span><br><span class="line">113e7bdad55e   centos    &quot;/bin/bash&quot;              12 minutes ago   Up 12 minutes             serene_pasteur</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">显示日志</span></span><br><span class="line">-tf </span><br><span class="line">--tail number # 要显示日志的条数</span><br><span class="line">[root@localhost ~]# docker logs -f -t --tail 10  113e7bdad55e</span><br></pre></td></tr></table></figure>
-
-<h5 id="查看容器中进程信息"><a href="#查看容器中进程信息" class="headerlink" title="查看容器中进程信息"></a>查看容器中进程信息</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">命令 docker top 容器<span class="built_in">id</span></span></span><br><span class="line">[root@localhost ~]# docker top 9916a0298bfd</span><br><span class="line">UID                 PID                 PPID                C                   STIME     </span><br><span class="line">root                180675              180655              0                   20:05      root                183113              180675              0                   20:44     </span><br></pre></td></tr></table></figure>
-
-<h5 id="查看镜像的元数据"><a href="#查看镜像的元数据" class="headerlink" title="查看镜像的元数据"></a>查看镜像的元数据</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">命令 docker inspect 容器<span class="built_in">id</span></span></span><br><span class="line">[root@localhost ~]# docker inspect 9916a0298bfd </span><br><span class="line">[</span><br><span class="line">    &#123;</span><br><span class="line">        &quot;Id&quot;: &quot;9916a0298bfd3fb37d142bdd8bc056a5c943f8aa3c08bc7e1bb75081ee2a3ed0&quot;,</span><br><span class="line">        &quot;Created&quot;: &quot;2022-03-23T00:05:18.49632074Z&quot;,</span><br><span class="line">        &quot;Path&quot;: &quot;/bin/sh&quot;,</span><br><span class="line">        &quot;Args&quot;: [</span><br><span class="line">            &quot;-c&quot;,</span><br><span class="line">            &quot;while true; do echo test;sleep 1;done&quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;State&quot;: &#123;</span><br><span class="line">            &quot;Status&quot;: &quot;running&quot;,</span><br><span class="line">            &quot;Running&quot;: true,</span><br><span class="line">            &quot;Paused&quot;: false,</span><br><span class="line">            &quot;Restarting&quot;: false,</span><br><span class="line">            &quot;OOMKilled&quot;: false,</span><br><span class="line">            &quot;Dead&quot;: false,</span><br><span class="line">            &quot;Pid&quot;: 180675,</span><br><span class="line">            &quot;ExitCode&quot;: 0,</span><br><span class="line">            &quot;Error&quot;: &quot;&quot;,</span><br><span class="line">            &quot;StartedAt&quot;: &quot;2022-03-23T00:05:19.263635448Z&quot;,</span><br><span class="line">            &quot;FinishedAt&quot;: &quot;0001-01-01T00:00:00Z&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;Image&quot;: &quot;sha256:5d0da3dc976460b72c77d94c8a1ad043720b0416bfc16c52c45d4847e53fadb6&quot;,</span><br><span class="line">        &quot;ResolvConfPath&quot;: &quot;/var/lib/docker/containers/9916a0298bfd3fb37d142bdd8bc056a5c943f8aa3c08bc7e1bb75081ee2a3ed0/resolv.conf&quot;,</span><br><span class="line">        &quot;HostnamePath&quot;: &quot;/var/lib/docker/containers/9916a0298bfd3fb37d142bdd8bc056a5c943f8aa3c08bc7e1bb75081ee2a3ed0/hostname&quot;,</span><br><span class="line">        &quot;HostsPath&quot;: &quot;/var/lib/docker/containers/9916a0298bfd3fb37d142bdd8bc056a5c943f8aa3c08bc7e1bb75081ee2a3ed0/hosts&quot;,</span><br><span class="line">        &quot;LogPath&quot;: &quot;/var/lib/docker/containers/9916a0298bfd3fb37d142bdd8bc056a5c943f8aa3c08bc7e1bb75081ee2a3ed0/9916a0298bfd3fb37d142bdd8bc056a5c943f8aa3c08bc7e1bb75081ee2a3ed0-json.log&quot;,</span><br><span class="line">        &quot;Name&quot;: &quot;/condescending_curie&quot;,</span><br><span class="line">        &quot;RestartCount&quot;: 0,</span><br><span class="line">        &quot;Driver&quot;: &quot;overlay2&quot;,</span><br><span class="line">        &quot;Platform&quot;: &quot;linux&quot;,</span><br><span class="line">        &quot;MountLabel&quot;: &quot;&quot;,</span><br><span class="line">        &quot;ProcessLabel&quot;: &quot;&quot;,</span><br><span class="line">        &quot;AppArmorProfile&quot;: &quot;&quot;,</span><br><span class="line">        &quot;ExecIDs&quot;: null,</span><br><span class="line">        &quot;HostConfig&quot;: &#123;</span><br><span class="line">            &quot;Binds&quot;: null,</span><br><span class="line">            &quot;ContainerIDFile&quot;: &quot;&quot;,</span><br><span class="line">            &quot;LogConfig&quot;: &#123;</span><br><span class="line">                &quot;Type&quot;: &quot;json-file&quot;,</span><br><span class="line">                &quot;Config&quot;: &#123;&#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;NetworkMode&quot;: &quot;default&quot;,</span><br><span class="line">            &quot;PortBindings&quot;: &#123;&#125;,</span><br><span class="line">            &quot;RestartPolicy&quot;: &#123;</span><br><span class="line">                &quot;Name&quot;: &quot;no&quot;,</span><br><span class="line">                &quot;MaximumRetryCount&quot;: 0</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;AutoRemove&quot;: false,</span><br><span class="line">            &quot;VolumeDriver&quot;: &quot;&quot;,</span><br><span class="line">            &quot;VolumesFrom&quot;: null,</span><br><span class="line">            &quot;CapAdd&quot;: null,</span><br><span class="line">            &quot;CapDrop&quot;: null,</span><br><span class="line">            &quot;CgroupnsMode&quot;: &quot;host&quot;,</span><br><span class="line">            &quot;Dns&quot;: [],</span><br><span class="line">            &quot;DnsOptions&quot;: [],</span><br><span class="line">            &quot;DnsSearch&quot;: [],</span><br><span class="line">            &quot;ExtraHosts&quot;: null,</span><br><span class="line">            &quot;GroupAdd&quot;: null,</span><br><span class="line">            &quot;IpcMode&quot;: &quot;private&quot;,</span><br><span class="line">            &quot;Cgroup&quot;: &quot;&quot;,</span><br><span class="line">            &quot;Links&quot;: null,</span><br><span class="line">            &quot;OomScoreAdj&quot;: 0,</span><br><span class="line">            &quot;PidMode&quot;: &quot;&quot;,</span><br><span class="line">            &quot;Privileged&quot;: false,</span><br><span class="line">            &quot;PublishAllPorts&quot;: false,</span><br><span class="line">            &quot;ReadonlyRootfs&quot;: false,</span><br><span class="line">            &quot;SecurityOpt&quot;: null,</span><br><span class="line">            &quot;UTSMode&quot;: &quot;&quot;,</span><br><span class="line">            &quot;UsernsMode&quot;: &quot;&quot;,</span><br><span class="line">            &quot;ShmSize&quot;: 67108864,</span><br><span class="line">            &quot;Runtime&quot;: &quot;runc&quot;,</span><br><span class="line">            &quot;ConsoleSize&quot;: [</span><br><span class="line">                0,</span><br><span class="line">                0</span><br><span class="line">            ],</span><br><span class="line">            &quot;Isolation&quot;: &quot;&quot;,</span><br><span class="line">            &quot;CpuShares&quot;: 0,</span><br><span class="line">            &quot;Memory&quot;: 0,</span><br><span class="line">            &quot;NanoCpus&quot;: 0,</span><br><span class="line">            &quot;CgroupParent&quot;: &quot;&quot;,</span><br><span class="line">            &quot;BlkioWeight&quot;: 0,</span><br><span class="line">            &quot;BlkioWeightDevice&quot;: [],</span><br><span class="line">            &quot;BlkioDeviceReadBps&quot;: null,</span><br><span class="line">            &quot;BlkioDeviceWriteBps&quot;: null,</span><br><span class="line">            &quot;BlkioDeviceReadIOps&quot;: null,</span><br><span class="line">            &quot;BlkioDeviceWriteIOps&quot;: null,</span><br><span class="line">            &quot;CpuPeriod&quot;: 0,</span><br><span class="line">            &quot;CpuQuota&quot;: 0,</span><br><span class="line">            &quot;CpuRealtimePeriod&quot;: 0,</span><br><span class="line">            &quot;CpuRealtimeRuntime&quot;: 0,</span><br><span class="line">            &quot;CpusetCpus&quot;: &quot;&quot;,</span><br><span class="line">            &quot;CpusetMems&quot;: &quot;&quot;,</span><br><span class="line">            &quot;Devices&quot;: [],</span><br><span class="line">            &quot;DeviceCgroupRules&quot;: null,</span><br><span class="line">            &quot;DeviceRequests&quot;: null,</span><br><span class="line">            &quot;KernelMemory&quot;: 0,</span><br><span class="line">            &quot;KernelMemoryTCP&quot;: 0,</span><br><span class="line">            &quot;MemoryReservation&quot;: 0,</span><br><span class="line">            &quot;MemorySwap&quot;: 0,</span><br><span class="line">            &quot;MemorySwappiness&quot;: null,</span><br><span class="line">            &quot;OomKillDisable&quot;: false,</span><br><span class="line">            &quot;PidsLimit&quot;: null,</span><br><span class="line">            &quot;Ulimits&quot;: null,</span><br><span class="line">            &quot;CpuCount&quot;: 0,</span><br><span class="line">            &quot;CpuPercent&quot;: 0,</span><br><span class="line">            &quot;IOMaximumIOps&quot;: 0,</span><br><span class="line">            &quot;IOMaximumBandwidth&quot;: 0,</span><br><span class="line">            &quot;MaskedPaths&quot;: [</span><br><span class="line">                &quot;/proc/asound&quot;,</span><br><span class="line">                &quot;/proc/acpi&quot;,</span><br><span class="line">                &quot;/proc/kcore&quot;,</span><br><span class="line">                &quot;/proc/keys&quot;,</span><br><span class="line">                &quot;/proc/latency_stats&quot;,</span><br><span class="line">                &quot;/proc/timer_list&quot;,</span><br><span class="line">                &quot;/proc/timer_stats&quot;,</span><br><span class="line">                &quot;/proc/sched_debug&quot;,</span><br><span class="line">                &quot;/proc/scsi&quot;,</span><br><span class="line">                &quot;/sys/firmware&quot;</span><br><span class="line">            ],</span><br><span class="line">            &quot;ReadonlyPaths&quot;: [</span><br><span class="line">                &quot;/proc/bus&quot;,</span><br><span class="line">                &quot;/proc/fs&quot;,</span><br><span class="line">                &quot;/proc/irq&quot;,</span><br><span class="line">                &quot;/proc/sys&quot;,</span><br><span class="line">                &quot;/proc/sysrq-trigger&quot;</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;GraphDriver&quot;: &#123;</span><br><span class="line">            &quot;Data&quot;: &#123;</span><br><span class="line">                &quot;LowerDir&quot;: &quot;/var/lib/docker/overlay2/2db2e17cdb47f8a05997664e4e31dc8f59b611e2d23388bc52b56c4407d27cc3-init/diff:/var/lib/docker/overlay2/e75ba16da0fef020c7930a9b6190dbd33a83a8324702c144c689c5cd4e323146/diff&quot;,</span><br><span class="line">                &quot;MergedDir&quot;: &quot;/var/lib/docker/overlay2/2db2e17cdb47f8a05997664e4e31dc8f59b611e2d23388bc52b56c4407d27cc3/merged&quot;,</span><br><span class="line">                &quot;UpperDir&quot;: &quot;/var/lib/docker/overlay2/2db2e17cdb47f8a05997664e4e31dc8f59b611e2d23388bc52b56c4407d27cc3/diff&quot;,</span><br><span class="line">                &quot;WorkDir&quot;: &quot;/var/lib/docker/overlay2/2db2e17cdb47f8a05997664e4e31dc8f59b611e2d23388bc52b56c4407d27cc3/work&quot;</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;Name&quot;: &quot;overlay2&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;Mounts&quot;: [],</span><br><span class="line">        &quot;Config&quot;: &#123;</span><br><span class="line">            &quot;Hostname&quot;: &quot;9916a0298bfd&quot;,</span><br><span class="line">            &quot;Domainname&quot;: &quot;&quot;,</span><br><span class="line">            &quot;User&quot;: &quot;&quot;,</span><br><span class="line">            &quot;AttachStdin&quot;: false,</span><br><span class="line">            &quot;AttachStdout&quot;: false,</span><br><span class="line">            &quot;AttachStderr&quot;: false,</span><br><span class="line">            &quot;Tty&quot;: false,</span><br><span class="line">            &quot;OpenStdin&quot;: false,</span><br><span class="line">            &quot;StdinOnce&quot;: false,</span><br><span class="line">            &quot;Env&quot;: [</span><br><span class="line">                &quot;PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;</span><br><span class="line">            ],</span><br><span class="line">            &quot;Cmd&quot;: [</span><br><span class="line">                &quot;/bin/sh&quot;,</span><br><span class="line">                &quot;-c&quot;,</span><br><span class="line">                &quot;while true; do echo test;sleep 1;done&quot;</span><br><span class="line">            ],</span><br><span class="line">            &quot;Image&quot;: &quot;centos&quot;,</span><br><span class="line">            &quot;Volumes&quot;: null,</span><br><span class="line">            &quot;WorkingDir&quot;: &quot;&quot;,</span><br><span class="line">            &quot;Entrypoint&quot;: null,</span><br><span class="line">            &quot;OnBuild&quot;: null,</span><br><span class="line">            &quot;Labels&quot;: &#123;</span><br><span class="line">                &quot;org.label-schema.build-date&quot;: &quot;20210915&quot;,</span><br><span class="line">                &quot;org.label-schema.license&quot;: &quot;GPLv2&quot;,</span><br><span class="line">                &quot;org.label-schema.name&quot;: &quot;CentOS Base Image&quot;,</span><br><span class="line">                &quot;org.label-schema.schema-version&quot;: &quot;1.0&quot;,</span><br><span class="line">                &quot;org.label-schema.vendor&quot;: &quot;CentOS&quot;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;NetworkSettings&quot;: &#123;</span><br><span class="line">            &quot;Bridge&quot;: &quot;&quot;,</span><br><span class="line">            &quot;SandboxID&quot;: &quot;f28f51fd2c85ab7e8ba88827ec901c9ef4b517428747bd1cdf5196810db622c7&quot;,</span><br><span class="line">            &quot;HairpinMode&quot;: false,</span><br><span class="line">            &quot;LinkLocalIPv6Address&quot;: &quot;&quot;,</span><br><span class="line">            &quot;LinkLocalIPv6PrefixLen&quot;: 0,</span><br><span class="line">            &quot;Ports&quot;: &#123;&#125;,</span><br><span class="line">            &quot;SandboxKey&quot;: &quot;/var/run/docker/netns/f28f51fd2c85&quot;,</span><br><span class="line">            &quot;SecondaryIPAddresses&quot;: null,</span><br><span class="line">            &quot;SecondaryIPv6Addresses&quot;: null,</span><br><span class="line">            &quot;EndpointID&quot;: &quot;41b020afb72dc9602f5a030e56d816692170c2f0427377829da822e62976732a&quot;,</span><br><span class="line">            &quot;Gateway&quot;: &quot;172.17.0.1&quot;,</span><br><span class="line">            &quot;GlobalIPv6Address&quot;: &quot;&quot;,</span><br><span class="line">            &quot;GlobalIPv6PrefixLen&quot;: 0,</span><br><span class="line">            &quot;IPAddress&quot;: &quot;172.17.0.3&quot;,</span><br><span class="line">            &quot;IPPrefixLen&quot;: 16,</span><br><span class="line">            &quot;IPv6Gateway&quot;: &quot;&quot;,</span><br><span class="line">            &quot;MacAddress&quot;: &quot;02:42:ac:11:00:03&quot;,</span><br><span class="line">            &quot;Networks&quot;: &#123;</span><br><span class="line">                &quot;bridge&quot;: &#123;</span><br><span class="line">                    &quot;IPAMConfig&quot;: null,</span><br><span class="line">                    &quot;Links&quot;: null,</span><br><span class="line">                    &quot;Aliases&quot;: null,</span><br><span class="line">                    &quot;NetworkID&quot;: &quot;d91d646c67beba9f1d4aa5cfa191bad1f24cf153ae1c6e3a37cf34599502a27f&quot;,</span><br><span class="line">                    &quot;EndpointID&quot;: &quot;41b020afb72dc9602f5a030e56d816692170c2f0427377829da822e62976732a&quot;,</span><br><span class="line">                    &quot;Gateway&quot;: &quot;172.17.0.1&quot;,</span><br><span class="line">                    &quot;IPAddress&quot;: &quot;172.17.0.3&quot;,</span><br><span class="line">                    &quot;IPPrefixLen&quot;: 16,</span><br><span class="line">                    &quot;IPv6Gateway&quot;: &quot;&quot;,</span><br><span class="line">                    &quot;GlobalIPv6Address&quot;: &quot;&quot;,</span><br><span class="line">                    &quot;GlobalIPv6PrefixLen&quot;: 0,</span><br><span class="line">                    &quot;MacAddress&quot;: &quot;02:42:ac:11:00:03&quot;,</span><br><span class="line">                    &quot;DriverOpts&quot;: null</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-
-<h5 id="进入当前正在运行的容器"><a href="#进入当前正在运行的容器" class="headerlink" title="进入当前正在运行的容器"></a>进入当前正在运行的容器</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">我们通常容器都是使用后台方式运行的，需要进入容器，修改一些配置</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">命令</span></span><br><span class="line">docker exec -it 容器id bashShell</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">测试</span></span><br><span class="line">[root@localhost ~]# docker ps</span><br><span class="line">CONTAINER ID   IMAGE     COMMAND                  CREATED             STATUS             PORTS     NAMES</span><br><span class="line">9916a0298bfd   centos    &quot;/bin/sh -c &#x27;while t…&quot;   About an hour ago   Up About an hour             condescending_curie</span><br><span class="line">113e7bdad55e   centos    &quot;/bin/bash&quot;              About an hour ago   Up About an hour             serene_pasteur</span><br><span class="line">[root@localhost ~]# docker exec -it 9916a0298bfd /bin/bash</span><br><span class="line">[root@9916a0298bfd /]# ps -ef</span><br><span class="line">UID          PID    PPID  C STIME TTY          TIME CMD</span><br><span class="line">root           1       0  0 00:05 ?        00:00:01 /bin/sh -c while true; do echo test;sleep 1;done</span><br><span class="line">root        4061       0  0 01:12 pts/0    00:00:00 /bin/bash</span><br><span class="line">root        4088       1  0 01:12 ?        00:00:00 /usr/bin/coreutils --coreutils-prog-shebang=sleep /usr/bin/sleep 1</span><br><span class="line">root        4089    4061  0 01:12 pts/0    00:00:00 ps -ef</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">方式二</span></span><br><span class="line">docker attach 容器id</span><br><span class="line">正在执行当前的代码...</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">docker <span class="built_in">exec</span>     <span class="comment"># 进入容器后开启一个新的终端，可以在里面操作（常用）</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">docker attach	  <span class="comment"># 进入容器正在执行的终端，不会启动新的进程</span></span></span><br></pre></td></tr></table></figure>
-
-<h5 id="从容器内烤贝文件到主机上"><a href="#从容器内烤贝文件到主机上" class="headerlink" title="从容器内烤贝文件到主机上"></a>从容器内烤贝文件到主机上</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">docker cp  b4bb1f3f7685:/home/test.java /home</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">进入docker容器内</span></span><br><span class="line">[root@b4bb1f3f7685 /]# cd /home</span><br><span class="line">[root@b4bb1f3f7685 home]# ls</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建java文件</span></span><br><span class="line">[root@b4bb1f3f7685 home]# touch test.java</span><br><span class="line">[root@b4bb1f3f7685 home]# ls</span><br><span class="line">test.java</span><br><span class="line">[root@b4bb1f3f7685 home]# exit</span><br><span class="line">exit</span><br><span class="line">docker cp 容器id:容器内部路径 目的的主路径</span><br><span class="line">[root@localhost home]# docker cp  b4bb1f3f7685:/home/test.java /home</span><br><span class="line">[root@localhost home]# ls</span><br><span class="line">shawn  test.java</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="五、安装服务器软件"><a href="#五、安装服务器软件" class="headerlink" title="五、安装服务器软件"></a>五、安装服务器软件</h3><h5 id="安装Tomcat"><a href="#安装Tomcat" class="headerlink" title="安装Tomcat"></a>安装Tomcat</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 官方的使用</span></span><br><span class="line">docker run -it --<span class="built_in">rm</span> tomcat:9.0</span><br><span class="line"><span class="comment"># 我们之前的启动都是后台，停止了容器之后，容器还是可以查到 docker run -it --rm 一般用来测试，用完就删除</span></span><br><span class="line"><span class="comment">#下载在启动</span></span><br><span class="line">docker pull tomcat:9.0</span><br></pre></td></tr></table></figure>
-
-<h5 id="安装es-kibana"><a href="#安装es-kibana" class="headerlink" title="安装es+kibana"></a>安装es+kibana</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">es 暴露的端口很多</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">es 十分的耗内存</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">es 的数据一般需要放置到安全目录 挂载</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">--net somenetwork 网路配置</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动 elasticsearch</span></span><br><span class="line">[root@localhost ~]# docker run -d --name elasticsearch01 -p 9200:9200 -p 9300:9300 -e &quot;discovery.type=single-node&quot; elasticsearch:7.6.2</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动了 linux就卡住了 docker stats 查看cpu的状态</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">es 是十分耗内存的 1.xG   1核2G</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看 docker stats</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">测试一下es是否成功了</span></span><br><span class="line">[root@localhost ~]# curl localhost:9200</span><br><span class="line">&#123;</span><br><span class="line">  &quot;name&quot; : &quot;6620e2b536c4&quot;,</span><br><span class="line">  &quot;cluster_name&quot; : &quot;docker-cluster&quot;,</span><br><span class="line">  &quot;cluster_uuid&quot; : &quot;9i4LLjxvTVKf46Hp1qHkqA&quot;,</span><br><span class="line">  &quot;version&quot; : &#123;</span><br><span class="line">    &quot;number&quot; : &quot;7.6.2&quot;,</span><br><span class="line">    &quot;build_flavor&quot; : &quot;default&quot;,</span><br><span class="line">    &quot;build_type&quot; : &quot;docker&quot;,</span><br><span class="line">    &quot;build_hash&quot; : &quot;ef48eb35cf30adf4db14086e8aabd07ef6fb113f&quot;,</span><br><span class="line">    &quot;build_date&quot; : &quot;2020-03-26T06:34:37.794943Z&quot;,</span><br><span class="line">    &quot;build_snapshot&quot; : false,</span><br><span class="line">    &quot;lucene_version&quot; : &quot;8.4.0&quot;,</span><br><span class="line">    &quot;minimum_wire_compatibility_version&quot; : &quot;6.8.0&quot;,</span><br><span class="line">    &quot;minimum_index_compatibility_version&quot; : &quot;6.0.0-beta1&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;tagline&quot; : &quot;You Know, for Search&quot;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">赶紧关闭，增加内存的限制,修改配置文件 -e 环境配置修改</span></span><br><span class="line">docker run -d --name elasticsearch02 -p 9200:9200 -p 9300:9300 -e ES_JAVA_OPTS=&quot;-Xms64m -Xmx512m&quot; -e &quot;discovery.type=single-node&quot; elasticsearch:7.6.2</span><br></pre></td></tr></table></figure>
-
-<h5 id="可视化"><a href="#可视化" class="headerlink" title="可视化"></a>可视化</h5><blockquote>
-<p>docker 图形化界面管理工具！提供一个后台供我们操作</p>
-</blockquote>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@localhost ~]# docker run -d -p 8090:9000 --restart=always -v /var/run/docker.sock:/var/run/docker.sock --privileged=true portainer/portainer</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>docker</category>
-      </categories>
-      <tags>
-        <tag>docker的基本命令</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Redhat Enterprise Linux</title>
-    <url>/2024/04/11/database/linux/</url>
-    <content><![CDATA[<h1 id="兼容RHEL的linux系统的现状"><a href="#兼容RHEL的linux系统的现状" class="headerlink" title="兼容RHEL的linux系统的现状"></a>兼容RHEL的linux系统的现状</h1><h3 id="RHEL（Redhat-Enterprise-Linux）的免费替代"><a href="#RHEL（Redhat-Enterprise-Linux）的免费替代" class="headerlink" title="RHEL（Redhat Enterprise Linux）的免费替代"></a>RHEL（Redhat Enterprise Linux）的免费替代</h3><p>国外较出名兼容RHEL有RockyLinux与Amalinux</p>
-<h5 id="RHEL常用的自8版本以后改为DNF（与yum兼容）"><a href="#RHEL常用的自8版本以后改为DNF（与yum兼容）" class="headerlink" title="RHEL常用的自8版本以后改为DNF（与yum兼容）"></a>RHEL常用的自8版本以后改为DNF（与yum兼容）</h5><p><a href="https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/9/html-single/managing_software_with_the_dnf_tool/index#doc-wrapper">dnf的使用</a></p>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>docker镜像讲解</title>
     <url>/2022/06/28/database/docker%E9%95%9C%E5%83%8F%E8%AE%B2%E8%A7%A3/</url>
     <content><![CDATA[<h1 id="Docker镜像讲解"><a href="#Docker镜像讲解" class="headerlink" title="Docker镜像讲解"></a>Docker镜像讲解</h1><h2 id="镜像是什么"><a href="#镜像是什么" class="headerlink" title="镜像是什么"></a>镜像是什么</h2><ul>
@@ -317,6 +402,19 @@
       </tags>
   </entry>
   <entry>
+    <title>Redhat Enterprise Linux</title>
+    <url>/2024/04/11/database/linux/</url>
+    <content><![CDATA[<h1 id="兼容RHEL的linux系统的现状"><a href="#兼容RHEL的linux系统的现状" class="headerlink" title="兼容RHEL的linux系统的现状"></a>兼容RHEL的linux系统的现状</h1><h3 id="RHEL（Redhat-Enterprise-Linux）的免费替代"><a href="#RHEL（Redhat-Enterprise-Linux）的免费替代" class="headerlink" title="RHEL（Redhat Enterprise Linux）的免费替代"></a>RHEL（Redhat Enterprise Linux）的免费替代</h3><p>国外较出名兼容RHEL有RockyLinux与Amalinux</p>
+<h5 id="RHEL常用的自8版本以后改为DNF（与yum兼容）"><a href="#RHEL常用的自8版本以后改为DNF（与yum兼容）" class="headerlink" title="RHEL常用的自8版本以后改为DNF（与yum兼容）"></a>RHEL常用的自8版本以后改为DNF（与yum兼容）</h5><p><a href="https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/9/html-single/managing_software_with_the_dnf_tool/index#doc-wrapper">dnf的使用</a></p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Kubernetes</title>
     <url>/2022/07/17/database/kubernetes/</url>
     <content><![CDATA[<h1 id="Kubernetes镜像"><a href="#Kubernetes镜像" class="headerlink" title="Kubernetes镜像"></a>Kubernetes镜像</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Kubernetes是一个开源系统，用于容器化应用的自动部署、扩缩和管理。它将构成应用的容器按逻辑单位进行分组以便于管理和发现。</p>
@@ -335,18 +433,6 @@
       </categories>
       <tags>
         <tag>kubernetes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Mybatis-Plus</title>
-    <url>/2024/04/11/database/mybatis/</url>
-    <content><![CDATA[<h1 id="Mybatis-Plus-常规用法"><a href="#Mybatis-Plus-常规用法" class="headerlink" title="Mybatis-Plus 常规用法"></a>Mybatis-Plus 常规用法</h1><p><a href="https://baomidou.com/pages/24112f/">Mybatis-Plus 使用文档</a></p>
-]]></content>
-      <categories>
-        <category>数据库查询</category>
-      </categories>
-      <tags>
-        <tag>jdbc</tag>
       </tags>
   </entry>
   <entry>
@@ -425,19 +511,15 @@
       </tags>
   </entry>
   <entry>
-    <title>rockylinux8-network-config</title>
-    <url>/2023/12/17/database/rockylinux8-network-config/</url>
-    <content><![CDATA[<h4 id="查看linux内核信息"><a href="#查看linux内核信息" class="headerlink" title="查看linux内核信息"></a>查看linux内核信息</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">uname</span> -a</span><br></pre></td></tr></table></figure>
-<h4 id="查看linux发行版信息"><a href="#查看linux发行版信息" class="headerlink" title="查看linux发行版信息"></a>查看linux发行版信息</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> /etc/os-release</span><br></pre></td></tr></table></figure>
-<h4 id="配置静态网路"><a href="#配置静态网路" class="headerlink" title="配置静态网路"></a>配置静态网路</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/sysconfig/network-scripts/ifcfg-ens160</span><br><span class="line"></span><br><span class="line">TYPE=Ethernet</span><br><span class="line">PROXY_METHOD=none</span><br><span class="line">BROWSER_ONLY=no</span><br><span class="line"><span class="comment"># 静态IP地址</span></span><br><span class="line">BOOTPROTO=static</span><br><span class="line">DEFROUTE=<span class="built_in">yes</span></span><br><span class="line">IPV4_FAILURE_FATAL=no</span><br><span class="line">IPV6INIT=<span class="built_in">yes</span></span><br><span class="line">IPV6_AUTOCONF=<span class="built_in">yes</span></span><br><span class="line">IPV6_DEFROUTE=<span class="built_in">yes</span></span><br><span class="line">IPV6_FAILURE_FATAL=no</span><br><span class="line">NAME=ens160</span><br><span class="line">UUID=293f1d04-332e-4de2-8f19-4910bca6672c</span><br><span class="line">DEVICE=ens160</span><br><span class="line"><span class="comment"># 开启</span></span><br><span class="line">ONBOOT=<span class="built_in">yes</span></span><br><span class="line"><span class="comment"># 本机地址</span></span><br><span class="line">IPADDR=192.168.166.6</span><br><span class="line"><span class="comment"># 子网掩码</span></span><br><span class="line">NETMASK=255.255.255.0</span><br><span class="line"><span class="comment"># 虚拟VM8网卡 NAT 网关</span></span><br><span class="line">GATEWAY=192.168.166.2</span><br><span class="line"><span class="comment"># DNS 域名解析服务器IP地址</span></span><br><span class="line">DNS1=114.114.114.114</span><br><span class="line">DNS2=223.5.5.5</span><br><span class="line">DNS3=8.8.8.8</span><br></pre></td></tr></table></figure>
-<h4 id="重启网络"><a href="#重启网络" class="headerlink" title="重启网络"></a>重启网络</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nmcli c reload</span><br></pre></td></tr></table></figure>
-<h4 id="SSH连接问题-网络不可达-怀疑是VMware软件问题，配置SSH映射就好了"><a href="#SSH连接问题-网络不可达-怀疑是VMware软件问题，配置SSH映射就好了" class="headerlink" title="SSH连接问题 网络不可达(怀疑是VMware软件问题，配置SSH映射就好了)"></a>SSH连接问题 网络不可达(怀疑是VMware软件问题，配置SSH映射就好了)</h4><p>网络也能ping外网了，具体操作见<a href="https://blog.csdn.net/YiRan_Zhao/article/details/110121526">地址</a></p>
+    <title>Mybatis-Plus</title>
+    <url>/2024/04/11/database/mybatis/</url>
+    <content><![CDATA[<h1 id="Mybatis-Plus-常规用法"><a href="#Mybatis-Plus-常规用法" class="headerlink" title="Mybatis-Plus 常规用法"></a>Mybatis-Plus 常规用法</h1><p><a href="https://baomidou.com/pages/24112f/">Mybatis-Plus 使用文档</a></p>
 ]]></content>
       <categories>
-        <category>rockylinux8</category>
+        <category>数据库查询</category>
       </categories>
       <tags>
-        <tag>rockylinux8-network-config</tag>
+        <tag>jdbc</tag>
       </tags>
   </entry>
   <entry>
@@ -466,6 +548,22 @@ dnf makecache
       </categories>
       <tags>
         <tag>兼容centos的社区实现</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>rockylinux8-network-config</title>
+    <url>/2023/12/17/database/rockylinux8-network-config/</url>
+    <content><![CDATA[<h4 id="查看linux内核信息"><a href="#查看linux内核信息" class="headerlink" title="查看linux内核信息"></a>查看linux内核信息</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">uname</span> -a</span><br></pre></td></tr></table></figure>
+<h4 id="查看linux发行版信息"><a href="#查看linux发行版信息" class="headerlink" title="查看linux发行版信息"></a>查看linux发行版信息</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> /etc/os-release</span><br></pre></td></tr></table></figure>
+<h4 id="配置静态网路"><a href="#配置静态网路" class="headerlink" title="配置静态网路"></a>配置静态网路</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/sysconfig/network-scripts/ifcfg-ens160</span><br><span class="line"></span><br><span class="line">TYPE=Ethernet</span><br><span class="line">PROXY_METHOD=none</span><br><span class="line">BROWSER_ONLY=no</span><br><span class="line"><span class="comment"># 静态IP地址</span></span><br><span class="line">BOOTPROTO=static</span><br><span class="line">DEFROUTE=<span class="built_in">yes</span></span><br><span class="line">IPV4_FAILURE_FATAL=no</span><br><span class="line">IPV6INIT=<span class="built_in">yes</span></span><br><span class="line">IPV6_AUTOCONF=<span class="built_in">yes</span></span><br><span class="line">IPV6_DEFROUTE=<span class="built_in">yes</span></span><br><span class="line">IPV6_FAILURE_FATAL=no</span><br><span class="line">NAME=ens160</span><br><span class="line">UUID=293f1d04-332e-4de2-8f19-4910bca6672c</span><br><span class="line">DEVICE=ens160</span><br><span class="line"><span class="comment"># 开启</span></span><br><span class="line">ONBOOT=<span class="built_in">yes</span></span><br><span class="line"><span class="comment"># 本机地址</span></span><br><span class="line">IPADDR=192.168.166.6</span><br><span class="line"><span class="comment"># 子网掩码</span></span><br><span class="line">NETMASK=255.255.255.0</span><br><span class="line"><span class="comment"># 虚拟VM8网卡 NAT 网关</span></span><br><span class="line">GATEWAY=192.168.166.2</span><br><span class="line"><span class="comment"># DNS 域名解析服务器IP地址</span></span><br><span class="line">DNS1=114.114.114.114</span><br><span class="line">DNS2=223.5.5.5</span><br><span class="line">DNS3=8.8.8.8</span><br></pre></td></tr></table></figure>
+<h4 id="重启网络"><a href="#重启网络" class="headerlink" title="重启网络"></a>重启网络</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nmcli c reload</span><br></pre></td></tr></table></figure>
+<h4 id="SSH连接问题-网络不可达-怀疑是VMware软件问题，配置SSH映射就好了"><a href="#SSH连接问题-网络不可达-怀疑是VMware软件问题，配置SSH映射就好了" class="headerlink" title="SSH连接问题 网络不可达(怀疑是VMware软件问题，配置SSH映射就好了)"></a>SSH连接问题 网络不可达(怀疑是VMware软件问题，配置SSH映射就好了)</h4><p>网络也能ping外网了，具体操作见<a href="https://blog.csdn.net/YiRan_Zhao/article/details/110121526">地址</a></p>
+]]></content>
+      <categories>
+        <category>rockylinux8</category>
+      </categories>
+      <tags>
+        <tag>rockylinux8-network-config</tag>
       </tags>
   </entry>
   <entry>
@@ -544,104 +642,6 @@ dnf makecache
       </tags>
   </entry>
   <entry>
-    <title>浏览器自动化测试</title>
-    <url>/2025/02/03/automate/automates/</url>
-    <content><![CDATA[<h2 id="浏览器自动化测试"><a href="#浏览器自动化测试" class="headerlink" title="浏览器自动化测试"></a>浏览器自动化测试</h2><h3 id="一、Playwright"><a href="#一、Playwright" class="headerlink" title="一、Playwright"></a>一、Playwright</h3><p>Playwright 是用 <strong>TypeScript</strong>（JavaScript 的超集）编写的。TypeScript 提供了静态类型检查，增强了 Playwright 的可维护性和开发体验。Playwright 的核心代码和 API 基于 Node.js 环境，因此它是一个主要面向 <strong>JavaScript&#x2F;TypeScript</strong> 开发者的工具。</p>
-<p>然而，Playwright 并不仅仅限于 JavaScript 和 TypeScript，它提供了 <strong>多语言绑定</strong>，使得开发者可以使用其他编程语言来操作 Playwright。除了 TypeScript 和 JavaScript，Playwright 还支持以下语言：</p>
-<ul>
-<li><strong>Python</strong>：通过 Playwright 的 Python 库，你可以使用 Python 编写自动化脚本。</li>
-<li>**C#**：Playwright 为 C# 开发者提供了相应的库和接口。</li>
-<li><strong>Java</strong>：Playwright 也提供了 Java 语言的绑定，允许 Java 开发者使用 Playwright 进行浏览器自动化。</li>
-</ul>
-<h3 id="语言支持的绑定："><a href="#语言支持的绑定：" class="headerlink" title="语言支持的绑定："></a>语言支持的绑定：</h3><ol>
-<li><strong>TypeScript&#x2F;JavaScript</strong>：最原生的支持，因为 Playwright 本身是用 TypeScript 开发的。</li>
-<li><strong>Python</strong>：提供了 Python 绑定，可以方便地在 Python 环境中使用 Playwright。</li>
-<li>**C#**：Playwright 为 C# 开发者提供了 SDK 和 API。</li>
-<li><strong>Java</strong>：Playwright 同样支持 Java 环境的使用，提供了相应的 API。</li>
-</ol>
-<p>总结来说，Playwright 的核心是使用 <strong>TypeScript</strong> 编写的，但它的多语言支持使得开发者可以根据自己的需求选择不同的编程语言来使用该工具。</p>
-<h3 id="二、Selenium"><a href="#二、Selenium" class="headerlink" title="二、Selenium"></a>二、Selenium</h3><p>Selenium 是用 <strong>Java</strong> 编写的核心库，但它支持多种编程语言，包括 Java、Python、C#、Ruby、JavaScript（Node.js）等。Selenium 提供了多种语言的绑定（API），这样开发者可以使用自己熟悉的编程语言与 Selenium 进行交互。</p>
-<h3 id="主要组成部分："><a href="#主要组成部分：" class="headerlink" title="主要组成部分："></a>主要组成部分：</h3><ol>
-<li><strong>Selenium WebDriver</strong>：<ul>
-<li>这是 Selenium 最核心的部分，负责与浏览器进行交互。</li>
-<li>WebDriver 本身是用 Java 编写的，但可以通过语言绑定支持多种编程语言。</li>
-</ul>
-</li>
-<li><strong>Selenium Grid</strong>：<ul>
-<li>用于并行化测试和跨多个机器执行。</li>
-<li>Selenium Grid 也是用 Java 编写的。</li>
-</ul>
-</li>
-<li><strong>Selenium IDE</strong>：<ul>
-<li>一个用于录制和回放测试脚本的工具，最初是作为 Firefox 插件开发的，后来支持 Chrome。</li>
-<li>IDE 也是基于 JavaScript 和其他前端技术的。</li>
-</ul>
-</li>
-</ol>
-<h3 id="支持的编程语言："><a href="#支持的编程语言：" class="headerlink" title="支持的编程语言："></a>支持的编程语言：</h3><ul>
-<li><strong>Java</strong>：最早的 Selenium 版本是用 Java 开发的，提供了最完整的功能和最广泛的社区支持。</li>
-<li><strong>Python</strong>：提供了 Python 语言的绑定，适用于使用 Python 编写自动化脚本的开发者。</li>
-<li>**C#**：C# 开发者可以使用 Selenium 提供的 C# 语言绑定进行自动化操作。</li>
-<li><strong>Ruby</strong>：Selenium 同样提供了 Ruby 绑定，适合 Ruby 开发者。</li>
-<li>**JavaScript (Node.js)**：Selenium 也支持 JavaScript 和 Node.js 环境，适合现代 Web 开发的自动化测试。</li>
-</ul>
-<p>总结来说，<strong>Selenium WebDriver</strong> 的核心部分是用 Java 编写的，但它提供了多种语言的接口，使得开发者可以使用不同的编程语言进行自动化测试或爬虫开发。</p>
-]]></content>
-      <categories>
-        <category>broswer-automate</category>
-      </categories>
-      <tags>
-        <tag>浏览器自动化测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在Nodejs中使用 Playwright</title>
-    <url>/2025/02/03/automate/Playwright/</url>
-    <content><![CDATA[<h2 id="Node-js-环境中安装和使用-Playwright"><a href="#Node-js-环境中安装和使用-Playwright" class="headerlink" title="Node.js 环境中安装和使用 Playwright"></a><strong>Node.js</strong> 环境中安装和使用 <strong>Playwright</strong></h2><p>首先，确保你已经安装了 <strong>Node.js</strong>。可以通过以下命令来检查是否已经安装 Node.js：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-
-<p>如果没有安装 Node.js，你可以从 <a href="https://nodejs.org/">Node.js 官网</a> 下载并安装最新版本的 Node.js。</p>
-<h3 id="2-初始化-Node-js-项目"><a href="#2-初始化-Node-js-项目" class="headerlink" title="2. 初始化 Node.js 项目"></a>2. <strong>初始化 Node.js 项目</strong></h3><p>如果你还没有创建 Node.js 项目，可以通过以下命令初始化一个新的 Node.js 项目：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> my-playwright-project</span><br><span class="line"><span class="built_in">cd</span> my-playwright-project</span><br><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
-
-<p>这将会创建一个 <code>package.json</code> 文件，管理你的项目依赖。</p>
-<h3 id="3-安装-Playwright"><a href="#3-安装-Playwright" class="headerlink" title="3. 安装 Playwright"></a>3. <strong>安装 Playwright</strong></h3><p>你可以使用 <strong>npm</strong> 或 <strong>yarn</strong> 来安装 Playwright。执行以下命令安装 Playwright 和浏览器依赖：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright</span><br></pre></td></tr></table></figure>
-
-<p>默认情况下，Playwright 会安装必要的浏览器二进制文件（Chromium、Firefox 和 WebKit），因此它会比较大。如果你只需要安装特定的浏览器，你可以选择安装指定的浏览器包：</p>
-<ul>
-<li><p><strong>只安装 Chromium</strong>:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-chromium</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>只安装 Firefox</strong>:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-firefox</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>只安装 WebKit</strong>:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-webkit</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="4-验证安装"><a href="#4-验证安装" class="headerlink" title="4. 验证安装"></a>4. <strong>验证安装</strong></h3><p>安装完成后，你可以创建一个简单的脚本来测试 Playwright 是否工作正常：</p>
-<p>创建一个文件 <code>test.js</code>，并添加以下内容：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; chromium &#125; = <span class="built_in">require</span>(<span class="string">&quot;playwright&quot;</span>);</span><br><span class="line"></span><br><span class="line">(<span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="comment">// 启动浏览器</span></span><br><span class="line">  <span class="keyword">const</span> browser = <span class="keyword">await</span> chromium.<span class="title function_">launch</span>(&#123; <span class="attr">headless</span>: <span class="literal">false</span> &#125;);</span><br><span class="line">  <span class="keyword">const</span> page = <span class="keyword">await</span> browser.<span class="title function_">newPage</span>();</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 打开一个页面</span></span><br><span class="line">  <span class="keyword">await</span> page.<span class="title function_">goto</span>(<span class="string">&quot;https://example.com&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 截图保存</span></span><br><span class="line">  <span class="keyword">await</span> page.<span class="title function_">screenshot</span>(&#123; <span class="attr">path</span>: <span class="string">&quot;example.png&quot;</span> &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 关闭浏览器</span></span><br><span class="line">  <span class="keyword">await</span> browser.<span class="title function_">close</span>();</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-
-<p>然后，运行脚本：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node test.js</span><br></pre></td></tr></table></figure>
-
-<p>如果一切正常，Playwright 会启动一个 Chromium 浏览器实例并打开 <code>https://example.com</code>，然后保存页面截图为 <code>example.png</code>。</p>
-<h3 id="5-常见问题"><a href="#5-常见问题" class="headerlink" title="5. 常见问题"></a>5. <strong>常见问题</strong></h3><ul>
-<li>如果你在安装过程中遇到浏览器二进制文件下载失败的情况，确保你的网络连接正常，并且没有防火墙或代理阻止下载。</li>
-<li>Playwright 会在安装时自动下载 Chromium、Firefox 和 WebKit。如果你不需要某个浏览器，可以手动卸载它们，或者仅安装你需要的特定浏览器。</li>
-</ul>
-<hr>
-<p>通过这些步骤，你就可以在 Node.js 环境中成功安装并使用 Playwright 进行浏览器自动化操作。</p>
-]]></content>
-      <categories>
-        <category>broswer-automate</category>
-      </categories>
-      <tags>
-        <tag>Playwright</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>idea快捷键</title>
     <url>/2022/07/11/idea/idea-shortcut-key/</url>
     <content><![CDATA[<h2 id="常用快捷键1"><a href="#常用快捷键1" class="headerlink" title="常用快捷键1"></a><a href="https://zhuanlan.zhihu.com/p/410613271">常用快捷键1</a></h2><h2 id="常用快捷键2"><a href="#常用快捷键2" class="headerlink" title="常用快捷键2"></a><a href="https://blog.csdn.net/weixin_45395059/article/details/125591122">常用快捷键2</a></h2><ul>
@@ -691,40 +691,6 @@ dnf makecache
       </tags>
   </entry>
   <entry>
-    <title>js模块化</title>
-    <url>/2022/08/14/js/js/</url>
-    <content><![CDATA[<h2 id="CommonJS"><a href="#CommonJS" class="headerlink" title="CommonJS"></a>CommonJS</h2><h2 id="ESM"><a href="#ESM" class="headerlink" title="ESM"></a>ESM</h2>]]></content>
-      <categories>
-        <category>模块化</category>
-      </categories>
-      <tags>
-        <tag>js模块化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>TS的!和?用法</title>
-    <url>/2022/09/11/js/TS/</url>
-    <content><![CDATA[<h2 id="用法"><a href="#用法" class="headerlink" title="!用法"></a>!用法</h2><ul>
-<li><p>用在变量前表示取反</p>
-</li>
-<li><p>用在赋值的内容后时，使null和undefined类型可以赋值给其他类型并通过编译，表示该变量值可空</p>
-<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">y</span>:<span class="built_in">number</span></span><br><span class="line"></span><br><span class="line">y = <span class="literal">null</span>		<span class="comment">// 无法通过编译</span></span><br><span class="line">y = <span class="literal">undefined</span>	<span class="comment">// 无法通过编译</span></span><br><span class="line"></span><br><span class="line">y = <span class="literal">null</span>!</span><br><span class="line">y = <span class="literal">undefined</span>!</span><br><span class="line"><span class="comment">// 由于x是可选的，因此parma.x的类型为number | undefined，无法传递给number类型的y，因此需要用x!</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">IDemo</span> &#123;</span><br><span class="line">x?: <span class="built_in">number</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">y</span>:<span class="built_in">number</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">demo</span> = (<span class="params">parma: IDemo</span>) =&gt; &#123;</span><br><span class="line">y = parma.<span class="property">x</span>!</span><br><span class="line"><span class="keyword">return</span> y</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>如果存在空情况的判断并赋具体值时，可以不用!，但是如果要想令y存在等于undefined的情况还是需要用!</p>
-<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">IDemo</span> &#123;</span><br><span class="line">x?: <span class="built_in">number</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">y</span>:<span class="built_in">number</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">demo</span> = (<span class="params">parma: IDemo</span>) =&gt; &#123;</span><br><span class="line">y = parma.<span class="property">x</span> || <span class="number">1</span>	<span class="comment">// 如果为undefined，返回y=1，如果不为undefined，则返回parma.x的值</span></span><br><span class="line"><span class="keyword">return</span> y</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<hr>
-<h2 id="用法-1"><a href="#用法-1" class="headerlink" title="?用法"></a>?用法</h2><ul>
-<li>除了表示可选参数外，常用于防御性编程<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> a = <span class="title function_">fetch</span>(...) || &#123;&#125;		<span class="comment">// 假设a是从后端拿到的一个对象类型数据</span></span><br><span class="line"><span class="keyword">const</span> unsafeData = a.<span class="property">b</span>.<span class="property">c</span>		<span class="comment">// 这样写时不安全的，无法确保b是否有值，如果为空则b.c会进行报错</span></span><br><span class="line"><span class="keyword">const</span> safeData = a?.<span class="property">b</span>?.<span class="property">c</span>		<span class="comment">// 实际上就是相当于 const safeData = a &amp;&amp; a.b &amp;&amp; a.b.c</span></span><br><span class="line">当使用A对象属性A.<span class="property">B</span>时，如果无法确定A是否为空，则需要用A?.<span class="property">B</span>，表示当A有值的时候才去访问B属性，没有值的时候就不去访问，如果不使用?则会报错</span><br><span class="line"></span><br><span class="line"><span class="comment">// 由于函数参数可选，因此parma无法确定是否拥有，所以无法正常使用parma.x，使用parma?.x向编译器假设此时parma不为空且为IDemo类型，同时parma?.x无法保证非空，因此使用parma?.x!来保证了整体通过编译</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">IDemo</span> &#123;</span><br><span class="line"><span class="attr">x</span>: <span class="built_in">number</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">y</span>:<span class="built_in">number</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">demo</span> = (<span class="params">parma?: IDemo</span>) =&gt; &#123;</span><br><span class="line">y = parma?.<span class="property">x</span>!</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(parma?.<span class="property">x</span>)	<span class="comment">// 只是单纯调用属性时就无需!</span></span><br><span class="line"><span class="keyword">return</span> y</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果使用y = parma!.x!是会报错的，因为当parma为空时，是不拥有x属性的，会报找不到x的错误</span></span><br><span class="line">但是?用法只能读操作而不能写操作，对一个可能为空的属性赋值是不会被编译通过的，此时还需用用到类型断言</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">IDemo</span> &#123;</span><br><span class="line"><span class="attr">x</span>: <span class="built_in">number</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 编译报错，不能赋值给可选属性</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">demo</span> = (<span class="params">parma?: IDemo</span>) =&gt; &#123;</span><br><span class="line">parma?.<span class="property">x</span> = <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用类型断言  </span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">demo_</span> = (<span class="params">parma?: IDemo</span>) =&gt; &#123;</span><br><span class="line"><span class="keyword">let</span> _parma = parma <span class="keyword">as</span> <span class="title class_">IDemo</span></span><br><span class="line">_parma.<span class="property">x</span> = <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      <categories>
-        <category>TS</category>
-      </categories>
-      <tags>
-        <tag>TS的!和?用法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>git配置SSH密钥</title>
     <url>/2025/01/31/git/git-rsa/</url>
     <content><![CDATA[<h3 id="1-生成新的-SSH-密钥"><a href="#1-生成新的-SSH-密钥" class="headerlink" title="1.生成新的 SSH 密钥"></a>1.生成新的 SSH 密钥</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
@@ -760,168 +726,26 @@ dnf makecache
       </tags>
   </entry>
   <entry>
-    <title>搜索引擎高级搜索技巧</title>
-    <url>/2022/06/03/others/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/</url>
-    <content><![CDATA[<h5 id="逻辑与-或"><a href="#逻辑与-或" class="headerlink" title="逻辑与&#x2F;或"></a><em><strong>逻辑与&#x2F;或</strong></em></h5><hr>
-<ul>
-<li>注意AND、OR必须大写，否则会被认为是普通的单词，而不是搜索指令</li>
-<li>与普通编程语言不一样的是，OR指令优先于AND指令</li>
-<li>简写：AND指令一般以空格代替，不明确写出。另外AND指令还可以用+代替。OR指令可用|代替</li>
-</ul>
-<h5 id="逻辑非："><a href="#逻辑非：" class="headerlink" title="逻辑非：-"></a><em><strong>逻辑非：-</strong></em></h5><hr>
-<ul>
-<li>样例：搜索引擎 历史 -文化 -中国历史 -世界历史</li>
-</ul>
-<h5 id="完整匹配-“-“"><a href="#完整匹配-“-“" class="headerlink" title="完整匹配 “ “"></a><em><strong>完整匹配 “ “</strong></em></h5><hr>
-<ul>
-<li>样例：”world war I” 表示搜索一次世界大战</li>
-</ul>
-<h5 id="通配符："><a href="#通配符：" class="headerlink" title="通配符：*?"></a><em><strong>通配符：*?</strong></em></h5><hr>
-<ul>
-<li>与我们通常的习惯一致，“*”代表一连串字符，“?”代表单个字符</li>
-</ul>
-<h5 id="site-在某个网站或域名下搜索"><a href="#site-在某个网站或域名下搜索" class="headerlink" title="site: 在某个网站或域名下搜索"></a><em><strong>site: 在某个网站或域名下搜索</strong></em></h5><hr>
-<ul>
-<li>样例：搜索引擎 技巧 site:edu.cn</li>
-<li>这表示要在中文教育科研网站（edu.cn）上关于搜索引擎技巧的页面</li>
-</ul>
-<h5 id="filetype-搜索某种类型的文件"><a href="#filetype-搜索某种类型的文件" class="headerlink" title="filetype: 搜索某种类型的文件"></a><em><strong>filetype: 搜索某种类型的文件</strong></em></h5><hr>
-<ul>
-<li>样例：天文学 filetype:pdf </li>
-<li>简写: 天文学:pdf</li>
-<li>这表示只搜索pdf文件</li>
-<li>tips：样例 天文学三个字位置任意写</li>
-</ul>
-<h5 id="in指令-位置关键词查找"><a href="#in指令-位置关键词查找" class="headerlink" title="in指令: 位置关键词查找"></a><em><strong>in指令: 位置关键词查找</strong></em></h5><hr>
-<ul>
-<li>intitle: 在网页标题中查找。这通常对讨论比较多的热门话题很有效。例如：intitle:”GeForce 7800”+测试</li>
-<li>例如：allintitile:”GeForce 7800” 测试 与 intitle:”GeForce 7800”+测试 的含义一致。但是，allintitile是排他的，不能加上其他非intitle方面的限制条件</li>
-<li>inurl: 在网页的url地址中查找。例如：inurl:dowload 表示查找url中包含download的网页</li>
-<li>allinurl: inurl的排他指令</li>
-<li>inanchor: 在网页的链接锚中查找</li>
-</ul>
-<h5 id="link-搜索所有链接到某个URL地址的网页"><a href="#link-搜索所有链接到某个URL地址的网页" class="headerlink" title="link: 搜索所有链接到某个URL地址的网页"></a><em><strong>link: 搜索所有链接到某个URL地址的网页</strong></em></h5><hr>
-<ul>
-<li>例如：link:<a href="http://www.newhua.com/">www.newhua.com</a> 表示所有指向“华军软件园”外部链接。</li>
-</ul>
-<h5 id="related-寻找某网页的“类似网页”"><a href="#related-寻找某网页的“类似网页”" class="headerlink" title="related: 寻找某网页的“类似网页”"></a><em><strong>related: 寻找某网页的“类似网页”</strong></em></h5><hr>
-<ul>
-<li>例如：related:<a href="http://www.newhua.com/">www.newhua.com</a> 表示找和“华军软件园”类似的网页。</li>
-</ul>
-<h5 id="cache-网页快照（略"><a href="#cache-网页快照（略" class="headerlink" title="cache: 网页快照（略)"></a><em><strong>cache: 网页快照（略)</strong></em></h5><hr>
-<ul>
-<li>查看网站的 Google 缓存版本，会直接显示缓存页面	</li>
-<li>cache:weibo.com	查看微博的谷歌快照</li>
-</ul>
-<h5 id="daterange-查找特定时间网页"><a href="#daterange-查找特定时间网页" class="headerlink" title="daterange 查找特定时间网页"></a><em><strong>daterange 查找特定时间网页</strong></em></h5><hr>
-<ul>
-<li>例如：”Spice Girls“ daterange:2450958-2450968。这里时间日期的格式是按天文学的儒略日</li>
-<li>儒略日数（Julian Day Number，JDN）的计算是从格林威治标准时间的中午开始，包含一个整天的时间，起点的时间（0日）回溯至儒略历的公元前4713年1月1日中午12点（在格里历是公元前4714年11月24日），这个日期是三种多年周期的共同起点，且是历史上最接近现代的一个起点。例如，2000年1月1日的UT12:00是儒略日2,451,545。</li>
-<li>世界时UT即格林尼治平太阳时间，是指格林尼治所在地的标准时间，也是表示地球自转速率的一种形式。以地球自转为基础的时间计量系统。</li>
-<li>格林尼治（Greenwich），是英国伦敦的一个区，位于伦敦东南、泰晤士河南岸</li>
-</ul>
-<h5 id="表示数值范围"><a href="#表示数值范围" class="headerlink" title=".. 表示数值范围"></a><em><strong>.. 表示数值范围</strong></em></h5><hr>
-<ul>
-<li>例如：数码相机 600..900 万像素 3000..4000 元</li>
-<li>注意：“900”与“万”之间必须有空格。</li>
-</ul>
-<h5 id=""><a href="#" class="headerlink" title="@"></a><em><strong>@</strong></em></h5><hr>
-<ul>
-<li>在用于搜索社交媒体的字词前加上@	trump @twitter	搜索trump的twitter</li>
-</ul>
-<h5 id="-1"><a href="#-1" class="headerlink" title="$"></a><em><strong>$</strong></em></h5><hr>
-<ul>
-<li>在数字前加上$搜索特定价格	camera $400	搜索400$的camera</li>
-</ul>
-<h5 id="-2"><a href="#-2" class="headerlink" title="#"></a><em><strong>#</strong></em></h5><hr>
-<ul>
-<li>搜索 # 标签	#throwbackthursday	</li>
-<li>搜索标签throwbackthursday</li>
-</ul>
-<h5 id="info"><a href="#info" class="headerlink" title="info"></a><em><strong>info</strong></em></h5><hr>
-<ul>
-<li>在网址前加info:，获取网站详情	info:github.com	搜索github网站详情</li>
-</ul>
-<h5 id="intext"><a href="#intext" class="headerlink" title="intext"></a><em><strong>intext</strong></em></h5><hr>
-<ul>
-<li>搜索查询词出现在页面正文(title)中的页面，支持中文和英文	SEO intext:搜索引擎	在正文包含【搜索引擎】的网页中搜索【SEO】</li>
-</ul>
-<h5 id="allintext"><a href="#allintext" class="headerlink" title="allintext"></a><em><strong>allintext</strong></em></h5><hr>
-<ul>
-<li>即all+inanchor 页面正文包含多个关键词的页面	allintext:SEO 搜索引擎优化	相当于：intext:SEO intext:搜索引擎优化</li>
-</ul>
-<h5 id="inanchor"><a href="#inanchor" class="headerlink" title="inanchor"></a><em><strong>inanchor</strong></em></h5><hr>
-<ul>
-<li>搜索链接锚文字(即链接显示的文字)中包含搜索词的页面	inanchor:前端	搜索链接锚文字中包含【前端】的页面</li>
-</ul>
-<h5 id="allinanchor"><a href="#allinanchor" class="headerlink" title="allinanchor"></a><em><strong>allinanchor</strong></em></h5><hr>
-<ul>
-<li><pre><code>即all+inanchor 页面链接锚文字包含多个关键词的页面	allinanchor:SEO 搜索引擎优化	相当于：inanchor:SEO inanchor:搜索引擎优化
-</code></pre>
+    <title>TS的!和?用法</title>
+    <url>/2022/09/11/js/TS/</url>
+    <content><![CDATA[<h2 id="用法"><a href="#用法" class="headerlink" title="!用法"></a>!用法</h2><ul>
+<li><p>用在变量前表示取反</p>
 </li>
+<li><p>用在赋值的内容后时，使null和undefined类型可以赋值给其他类型并通过编译，表示该变量值可空</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">y</span>:<span class="built_in">number</span></span><br><span class="line"></span><br><span class="line">y = <span class="literal">null</span>		<span class="comment">// 无法通过编译</span></span><br><span class="line">y = <span class="literal">undefined</span>	<span class="comment">// 无法通过编译</span></span><br><span class="line"></span><br><span class="line">y = <span class="literal">null</span>!</span><br><span class="line">y = <span class="literal">undefined</span>!</span><br><span class="line"><span class="comment">// 由于x是可选的，因此parma.x的类型为number | undefined，无法传递给number类型的y，因此需要用x!</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">IDemo</span> &#123;</span><br><span class="line">x?: <span class="built_in">number</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">y</span>:<span class="built_in">number</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">demo</span> = (<span class="params">parma: IDemo</span>) =&gt; &#123;</span><br><span class="line">y = parma.<span class="property">x</span>!</span><br><span class="line"><span class="keyword">return</span> y</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>如果存在空情况的判断并赋具体值时，可以不用!，但是如果要想令y存在等于undefined的情况还是需要用!</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">IDemo</span> &#123;</span><br><span class="line">x?: <span class="built_in">number</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">y</span>:<span class="built_in">number</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">demo</span> = (<span class="params">parma: IDemo</span>) =&gt; &#123;</span><br><span class="line">y = parma.<span class="property">x</span> || <span class="number">1</span>	<span class="comment">// 如果为undefined，返回y=1，如果不为undefined，则返回parma.x的值</span></span><br><span class="line"><span class="keyword">return</span> y</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h5 id="weather"><a href="#weather" class="headerlink" title="weather"></a><em><strong>weather</strong></em></h5><hr>
-<ul>
-<li>weather&#x2F;time&#x2F;sunrise&#x2F;sundown+城市名，返回城市的天气&#x2F;时间&#x2F;日出时间&#x2F;日落时间</li>
-<li>weather:beijing	显示北京的天气</li>
-</ul>
-<h5 id="music"><a href="#music" class="headerlink" title="music"></a><em><strong>music</strong></em></h5><hr>
-<ul>
-<li>music或者用songs，歌手名字+music&#x2F;songs	周杰伦 music	返回周杰伦的各首歌曲</li>
-</ul>
-]]></content>
-      <categories>
-        <category>搜索</category>
-      </categories>
-      <tags>
-        <tag>搜索引擎</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>资讯、多媒体订阅</title>
-    <url>/2023/09/25/others/%E8%B5%84%E8%AE%AF%E3%80%81%E5%8D%9A%E5%AE%A2%E8%AE%A2%E9%98%85/</url>
-    <content><![CDATA[<h3 id="消息-资讯-订阅"><a href="#消息-资讯-订阅" class="headerlink" title="消息|资讯 订阅"></a>消息|资讯 订阅</h3><p><a href="https://sspai.com/post/57498">Tiny Tiny RSS 部署</a></p>
 <hr>
-<h3 id="多媒体-播客订阅服务"><a href="#多媒体-播客订阅服务" class="headerlink" title="多媒体 播客订阅服务"></a>多媒体 播客订阅服务</h3><p><a href="https://sspai.com/post/63610">Airsonic 部署</a></p>
-]]></content>
-      <categories>
-        <category>订阅</category>
-      </categories>
-      <tags>
-        <tag>订阅</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>码制与位运算</title>
-    <url>/2021/11/10/others/%E7%A0%81%E5%88%B6%E4%B8%8E%E4%BD%8D%E8%BF%90%E7%AE%97/</url>
-    <content><![CDATA[<h3 id="二进制"><a href="#二进制" class="headerlink" title="二进制"></a>二进制</h3><p>0b00000001</p>
-<h3 id="八进制"><a href="#八进制" class="headerlink" title="八进制"></a>八进制</h3><p>0o001(python)</p>
-<h3 id="十六进制"><a href="#十六进制" class="headerlink" title="十六进制"></a>十六进制</h3><p>0xFE</p>
-<h3 id="原码"><a href="#原码" class="headerlink" title="原码"></a>原码</h3><blockquote>
-<p>将数字表述为二进制数，方便人看</p>
-</blockquote>
-<h3 id="反码"><a href="#反码" class="headerlink" title="反码"></a>反码</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">正数与原码相同</span><br><span class="line">负数符号位不变，其余位取反</span><br></pre></td></tr></table></figure>
-<h3 id="补码"><a href="#补码" class="headerlink" title="补码"></a>补码</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">正数与原码相同</span><br><span class="line">反码符号位不变其余位取反加一</span><br><span class="line">补码的补码是原码</span><br></pre></td></tr></table></figure>
-<h3 id="浮点数存储方式"><a href="#浮点数存储方式" class="headerlink" title="浮点数存储方式"></a>浮点数存储方式</h3><h3 id="算术运算"><a href="#算术运算" class="headerlink" title="算术运算"></a>算术运算</h3><h3 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h3><h3 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h3><ul>
-<li>&amp;&amp; </li>
-<li>|| </li>
-<li>！</li>
-</ul>
-<h3 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h3><ul>
-<li>&amp; </li>
-<li>| </li>
-<li>~ </li>
-<li>^ </li>
-<li>&gt;&gt; </li>
-<li>&lt;&lt;</li>
+<h2 id="用法-1"><a href="#用法-1" class="headerlink" title="?用法"></a>?用法</h2><ul>
+<li>除了表示可选参数外，常用于防御性编程<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> a = <span class="title function_">fetch</span>(...) || &#123;&#125;		<span class="comment">// 假设a是从后端拿到的一个对象类型数据</span></span><br><span class="line"><span class="keyword">const</span> unsafeData = a.<span class="property">b</span>.<span class="property">c</span>		<span class="comment">// 这样写时不安全的，无法确保b是否有值，如果为空则b.c会进行报错</span></span><br><span class="line"><span class="keyword">const</span> safeData = a?.<span class="property">b</span>?.<span class="property">c</span>		<span class="comment">// 实际上就是相当于 const safeData = a &amp;&amp; a.b &amp;&amp; a.b.c</span></span><br><span class="line">当使用A对象属性A.<span class="property">B</span>时，如果无法确定A是否为空，则需要用A?.<span class="property">B</span>，表示当A有值的时候才去访问B属性，没有值的时候就不去访问，如果不使用?则会报错</span><br><span class="line"></span><br><span class="line"><span class="comment">// 由于函数参数可选，因此parma无法确定是否拥有，所以无法正常使用parma.x，使用parma?.x向编译器假设此时parma不为空且为IDemo类型，同时parma?.x无法保证非空，因此使用parma?.x!来保证了整体通过编译</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">IDemo</span> &#123;</span><br><span class="line"><span class="attr">x</span>: <span class="built_in">number</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">y</span>:<span class="built_in">number</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">demo</span> = (<span class="params">parma?: IDemo</span>) =&gt; &#123;</span><br><span class="line">y = parma?.<span class="property">x</span>!</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(parma?.<span class="property">x</span>)	<span class="comment">// 只是单纯调用属性时就无需!</span></span><br><span class="line"><span class="keyword">return</span> y</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果使用y = parma!.x!是会报错的，因为当parma为空时，是不拥有x属性的，会报找不到x的错误</span></span><br><span class="line">但是?用法只能读操作而不能写操作，对一个可能为空的属性赋值是不会被编译通过的，此时还需用用到类型断言</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">IDemo</span> &#123;</span><br><span class="line"><span class="attr">x</span>: <span class="built_in">number</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 编译报错，不能赋值给可选属性</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">demo</span> = (<span class="params">parma?: IDemo</span>) =&gt; &#123;</span><br><span class="line">parma?.<span class="property">x</span> = <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用类型断言  </span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">demo_</span> = (<span class="params">parma?: IDemo</span>) =&gt; &#123;</span><br><span class="line"><span class="keyword">let</span> _parma = parma <span class="keyword">as</span> <span class="title class_">IDemo</span></span><br><span class="line">_parma.<span class="property">x</span> = <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 ]]></content>
       <categories>
-        <category>进制与编码</category>
+        <category>TS</category>
       </categories>
       <tags>
-        <tag>进制</tag>
-        <tag>编码</tag>
+        <tag>TS的!和?用法</tag>
       </tags>
   </entry>
   <entry>
@@ -1134,6 +958,182 @@ dnf makecache
       </categories>
       <tags>
         <tag>Java爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>js模块化</title>
+    <url>/2022/08/14/js/js/</url>
+    <content><![CDATA[<h2 id="CommonJS"><a href="#CommonJS" class="headerlink" title="CommonJS"></a>CommonJS</h2><h2 id="ESM"><a href="#ESM" class="headerlink" title="ESM"></a>ESM</h2>]]></content>
+      <categories>
+        <category>模块化</category>
+      </categories>
+      <tags>
+        <tag>js模块化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搜索引擎高级搜索技巧</title>
+    <url>/2022/06/03/others/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<h5 id="逻辑与-或"><a href="#逻辑与-或" class="headerlink" title="逻辑与&#x2F;或"></a><em><strong>逻辑与&#x2F;或</strong></em></h5><hr>
+<ul>
+<li>注意AND、OR必须大写，否则会被认为是普通的单词，而不是搜索指令</li>
+<li>与普通编程语言不一样的是，OR指令优先于AND指令</li>
+<li>简写：AND指令一般以空格代替，不明确写出。另外AND指令还可以用+代替。OR指令可用|代替</li>
+</ul>
+<h5 id="逻辑非："><a href="#逻辑非：" class="headerlink" title="逻辑非：-"></a><em><strong>逻辑非：-</strong></em></h5><hr>
+<ul>
+<li>样例：搜索引擎 历史 -文化 -中国历史 -世界历史</li>
+</ul>
+<h5 id="完整匹配-“-“"><a href="#完整匹配-“-“" class="headerlink" title="完整匹配 “ “"></a><em><strong>完整匹配 “ “</strong></em></h5><hr>
+<ul>
+<li>样例：”world war I” 表示搜索一次世界大战</li>
+</ul>
+<h5 id="通配符："><a href="#通配符：" class="headerlink" title="通配符：*?"></a><em><strong>通配符：*?</strong></em></h5><hr>
+<ul>
+<li>与我们通常的习惯一致，“*”代表一连串字符，“?”代表单个字符</li>
+</ul>
+<h5 id="site-在某个网站或域名下搜索"><a href="#site-在某个网站或域名下搜索" class="headerlink" title="site: 在某个网站或域名下搜索"></a><em><strong>site: 在某个网站或域名下搜索</strong></em></h5><hr>
+<ul>
+<li>样例：搜索引擎 技巧 site:edu.cn</li>
+<li>这表示要在中文教育科研网站（edu.cn）上关于搜索引擎技巧的页面</li>
+</ul>
+<h5 id="filetype-搜索某种类型的文件"><a href="#filetype-搜索某种类型的文件" class="headerlink" title="filetype: 搜索某种类型的文件"></a><em><strong>filetype: 搜索某种类型的文件</strong></em></h5><hr>
+<ul>
+<li>样例：天文学 filetype:pdf </li>
+<li>简写: 天文学:pdf</li>
+<li>这表示只搜索pdf文件</li>
+<li>tips：样例 天文学三个字位置任意写</li>
+</ul>
+<h5 id="in指令-位置关键词查找"><a href="#in指令-位置关键词查找" class="headerlink" title="in指令: 位置关键词查找"></a><em><strong>in指令: 位置关键词查找</strong></em></h5><hr>
+<ul>
+<li>intitle: 在网页标题中查找。这通常对讨论比较多的热门话题很有效。例如：intitle:”GeForce 7800”+测试</li>
+<li>例如：allintitile:”GeForce 7800” 测试 与 intitle:”GeForce 7800”+测试 的含义一致。但是，allintitile是排他的，不能加上其他非intitle方面的限制条件</li>
+<li>inurl: 在网页的url地址中查找。例如：inurl:dowload 表示查找url中包含download的网页</li>
+<li>allinurl: inurl的排他指令</li>
+<li>inanchor: 在网页的链接锚中查找</li>
+</ul>
+<h5 id="link-搜索所有链接到某个URL地址的网页"><a href="#link-搜索所有链接到某个URL地址的网页" class="headerlink" title="link: 搜索所有链接到某个URL地址的网页"></a><em><strong>link: 搜索所有链接到某个URL地址的网页</strong></em></h5><hr>
+<ul>
+<li>例如：link:<a href="http://www.newhua.com/">www.newhua.com</a> 表示所有指向“华军软件园”外部链接。</li>
+</ul>
+<h5 id="related-寻找某网页的“类似网页”"><a href="#related-寻找某网页的“类似网页”" class="headerlink" title="related: 寻找某网页的“类似网页”"></a><em><strong>related: 寻找某网页的“类似网页”</strong></em></h5><hr>
+<ul>
+<li>例如：related:<a href="http://www.newhua.com/">www.newhua.com</a> 表示找和“华军软件园”类似的网页。</li>
+</ul>
+<h5 id="cache-网页快照（略"><a href="#cache-网页快照（略" class="headerlink" title="cache: 网页快照（略)"></a><em><strong>cache: 网页快照（略)</strong></em></h5><hr>
+<ul>
+<li>查看网站的 Google 缓存版本，会直接显示缓存页面	</li>
+<li>cache:weibo.com	查看微博的谷歌快照</li>
+</ul>
+<h5 id="daterange-查找特定时间网页"><a href="#daterange-查找特定时间网页" class="headerlink" title="daterange 查找特定时间网页"></a><em><strong>daterange 查找特定时间网页</strong></em></h5><hr>
+<ul>
+<li>例如：”Spice Girls“ daterange:2450958-2450968。这里时间日期的格式是按天文学的儒略日</li>
+<li>儒略日数（Julian Day Number，JDN）的计算是从格林威治标准时间的中午开始，包含一个整天的时间，起点的时间（0日）回溯至儒略历的公元前4713年1月1日中午12点（在格里历是公元前4714年11月24日），这个日期是三种多年周期的共同起点，且是历史上最接近现代的一个起点。例如，2000年1月1日的UT12:00是儒略日2,451,545。</li>
+<li>世界时UT即格林尼治平太阳时间，是指格林尼治所在地的标准时间，也是表示地球自转速率的一种形式。以地球自转为基础的时间计量系统。</li>
+<li>格林尼治（Greenwich），是英国伦敦的一个区，位于伦敦东南、泰晤士河南岸</li>
+</ul>
+<h5 id="表示数值范围"><a href="#表示数值范围" class="headerlink" title=".. 表示数值范围"></a><em><strong>.. 表示数值范围</strong></em></h5><hr>
+<ul>
+<li>例如：数码相机 600..900 万像素 3000..4000 元</li>
+<li>注意：“900”与“万”之间必须有空格。</li>
+</ul>
+<h5 id=""><a href="#" class="headerlink" title="@"></a><em><strong>@</strong></em></h5><hr>
+<ul>
+<li>在用于搜索社交媒体的字词前加上@	trump @twitter	搜索trump的twitter</li>
+</ul>
+<h5 id="-1"><a href="#-1" class="headerlink" title="$"></a><em><strong>$</strong></em></h5><hr>
+<ul>
+<li>在数字前加上$搜索特定价格	camera $400	搜索400$的camera</li>
+</ul>
+<h5 id="-2"><a href="#-2" class="headerlink" title="#"></a><em><strong>#</strong></em></h5><hr>
+<ul>
+<li>搜索 # 标签	#throwbackthursday	</li>
+<li>搜索标签throwbackthursday</li>
+</ul>
+<h5 id="info"><a href="#info" class="headerlink" title="info"></a><em><strong>info</strong></em></h5><hr>
+<ul>
+<li>在网址前加info:，获取网站详情	info:github.com	搜索github网站详情</li>
+</ul>
+<h5 id="intext"><a href="#intext" class="headerlink" title="intext"></a><em><strong>intext</strong></em></h5><hr>
+<ul>
+<li>搜索查询词出现在页面正文(title)中的页面，支持中文和英文	SEO intext:搜索引擎	在正文包含【搜索引擎】的网页中搜索【SEO】</li>
+</ul>
+<h5 id="allintext"><a href="#allintext" class="headerlink" title="allintext"></a><em><strong>allintext</strong></em></h5><hr>
+<ul>
+<li>即all+inanchor 页面正文包含多个关键词的页面	allintext:SEO 搜索引擎优化	相当于：intext:SEO intext:搜索引擎优化</li>
+</ul>
+<h5 id="inanchor"><a href="#inanchor" class="headerlink" title="inanchor"></a><em><strong>inanchor</strong></em></h5><hr>
+<ul>
+<li>搜索链接锚文字(即链接显示的文字)中包含搜索词的页面	inanchor:前端	搜索链接锚文字中包含【前端】的页面</li>
+</ul>
+<h5 id="allinanchor"><a href="#allinanchor" class="headerlink" title="allinanchor"></a><em><strong>allinanchor</strong></em></h5><hr>
+<ul>
+<li><pre><code>即all+inanchor 页面链接锚文字包含多个关键词的页面	allinanchor:SEO 搜索引擎优化	相当于：inanchor:SEO inanchor:搜索引擎优化
+</code></pre>
+</li>
+</ul>
+<h5 id="weather"><a href="#weather" class="headerlink" title="weather"></a><em><strong>weather</strong></em></h5><hr>
+<ul>
+<li>weather&#x2F;time&#x2F;sunrise&#x2F;sundown+城市名，返回城市的天气&#x2F;时间&#x2F;日出时间&#x2F;日落时间</li>
+<li>weather:beijing	显示北京的天气</li>
+</ul>
+<h5 id="music"><a href="#music" class="headerlink" title="music"></a><em><strong>music</strong></em></h5><hr>
+<ul>
+<li>music或者用songs，歌手名字+music&#x2F;songs	周杰伦 music	返回周杰伦的各首歌曲</li>
+</ul>
+]]></content>
+      <categories>
+        <category>搜索</category>
+      </categories>
+      <tags>
+        <tag>搜索引擎</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>码制与位运算</title>
+    <url>/2021/11/10/others/%E7%A0%81%E5%88%B6%E4%B8%8E%E4%BD%8D%E8%BF%90%E7%AE%97/</url>
+    <content><![CDATA[<h3 id="二进制"><a href="#二进制" class="headerlink" title="二进制"></a>二进制</h3><p>0b00000001</p>
+<h3 id="八进制"><a href="#八进制" class="headerlink" title="八进制"></a>八进制</h3><p>0o001(python)</p>
+<h3 id="十六进制"><a href="#十六进制" class="headerlink" title="十六进制"></a>十六进制</h3><p>0xFE</p>
+<h3 id="原码"><a href="#原码" class="headerlink" title="原码"></a>原码</h3><blockquote>
+<p>将数字表述为二进制数，方便人看</p>
+</blockquote>
+<h3 id="反码"><a href="#反码" class="headerlink" title="反码"></a>反码</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">正数与原码相同</span><br><span class="line">负数符号位不变，其余位取反</span><br></pre></td></tr></table></figure>
+<h3 id="补码"><a href="#补码" class="headerlink" title="补码"></a>补码</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">正数与原码相同</span><br><span class="line">反码符号位不变其余位取反加一</span><br><span class="line">补码的补码是原码</span><br></pre></td></tr></table></figure>
+<h3 id="浮点数存储方式"><a href="#浮点数存储方式" class="headerlink" title="浮点数存储方式"></a>浮点数存储方式</h3><h3 id="算术运算"><a href="#算术运算" class="headerlink" title="算术运算"></a>算术运算</h3><h3 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h3><h3 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h3><ul>
+<li>&amp;&amp; </li>
+<li>|| </li>
+<li>！</li>
+</ul>
+<h3 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h3><ul>
+<li>&amp; </li>
+<li>| </li>
+<li>~ </li>
+<li>^ </li>
+<li>&gt;&gt; </li>
+<li>&lt;&lt;</li>
+</ul>
+]]></content>
+      <categories>
+        <category>进制与编码</category>
+      </categories>
+      <tags>
+        <tag>进制</tag>
+        <tag>编码</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>资讯、多媒体订阅</title>
+    <url>/2023/09/25/others/%E8%B5%84%E8%AE%AF%E3%80%81%E5%8D%9A%E5%AE%A2%E8%AE%A2%E9%98%85/</url>
+    <content><![CDATA[<h3 id="消息-资讯-订阅"><a href="#消息-资讯-订阅" class="headerlink" title="消息|资讯 订阅"></a>消息|资讯 订阅</h3><p><a href="https://sspai.com/post/57498">Tiny Tiny RSS 部署</a></p>
+<hr>
+<h3 id="多媒体-播客订阅服务"><a href="#多媒体-播客订阅服务" class="headerlink" title="多媒体 播客订阅服务"></a>多媒体 播客订阅服务</h3><p><a href="https://sspai.com/post/63610">Airsonic 部署</a></p>
+]]></content>
+      <categories>
+        <category>订阅</category>
+      </categories>
+      <tags>
+        <tag>订阅</tag>
       </tags>
   </entry>
 </search>
