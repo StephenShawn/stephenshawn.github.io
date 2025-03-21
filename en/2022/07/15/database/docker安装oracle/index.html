@@ -21,15 +21,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"stephenshawn.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12,"Pisces | Gemini":240,"width":300},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="docker安装oracle1、安装docker环境。2、开始拉取oracle镜像1docker pull registry.cn-hangzhou.aliyuncs.com&#x2F;helowin&#x2F;oracle_11g  3、下载完成后，查看镜像1docker images  4、创建容器1docker run -d -p 1521:1521 --name oracle11g registry.cn-h">
+    <meta name="description" content="docker 安装 oracle1、安装 docker 环境。2、开始拉取 oracle 镜像1docker pull registry.cn-hangzhou.aliyuncs.com&#x2F;helowin&#x2F;oracle_11g  3、下载完成后，查看镜像1docker images  4、创建容器1docker run -d -p 1521:1521 --name oracle11g registr">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="docker安装oracle">
 <meta property="og:url" content="https://stephenshawn.github.io/en/2022/07/15/database/docker%E5%AE%89%E8%A3%85oracle/index.html">
 <meta property="og:site_name" content="ShawnYoung&#39;s Blog">
-<meta property="og:description" content="docker安装oracle1、安装docker环境。2、开始拉取oracle镜像1docker pull registry.cn-hangzhou.aliyuncs.com&#x2F;helowin&#x2F;oracle_11g  3、下载完成后，查看镜像1docker images  4、创建容器1docker run -d -p 1521:1521 --name oracle11g registry.cn-h">
+<meta property="og:description" content="docker 安装 oracle1、安装 docker 环境。2、开始拉取 oracle 镜像1docker pull registry.cn-hangzhou.aliyuncs.com&#x2F;helowin&#x2F;oracle_11g  3、下载完成后，查看镜像1docker images  4、创建容器1docker run -d -p 1521:1521 --name oracle11g registr">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-15T07:10:18.000Z">
-<meta property="article:modified_time" content="2022-11-19T01:45:46.876Z">
+<meta property="article:modified_time" content="2025-03-21T10:36:50.765Z">
 <meta property="article:author" content="ShawnYoung">
 <meta property="article:tag" content="oracle">
 <meta name="twitter:card" content="summary">
@@ -77,7 +77,7 @@
       <p class="site-title">ShawnYoung's Blog</p>
       <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">love&&curiosity</p>
+      <p class="site-subtitle" itemprop="description">爱与和平</p>
   </div>
 
   <div class="site-nav-right">
@@ -90,7 +90,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">28</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">29</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -141,7 +141,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#docker%E5%AE%89%E8%A3%85oracle"><span class="nav-number">1.</span> <span class="nav-text">docker安装oracle</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85docker%E7%8E%AF%E5%A2%83%E3%80%82"><span class="nav-number">1.0.1.</span> <span class="nav-text">1、安装docker环境。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E5%BC%80%E5%A7%8B%E6%8B%89%E5%8F%96oracle%E9%95%9C%E5%83%8F"><span class="nav-number">1.0.2.</span> <span class="nav-text">2、开始拉取oracle镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E4%B8%8B%E8%BD%BD%E5%AE%8C%E6%88%90%E5%90%8E%EF%BC%8C%E6%9F%A5%E7%9C%8B%E9%95%9C%E5%83%8F"><span class="nav-number">1.0.3.</span> <span class="nav-text">3、下载完成后，查看镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81%E5%88%9B%E5%BB%BA%E5%AE%B9%E5%99%A8"><span class="nav-number">1.0.4.</span> <span class="nav-text">4、创建容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%E3%80%81%E8%BF%9B%E5%85%A5%E9%95%9C%E5%83%8F%E8%BF%9B%E8%A1%8C%E9%85%8D%E7%BD%AE"><span class="nav-number">1.0.5.</span> <span class="nav-text">5、进入镜像进行配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6%E3%80%81%E8%BF%9B%E8%A1%8Csql%E7%99%BB%E5%BD%95"><span class="nav-number">1.0.6.</span> <span class="nav-text">6、进行sql登录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7%E3%80%81%E7%BC%96%E8%BE%91profile%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AEORACLE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">1.0.7.</span> <span class="nav-text">7、编辑profile文件配置ORACLE环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8%E3%80%81%E4%BF%9D%E5%AD%98%E5%90%8E%E6%89%A7%E8%A1%8Csource-etc-profile-%E5%8A%A0%E8%BD%BD%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%9B"><span class="nav-number">1.0.8.</span> <span class="nav-text">8、保存后执行source &#x2F;etc&#x2F;profile 加载环境变量；</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9%E3%80%81%E5%88%9B%E5%BB%BA%E8%BD%AF%E8%BF%9E%E6%8E%A5"><span class="nav-number">1.0.9.</span> <span class="nav-text">9、创建软连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10%E3%80%81%E5%88%87%E6%8D%A2%E5%88%B0oracle-%E7%94%A8%E6%88%B7"><span class="nav-number">1.0.10.</span> <span class="nav-text">10、切换到oracle 用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11%E3%80%81%E7%99%BB%E5%BD%95sqlplus%E5%B9%B6%E4%BF%AE%E6%94%B9sys%E3%80%81system%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81"><span class="nav-number">1.0.11.</span> <span class="nav-text">11、登录sqlplus并修改sys、system用户密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12%E3%80%81%E4%BF%AE%E6%94%B9%E4%BB%A5%E4%B8%8A%E4%BF%A1%E6%81%AF%E5%90%8E%EF%BC%8C%E9%9C%80%E8%A6%81%E9%87%8D%E6%96%B0%E5%90%AF%E5%8A%A8%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%9B"><span class="nav-number">1.0.12.</span> <span class="nav-text">12、修改以上信息后，需要重新启动数据库；</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13%E3%80%81%E5%A4%8D%E5%88%B6oracle%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8F%8A%E9%85%8D%E7%BD%AE"><span class="nav-number">1.0.13.</span> <span class="nav-text">13、复制oracle的数据及配置</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#docker-%E5%AE%89%E8%A3%85-oracle"><span class="nav-number">1.</span> <span class="nav-text">docker 安装 oracle</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85-docker-%E7%8E%AF%E5%A2%83%E3%80%82"><span class="nav-number">1.0.1.</span> <span class="nav-text">1、安装 docker 环境。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E5%BC%80%E5%A7%8B%E6%8B%89%E5%8F%96-oracle-%E9%95%9C%E5%83%8F"><span class="nav-number">1.0.2.</span> <span class="nav-text">2、开始拉取 oracle 镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E4%B8%8B%E8%BD%BD%E5%AE%8C%E6%88%90%E5%90%8E%EF%BC%8C%E6%9F%A5%E7%9C%8B%E9%95%9C%E5%83%8F"><span class="nav-number">1.0.3.</span> <span class="nav-text">3、下载完成后，查看镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81%E5%88%9B%E5%BB%BA%E5%AE%B9%E5%99%A8"><span class="nav-number">1.0.4.</span> <span class="nav-text">4、创建容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%E3%80%81%E8%BF%9B%E5%85%A5%E9%95%9C%E5%83%8F%E8%BF%9B%E8%A1%8C%E9%85%8D%E7%BD%AE"><span class="nav-number">1.0.5.</span> <span class="nav-text">5、进入镜像进行配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6%E3%80%81%E8%BF%9B%E8%A1%8C-sql-%E7%99%BB%E5%BD%95"><span class="nav-number">1.0.6.</span> <span class="nav-text">6、进行 sql 登录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7%E3%80%81%E7%BC%96%E8%BE%91-profile-%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE-ORACLE-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">1.0.7.</span> <span class="nav-text">7、编辑 profile 文件配置 ORACLE 环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8%E3%80%81%E4%BF%9D%E5%AD%98%E5%90%8E%E6%89%A7%E8%A1%8Csource-etc-profile-%E5%8A%A0%E8%BD%BD%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%9B"><span class="nav-number">1.0.8.</span> <span class="nav-text">8、保存后执行source &#x2F;etc&#x2F;profile 加载环境变量；</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9%E3%80%81%E5%88%9B%E5%BB%BA%E8%BD%AF%E8%BF%9E%E6%8E%A5"><span class="nav-number">1.0.9.</span> <span class="nav-text">9、创建软连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10%E3%80%81%E5%88%87%E6%8D%A2%E5%88%B0-oracle-%E7%94%A8%E6%88%B7"><span class="nav-number">1.0.10.</span> <span class="nav-text">10、切换到 oracle 用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11%E3%80%81%E7%99%BB%E5%BD%95-sqlplus-%E5%B9%B6%E4%BF%AE%E6%94%B9-sys%E3%80%81system-%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81"><span class="nav-number">1.0.11.</span> <span class="nav-text">11、登录 sqlplus 并修改 sys、system 用户密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12%E3%80%81%E4%BF%AE%E6%94%B9%E4%BB%A5%E4%B8%8A%E4%BF%A1%E6%81%AF%E5%90%8E%EF%BC%8C%E9%9C%80%E8%A6%81%E9%87%8D%E6%96%B0%E5%90%AF%E5%8A%A8%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%9B"><span class="nav-number">1.0.12.</span> <span class="nav-text">12、修改以上信息后，需要重新启动数据库；</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13%E3%80%81%E5%A4%8D%E5%88%B6-oracle-%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8F%8A%E9%85%8D%E7%BD%AE"><span class="nav-number">1.0.13.</span> <span class="nav-text">13、复制 oracle 的数据及配置</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -160,13 +160,9 @@
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
-      <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">18</span>
-        <span class="site-state-item-name">categories</span>
-      </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-count">29</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -252,16 +248,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-11-19 09:45:46" itemprop="dateModified" datetime="2022-11-19T09:45:46+08:00">2022-11-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a>
-        </span>
+      <time title="Modified: 2025-03-21 18:36:50" itemprop="dateModified" datetime="2025-03-21T18:36:50+08:00">2025-03-21</time>
     </span>
 
   
@@ -309,44 +296,40 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="docker安装oracle"><a href="#docker安装oracle" class="headerlink" title="docker安装oracle"></a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/443324194">docker安装oracle</a></h1><h3 id="1、安装docker环境。"><a href="#1、安装docker环境。" class="headerlink" title="1、安装docker环境。"></a>1、安装docker环境。</h3><h3 id="2、开始拉取oracle镜像"><a href="#2、开始拉取oracle镜像" class="headerlink" title="2、开始拉取oracle镜像"></a>2、开始拉取oracle镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull registry.cn-hangzhou.aliyuncs.com/helowin/oracle_11g</span><br></pre></td></tr></table></figure>
+    <div class="post-body" itemprop="articleBody"><h1 id="docker-安装-oracle"><a href="#docker-安装-oracle" class="headerlink" title="docker 安装 oracle"></a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/443324194">docker 安装 oracle</a></h1><h3 id="1、安装-docker-环境。"><a href="#1、安装-docker-环境。" class="headerlink" title="1、安装 docker 环境。"></a>1、安装 docker 环境。</h3><h3 id="2、开始拉取-oracle-镜像"><a href="#2、开始拉取-oracle-镜像" class="headerlink" title="2、开始拉取 oracle 镜像"></a>2、开始拉取 oracle 镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull registry.cn-hangzhou.aliyuncs.com/helowin/oracle_11g</span><br></pre></td></tr></table></figure>
 
 <h3 id="3、下载完成后，查看镜像"><a href="#3、下载完成后，查看镜像" class="headerlink" title="3、下载完成后，查看镜像"></a>3、下载完成后，查看镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
 
 <h3 id="4、创建容器"><a href="#4、创建容器" class="headerlink" title="4、创建容器"></a>4、创建容器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 1521:1521 --name oracle11g registry.cn-hangzhou.aliyuncs.com/helowin/oracle_11g</span><br></pre></td></tr></table></figure>
 
-<p>可以写成shell脚本，下次打开oracle数据库就可以一条命令创建容器。</p>
-<p>shell脚本如下：</p>
+<p>可以写成 shell 脚本，下次打开 oracle 数据库就可以一条命令创建容器。</p>
+<p>shell 脚本如下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># BEGIN ANSIBLE MANAGED BLOCK</span></span><br><span class="line"><span class="comment">#!/bin/bash</span></span><br><span class="line">docker <span class="built_in">rm</span> -f oracle11;</span><br><span class="line">docker run -it -d -p 1521:1521</span><br><span class="line">--privileged=<span class="literal">true</span> \</span><br><span class="line">-v /opt/oracle/oradata/dbs:/home/oracle/app/oracle/product/11.2.0/dbhome_2/dbs \</span><br><span class="line">-v /opt/oracle/oradata:/home/oracle/app/oracle/oradata \</span><br><span class="line">-e ORACLE_PWD=helowin --name oracle11 registry.cn-hangzhou.aliyuncs.com/helowin/oracle_11g</span><br><span class="line"><span class="comment"># END ANSIBLE MANAGED BLOCK</span></span><br></pre></td></tr></table></figure>
 
-
-
-<p><strong>但为了保存上一次容易的配置值，是不建议写这个shell脚本的，下次打开直接用docker start oracle11命令打开。</strong></p>
-<p>如果创建成功能会返回容器id</p>
+<p><strong>但为了保存上一次容易的配置值，是不建议写这个 shell 脚本的，下次打开直接用 docker start oracle11 命令打开。</strong></p>
+<p>如果创建成功能会返回容器 id</p>
 <h3 id="5、进入镜像进行配置"><a href="#5、进入镜像进行配置" class="headerlink" title="5、进入镜像进行配置"></a>5、进入镜像进行配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it oracle11 bash</span><br></pre></td></tr></table></figure>
 
-<h3 id="6、进行sql登录"><a href="#6、进行sql登录" class="headerlink" title="6、进行sql登录"></a>6、进行sql登录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlplus /nolog</span><br></pre></td></tr></table></figure>
+<h3 id="6、进行-sql-登录"><a href="#6、进行-sql-登录" class="headerlink" title="6、进行 sql 登录"></a>6、进行 sql 登录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlplus /nolog</span><br></pre></td></tr></table></figure>
 
-<p>发现没有该命令，需要先配置环境变量，所以切换root用户。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su root </span><br></pre></td></tr></table></figure>
+<p>发现没有该命令，需要先配置环境变量，所以切换 root 用户。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su root</span><br></pre></td></tr></table></figure>
 
 <p>输入密码：helowin</p>
-<h3 id="7、编辑profile文件配置ORACLE环境变量"><a href="#7、编辑profile文件配置ORACLE环境变量" class="headerlink" title="7、编辑profile文件配置ORACLE环境变量"></a>7、编辑profile文件配置ORACLE环境变量</h3><p>打开：vi &#x2F;etc&#x2F;profile ，在文件最后写上下面内容：</p>
+<h3 id="7、编辑-profile-文件配置-ORACLE-环境变量"><a href="#7、编辑-profile-文件配置-ORACLE-环境变量" class="headerlink" title="7、编辑 profile 文件配置 ORACLE 环境变量"></a>7、编辑 profile 文件配置 ORACLE 环境变量</h3><p>打开：vi &#x2F;etc&#x2F;profile ，在文件最后写上下面内容：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> ORACLE_HOME=/home/oracle/app/oracle/product/11.2.0/dbhome_2</span><br><span class="line"><span class="built_in">export</span> ORACLE_SID=helowin</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$ORACLE_HOME</span>/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="8、保存后执行source-etc-profile-加载环境变量；"><a href="#8、保存后执行source-etc-profile-加载环境变量；" class="headerlink" title="8、保存后执行source /etc/profile 加载环境变量；"></a>8、保存后执行<code>source /etc/profile</code> 加载环境变量；</h3><h3 id="9、创建软连接"><a href="#9、创建软连接" class="headerlink" title="9、创建软连接"></a>9、创建软连接</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s <span class="variable">$ORACLE_HOME</span>/bin/sqlplus /usr/bin</span><br></pre></td></tr></table></figure>
 
-<h3 id="10、切换到oracle-用户"><a href="#10、切换到oracle-用户" class="headerlink" title="10、切换到oracle 用户"></a>10、切换到oracle 用户</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su - oracle</span><br></pre></td></tr></table></figure>
-
-
+<h3 id="10、切换到-oracle-用户"><a href="#10、切换到-oracle-用户" class="headerlink" title="10、切换到 oracle 用户"></a>10、切换到 oracle 用户</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su - oracle</span><br></pre></td></tr></table></figure>
 
 <p><em>这里还要说一下，一定要写中间的短横线 - 必须要，否则软连接无效</em></p>
-<h3 id="11、登录sqlplus并修改sys、system用户密码"><a href="#11、登录sqlplus并修改sys、system用户密码" class="headerlink" title="11、登录sqlplus并修改sys、system用户密码"></a>11、登录sqlplus并修改sys、system用户密码</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sqlplus <span class="operator">/</span>nolog   <span class="comment">--登录</span></span><br><span class="line">conn <span class="operator">/</span><span class="keyword">as</span> sysdba  <span class="comment">--</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">user</span> <span class="keyword">system</span> identified <span class="keyword">by</span> <span class="keyword">system</span>;<span class="comment">--修改system用户账号密码；</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">user</span> sys identified <span class="keyword">by</span> <span class="keyword">system</span>;<span class="comment">--修改sys用户账号密码；</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">user</span> test identified <span class="keyword">by</span> test; <span class="comment">-- 创建内部管理员账号密码；</span></span><br><span class="line"><span class="keyword">grant</span> <span class="keyword">connect</span>,resource,dba <span class="keyword">to</span> yan_test; <span class="comment">--将dba权限授权给内部管理员账号和密码；</span></span><br><span class="line"><span class="keyword">ALTER</span> PROFILE <span class="keyword">DEFAULT</span> LIMIT PASSWORD_LIFE_TIME UNLIMITED; <span class="comment">--修改密码规则策略为密码永不过期；（会出现坑，后面讲解）</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">system</span> <span class="keyword">set</span> processes<span class="operator">=</span><span class="number">1000</span> <span class="keyword">scope</span><span class="operator">=</span>spfile; <span class="comment">--修改数据库最大连接数据；</span></span><br></pre></td></tr></table></figure>
+<h3 id="11、登录-sqlplus-并修改-sys、system-用户密码"><a href="#11、登录-sqlplus-并修改-sys、system-用户密码" class="headerlink" title="11、登录 sqlplus 并修改 sys、system 用户密码"></a>11、登录 sqlplus 并修改 sys、system 用户密码</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sqlplus <span class="operator">/</span>nolog   <span class="comment">--登录</span></span><br><span class="line">conn <span class="operator">/</span><span class="keyword">as</span> sysdba  <span class="comment">--</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">user</span> <span class="keyword">system</span> identified <span class="keyword">by</span> <span class="keyword">system</span>;<span class="comment">--修改system用户账号密码；</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">user</span> sys identified <span class="keyword">by</span> <span class="keyword">system</span>;<span class="comment">--修改sys用户账号密码；</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">user</span> test identified <span class="keyword">by</span> test; <span class="comment">-- 创建内部管理员账号密码；</span></span><br><span class="line"><span class="keyword">grant</span> <span class="keyword">connect</span>,resource,dba <span class="keyword">to</span> yan_test; <span class="comment">--将dba权限授权给内部管理员账号和密码；</span></span><br><span class="line"><span class="keyword">ALTER</span> PROFILE <span class="keyword">DEFAULT</span> LIMIT PASSWORD_LIFE_TIME UNLIMITED; <span class="comment">--修改密码规则策略为密码永不过期；（会出现坑，后面讲解）</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">system</span> <span class="keyword">set</span> processes<span class="operator">=</span><span class="number">1000</span> <span class="keyword">scope</span><span class="operator">=</span>spfile; <span class="comment">--修改数据库最大连接数据；</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="12、修改以上信息后，需要重新启动数据库；"><a href="#12、修改以上信息后，需要重新启动数据库；" class="headerlink" title="12、修改以上信息后，需要重新启动数据库；"></a>12、修改以上信息后，需要重新启动数据库；</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">conn /as sysdba</span><br><span class="line">shutdown immediate; --关闭数据库</span><br><span class="line">startup; --启动数据库</span><br><span class="line">exit：退出软链接</span><br></pre></td></tr></table></figure>
 
 <hr>
-<p>*<strong>上面提到的其中一个坑说明：*</strong></p>
+<p><strong>*上面提到的其中一个坑说明：*</strong></p>
 <p>当执行修改密码的时候出现 ： database not open</p>
 <p>提示数据库没有打开，不急按如下操作</p>
 <p>输入：</p>
@@ -362,8 +345,9 @@
 <p>改完之后输入：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> PROFILE <span class="keyword">DEFAULT</span> LIMIT PASSWORD_LIFE_TIME UNLIMITED;</span><br></pre></td></tr></table></figure>
 
-<p><strong>刷新下表 exit 是退出sql 软连接</strong></p>
-<h3 id="13、复制oracle的数据及配置"><a href="#13、复制oracle的数据及配置" class="headerlink" title="13、复制oracle的数据及配置"></a>13、复制oracle的数据及配置</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker cp <span class="built_in">id</span>:/home/oracle/app/oracle /opt/oracle</span><br></pre></td></tr></table></figure>
+<p><strong>刷新下表 exit 是退出 sql 软连接</strong></p>
+<h3 id="13、复制-oracle-的数据及配置"><a href="#13、复制-oracle-的数据及配置" class="headerlink" title="13、复制 oracle 的数据及配置"></a>13、复制 oracle 的数据及配置</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker cp <span class="built_in">id</span>:/home/oracle/app/oracle /opt/oracle</span><br></pre></td></tr></table></figure>
+
     </div>
 
     
@@ -459,7 +443,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1:01</span>
+    <span title="Reading time total">1:02</span>
   </span>
 </div>
 <div class="busuanzi-count">
