@@ -1,6 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>2025年微博图床失效解决方法</title>
+    <url>/2025/04/11/blog/%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A%E5%A4%B1%E6%95%88%E8%A7%A3%E5%86%B3/</url>
+    <content><![CDATA[<h2 id="2025年微博图床失效解决方法"><a href="#2025年微博图床失效解决方法" class="headerlink" title="2025年微博图床失效解决方法"></a>2025年微博图床失效解决方法</h2><h4 id="一、下载BlogHelper-Browse-1-0-30-at-SourceForge-net"><a href="#一、下载BlogHelper-Browse-1-0-30-at-SourceForge-net" class="headerlink" title="一、下载BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net"></a>一、下载<a href="https://sourceforge.net/projects/bloghelper.mirror/files/1.0.30/">BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net</a></h4><h4 id="二、登陆微博账号，再启动新浪图床如下"><a href="#二、登陆微博账号，再启动新浪图床如下" class="headerlink" title="二、登陆微博账号，再启动新浪图床如下"></a>二、登陆微博账号，再启动新浪图床如下</h4><p><img src="https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0eg6z69jdj308105374f.jpg" alt="新浪图床启动"></p>
+<h4 id="三、上传包含本地图片的md文件-先用Typora-编辑好md文件-，得到替换图片连接后的md文件"><a href="#三、上传包含本地图片的md文件-先用Typora-编辑好md文件-，得到替换图片连接后的md文件" class="headerlink" title="三、上传包含本地图片的md文件(先用Typora 编辑好md文件)，得到替换图片连接后的md文件"></a>三、上传包含本地图片的md文件(先用<a href="https://typoraio.cn/">Typora </a>编辑好md文件)，得到替换图片连接后的md文件</h4><p><img src="https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0eg6zboy0j306t05fgls.jpg" alt="新浪图床图片上传"></p>
+<h4 id="四、将得到的md文件中图片地址修改"><a href="#四、将得到的md文件中图片地址修改" class="headerlink" title="四、将得到的md文件中图片地址修改"></a>四、将得到的md文件中图片地址修改</h4><blockquote>
+<p>例如得到的图片地址为: <code>http://ww3.sinaimg.cn/large/008qTdeRly1i0edw9eafdj31ao0t6q42.jpg</code>该地址不能正常访问</p>
+<p>将其改为<code>https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0edw9eafdj31ao0t6q42.jpg</code></p>
+<p>就是将前缀<code>http://ww3.sinaimg.cn</code>改为<code>https://cdn.cdnjson.com/tvax3.sinaimg.cn</code></p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在Nodejs中使用 Playwright</title>
+    <url>/2025/02/03/automate/Playwright/</url>
+    <content><![CDATA[<p>首先，确保你已经安装了 <strong>Node.js</strong>。可以通过以下命令来检查是否已经安装 Node.js：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<p>如果没有安装 Node.js，你可以从 <a href="https://nodejs.org/">Node.js 官网</a> 下载并安装最新版本的 Node.js。</p>
+<h3 id="2-初始化-Node-js-项目"><a href="#2-初始化-Node-js-项目" class="headerlink" title="2. 初始化 Node.js 项目"></a>2. <strong>初始化 Node.js 项目</strong></h3><p>如果你还没有创建 Node.js 项目，可以通过以下命令初始化一个新的 Node.js 项目：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> my-playwright-project</span><br><span class="line"><span class="built_in">cd</span> my-playwright-project</span><br><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
+
+<p>这将会创建一个 <code>package.json</code> 文件，管理你的项目依赖。</p>
+<h3 id="3-安装-Playwright"><a href="#3-安装-Playwright" class="headerlink" title="3. 安装 Playwright"></a>3. <strong>安装 Playwright</strong></h3><p>你可以使用 <strong>npm</strong> 或 <strong>yarn</strong> 来安装 Playwright。执行以下命令安装 Playwright 和浏览器依赖：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright</span><br></pre></td></tr></table></figure>
+
+<p>默认情况下，Playwright 会安装必要的浏览器二进制文件（Chromium、Firefox 和 WebKit），因此它会比较大。如果你只需要安装特定的浏览器，你可以选择安装指定的浏览器包：</p>
+<ul>
+<li><p><strong>只安装 Chromium</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-chromium</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>只安装 Firefox</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-firefox</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>只安装 WebKit</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-webkit</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="4-验证安装"><a href="#4-验证安装" class="headerlink" title="4. 验证安装"></a>4. <strong>验证安装</strong></h3><p>安装完成后，你可以创建一个简单的脚本来测试 Playwright 是否工作正常：</p>
+<p>创建一个文件 <code>test.js</code>，并添加以下内容：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; chromium &#125; = <span class="built_in">require</span>(<span class="string">&quot;playwright&quot;</span>);</span><br><span class="line"></span><br><span class="line">(<span class="title function_">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="comment">// 启动浏览器</span></span><br><span class="line">  <span class="keyword">const</span> browser = <span class="keyword">await</span> chromium.<span class="title function_">launch</span>(&#123; <span class="attr">headless</span>: <span class="literal">false</span> &#125;);</span><br><span class="line">  <span class="keyword">const</span> page = <span class="keyword">await</span> browser.<span class="title function_">newPage</span>();</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 打开一个页面</span></span><br><span class="line">  <span class="keyword">await</span> page.<span class="title function_">goto</span>(<span class="string">&quot;https://example.com&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 截图保存</span></span><br><span class="line">  <span class="keyword">await</span> page.<span class="title function_">screenshot</span>(&#123; <span class="attr">path</span>: <span class="string">&quot;example.png&quot;</span> &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 关闭浏览器</span></span><br><span class="line">  <span class="keyword">await</span> browser.<span class="title function_">close</span>();</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+<p>然后，运行脚本：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node test.js</span><br></pre></td></tr></table></figure>
+
+<p>如果一切正常，Playwright 会启动一个 Chromium 浏览器实例并打开 <code>https://example.com</code>，然后保存页面截图为 <code>example.png</code>。</p>
+<h3 id="5-常见问题"><a href="#5-常见问题" class="headerlink" title="5. 常见问题"></a>5. <strong>常见问题</strong></h3><ul>
+<li>如果你在安装过程中遇到浏览器二进制文件下载失败的情况，确保你的网络连接正常，并且没有防火墙或代理阻止下载。</li>
+<li>Playwright 会在安装时自动下载 Chromium、Firefox 和 WebKit。如果你不需要某个浏览器，可以手动卸载它们，或者仅安装你需要的特定浏览器。</li>
+</ul>
+<hr>
+<p>通过这些步骤，你就可以在 Node.js 环境中成功安装并使用 Playwright 进行浏览器自动化操作。</p>
+]]></content>
+      <tags>
+        <tag>浏览器自动化测试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>浏览器自动化测试</title>
     <url>/2025/02/03/automate/automates/</url>
     <content><![CDATA[<h3 id="一、Playwright"><a href="#一、Playwright" class="headerlink" title="一、Playwright"></a>一、Playwright</h3><p>Playwright 是用 <strong>TypeScript</strong>（JavaScript 的超集）编写的。TypeScript 提供了静态类型检查，增强了 Playwright 的可维护性和开发体验。Playwright 的核心代码和 API 基于 Node.js 环境，因此它是一个主要面向 <strong>JavaScript&#x2F;TypeScript</strong> 开发者的工具。</p>
@@ -49,62 +108,16 @@
       </tags>
   </entry>
   <entry>
-    <title>在Nodejs中使用 Playwright</title>
-    <url>/2025/02/03/automate/Playwright/</url>
-    <content><![CDATA[<p>首先，确保你已经安装了 <strong>Node.js</strong>。可以通过以下命令来检查是否已经安装 Node.js：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+    <title>git配置SSH密钥</title>
+    <url>/2025/01/31/git/git-rsa/</url>
+    <content><![CDATA[<h3 id="1-生成新的-SSH-密钥"><a href="#1-生成新的-SSH-密钥" class="headerlink" title="1.生成新的 SSH 密钥"></a>1.生成新的 SSH 密钥</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
 
-<p>如果没有安装 Node.js，你可以从 <a href="https://nodejs.org/">Node.js 官网</a> 下载并安装最新版本的 Node.js。</p>
-<h3 id="2-初始化-Node-js-项目"><a href="#2-初始化-Node-js-项目" class="headerlink" title="2. 初始化 Node.js 项目"></a>2. <strong>初始化 Node.js 项目</strong></h3><p>如果你还没有创建 Node.js 项目，可以通过以下命令初始化一个新的 Node.js 项目：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> my-playwright-project</span><br><span class="line"><span class="built_in">cd</span> my-playwright-project</span><br><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
-
-<p>这将会创建一个 <code>package.json</code> 文件，管理你的项目依赖。</p>
-<h3 id="3-安装-Playwright"><a href="#3-安装-Playwright" class="headerlink" title="3. 安装 Playwright"></a>3. <strong>安装 Playwright</strong></h3><p>你可以使用 <strong>npm</strong> 或 <strong>yarn</strong> 来安装 Playwright。执行以下命令安装 Playwright 和浏览器依赖：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright</span><br></pre></td></tr></table></figure>
-
-<p>默认情况下，Playwright 会安装必要的浏览器二进制文件（Chromium、Firefox 和 WebKit），因此它会比较大。如果你只需要安装特定的浏览器，你可以选择安装指定的浏览器包：</p>
-<ul>
-<li><p><strong>只安装 Chromium</strong>:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-chromium</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>只安装 Firefox</strong>:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-firefox</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>只安装 WebKit</strong>:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-webkit</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="4-验证安装"><a href="#4-验证安装" class="headerlink" title="4. 验证安装"></a>4. <strong>验证安装</strong></h3><p>安装完成后，你可以创建一个简单的脚本来测试 Playwright 是否工作正常：</p>
-<p>创建一个文件 <code>test.js</code>，并添加以下内容：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; chromium &#125; = <span class="built_in">require</span>(<span class="string">&quot;playwright&quot;</span>);</span><br><span class="line"></span><br><span class="line">(<span class="title function_">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="comment">// 启动浏览器</span></span><br><span class="line">  <span class="keyword">const</span> browser = <span class="keyword">await</span> chromium.<span class="title function_">launch</span>(&#123; <span class="attr">headless</span>: <span class="literal">false</span> &#125;);</span><br><span class="line">  <span class="keyword">const</span> page = <span class="keyword">await</span> browser.<span class="title function_">newPage</span>();</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 打开一个页面</span></span><br><span class="line">  <span class="keyword">await</span> page.<span class="title function_">goto</span>(<span class="string">&quot;https://example.com&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 截图保存</span></span><br><span class="line">  <span class="keyword">await</span> page.<span class="title function_">screenshot</span>(&#123; <span class="attr">path</span>: <span class="string">&quot;example.png&quot;</span> &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 关闭浏览器</span></span><br><span class="line">  <span class="keyword">await</span> browser.<span class="title function_">close</span>();</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-
-<p>然后，运行脚本：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node test.js</span><br></pre></td></tr></table></figure>
-
-<p>如果一切正常，Playwright 会启动一个 Chromium 浏览器实例并打开 <code>https://example.com</code>，然后保存页面截图为 <code>example.png</code>。</p>
-<h3 id="5-常见问题"><a href="#5-常见问题" class="headerlink" title="5. 常见问题"></a>5. <strong>常见问题</strong></h3><ul>
-<li>如果你在安装过程中遇到浏览器二进制文件下载失败的情况，确保你的网络连接正常，并且没有防火墙或代理阻止下载。</li>
-<li>Playwright 会在安装时自动下载 Chromium、Firefox 和 WebKit。如果你不需要某个浏览器，可以手动卸载它们，或者仅安装你需要的特定浏览器。</li>
-</ul>
-<hr>
-<p>通过这些步骤，你就可以在 Node.js 环境中成功安装并使用 Playwright 进行浏览器自动化操作。</p>
+<h3 id="2-测试-SSH-连接"><a href="#2-测试-SSH-连接" class="headerlink" title="2.测试 SSH 连接"></a>2.测试 SSH 连接</h3><p> 将 <code>your_email@example.com</code> 替换为你在 Git 服务提供商（如 GitHub）上注册的邮箱地址。</p>
+<p>执行命令后，会提示你选择密钥的保存位置和设置密码（密码可以为空）。一般情况下，直接按回车键使用默认设置即可。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
-        <tag>浏览器自动化测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2025年微博图床失效解决方法</title>
-    <url>/2025/04/11/blog/%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A%E5%A4%B1%E6%95%88%E8%A7%A3%E5%86%B3/</url>
-    <content><![CDATA[<h2 id="2025年微博图床失效解决方法"><a href="#2025年微博图床失效解决方法" class="headerlink" title="2025年微博图床失效解决方法"></a>2025年微博图床失效解决方法</h2><h4 id="一、下载BlogHelper-Browse-1-0-30-at-SourceForge-net"><a href="#一、下载BlogHelper-Browse-1-0-30-at-SourceForge-net" class="headerlink" title="一、下载BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net"></a>一、下载<a href="https://sourceforge.net/projects/bloghelper.mirror/files/1.0.30/">BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net</a></h4><h4 id="二、登陆微博账号，再启动新浪图床如下"><a href="#二、登陆微博账号，再启动新浪图床如下" class="headerlink" title="二、登陆微博账号，再启动新浪图床如下"></a>二、登陆微博账号，再启动新浪图床如下</h4><p><img src="https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0eg6z69jdj308105374f.jpg" alt="新浪图床启动"></p>
-<h4 id="三、上传包含本地图片的md文件-先用Typora-编辑好md文件-，得到替换图片连接后的md文件"><a href="#三、上传包含本地图片的md文件-先用Typora-编辑好md文件-，得到替换图片连接后的md文件" class="headerlink" title="三、上传包含本地图片的md文件(先用Typora 编辑好md文件)，得到替换图片连接后的md文件"></a>三、上传包含本地图片的md文件(先用<a href="https://typoraio.cn/">Typora </a>编辑好md文件)，得到替换图片连接后的md文件</h4><p><img src="https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0eg6zboy0j306t05fgls.jpg" alt="新浪图床图片上传"></p>
-<h4 id="四、将得到的md文件中图片地址修改"><a href="#四、将得到的md文件中图片地址修改" class="headerlink" title="四、将得到的md文件中图片地址修改"></a>四、将得到的md文件中图片地址修改</h4><blockquote>
-<p>例如得到的图片地址为: <code>http://ww3.sinaimg.cn/large/008qTdeRly1i0edw9eafdj31ao0t6q42.jpg</code>该地址不能正常访问</p>
-<p>将其改为<code>https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0edw9eafdj31ao0t6q42.jpg</code></p>
-<p>就是将前缀<code>http://ww3.sinaimg.cn</code>改为<code>https://cdn.cdnjson.com/tvax3.sinaimg.cn</code></p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>blog</tag>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -242,9 +255,36 @@
       </tags>
   </entry>
   <entry>
+    <title>git配置用户名和密码</title>
+    <url>/2022/05/14/git/git-username/</url>
+    <content><![CDATA[<h3 id="1-全局配置"><a href="#1-全局配置" class="headerlink" title="1.全局配置"></a>1.全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-全局配置删除"><a href="#2-全局配置删除" class="headerlink" title="2.全局配置删除"></a>2.全局配置删除</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --global --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-系统配置删除"><a href="#3-系统配置删除" class="headerlink" title="3.系统配置删除"></a>3.系统配置删除</h3><p>系统配置会影响系统上所有用户的所有 Git 仓库，操作时需谨慎。删除系统配置的用户和邮箱信息，使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --system --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-查看全局配置"><a href="#4-查看全局配置" class="headerlink" title="4.查看全局配置"></a>4.查看全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-查看系统配置"><a href="#5-查看系统配置" class="headerlink" title="5.查看系统配置"></a>5.查看系统配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --list</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>docker学习大纲</title>
     <url>/2022/06/28/database/docker%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2/</url>
     <content><![CDATA[<h3 id="Docker-network-（容器网络）"><a href="#Docker-network-（容器网络）" class="headerlink" title="Docker network （容器网络）"></a>Docker network （容器网络）</h3><h3 id="Docker-compose（容器编排）"><a href="#Docker-compose（容器编排）" class="headerlink" title="Docker compose（容器编排）"></a>Docker compose（容器编排）</h3><h3 id="Docker-Swarm（集群）"><a href="#Docker-Swarm（集群）" class="headerlink" title="Docker Swarm（集群）"></a>Docker Swarm（集群）</h3><h3 id="CI-CD-jenkins-流水线"><a href="#CI-CD-jenkins-流水线" class="headerlink" title="CI&#x2F;CD jenkins (流水线)"></a>CI&#x2F;CD jenkins (流水线)</h3><h3 id="ansible-自动化工具，部署"><a href="#ansible-自动化工具，部署" class="headerlink" title="ansible (自动化工具，部署)"></a><a href="http://ansible.com.cn/docs">ansible</a> (自动化工具，部署)</h3>]]></content>
+      <tags>
+        <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker安装mysql</title>
+    <url>/2022/07/15/database/docker%E5%AE%89%E8%A3%85mysql/</url>
+    <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> docker run -d -p 3306:3306 \</span><br><span class="line">--privileged=<span class="literal">true</span> \</span><br><span class="line">-v /opt/mysql/conf:/etc/mysql/conf.d \</span><br><span class="line">-v /opt/mysql/data:/var/lib/mysql \</span><br><span class="line">-v /opt/mysql/log:/var/log/mysql \</span><br><span class="line">-e MYSQL_ROOT_PASSWORD=123456 \</span><br><span class="line">--name mysql01 mysql:5.7 \</span><br><span class="line">--character-set-server=utf8mb4 \</span><br><span class="line">--collation-server=utf8mb4_unicode_ci</span><br></pre></td></tr></table></figure>
+]]></content>
       <tags>
         <tag>docker</tag>
       </tags>
@@ -303,15 +343,6 @@
 
 <p><strong>刷新下表 exit 是退出 sql 软连接</strong></p>
 <h3 id="13、复制-oracle-的数据及配置"><a href="#13、复制-oracle-的数据及配置" class="headerlink" title="13、复制 oracle 的数据及配置"></a>13、复制 oracle 的数据及配置</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sudo docker cp <span class="built_in">id</span>:/home/oracle/app/oracle /opt/oracle</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>docker安装mysql</title>
-    <url>/2022/07/15/database/docker%E5%AE%89%E8%A3%85mysql/</url>
-    <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> docker run -d -p 3306:3306 \</span><br><span class="line">--privileged=<span class="literal">true</span> \</span><br><span class="line">-v /opt/mysql/conf:/etc/mysql/conf.d \</span><br><span class="line">-v /opt/mysql/data:/var/lib/mysql \</span><br><span class="line">-v /opt/mysql/log:/var/log/mysql \</span><br><span class="line">-e MYSQL_ROOT_PASSWORD=123456 \</span><br><span class="line">--name mysql01 mysql:5.7 \</span><br><span class="line">--character-set-server=utf8mb4 \</span><br><span class="line">--collation-server=utf8mb4_unicode_ci</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>docker</tag>
@@ -399,7 +430,7 @@
 <h2 id="commit-镜像"><a href="#commit-镜像" class="headerlink" title="commit 镜像"></a>commit 镜像</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker commit 提交容器成为一个新的副本</span><br><span class="line">docker commit -m=&quot;提交的描述信息&quot; -a=&quot;作者&quot; 容器id 目标镜像名:[tag]</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看运行的容器</span></span><br><span class="line">[root@localhost ~]# docker ps</span><br><span class="line">CONTAINER ID   IMAGE                 COMMAND             CREATED        STATUS         PORTS                                       NAMES</span><br><span class="line">01f17edc0c92   tomcat                &quot;catalina.sh run&quot;   3 months ago   Up 5 minutes   0.0.0.0:8080-&gt;8080/tcp, :::8080-&gt;8080/tcp   tomcat01</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建自己的tomcat镜像</span></span><br><span class="line">[root@localhost ~]# docker commit -a=&quot;StephenShawn&quot; -m=&quot;add webapps&quot; 01f17edc0c92 tomcat01:0.1</span><br><span class="line">sha256:5da731531f9fea322cbf4cb2a971c5924672001746de2871171537faf4e6abe9</span><br><span class="line">[root@localhost ~]# docker images</span><br><span class="line">REPOSITORY            TAG       IMAGE ID       CREATED          SIZE</span><br><span class="line">tomcat01              0.1       5da731531f9f   14 seconds ago   684MB</span><br><span class="line">tomcat                9.0       b8e65a4d736d   6 months ago     680MB</span><br><span class="line">tomcat                latest    fb5657adc892   6 months ago     680MB</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
-        <tag>dokcer</tag>
+        <tag>docker</tag>
       </tags>
   </entry>
   <entry>
@@ -428,6 +459,23 @@
 ]]></content>
       <tags>
         <tag>kubernetes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>rockylinux8-network-config</title>
+    <url>/2023/12/17/database/rockylinux8-network-config/</url>
+    <content><![CDATA[<h4 id="查看-linux-内核信息"><a href="#查看-linux-内核信息" class="headerlink" title="查看 linux 内核信息"></a>查看 linux 内核信息</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">uname</span> -a</span><br></pre></td></tr></table></figure>
+
+<h4 id="查看-linux-发行版信息"><a href="#查看-linux-发行版信息" class="headerlink" title="查看 linux 发行版信息"></a>查看 linux 发行版信息</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> /etc/os-release</span><br></pre></td></tr></table></figure>
+
+<h4 id="配置静态网路"><a href="#配置静态网路" class="headerlink" title="配置静态网路"></a>配置静态网路</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/sysconfig/network-scripts/ifcfg-ens160</span><br><span class="line"></span><br><span class="line">TYPE=Ethernet</span><br><span class="line">PROXY_METHOD=none</span><br><span class="line">BROWSER_ONLY=no</span><br><span class="line"><span class="comment"># 静态IP地址</span></span><br><span class="line">BOOTPROTO=static</span><br><span class="line">DEFROUTE=<span class="built_in">yes</span></span><br><span class="line">IPV4_FAILURE_FATAL=no</span><br><span class="line">IPV6INIT=<span class="built_in">yes</span></span><br><span class="line">IPV6_AUTOCONF=<span class="built_in">yes</span></span><br><span class="line">IPV6_DEFROUTE=<span class="built_in">yes</span></span><br><span class="line">IPV6_FAILURE_FATAL=no</span><br><span class="line">NAME=ens160</span><br><span class="line">UUID=293f1d04-332e-4de2-8f19-4910bca6672c</span><br><span class="line">DEVICE=ens160</span><br><span class="line"><span class="comment"># 开启</span></span><br><span class="line">ONBOOT=<span class="built_in">yes</span></span><br><span class="line"><span class="comment"># 本机地址</span></span><br><span class="line">IPADDR=192.168.166.6</span><br><span class="line"><span class="comment"># 子网掩码</span></span><br><span class="line">NETMASK=255.255.255.0</span><br><span class="line"><span class="comment"># 虚拟VM8网卡 NAT 网关</span></span><br><span class="line">GATEWAY=192.168.166.2</span><br><span class="line"><span class="comment"># DNS 域名解析服务器IP地址</span></span><br><span class="line">DNS1=114.114.114.114</span><br><span class="line">DNS2=223.5.5.5</span><br><span class="line">DNS3=8.8.8.8</span><br></pre></td></tr></table></figure>
+
+<h4 id="重启网络"><a href="#重启网络" class="headerlink" title="重启网络"></a>重启网络</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nmcli c reload</span><br></pre></td></tr></table></figure>
+
+<h4 id="SSH-连接问题-网络不可达-怀疑是-VMware-软件问题，配置-SSH-映射就好了"><a href="#SSH-连接问题-网络不可达-怀疑是-VMware-软件问题，配置-SSH-映射就好了" class="headerlink" title="SSH 连接问题 网络不可达(怀疑是 VMware 软件问题，配置 SSH 映射就好了)"></a>SSH 连接问题 网络不可达(怀疑是 VMware 软件问题，配置 SSH 映射就好了)</h4><p>网络也能 ping 外网了，具体操作见<a href="https://blog.csdn.net/YiRan_Zhao/article/details/110121526">地址</a></p>
+]]></content>
+      <tags>
+        <tag>rockylinux8</tag>
       </tags>
   </entry>
   <entry>
@@ -470,36 +518,6 @@
 ]]></content>
       <tags>
         <tag>docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>rockylinux8-network-config</title>
-    <url>/2023/12/17/database/rockylinux8-network-config/</url>
-    <content><![CDATA[<h4 id="查看-linux-内核信息"><a href="#查看-linux-内核信息" class="headerlink" title="查看 linux 内核信息"></a>查看 linux 内核信息</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">uname</span> -a</span><br></pre></td></tr></table></figure>
-
-<h4 id="查看-linux-发行版信息"><a href="#查看-linux-发行版信息" class="headerlink" title="查看 linux 发行版信息"></a>查看 linux 发行版信息</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> /etc/os-release</span><br></pre></td></tr></table></figure>
-
-<h4 id="配置静态网路"><a href="#配置静态网路" class="headerlink" title="配置静态网路"></a>配置静态网路</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/sysconfig/network-scripts/ifcfg-ens160</span><br><span class="line"></span><br><span class="line">TYPE=Ethernet</span><br><span class="line">PROXY_METHOD=none</span><br><span class="line">BROWSER_ONLY=no</span><br><span class="line"><span class="comment"># 静态IP地址</span></span><br><span class="line">BOOTPROTO=static</span><br><span class="line">DEFROUTE=<span class="built_in">yes</span></span><br><span class="line">IPV4_FAILURE_FATAL=no</span><br><span class="line">IPV6INIT=<span class="built_in">yes</span></span><br><span class="line">IPV6_AUTOCONF=<span class="built_in">yes</span></span><br><span class="line">IPV6_DEFROUTE=<span class="built_in">yes</span></span><br><span class="line">IPV6_FAILURE_FATAL=no</span><br><span class="line">NAME=ens160</span><br><span class="line">UUID=293f1d04-332e-4de2-8f19-4910bca6672c</span><br><span class="line">DEVICE=ens160</span><br><span class="line"><span class="comment"># 开启</span></span><br><span class="line">ONBOOT=<span class="built_in">yes</span></span><br><span class="line"><span class="comment"># 本机地址</span></span><br><span class="line">IPADDR=192.168.166.6</span><br><span class="line"><span class="comment"># 子网掩码</span></span><br><span class="line">NETMASK=255.255.255.0</span><br><span class="line"><span class="comment"># 虚拟VM8网卡 NAT 网关</span></span><br><span class="line">GATEWAY=192.168.166.2</span><br><span class="line"><span class="comment"># DNS 域名解析服务器IP地址</span></span><br><span class="line">DNS1=114.114.114.114</span><br><span class="line">DNS2=223.5.5.5</span><br><span class="line">DNS3=8.8.8.8</span><br></pre></td></tr></table></figure>
-
-<h4 id="重启网络"><a href="#重启网络" class="headerlink" title="重启网络"></a>重启网络</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nmcli c reload</span><br></pre></td></tr></table></figure>
-
-<h4 id="SSH-连接问题-网络不可达-怀疑是-VMware-软件问题，配置-SSH-映射就好了"><a href="#SSH-连接问题-网络不可达-怀疑是-VMware-软件问题，配置-SSH-映射就好了" class="headerlink" title="SSH 连接问题 网络不可达(怀疑是 VMware 软件问题，配置 SSH 映射就好了)"></a>SSH 连接问题 网络不可达(怀疑是 VMware 软件问题，配置 SSH 映射就好了)</h4><p>网络也能 ping 外网了，具体操作见<a href="https://blog.csdn.net/YiRan_Zhao/article/details/110121526">地址</a></p>
-]]></content>
-      <tags>
-        <tag>rockylinux8</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git配置SSH密钥</title>
-    <url>/2025/01/31/git/git-rsa/</url>
-    <content><![CDATA[<h3 id="1-生成新的-SSH-密钥"><a href="#1-生成新的-SSH-密钥" class="headerlink" title="1.生成新的 SSH 密钥"></a>1.生成新的 SSH 密钥</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-测试-SSH-连接"><a href="#2-测试-SSH-连接" class="headerlink" title="2.测试 SSH 连接"></a>2.测试 SSH 连接</h3><p> 将 <code>your_email@example.com</code> 替换为你在 Git 服务提供商（如 GitHub）上注册的邮箱地址。</p>
-<p>执行命令后，会提示你选择密钥的保存位置和设置密码（密码可以为空）。一般情况下，直接按回车键使用默认设置即可。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -546,21 +564,12 @@
       </tags>
   </entry>
   <entry>
-    <title>git配置用户名和密码</title>
-    <url>/2022/05/14/git/git-username/</url>
-    <content><![CDATA[<h3 id="1-全局配置"><a href="#1-全局配置" class="headerlink" title="1.全局配置"></a>1.全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-全局配置删除"><a href="#2-全局配置删除" class="headerlink" title="2.全局配置删除"></a>2.全局配置删除</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --global --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-系统配置删除"><a href="#3-系统配置删除" class="headerlink" title="3.系统配置删除"></a>3.系统配置删除</h3><p>系统配置会影响系统上所有用户的所有 Git 仓库，操作时需谨慎。删除系统配置的用户和邮箱信息，使用以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --system --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-查看全局配置"><a href="#4-查看全局配置" class="headerlink" title="4.查看全局配置"></a>4.查看全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-查看系统配置"><a href="#5-查看系统配置" class="headerlink" title="5.查看系统配置"></a>5.查看系统配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --list</span><br></pre></td></tr></table></figure>
+    <title>Mybatis-Plus</title>
+    <url>/2024/04/11/java/mybatis/</url>
+    <content><![CDATA[<h1 id="Mybatis-Plus-常规用法"><a href="#Mybatis-Plus-常规用法" class="headerlink" title="Mybatis-Plus 常规用法"></a>Mybatis-Plus 常规用法</h1><p><a href="https://baomidou.com/pages/24112f/">Mybatis-Plus 使用文档</a></p>
 ]]></content>
       <tags>
-        <tag>git</tag>
+        <tag>jdbc</tag>
       </tags>
   </entry>
   <entry>
@@ -584,29 +593,6 @@
 <p><code>update-crypto-policies --set LEGACY</code></p>
 </li>
 </ol>
-]]></content>
-      <tags>
-        <tag>jdbc</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>idea配置</title>
-    <url>/2025/04/16/idea/idea%E4%BB%A3%E7%A0%81%E7%83%AD%E9%83%A8%E7%BD%B2%E4%B8%8E%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/</url>
-    <content><![CDATA[<ol>
-<li><p><a href="https://blog.csdn.net/qq_36268452/article/details/139185162">idea springboot修改完java代码自动重启</a></p>
-</li>
-<li><p><a href="https://blog.csdn.net/qq_36268452/article/details/139185162">如何让社区版IDEA变得好用_idea社区版-CSDN博客</a></p>
-</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>IntelliJ IDEA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Mybatis-Plus</title>
-    <url>/2024/04/11/java/mybatis/</url>
-    <content><![CDATA[<h1 id="Mybatis-Plus-常规用法"><a href="#Mybatis-Plus-常规用法" class="headerlink" title="Mybatis-Plus 常规用法"></a>Mybatis-Plus 常规用法</h1><p><a href="https://baomidou.com/pages/24112f/">Mybatis-Plus 使用文档</a></p>
 ]]></content>
       <tags>
         <tag>jdbc</tag>
@@ -653,6 +639,20 @@
 <h2 id="调试debug"><a href="#调试debug" class="headerlink" title="调试debug"></a>调试<a href="https://blog.csdn.net/m0_37154839/article/details/107617122">debug</a></h2><ul>
 <li>F9 调试</li>
 </ul>
+]]></content>
+      <tags>
+        <tag>IntelliJ IDEA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>idea配置</title>
+    <url>/2025/04/16/idea/idea%E4%BB%A3%E7%A0%81%E7%83%AD%E9%83%A8%E7%BD%B2%E4%B8%8E%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/</url>
+    <content><![CDATA[<ol>
+<li><p><a href="https://blog.csdn.net/qq_36268452/article/details/139185162">idea springboot修改完java代码自动重启</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/qq_36268452/article/details/139185162">如何让社区版IDEA变得好用_idea社区版-CSDN博客</a></p>
+</li>
+</ol>
 ]]></content>
       <tags>
         <tag>IntelliJ IDEA</tag>
