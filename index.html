@@ -535,146 +535,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.shawnyoung.top/2025/02/03/automate/Playwright/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ShawnYoung">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ShawnYoung's Blog">
-      <meta itemprop="description" content="陌上花开">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ShawnYoung's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/02/03/automate/Playwright/" class="post-title-link" itemprop="url">在Nodejs中使用 Playwright</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2025-02-03 18:30:00" itemprop="dateCreated datePublished" datetime="2025-02-03T18:30:00+08:00">2025-02-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-04-24 12:24:16" itemprop="dateModified" datetime="2025-04-24T12:24:16+08:00">2025-04-24</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    <a title="在Nodejs中使用 Playwright" href="/2025/02/03/automate/Playwright/#SOHUCS" itemprop="discussionUrl">
-      <span id="sourceId::2fc490127ff79638e9f169acf6b170ac" class="cy_cmt_count" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.3k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>首先，确保你已经安装了 <strong>Node.js</strong>。可以通过以下命令来检查是否已经安装 Node.js：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-
-<p>如果没有安装 Node.js，你可以从 <a target="_blank" rel="noopener" href="https://nodejs.org/">Node.js 官网</a> 下载并安装最新版本的 Node.js。</p>
-<h3 id="2-初始化-Node-js-项目"><a href="#2-初始化-Node-js-项目" class="headerlink" title="2. 初始化 Node.js 项目"></a>2. <strong>初始化 Node.js 项目</strong></h3><p>如果你还没有创建 Node.js 项目，可以通过以下命令初始化一个新的 Node.js 项目：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> my-playwright-project</span><br><span class="line"><span class="built_in">cd</span> my-playwright-project</span><br><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
-
-<p>这将会创建一个 <code>package.json</code> 文件，管理你的项目依赖。</p>
-<h3 id="3-安装-Playwright"><a href="#3-安装-Playwright" class="headerlink" title="3. 安装 Playwright"></a>3. <strong>安装 Playwright</strong></h3><p>你可以使用 <strong>npm</strong> 或 <strong>yarn</strong> 来安装 Playwright。执行以下命令安装 Playwright 和浏览器依赖：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install playwright</span><br></pre></td></tr></table></figure>
-
-<p>默认情况下，Playwright 会安装必要的浏览器二进制文件（Chromium、Firefox 和 WebKit），因此它会比较大。如果你只需要安装特定的浏览器，你可以选择安装指定的浏览器包：</p>
-<ul>
-<li><p><strong>只安装 Chromium</strong>:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install playwright-chromium</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>只安装 Firefox</strong>:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install playwright-firefox</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>只安装 WebKit</strong>:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install playwright-webkit</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="4-验证安装"><a href="#4-验证安装" class="headerlink" title="4. 验证安装"></a>4. <strong>验证安装</strong></h3><p>安装完成后，你可以创建一个简单的脚本来测试 Playwright 是否工作正常：</p>
-<p>创建一个文件 <code>test.js</code>，并添加以下内容：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; chromium &#125; = <span class="built_in">require</span>(<span class="string">&quot;playwright&quot;</span>);</span><br><span class="line"></span><br><span class="line">(<span class="title function_">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="comment">// 启动浏览器</span></span><br><span class="line">  <span class="keyword">const</span> browser = <span class="keyword">await</span> chromium.<span class="title function_">launch</span>(&#123; <span class="attr">headless</span>: <span class="literal">false</span> &#125;);</span><br><span class="line">  <span class="keyword">const</span> page = <span class="keyword">await</span> browser.<span class="title function_">newPage</span>();</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 打开一个页面</span></span><br><span class="line">  <span class="keyword">await</span> page.<span class="title function_">goto</span>(<span class="string">&quot;https://example.com&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 截图保存</span></span><br><span class="line">  <span class="keyword">await</span> page.<span class="title function_">screenshot</span>(&#123; <span class="attr">path</span>: <span class="string">&quot;example.png&quot;</span> &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 关闭浏览器</span></span><br><span class="line">  <span class="keyword">await</span> browser.<span class="title function_">close</span>();</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-
-<p>然后，运行脚本：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node test.js</span><br></pre></td></tr></table></figure>
-
-<p>如果一切正常，Playwright 会启动一个 Chromium 浏览器实例并打开 <code>https://example.com</code>，然后保存页面截图为 <code>example.png</code>。</p>
-<h3 id="5-常见问题"><a href="#5-常见问题" class="headerlink" title="5. 常见问题"></a>5. <strong>常见问题</strong></h3><ul>
-<li>如果你在安装过程中遇到浏览器二进制文件下载失败的情况，确保你的网络连接正常，并且没有防火墙或代理阻止下载。</li>
-<li>Playwright 会在安装时自动下载 Chromium、Firefox 和 WebKit。如果你不需要某个浏览器，可以手动卸载它们，或者仅安装你需要的特定浏览器。</li>
-</ul>
-<hr>
-<p>通过这些步骤，你就可以在 Node.js 环境中成功安装并使用 Playwright 进行浏览器自动化操作。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://blog.shawnyoung.top/2025/02/03/automate/automates/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -793,6 +653,146 @@
 <li>**JavaScript (Node.js)**：Selenium 也支持 JavaScript 和 Node.js 环境，适合现代 Web 开发的自动化测试。</li>
 </ul>
 <p>总结来说，<strong>Selenium WebDriver</strong> 的核心部分是用 Java 编写的，但它提供了多种语言的接口，使得开发者可以使用不同的编程语言进行自动化测试或爬虫开发。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.shawnyoung.top/2025/02/03/automate/Playwright/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ShawnYoung">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ShawnYoung's Blog">
+      <meta itemprop="description" content="陌上花开">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ShawnYoung's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/02/03/automate/Playwright/" class="post-title-link" itemprop="url">在Nodejs中使用 Playwright</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-02-03 18:30:00" itemprop="dateCreated datePublished" datetime="2025-02-03T18:30:00+08:00">2025-02-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-04-24 12:24:16" itemprop="dateModified" datetime="2025-04-24T12:24:16+08:00">2025-04-24</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    <a title="在Nodejs中使用 Playwright" href="/2025/02/03/automate/Playwright/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::2fc490127ff79638e9f169acf6b170ac" class="cy_cmt_count" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>首先，确保你已经安装了 <strong>Node.js</strong>。可以通过以下命令来检查是否已经安装 Node.js：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<p>如果没有安装 Node.js，你可以从 <a target="_blank" rel="noopener" href="https://nodejs.org/">Node.js 官网</a> 下载并安装最新版本的 Node.js。</p>
+<h3 id="2-初始化-Node-js-项目"><a href="#2-初始化-Node-js-项目" class="headerlink" title="2. 初始化 Node.js 项目"></a>2. <strong>初始化 Node.js 项目</strong></h3><p>如果你还没有创建 Node.js 项目，可以通过以下命令初始化一个新的 Node.js 项目：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> my-playwright-project</span><br><span class="line"><span class="built_in">cd</span> my-playwright-project</span><br><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
+
+<p>这将会创建一个 <code>package.json</code> 文件，管理你的项目依赖。</p>
+<h3 id="3-安装-Playwright"><a href="#3-安装-Playwright" class="headerlink" title="3. 安装 Playwright"></a>3. <strong>安装 Playwright</strong></h3><p>你可以使用 <strong>npm</strong> 或 <strong>yarn</strong> 来安装 Playwright。执行以下命令安装 Playwright 和浏览器依赖：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install playwright</span><br></pre></td></tr></table></figure>
+
+<p>默认情况下，Playwright 会安装必要的浏览器二进制文件（Chromium、Firefox 和 WebKit），因此它会比较大。如果你只需要安装特定的浏览器，你可以选择安装指定的浏览器包：</p>
+<ul>
+<li><p><strong>只安装 Chromium</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install playwright-chromium</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>只安装 Firefox</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install playwright-firefox</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>只安装 WebKit</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install playwright-webkit</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="4-验证安装"><a href="#4-验证安装" class="headerlink" title="4. 验证安装"></a>4. <strong>验证安装</strong></h3><p>安装完成后，你可以创建一个简单的脚本来测试 Playwright 是否工作正常：</p>
+<p>创建一个文件 <code>test.js</code>，并添加以下内容：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; chromium &#125; = <span class="built_in">require</span>(<span class="string">&quot;playwright&quot;</span>);</span><br><span class="line"></span><br><span class="line">(<span class="title function_">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="comment">// 启动浏览器</span></span><br><span class="line">  <span class="keyword">const</span> browser = <span class="keyword">await</span> chromium.<span class="title function_">launch</span>(&#123; <span class="attr">headless</span>: <span class="literal">false</span> &#125;);</span><br><span class="line">  <span class="keyword">const</span> page = <span class="keyword">await</span> browser.<span class="title function_">newPage</span>();</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 打开一个页面</span></span><br><span class="line">  <span class="keyword">await</span> page.<span class="title function_">goto</span>(<span class="string">&quot;https://example.com&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 截图保存</span></span><br><span class="line">  <span class="keyword">await</span> page.<span class="title function_">screenshot</span>(&#123; <span class="attr">path</span>: <span class="string">&quot;example.png&quot;</span> &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 关闭浏览器</span></span><br><span class="line">  <span class="keyword">await</span> browser.<span class="title function_">close</span>();</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+<p>然后，运行脚本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node test.js</span><br></pre></td></tr></table></figure>
+
+<p>如果一切正常，Playwright 会启动一个 Chromium 浏览器实例并打开 <code>https://example.com</code>，然后保存页面截图为 <code>example.png</code>。</p>
+<h3 id="5-常见问题"><a href="#5-常见问题" class="headerlink" title="5. 常见问题"></a>5. <strong>常见问题</strong></h3><ul>
+<li>如果你在安装过程中遇到浏览器二进制文件下载失败的情况，确保你的网络连接正常，并且没有防火墙或代理阻止下载。</li>
+<li>Playwright 会在安装时自动下载 Chromium、Firefox 和 WebKit。如果你不需要某个浏览器，可以手动卸载它们，或者仅安装你需要的特定浏览器。</li>
+</ul>
+<hr>
+<p>通过这些步骤，你就可以在 Node.js 环境中成功安装并使用 Playwright 进行浏览器自动化操作。</p>
 
       
     </div>
