@@ -93,6 +93,19 @@
       </tags>
   </entry>
   <entry>
+    <title>git配置SSH密钥</title>
+    <url>/2025/01/31/git/git-rsa/</url>
+    <content><![CDATA[<h3 id="1-生成新的-SSH-密钥"><a href="#1-生成新的-SSH-密钥" class="headerlink" title="1.生成新的 SSH 密钥"></a>1.生成新的 SSH 密钥</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-测试-SSH-连接"><a href="#2-测试-SSH-连接" class="headerlink" title="2.测试 SSH 连接"></a>2.测试 SSH 连接</h3><p> 将 <code>your_email@example.com</code> 替换为你在 Git 服务提供商（如 GitHub）上注册的邮箱地址。</p>
+<p>执行命令后，会提示你选择密钥的保存位置和设置密码（密码可以为空）。一般情况下，直接按回车键使用默认设置即可。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2025年微博图床失效解决方法</title>
     <url>/2025/04/11/blog/%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A%E5%A4%B1%E6%95%88%E8%A7%A3%E5%86%B3/</url>
     <content><![CDATA[<h2 id="2025年微博图床失效解决方法"><a href="#2025年微博图床失效解决方法" class="headerlink" title="2025年微博图床失效解决方法"></a>2025年微博图床失效解决方法</h2><h4 id="一、下载BlogHelper-Browse-1-0-30-at-SourceForge-net"><a href="#一、下载BlogHelper-Browse-1-0-30-at-SourceForge-net" class="headerlink" title="一、下载BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net"></a>一、下载<a href="https://sourceforge.net/projects/bloghelper.mirror/files/1.0.30/">BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net</a></h4><h4 id="二、登陆微博账号，再启动新浪图床如下"><a href="#二、登陆微博账号，再启动新浪图床如下" class="headerlink" title="二、登陆微博账号，再启动新浪图床如下"></a>二、登陆微博账号，再启动新浪图床如下</h4><p><img src="https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0eg6z69jdj308105374f.jpg" alt="新浪图床启动"></p>
@@ -105,6 +118,24 @@
 ]]></content>
       <tags>
         <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git配置用户名和密码</title>
+    <url>/2022/05/14/git/git-username/</url>
+    <content><![CDATA[<h3 id="1-全局配置"><a href="#1-全局配置" class="headerlink" title="1.全局配置"></a>1.全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-全局配置删除"><a href="#2-全局配置删除" class="headerlink" title="2.全局配置删除"></a>2.全局配置删除</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --global --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-系统配置删除"><a href="#3-系统配置删除" class="headerlink" title="3.系统配置删除"></a>3.系统配置删除</h3><p>系统配置会影响系统上所有用户的所有 Git 仓库，操作时需谨慎。删除系统配置的用户和邮箱信息，使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --system --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-查看全局配置"><a href="#4-查看全局配置" class="headerlink" title="4.查看全局配置"></a>4.查看全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-查看系统配置"><a href="#5-查看系统配置" class="headerlink" title="5.查看系统配置"></a>5.查看系统配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --list</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -242,15 +273,6 @@
       </tags>
   </entry>
   <entry>
-    <title>docker安装mysql</title>
-    <url>/2022/07/15/database/docker%E5%AE%89%E8%A3%85mysql/</url>
-    <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> docker run -d -p 3306:3306 \</span><br><span class="line">--privileged=<span class="literal">true</span> \</span><br><span class="line">-v /opt/mysql/conf:/etc/mysql/conf.d \</span><br><span class="line">-v /opt/mysql/data:/var/lib/mysql \</span><br><span class="line">-v /opt/mysql/log:/var/log/mysql \</span><br><span class="line">-e MYSQL_ROOT_PASSWORD=123456 \</span><br><span class="line">--name mysql01 mysql:5.7 \</span><br><span class="line">--character-set-server=utf8mb4 \</span><br><span class="line">--collation-server=utf8mb4_unicode_ci</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>docker</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>docker学习大纲</title>
     <url>/2022/06/28/database/docker%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2/</url>
     <content><![CDATA[<h3 id="Docker-network-（容器网络）"><a href="#Docker-network-（容器网络）" class="headerlink" title="Docker network （容器网络）"></a>Docker network （容器网络）</h3><h3 id="Docker-compose（容器编排）"><a href="#Docker-compose（容器编排）" class="headerlink" title="Docker compose（容器编排）"></a>Docker compose（容器编排）</h3><h3 id="Docker-Swarm（集群）"><a href="#Docker-Swarm（集群）" class="headerlink" title="Docker Swarm（集群）"></a>Docker Swarm（集群）</h3><h3 id="CI-CD-jenkins-流水线"><a href="#CI-CD-jenkins-流水线" class="headerlink" title="CI&#x2F;CD jenkins (流水线)"></a>CI&#x2F;CD jenkins (流水线)</h3><h3 id="ansible-自动化工具，部署"><a href="#ansible-自动化工具，部署" class="headerlink" title="ansible (自动化工具，部署)"></a><a href="http://ansible.com.cn/docs">ansible</a> (自动化工具，部署)</h3>]]></content>
@@ -362,21 +384,12 @@
       </tags>
   </entry>
   <entry>
-    <title>Kubernetes</title>
-    <url>/2022/07/17/database/kubernetes/</url>
-    <content><![CDATA[<h1 id="Kubernetes-镜像"><a href="#Kubernetes-镜像" class="headerlink" title="Kubernetes 镜像"></a>Kubernetes 镜像</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Kubernetes 是一个开源系统，用于容器化应用的自动部署、扩缩和管理。它将构成应用的容器按逻辑单位进行分组以便于管理和发现。</p>
-<p>下载地址：<a href="https://mirrors.aliyun.com/kubernetes/">https://mirrors.aliyun.com/kubernetes/</a></p>
-<h2 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h2><h3 id="Debian-Ubuntu"><a href="#Debian-Ubuntu" class="headerlink" title="Debian &#x2F; Ubuntu"></a>Debian &#x2F; Ubuntu</h3><figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">apt-<span class="built_in">get</span> <span class="keyword">update</span> &amp;&amp; apt-<span class="built_in">get</span> install -<span class="keyword">y</span> apt-transport-https</span><br><span class="line">curl https://mirrors.aliyun.<span class="keyword">com</span>/kubernetes/apt/doc/apt-key.gpg | apt-key <span class="built_in">add</span> -</span><br><span class="line"><span class="keyword">cat</span> &lt;&lt;EOF &gt;/etc/apt/sources.<span class="keyword">list</span>.d/kubernetes.<span class="keyword">list</span></span><br><span class="line"><span class="keyword">deb</span> https://mirrors.aliyun.<span class="keyword">com</span>/kubernetes/apt/ kubernetes-xenial main</span><br><span class="line">EOF</span><br><span class="line">apt-<span class="built_in">get</span> <span class="keyword">update</span></span><br><span class="line">apt-<span class="built_in">get</span> install -<span class="keyword">y</span> kubelet kubeadm kubectl</span><br></pre></td></tr></table></figure>
-
-<h3 id="CentOS-RHEL-Fedora"><a href="#CentOS-RHEL-Fedora" class="headerlink" title="CentOS &#x2F; RHEL &#x2F; Fedora"></a>CentOS &#x2F; RHEL &#x2F; Fedora</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">cat &lt;&lt;EOF &gt; <span class="regexp">/etc/yum</span>.repos.d/kubernetes.repo</span><br><span class="line">[kubernetes]</span><br><span class="line">name=Kubernetes</span><br><span class="line">baseurl=https:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/kubernetes/yum</span><span class="regexp">/repos/</span>kubernetes-el7-x86_64/</span><br><span class="line">enabled=<span class="number">1</span></span><br><span class="line">gpgcheck=<span class="number">1</span></span><br><span class="line">repo_gpgcheck=<span class="number">1</span></span><br><span class="line">gpgkey=https:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/kubernetes/yum</span><span class="regexp">/doc/yum</span>-key.gpg https:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/kubernetes/yum</span><span class="regexp">/doc/</span>rpm-package-key.gpg</span><br><span class="line">EOF</span><br><span class="line">setenforce <span class="number">0</span></span><br><span class="line">yum install -y kubelet kubeadm kubectl</span><br><span class="line">systemctl enable kubelet &amp;&amp; systemctl start kubelet</span><br></pre></td></tr></table></figure>
-
-<p>ps: 由于官网未开放同步方式, 可能会有索引 gpg 检查失败的情况, 这时请用 <code>yum install -y --nogpgcheck kubelet kubeadm kubectl</code> 安装</p>
-<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ul>
-<li>官方主页：<a href="https://kubernetes.io/">https://kubernetes.io/</a></li>
-</ul>
+    <title>docker安装mysql</title>
+    <url>/2022/07/15/database/docker%E5%AE%89%E8%A3%85mysql/</url>
+    <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> docker run -d -p 3306:3306 \</span><br><span class="line">--privileged=<span class="literal">true</span> \</span><br><span class="line">-v /opt/mysql/conf:/etc/mysql/conf.d \</span><br><span class="line">-v /opt/mysql/data:/var/lib/mysql \</span><br><span class="line">-v /opt/mysql/log:/var/log/mysql \</span><br><span class="line">-e MYSQL_ROOT_PASSWORD=123456 \</span><br><span class="line">--name mysql01 mysql:5.7 \</span><br><span class="line">--character-set-server=utf8mb4 \</span><br><span class="line">--collation-server=utf8mb4_unicode_ci</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
-        <tag>kubernetes</tag>
+        <tag>docker</tag>
       </tags>
   </entry>
   <entry>
@@ -418,6 +431,24 @@
 ]]></content>
       <tags>
         <tag>dokcer</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Kubernetes</title>
+    <url>/2022/07/17/database/kubernetes/</url>
+    <content><![CDATA[<h1 id="Kubernetes-镜像"><a href="#Kubernetes-镜像" class="headerlink" title="Kubernetes 镜像"></a>Kubernetes 镜像</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Kubernetes 是一个开源系统，用于容器化应用的自动部署、扩缩和管理。它将构成应用的容器按逻辑单位进行分组以便于管理和发现。</p>
+<p>下载地址：<a href="https://mirrors.aliyun.com/kubernetes/">https://mirrors.aliyun.com/kubernetes/</a></p>
+<h2 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h2><h3 id="Debian-Ubuntu"><a href="#Debian-Ubuntu" class="headerlink" title="Debian &#x2F; Ubuntu"></a>Debian &#x2F; Ubuntu</h3><figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">apt-<span class="built_in">get</span> <span class="keyword">update</span> &amp;&amp; apt-<span class="built_in">get</span> install -<span class="keyword">y</span> apt-transport-https</span><br><span class="line">curl https://mirrors.aliyun.<span class="keyword">com</span>/kubernetes/apt/doc/apt-key.gpg | apt-key <span class="built_in">add</span> -</span><br><span class="line"><span class="keyword">cat</span> &lt;&lt;EOF &gt;/etc/apt/sources.<span class="keyword">list</span>.d/kubernetes.<span class="keyword">list</span></span><br><span class="line"><span class="keyword">deb</span> https://mirrors.aliyun.<span class="keyword">com</span>/kubernetes/apt/ kubernetes-xenial main</span><br><span class="line">EOF</span><br><span class="line">apt-<span class="built_in">get</span> <span class="keyword">update</span></span><br><span class="line">apt-<span class="built_in">get</span> install -<span class="keyword">y</span> kubelet kubeadm kubectl</span><br></pre></td></tr></table></figure>
+
+<h3 id="CentOS-RHEL-Fedora"><a href="#CentOS-RHEL-Fedora" class="headerlink" title="CentOS &#x2F; RHEL &#x2F; Fedora"></a>CentOS &#x2F; RHEL &#x2F; Fedora</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">cat &lt;&lt;EOF &gt; <span class="regexp">/etc/yum</span>.repos.d/kubernetes.repo</span><br><span class="line">[kubernetes]</span><br><span class="line">name=Kubernetes</span><br><span class="line">baseurl=https:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/kubernetes/yum</span><span class="regexp">/repos/</span>kubernetes-el7-x86_64/</span><br><span class="line">enabled=<span class="number">1</span></span><br><span class="line">gpgcheck=<span class="number">1</span></span><br><span class="line">repo_gpgcheck=<span class="number">1</span></span><br><span class="line">gpgkey=https:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/kubernetes/yum</span><span class="regexp">/doc/yum</span>-key.gpg https:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/kubernetes/yum</span><span class="regexp">/doc/</span>rpm-package-key.gpg</span><br><span class="line">EOF</span><br><span class="line">setenforce <span class="number">0</span></span><br><span class="line">yum install -y kubelet kubeadm kubectl</span><br><span class="line">systemctl enable kubelet &amp;&amp; systemctl start kubelet</span><br></pre></td></tr></table></figure>
+
+<p>ps: 由于官网未开放同步方式, 可能会有索引 gpg 检查失败的情况, 这时请用 <code>yum install -y --nogpgcheck kubelet kubeadm kubectl</code> 安装</p>
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ul>
+<li>官方主页：<a href="https://kubernetes.io/">https://kubernetes.io/</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>kubernetes</tag>
       </tags>
   </entry>
   <entry>
@@ -533,37 +564,6 @@
       </tags>
   </entry>
   <entry>
-    <title>git配置SSH密钥</title>
-    <url>/2025/01/31/git/git-rsa/</url>
-    <content><![CDATA[<h3 id="1-生成新的-SSH-密钥"><a href="#1-生成新的-SSH-密钥" class="headerlink" title="1.生成新的 SSH 密钥"></a>1.生成新的 SSH 密钥</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-测试-SSH-连接"><a href="#2-测试-SSH-连接" class="headerlink" title="2.测试 SSH 连接"></a>2.测试 SSH 连接</h3><p> 将 <code>your_email@example.com</code> 替换为你在 Git 服务提供商（如 GitHub）上注册的邮箱地址。</p>
-<p>执行命令后，会提示你选择密钥的保存位置和设置密码（密码可以为空）。一般情况下，直接按回车键使用默认设置即可。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git配置用户名和密码</title>
-    <url>/2022/05/14/git/git-username/</url>
-    <content><![CDATA[<h3 id="1-全局配置"><a href="#1-全局配置" class="headerlink" title="1.全局配置"></a>1.全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-全局配置删除"><a href="#2-全局配置删除" class="headerlink" title="2.全局配置删除"></a>2.全局配置删除</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --global --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-系统配置删除"><a href="#3-系统配置删除" class="headerlink" title="3.系统配置删除"></a>3.系统配置删除</h3><p>系统配置会影响系统上所有用户的所有 Git 仓库，操作时需谨慎。删除系统配置的用户和邮箱信息，使用以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --system --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-查看全局配置"><a href="#4-查看全局配置" class="headerlink" title="4.查看全局配置"></a>4.查看全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-查看系统配置"><a href="#5-查看系统配置" class="headerlink" title="5.查看系统配置"></a>5.查看系统配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --list</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>idea快捷键</title>
     <url>/2022/07/11/idea/idea-shortcut-key/</url>
     <content><![CDATA[<h2 id="常用快捷键-1"><a href="#常用快捷键-1" class="headerlink" title="常用快捷键 1"></a><a href="https://zhuanlan.zhihu.com/p/410613271">常用快捷键 1</a></h2><h2 id="常用快捷键-2"><a href="#常用快捷键-2" class="headerlink" title="常用快捷键 2"></a><a href="https://blog.csdn.net/weixin_45395059/article/details/125591122">常用快捷键 2</a></h2><ul>
@@ -610,20 +610,6 @@
       </tags>
   </entry>
   <entry>
-    <title>idea配置</title>
-    <url>/2025/04/16/idea/idea%E4%BB%A3%E7%A0%81%E7%83%AD%E9%83%A8%E7%BD%B2%E4%B8%8E%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/</url>
-    <content><![CDATA[<ol>
-<li><p><a href="https://blog.csdn.net/qq_36268452/article/details/139185162">idea springboot修改完java代码自动重启</a></p>
-</li>
-<li><p><a href="https://blog.csdn.net/qq_36268452/article/details/139185162">如何让社区版IDEA变得好用_idea社区版-CSDN博客</a></p>
-</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>IntelliJ IDEA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>jdbc连接数据库SSL</title>
     <url>/2022/07/17/java/jdbc-SSL/</url>
     <content><![CDATA[<h4 id="在-Java8-及高版本以上的版本在调用-ssl-时会出现javax-net-ssl-SSLHandshakeException-No-appropriate-protocol的异常。"><a href="#在-Java8-及高版本以上的版本在调用-ssl-时会出现javax-net-ssl-SSLHandshakeException-No-appropriate-protocol的异常。" class="headerlink" title="在 Java8 及高版本以上的版本在调用 ssl 时会出现javax.net.ssl.SSLHandshakeException: No appropriate protocol的异常。"></a>在 Java8 及高版本以上的版本在调用 ssl 时会出现<code>javax.net.ssl.SSLHandshakeException: No appropriate protocol</code>的异常。</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">javax.net.ssl.SSLHandshakeException: No appropriate <span class="title function_">protocol</span> <span class="params">(protocol is disabled or cipher suites are inappropriate)</span></span><br><span class="line">	at sun.security.ssl.HandshakeContext.&lt;init&gt;(HandshakeContext.java:<span class="number">171</span>) ~[na:<span class="number">1.8</span><span class="number">.0_292</span>]</span><br><span class="line">	at sun.security.ssl.ClientHandshakeContext.&lt;init&gt;(ClientHandshakeContext.java:<span class="number">98</span>) ~[na:<span class="number">1.8</span><span class="number">.0_292</span>]</span><br><span class="line">	at sun.security.ssl.TransportContext.kickstart(TransportContext.java:<span class="number">220</span>) ~[na:<span class="number">1.8</span><span class="number">.0_292</span>]</span><br><span class="line">	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:<span class="number">428</span>) ~[na:<span class="number">1.8</span><span class="number">.0_292</span>]</span><br><span class="line">	at com.mysql.cj.protocol.ExportControlled.performTlsHandshake(ExportControlled.java:<span class="number">316</span>) ~[mysql-connector-java-<span class="number">8.0</span><span class="number">.17</span>.jar:<span class="number">8.0</span><span class="number">.17</span>]</span><br><span class="line">	at com.mysql.cj.protocol.StandardSocketFactory.performTlsHandshake(StandardSocketFactory.java:<span class="number">188</span>) ~[mysql-connector-java-<span class="number">8.0</span><span class="number">.17</span>.jar:<span class="number">8.0</span><span class="number">.17</span>]</span><br><span class="line">	at com.mysql.cj.protocol.a.NativeSocketConnection.performTlsHandshake(NativeSocketConnection.java:<span class="number">99</span>) ~[mysql-connector-java-<span class="number">8.0</span><span class="number">.17</span>.jar:<span class="number">8.0</span><span class="number">.17</span>]</span><br><span class="line">	at com.mysql.cj.protocol.a.NativeProtocol.negotiateSSLConnection(NativeProtocol.java:<span class="number">331</span>) ~[mysql-connector-java-<span class="number">8.0</span><span class="number">.17</span>.jar:<span class="number">8.0</span><span class="number">.17</span>]</span><br><span class="line">	... <span class="number">68</span> common frames omitted</span><br></pre></td></tr></table></figure>
@@ -647,6 +633,20 @@
 ]]></content>
       <tags>
         <tag>jdbc</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>idea配置</title>
+    <url>/2025/04/16/idea/idea%E4%BB%A3%E7%A0%81%E7%83%AD%E9%83%A8%E7%BD%B2%E4%B8%8E%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/</url>
+    <content><![CDATA[<ol>
+<li><p><a href="https://blog.csdn.net/qq_36268452/article/details/139185162">idea springboot修改完java代码自动重启</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/qq_36268452/article/details/139185162">如何让社区版IDEA变得好用_idea社区版-CSDN博客</a></p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>IntelliJ IDEA</tag>
       </tags>
   </entry>
   <entry>
