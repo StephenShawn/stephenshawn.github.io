@@ -88,7 +88,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">30</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">15</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -153,13 +153,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">24</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -208,336 +208,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.shawnyoung.top/2023/09/25/java/java-spider/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ShawnYoung">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ShawnYoung's Blog">
-      <meta itemprop="description" content="陌上花开">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ShawnYoung's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/09/25/java/java-spider/" class="post-title-link" itemprop="url">Java爬虫</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-09-25 22:28:18" itemprop="dateCreated datePublished" datetime="2023-09-25T22:28:18+08:00">2023-09-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-03-21 18:42:20" itemprop="dateModified" datetime="2025-03-21T18:42:20+08:00">2025-03-21</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    <a title="Java爬虫" href="/2023/09/25/java/java-spider/#SOHUCS" itemprop="discussionUrl">
-      <span id="sourceId::109fd5afea7699caddc8e1ec237b5e45" class="cy_cmt_count" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>4.5k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>4 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Java 编写的开源 Web 爬虫</p>
-<ol>
-<li>Apache Nutch<br>实现语言： Java<br>GitHub 星标数： 1743<br>官方支持链接</li>
-</ol>
-<p>简介：</p>
-<p>Apache Nutch 是一种高度可扩展、可伸缩的开源 Web 爬虫软件项目。<br>如果要列出最好的开源 Web 爬虫列表，Apache Nutch 无疑金榜题名。<br>作为一种用于数据挖掘的高度可扩展、可伸缩的开源代码 Web 数据抽取软件项目，Apache Nutch 得到了广泛的使用。<br>Nutch 支持单机运行，但是在 Hadoop 集群上运行可最大化地发挥其强大能力。<br>全球范围内很多数据分析人员和科研人员、应用开发人员和 Web 文本挖掘工程师都在使用 Apache Nutch。<br>Apache Nutch 是一种 Java 编写的跨平台解决方案。<br>特性：</p>
-<p>默认情况下，爬取数据和分析数据是独立的过程。<br>广泛支持多种文档格式，包括纯文本、HTML&#x2F;XHTML+XML、XML、PDF、ZIP 等。<br>使用 XPath 和命名空间实现映射。<br>通过 Hadoop 支持分布式文件系统。<br>链接图形式的数据库。<br>支持 NTLM 认证。<br>– 官方文档： <a target="_blank" rel="noopener" href="https://wiki.apache.org/nutch/">https://wiki.apache.org/nutch/</a></p>
-<p>– 官方网站： <a target="_blank" rel="noopener" href="http://nutch.apache.org/">http://nutch.apache.org/</a></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/09/25/java/java-spider/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.shawnyoung.top/2023/09/25/others/%E8%B5%84%E8%AE%AF%E3%80%81%E5%8D%9A%E5%AE%A2%E8%AE%A2%E9%98%85/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ShawnYoung">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ShawnYoung's Blog">
-      <meta itemprop="description" content="陌上花开">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ShawnYoung's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/09/25/others/%E8%B5%84%E8%AE%AF%E3%80%81%E5%8D%9A%E5%AE%A2%E8%AE%A2%E9%98%85/" class="post-title-link" itemprop="url">资讯、多媒体订阅</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-09-25 22:28:18" itemprop="dateCreated datePublished" datetime="2023-09-25T22:28:18+08:00">2023-09-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-03-21 18:43:26" itemprop="dateModified" datetime="2025-03-21T18:43:26+08:00">2025-03-21</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    <a title="资讯、多媒体订阅" href="/2023/09/25/others/%E8%B5%84%E8%AE%AF%E3%80%81%E5%8D%9A%E5%AE%A2%E8%AE%A2%E9%98%85/#SOHUCS" itemprop="discussionUrl">
-      <span id="sourceId::f29800f9ad14ae2e8ee8a551b09a4972" class="cy_cmt_count" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>39</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="消息-资讯-订阅"><a href="#消息-资讯-订阅" class="headerlink" title="消息|资讯 订阅"></a>消息|资讯 订阅</h3><p><a target="_blank" rel="noopener" href="https://sspai.com/post/57498">Tiny Tiny RSS 部署</a></p>
-<hr>
-<h3 id="多媒体-播客订阅服务"><a href="#多媒体-播客订阅服务" class="headerlink" title="多媒体 播客订阅服务"></a>多媒体 播客订阅服务</h3><p><a target="_blank" rel="noopener" href="https://sspai.com/post/63610">Airsonic 部署</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.shawnyoung.top/2022/09/16/database/Mysql%E4%B8%8EMariaDB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ShawnYoung">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ShawnYoung's Blog">
-      <meta itemprop="description" content="陌上花开">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ShawnYoung's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/16/database/Mysql%E4%B8%8EMariaDB/" class="post-title-link" itemprop="url">Mysql与MariaDB</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-09-16 20:22:46" itemprop="dateCreated datePublished" datetime="2022-09-16T20:22:46+08:00">2022-09-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-03-21 18:37:46" itemprop="dateModified" datetime="2025-03-21T18:37:46+08:00">2025-03-21</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    <a title="Mysql与MariaDB" href="/2022/09/16/database/Mysql%E4%B8%8EMariaDB/#SOHUCS" itemprop="discussionUrl">
-      <span id="sourceId::4bef0fe1e38f38f3e46510646bce3726" class="cy_cmt_count" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>17</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="MariaDB-和-MySQL-全面对比"><a href="#MariaDB-和-MySQL-全面对比" class="headerlink" title="MariaDB 和 MySQL 全面对比"></a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/43993816">MariaDB 和 MySQL 全面对比</a></h1>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://blog.shawnyoung.top/2022/09/12/database/rockylinux-install/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -556,7 +226,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/12/database/rockylinux-install/" class="post-title-link" itemprop="url">rockylinux install</a>
+          <a href="/2022/09/12/database/rockylinux-install/" class="post-title-link" itemprop="url">rockylinux8软件源镜像配置</a>
         </h2>
 
         <div class="post-meta-container">
@@ -574,7 +244,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-04-09 12:10:43" itemprop="dateModified" datetime="2025-04-09T12:10:43+08:00">2025-04-09</time>
+      <time title="修改时间：2025-04-24 12:14:56" itemprop="dateModified" datetime="2025-04-24T12:14:56+08:00">2025-04-24</time>
     </span>
 
   
@@ -586,7 +256,7 @@
       </span>
       <span class="post-meta-item-text">Changyan：</span>
     
-    <a title="rockylinux install" href="/2022/09/12/database/rockylinux-install/#SOHUCS" itemprop="discussionUrl">
+    <a title="rockylinux8软件源镜像配置" href="/2022/09/12/database/rockylinux-install/#SOHUCS" itemprop="discussionUrl">
       <span id="sourceId::57d347553a47c7c0dc7775f91d817e81" class="cy_cmt_count" itemprop="commentCount"></span>
     </a>
   </span>
@@ -627,232 +297,6 @@
 <li><a target="_blank" rel="noopener" href="https://blog.51cto.com/andyxu/2137046">firewalld</a></li>
 </ul>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.shawnyoung.top/2022/09/11/js/TS/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ShawnYoung">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ShawnYoung's Blog">
-      <meta itemprop="description" content="陌上花开">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ShawnYoung's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/11/js/TS/" class="post-title-link" itemprop="url">TS的!和?用法</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-09-11 22:42:46" itemprop="dateCreated datePublished" datetime="2022-09-11T22:42:46+08:00">2022-09-11</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-03-21 18:42:42" itemprop="dateModified" datetime="2025-03-21T18:42:42+08:00">2025-03-21</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    <a title="TS的!和?用法" href="/2022/09/11/js/TS/#SOHUCS" itemprop="discussionUrl">
-      <span id="sourceId::fa14549f8494e1eb3d36cc9affb599b4" class="cy_cmt_count" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.4k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="用法"><a href="#用法" class="headerlink" title="!用法"></a>!用法</h2><ul>
-<li><p>用在变量前表示取反</p>
-</li>
-<li><p>用在赋值的内容后时，使 null 和 undefined 类型可以赋值给其他类型并通过编译，表示该变量值可空</p>
-</li>
-</ul>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">y</span>: <span class="built_in">number</span>;</span><br><span class="line"></span><br><span class="line">y = <span class="literal">null</span>; <span class="comment">// 无法通过编译</span></span><br><span class="line">y = <span class="literal">undefined</span>; <span class="comment">// 无法通过编译</span></span><br><span class="line"></span><br><span class="line">y = <span class="literal">null</span>!;</span><br><span class="line">y = <span class="literal">undefined</span>!;</span><br><span class="line"><span class="comment">// 由于x是可选的，因此parma.x的类型为number | undefined，无法传递给number类型的y，因此需要用x!</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">IDemo</span> &#123;</span><br><span class="line">  <span class="attr">x</span>?: <span class="built_in">number</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">y</span>: <span class="built_in">number</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">demo</span> = (<span class="params"><span class="attr">parma</span>: <span class="title class_">IDemo</span></span>) =&gt; &#123;</span><br><span class="line">  y = parma.<span class="property">x</span>!;</span><br><span class="line">  <span class="keyword">return</span> y;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>如果存在空情况的判断并赋具体值时，可以不用!，但是如果要想令 y 存在等于 undefined 的情况还是需要用!</li>
-</ul>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">IDemo</span> &#123;</span><br><span class="line">  <span class="attr">x</span>?: <span class="built_in">number</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">y</span>: <span class="built_in">number</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">demo</span> = (<span class="params"><span class="attr">parma</span>: <span class="title class_">IDemo</span></span>) =&gt; &#123;</span><br><span class="line">  y = parma.<span class="property">x</span> || <span class="number">1</span>; <span class="comment">// 如果为undefined，返回y=1，如果不为undefined，则返回parma.x的值</span></span><br><span class="line">  <span class="keyword">return</span> y;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="用法-1"><a href="#用法-1" class="headerlink" title="?用法"></a>?用法</h2><ul>
-<li>除了表示可选参数外，常用于防御性编程</li>
-</ul>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a = <span class="title function_">fetch</span>(...) || &#123;&#125;		<span class="comment">// 假设a是从后端拿到的一个对象类型数据</span></span><br><span class="line"><span class="keyword">const</span> unsafeData = a.<span class="property">b</span>.<span class="property">c</span>		<span class="comment">// 这样写时不安全的，无法确保b是否有值，如果为空则b.c会进行报错</span></span><br><span class="line"><span class="keyword">const</span> safeData = a?.<span class="property">b</span>?.<span class="property">c</span>		<span class="comment">// 实际上就是相当于 const safeData = a &amp;&amp; a.b &amp;&amp; a.b.c</span></span><br><span class="line">当使用A对象属性A.<span class="property">B</span>时，如果无法确定A是否为空，则需要用A?.<span class="property">B</span>，表示当A有值的时候才去访问B属性，没有值的时候就不去访问，如果不使用?则会报错</span><br><span class="line"></span><br><span class="line"><span class="comment">// 由于函数参数可选，因此parma无法确定是否拥有，所以无法正常使用parma.x，使用parma?.x向编译器假设此时parma不为空且为IDemo类型，同时parma?.x无法保证非空，因此使用parma?.x!来保证了整体通过编译</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">IDemo</span> &#123;</span><br><span class="line"><span class="attr">x</span>: <span class="built_in">number</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">y</span>:<span class="built_in">number</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">demo</span> = (<span class="params"><span class="attr">parma</span>?: <span class="title class_">IDemo</span></span>) =&gt; &#123;</span><br><span class="line">y = parma?.<span class="property">x</span>!</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(parma?.<span class="property">x</span>)	<span class="comment">// 只是单纯调用属性时就无需!</span></span><br><span class="line"><span class="keyword">return</span> y</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果使用y = parma!.x!是会报错的，因为当parma为空时，是不拥有x属性的，会报找不到x的错误</span></span><br><span class="line">但是?用法只能读操作而不能写操作，对一个可能为空的属性赋值是不会被编译通过的，此时还需用用到类型断言</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">IDemo</span> &#123;</span><br><span class="line"><span class="attr">x</span>: <span class="built_in">number</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 编译报错，不能赋值给可选属性</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">demo</span> = (<span class="params"><span class="attr">parma</span>?: <span class="title class_">IDemo</span></span>) =&gt; &#123;</span><br><span class="line">parma?.<span class="property">x</span> = <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用类型断言</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">demo_</span> = (<span class="params"><span class="attr">parma</span>?: <span class="title class_">IDemo</span></span>) =&gt; &#123;</span><br><span class="line"><span class="keyword">let</span> _parma = parma <span class="keyword">as</span> <span class="title class_">IDemo</span></span><br><span class="line">_parma.<span class="property">x</span> = <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.shawnyoung.top/2022/08/14/js/js/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ShawnYoung">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ShawnYoung's Blog">
-      <meta itemprop="description" content="陌上花开">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ShawnYoung's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/08/14/js/js/" class="post-title-link" itemprop="url">js模块化</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-08-14 16:02:32" itemprop="dateCreated datePublished" datetime="2022-08-14T16:02:32+08:00">2022-08-14</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-03-21 18:42:37" itemprop="dateModified" datetime="2025-03-21T18:42:37+08:00">2025-03-21</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    <a title="js模块化" href="/2022/08/14/js/js/#SOHUCS" itemprop="discussionUrl">
-      <span id="sourceId::018e824bfadfea7944ee965d4451a621" class="cy_cmt_count" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>11</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="CommonJS"><a href="#CommonJS" class="headerlink" title="CommonJS"></a>CommonJS</h2><h2 id="ESM"><a href="#ESM" class="headerlink" title="ESM"></a>ESM</h2>
       
     </div>
 
@@ -1150,7 +594,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-03-21 18:36:50" itemprop="dateModified" datetime="2025-03-21T18:36:50+08:00">2025-03-21</time>
+      <time title="修改时间：2025-04-24 12:23:19" itemprop="dateModified" datetime="2025-04-24T12:23:19+08:00">2025-04-24</time>
     </span>
 
   
@@ -1255,7 +699,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-03-21 18:36:50" itemprop="dateModified" datetime="2025-03-21T18:36:50+08:00">2025-03-21</time>
+      <time title="修改时间：2025-04-24 12:23:06" itemprop="dateModified" datetime="2025-04-24T12:23:06+08:00">2025-04-24</time>
     </span>
 
   
@@ -1366,8 +810,760 @@
 
 
 
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.shawnyoung.top/2022/07/14/database/MysqlSQL/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ShawnYoung">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ShawnYoung's Blog">
+      <meta itemprop="description" content="陌上花开">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ShawnYoung's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/07/14/database/MysqlSQL/" class="post-title-link" itemprop="url">数据库SQL语言</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-07-14 08:39:00" itemprop="dateCreated datePublished" datetime="2022-07-14T08:39:00+08:00">2022-07-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-04-24 12:19:55" itemprop="dateModified" datetime="2025-04-24T12:19:55+08:00">2025-04-24</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    <a title="数据库SQL语言" href="/2022/07/14/database/MysqlSQL/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::ff12d9d7f8c11f71554ef5017fc4dbb7" class="cy_cmt_count" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <ol>
+<li>DDL (Data Definition Language): 数据定义语言</li>
+<li>DML (Data Manipulation Language)：数据操作语言</li>
+<li>DCL (Data Control Language): 数据控制语言</li>
+<li>DQL (Data Query Language): 数据查询语言</li>
+</ol>
+<ul>
+<li>ddl：数据库或表的结构操作(****)</li>
+<li>dml：对表的记录进行更新(增、删、改)(****)</li>
+<li>dql：对表的记录的查询(****，难点)</li>
+<li>dcl：对用户的创建及授权(****)</li>
+</ul>
+<h3 id="DDL"><a href="#DDL" class="headerlink" title="DDL"></a>DDL</h3><h4 id="一、数据库"><a href="#一、数据库" class="headerlink" title="一、数据库"></a>一、数据库</h4><ul>
+<li><p>查看所有数据库：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SHOW</span> DATABASES</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>切换数据库：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">USE DATABASENAME</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建数据库：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> DATABASE IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> MYDB CHARSET<span class="operator">=</span>utf8</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改数据库：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">AlTER</span> DATABASE MYDB CHARSET <span class="keyword">SET</span> utf8</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> database MYDB</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><ul>
+<li>int：整型;</li>
+<li>double ：浮点型，例如 double(5,2)表示最多 5 位，其中必须有 2 位小数，即最大值为 999.99；</li>
+<li>decimal：浮点型 ，在表单钱方面使用该类型，因为不会出现精度缺失问题；</li>
+<li>char：固定长度字符串类型，char(255);</li>
+<li>varchar: 可变字符串类型：varchar(65535);</li>
+<li>text(clob):字符串类型；</li>
+</ul>
+<ol>
+<li>tinytext 2^8-1 Byte</li>
+<li>text 2^16-1 Byte</li>
+<li>mediumtext 2^24-1 Byte</li>
+<li>longtext 2^34-1 Byte</li>
+</ol>
+<ul>
+<li>blob ：字节类型；</li>
+</ul>
+<ol>
+<li>tinyblob 2^8-1 Byte</li>
+<li>blob 2^16-1 Byte</li>
+<li>mediumblob 2^24-1 Byte</li>
+<li>longblob 2^34-1 Byte</li>
+</ol>
+<ul>
+<li>date：日期类型，格式为：yyyy-MM-dd;</li>
+<li>time: 时间类型 格式为：hh:mm:ss</li>
+<li>timestamp: 时间戳类型；</li>
+</ul>
+<h4 id="二、表"><a href="#二、表" class="headerlink" title="二、表"></a>二、表</h4><ul>
+<li>创建表：</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE TABLE</span> [IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span>] TABLENAME (cloumn01 type01,cloumn02 type02,cloumn03 type03);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看当前数据库中所有表名称：SHOW TABLES;</li>
+<li>查看指定表的创建语句：SHOW CREATE TABLE 表名(了解)；</li>
+<li>查看表结构：DESC 表名;</li>
+<li>删除表结构：DROP TABLE 表名;</li>
+<li>修改表：前缀：ALTER TABLE 表名;</li>
+</ul>
+<ol>
+<li>修改之添加列：<br>AlTER TABLE 表名 ADD （<br>列名 列类型，<br>列名 列类型，<br>…<br>）</li>
+<li>修改列类型（如果被修改的列已存在数据，那么新的列类型可能会影响到已存在数据）：ALTER TABLE 表名 MODIFY 列名 列类型</li>
+<li>修改列名：ALTER TABLE 表名 CHANGE 原列名 新列名 新类型</li>
+<li>删除列：ALTER TABLE 表名 DROP 列名</li>
+<li>修改表名称：ALTER TABLE 原表名 RENAME TO 新表名</li>
+</ol>
+<h3 id="DML"><a href="#DML" class="headerlink" title="DML"></a>DML</h3><ul>
+<li>添加表记录</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT INTO</span> tableName (c1,c2,c3)<span class="keyword">values</span>(v1,v2,v3);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>修改表记录</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> tableName <span class="keyword">set</span> c1 <span class="operator">=</span> v1,c2 <span class="operator">=</span> v2;</span><br><span class="line"><span class="keyword">update</span> tableName <span class="keyword">set</span> c1 <span class="operator">=</span> v1,c2 <span class="operator">=</span> v2 <span class="keyword">where</span> c3 <span class="operator">=</span> v3 <span class="keyword">or</span> c4 <span class="operator">=</span> v4;</span><br><span class="line"><span class="keyword">delete</span> <span class="operator">*</span> <span class="keyword">from</span> stu <span class="keyword">where</span> gender <span class="keyword">is</span> <span class="keyword">null</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="DCL"><a href="#DCL" class="headerlink" title="DCL"></a>DCL</h3><ul>
+<li>一个项目创建一个用户！一个项目对应的数据库只有一个！</li>
+<li>这个用户只能对这个数据库有权限，其他数据库不能操作</li>
+</ul>
+<ol>
+<li>创建用户</li>
+</ol>
+<ul>
+<li>在指定的 IP 地址上登录</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> username<span class="variable">@IP</span> IDENTIFIED <span class="keyword">BY</span> <span class="string">&#x27;password&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在任意的 IP 地址上登录</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> username@<span class="string">&#x27;%&#x27;</span> IDENTIFIED <span class="keyword">BY</span> <span class="string">&#x27;password&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>给用户授权</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 部分权限授权</span></span><br><span class="line"> <span class="keyword">GRANT</span> <span class="keyword">CREATE</span>,<span class="keyword">ALTER</span>,<span class="keyword">DROP</span>,<span class="keyword">INSERT</span>,<span class="keyword">UPDATE</span>,<span class="keyword">DELETE</span>,<span class="keyword">SELECT</span> <span class="keyword">ON</span> mydb.<span class="operator">*</span> <span class="keyword">TO</span> shawn<span class="variable">@IP</span></span><br><span class="line"><span class="comment">-- 所有权限授权</span></span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">ALL</span> <span class="keyword">ON</span> mydb.<span class="operator">*</span> <span class="keyword">TO</span> username<span class="variable">@IP</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>撤销授权</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">REVOKE</span> <span class="keyword">CREATE</span>,<span class="keyword">ALTER</span>,<span class="keyword">DROP</span>,<span class="keyword">UPDATE</span>,<span class="keyword">DELETE</span> <span class="keyword">ON</span> mydb.<span class="operator">*</span> <span class="keyword">FROM</span> username<span class="variable">@IP</span></span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>查看权限</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SHOW</span> GRANTS <span class="keyword">FOR</span> username<span class="variable">@IP</span></span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>删除用户</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">USER</span> username<span class="variable">@IP</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="DQL"><a href="#DQL" class="headerlink" title="DQL"></a>DQL</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM tableName;</span><br></pre></td></tr></table></figure>
+
+<h3 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">IFNUll(c1,v1);</span><br><span class="line">DATE_FORMAT(&quot;yyyy-MM-dd&quot;,&#x27;%Y-%m-%d&#x27;);</span><br><span class="line">CONCAT(v1,v2,v3);</span><br><span class="line">distinct;</span><br><span class="line">-- &#x27;_&#x27;匹配一个字符</span><br><span class="line">-- &#x27;%&#x27;匹配零个到N个字符</span><br><span class="line">like &#x27;_%&#x27;;</span><br><span class="line">-- （当前页-1）* 每页记录数</span><br><span class="line">limit (17-1)*8,8</span><br></pre></td></tr></table></figure>
+
+<h4 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h4><h4 id="联合查询"><a href="#联合查询" class="headerlink" title="联合查询"></a>联合查询</h4><h4 id="聚合函数-1"><a href="#聚合函数-1" class="headerlink" title="聚合函数"></a>聚合函数</h4>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.shawnyoung.top/2022/07/11/idea/idea-shortcut-key/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ShawnYoung">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ShawnYoung's Blog">
+      <meta itemprop="description" content="陌上花开">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ShawnYoung's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/07/11/idea/idea-shortcut-key/" class="post-title-link" itemprop="url">idea快捷键</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-07-11 20:35:02" itemprop="dateCreated datePublished" datetime="2022-07-11T20:35:02+08:00">2022-07-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-03-21 18:42:07" itemprop="dateModified" datetime="2025-03-21T18:42:07+08:00">2025-03-21</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    <a title="idea快捷键" href="/2022/07/11/idea/idea-shortcut-key/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::8d096385fc679e65ff66112d3826cc6e" class="cy_cmt_count" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>553</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="常用快捷键-1"><a href="#常用快捷键-1" class="headerlink" title="常用快捷键 1"></a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/410613271">常用快捷键 1</a></h2><h2 id="常用快捷键-2"><a href="#常用快捷键-2" class="headerlink" title="常用快捷键 2"></a><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45395059/article/details/125591122">常用快捷键 2</a></h2><ul>
+<li>ctrl + alt + o 代码优化(自动删除多余的包与变量)</li>
+<li>Alt + F12 打开 terminal(终端)</li>
+<li>ctrl+shift+(+&#x2F;-) 展开全部折叠全部</li>
+<li>ctrl+（+&#x2F;-） 展开折叠当前方法</li>
+<li>shift + f6 重命名(重构)</li>
+<li>ctrl + alt + l 代码格式化</li>
+<li>alt + insert 创建内容</li>
+<li>psvm main 方法</li>
+<li>sout 输出语句</li>
+<li>Ctrl + d 复制一行</li>
+<li>Ctrl + y 删除一行</li>
+<li>Ctrl + Shift + Up&#x2F;Down 代码向上&#x2F;下移动</li>
+<li>Ctrl + n 搜索类</li>
+<li>alt + insert 生成代码</li>
+<li>alt + Enter 导包，生成变量</li>
+<li>Ctrl + &#x2F; 或 Ctrl + Shift+ &#x2F; 单行注释或多行注释</li>
+<li>fori 回车即可 for 循环</li>
+<li>ctrl + alt + t 代码包围 try-catch,if,while 等</li>
+<li>ctrl + alt + -&gt; 向后 ctrl + alt + &lt;- 向前</li>
+<li>显示代码结构：alt + 7</li>
+<li>显示导航栏：alt + 1</li>
+<li>撤销 ctrl + Z</li>
+<li>REDO 操作 ctrl + shif + z</li>
+<li>Tab 缩进 shift+Tab 撤销缩进</li>
+<li>Ctrl + u 选择行</li>
+<li>alt + f8 查看变量值</li>
+<li>ctrl + alt +B 查找接口实现类</li>
+<li>ctrl + h 查看类或接口的继承关系</li>
+<li>ctrl + o 覆写方法</li>
+</ul>
+<h3 id="替换"><a href="#替换" class="headerlink" title="替换"></a>替换</h3><ul>
+<li>ctrl + r 替换</li>
+<li>ctrl + shift + r 路径中替换</li>
+</ul>
+<h2 id="调试debug"><a href="#调试debug" class="headerlink" title="调试debug"></a>调试<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_37154839/article/details/107617122">debug</a></h2><ul>
+<li>F9 调试</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.shawnyoung.top/2022/06/28/database/%E5%AE%B9%E5%99%A8%E6%95%B0%E6%8D%AE%E5%8D%B7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ShawnYoung">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ShawnYoung's Blog">
+      <meta itemprop="description" content="陌上花开">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ShawnYoung's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/06/28/database/%E5%AE%B9%E5%99%A8%E6%95%B0%E6%8D%AE%E5%8D%B7/" class="post-title-link" itemprop="url">容器数据卷</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-06-28 23:11:14" itemprop="dateCreated datePublished" datetime="2022-06-28T23:11:14+08:00">2022-06-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-04-24 12:19:02" itemprop="dateModified" datetime="2025-04-24T12:19:02+08:00">2025-04-24</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    <a title="容器数据卷" href="/2022/06/28/database/%E5%AE%B9%E5%99%A8%E6%95%B0%E6%8D%AE%E5%8D%B7/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::93ca912a36a68a60d8994e7d10588514" class="cy_cmt_count" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>12k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>11 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Docker-容器数据卷"><a href="#Docker-容器数据卷" class="headerlink" title="Docker 容器数据卷"></a>Docker 容器数据卷</h2><p>原理：将容器目录挂载到 Linux 的目录</p>
+<p><strong>容器的持久化和同步操作 ！容器间也是可以数据共享的</strong></p>
+<h2 id="使用数据卷"><a href="#使用数据卷" class="headerlink" title="使用数据卷"></a>使用数据卷</h2><blockquote>
+<p>方式一：直接使用命令来挂载 -v</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -it -v 主机目录：容器内目录</span><br></pre></td></tr></table></figure>
+
+<h5 id="安装-MySQL"><a href="#安装-MySQL" class="headerlink" title="安装 MySQL"></a>安装 MySQL</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 获取镜像</span></span><br><span class="line">[root@localhost ~]# docker pull mysql:5.7</span><br><span class="line"></span><br><span class="line"><span class="comment"># 不挂载数据</span></span><br><span class="line"><span class="comment">## 查看主机是否有msql服务</span></span><br><span class="line">[root@localhost home]# ps -ef |grep mysql</span><br><span class="line">root       13049   12627  0 14:40 pts/5    00:00:00 grep --color=auto mysql</span><br><span class="line"><span class="comment">## 启动mysql容器</span></span><br><span class="line">[root@localhost home]# docker run -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7</span><br><span class="line">95a10c860fd5ab401b7d29f728addff9b99f1f2a6b28286d78d9d78958843a6b</span><br><span class="line"><span class="comment">## 查看msql容器是否运行</span></span><br><span class="line">[root@localhost home]# docker ps</span><br><span class="line">CONTAINER ID   IMAGE       COMMAND                  CREATED         STATUS         PORTS                                                  NAMES</span><br><span class="line">95a10c860fd5   mysql:5.7   <span class="string">&quot;docker-entrypoint.s…&quot;</span>   6 seconds ago   Up 5 seconds   0.0.0.0:3306-&gt;3306/tcp, :::3306-&gt;3306/tcp, 33060/tcp   kind_shannon</span><br><span class="line"><span class="comment">## 进入mysql容器内</span></span><br><span class="line">[root@localhost home]# docker <span class="built_in">exec</span> -it 95a10c860fd5 /bin/bash</span><br><span class="line"><span class="comment">## 登录mysql</span></span><br><span class="line">root@95a10c860fd5:/# mysql -u root -p</span><br><span class="line">Enter password:</span><br><span class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.</span><br><span class="line">Your MySQL connection <span class="built_in">id</span> is 2</span><br><span class="line">Server version: 5.7.36 MySQL Community Server (GPL)</span><br><span class="line"></span><br><span class="line">Copyright (c) 2000, 2021, Oracle and/or its affiliates.</span><br><span class="line"></span><br><span class="line">Oracle is a registered trademark of Oracle Corporation and/or its</span><br><span class="line">affiliates. Other names may be trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line"></span><br><span class="line">Type <span class="string">&#x27;help;&#x27;</span> or <span class="string">&#x27;\h&#x27;</span> <span class="keyword">for</span> <span class="built_in">help</span>. Type <span class="string">&#x27;\c&#x27;</span> to clear the current input statement.</span><br><span class="line"><span class="comment">## 查看数据库有哪些</span></span><br><span class="line">mysql&gt; show databases;</span><br><span class="line">+--------------------+</span><br><span class="line">| Database           |</span><br><span class="line">+--------------------+</span><br><span class="line">| information_schema |</span><br><span class="line">| mysql              |</span><br><span class="line">| performance_schema |</span><br><span class="line">| sys                |</span><br><span class="line">+--------------------+</span><br><span class="line">4 rows <span class="keyword">in</span> <span class="built_in">set</span> (0.00 sec)</span><br><span class="line"><span class="comment">## 创建数据库</span></span><br><span class="line">mysql&gt; create database db01;</span><br><span class="line">Query OK, 1 row affected (0.00 sec)</span><br><span class="line"><span class="comment">## 使用数据库</span></span><br><span class="line">mysql&gt; use db01</span><br><span class="line">Database changed</span><br><span class="line"><span class="comment">## 创建表student</span></span><br><span class="line">mysql&gt; create table student(<span class="built_in">id</span> int,name varchar(20));</span><br><span class="line">Query OK, 0 rows affected (0.01 sec)</span><br><span class="line"><span class="comment">## 向student表插入数据</span></span><br><span class="line">mysql&gt; insert into student values(1,<span class="string">&#x27;z3&#x27;</span>);</span><br><span class="line">Query OK, 1 row affected (0.04 sec)</span><br><span class="line"><span class="comment">## 查询student表所有数据</span></span><br><span class="line">mysql&gt; <span class="keyword">select</span> * from student ;</span><br><span class="line">+------+------+</span><br><span class="line">| <span class="built_in">id</span>   | name |</span><br><span class="line">+------+------+</span><br><span class="line">|    1 | z3   |</span><br><span class="line">+------+------+</span><br><span class="line">1 row <span class="keyword">in</span> <span class="built_in">set</span> (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; <span class="keyword">select</span> * from student;</span><br><span class="line">+------+------+</span><br><span class="line">| <span class="built_in">id</span>   | name |</span><br><span class="line">+------+------+</span><br><span class="line">|    1 | z3   |</span><br><span class="line">|    2 | lisi |</span><br><span class="line">+------+------+</span><br><span class="line">2 rows <span class="keyword">in</span> <span class="built_in">set</span> (0.00 sec)</span><br><span class="line"><span class="comment">## 查看数据库默认字符集为latin1</span></span><br><span class="line">mysql&gt; show variables like <span class="string">&#x27;character%&#x27;</span> ;</span><br><span class="line">+--------------------------+----------------------------+</span><br><span class="line">| Variable_name            | Value                      |</span><br><span class="line">+--------------------------+----------------------------+</span><br><span class="line">| character_set_client     | latin1                     |</span><br><span class="line">| character_set_connection | latin1                     |</span><br><span class="line">| character_set_database   | latin1                     |</span><br><span class="line">| character_set_filesystem | binary                     |</span><br><span class="line">| character_set_results    | latin1                     |</span><br><span class="line">| character_set_server     | latin1                     |</span><br><span class="line">| character_set_system     | utf8                       |</span><br><span class="line">| character_sets_dir       | /usr/share/mysql/charsets/ |</span><br><span class="line">+--------------------------+----------------------------+</span><br><span class="line">8 rows <span class="keyword">in</span> <span class="built_in">set</span> (0.01 sec)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行容器 需要做数据挂载！</span></span><br><span class="line">[root@localhost ~]# docker run -d -p 3306:3306 \</span><br><span class="line">--privileged=<span class="literal">true</span> \</span><br><span class="line">-v /home/mysql/conf:/etc/mysql/conf.d \</span><br><span class="line">-v /home/mysql/data:/var/lib/mysql \</span><br><span class="line">-v /home/mysql/log:/var/log/mysql \</span><br><span class="line">-e MYSQL_ROOT_PASSWORD=123456 \</span><br><span class="line">--name mysql01 mysql:5.7</span><br><span class="line"><span class="comment">#修改字符集</span></span><br><span class="line"><span class="comment"># 创建my.conf并填入以下内容</span></span><br><span class="line">vi /home/mysql/conf/my.cnf</span><br><span class="line"><span class="comment"># 方法一</span></span><br><span class="line">  [client]</span><br><span class="line">	default_character_set=utf8</span><br><span class="line">  [mysqld]</span><br><span class="line">	collation_server = utf8_general_ci</span><br><span class="line">	character_set_server = uft8</span><br><span class="line"><span class="comment"># 方法二</span></span><br><span class="line">	[mysql]</span><br><span class="line">	  default-character-set=utf8mb4</span><br><span class="line">	[mysqld]</span><br><span class="line">	  character_set_server = utf8</span><br><span class="line">	  init_connect=<span class="string">&#x27;SET NAMES utf8&#x27;</span></span><br><span class="line">	  lower_case_table_names=1</span><br><span class="line"><span class="comment"># 方法三</span></span><br><span class="line">[root@localhost ~]# docker run -d -p 3306:3306 \</span><br><span class="line">--privileged=<span class="literal">true</span> \</span><br><span class="line">-v /home/mysql/conf:/etc/mysql/conf.d \</span><br><span class="line">-v /home/mysql/data:/var/lib/mysql \</span><br><span class="line">-v /home/mysql/log:/var/log/mysql \</span><br><span class="line">-e MYSQL_ROOT_PASSWORD=123456 \</span><br><span class="line">--name mysql01 mysql:5.7 \</span><br><span class="line">--character-set-server=utf8mb4 \</span><br><span class="line">--collation-server=utf8mb4_unicode_ci</span><br><span class="line"><span class="comment">##</span></span><br><span class="line">新项目只考虑utf8mb4</span><br><span class="line">　　UTF-8 编码是一种变长的编码机制，可以用1~4个字节存储字符。</span><br><span class="line"></span><br><span class="line">　　因为历史遗留问题，MySQL 中的 utf8 编码并不是真正的 UTF-8，而是阉割版的，最长只有3个字节。当遇到占4个字节的 UTF-8 编码，例如 emoji 字符或者复杂的汉字，也就是我们通常在聊天时发的小黄脸表情，会导致存储异常。</span><br><span class="line"></span><br><span class="line">　　从 5.5.3 开始，MySQL 开始用 utf8mb4 编码来实现完整的 UTF-8，其中 mb4 表示 most bytes 4，最多占用4个字节，用来兼容四个字节的Unicode（万国码）。utf8mb4是utf8的一个扩展。从 8.0 之后，将会在某个版本开始用 utf8mb4 作为默认字符编码。</span><br><span class="line"><span class="comment"># 重启mysql02</span></span><br><span class="line">docker restart mysql02</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="具名与匿名挂载"><a href="#具名与匿名挂载" class="headerlink" title="具名与匿名挂载"></a>具名与匿名挂载</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看卷的命令</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">[root@localhost home]# docker volume --<span class="built_in">help</span></span></span><br><span class="line"></span><br><span class="line">Usage:  docker volume COMMAND</span><br><span class="line"></span><br><span class="line">Manage volumes</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line">  create      Create a volume</span><br><span class="line">  inspect     Display detailed information on one or more volumes</span><br><span class="line">  ls          List volumes</span><br><span class="line">  prune       Remove all unused local volumes</span><br><span class="line">  rm          Remove one or more volumes</span><br><span class="line"></span><br><span class="line">-v 容器内路径！</span><br><span class="line">docker run -d -P</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">匿名挂载</span></span><br><span class="line">[root@localhost home]# docker run -d -P --name nginx01 -v /etc/nginx nginx</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">具名挂载</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">-v 卷名：容器内路径</span></span><br><span class="line">[root@localhost home]# docker run -d -P --name nginx02 -v my-nginx:/etc/nginx nginx</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看挂载路径</span></span><br><span class="line">[root@localhost home]# docker volume inspect my-nginx</span><br><span class="line">[</span><br><span class="line">    &#123;</span><br><span class="line">        &quot;CreatedAt&quot;: &quot;2022-06-28T22:46:09-04:00&quot;,</span><br><span class="line">        &quot;Driver&quot;: &quot;local&quot;,</span><br><span class="line">        &quot;Labels&quot;: null,</span><br><span class="line">        &quot;Mountpoint&quot;: &quot;/var/lib/docker/volumes/my-nginx/_data&quot;,</span><br><span class="line">        &quot;Name&quot;: &quot;my-nginx&quot;,</span><br><span class="line">        &quot;Options&quot;: null,</span><br><span class="line">        &quot;Scope&quot;: &quot;local&quot;</span><br><span class="line">    &#125;</span><br><span class="line">]</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">所有的docker容器内的卷，没有自定义目录的情况下都是在/var/lib/docker/volumes/xxx/_data</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">如何确定是具名挂载还是匿名挂载，还是指定路径挂载！</span></span><br><span class="line">-v 容器内路径   # 匿名挂载</span><br><span class="line">-v 卷名：容器内路径 # 具名挂载</span><br><span class="line">-v /宿主机路径:/容器内路径 # 指定路径挂载</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">通过 -v 容器内路径:ro rw 改变读写权限</span></span><br><span class="line">ro readonly #只读</span><br><span class="line">rw readwrite #读写</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">一旦这个设置容器权限，容器对我们挂载出来的内容就有先限定了！</span></span><br><span class="line"> docker run -d -P --name nginx02 -v my-nginx:/etc/nginx:ro nginx</span><br><span class="line"> docker run -d -P --name nginx02 -v my-nginx:/etc/nginx:rw nginx</span><br></pre></td></tr></table></figure>
+
+<h2 id="初识-Dockerfile"><a href="#初识-Dockerfile" class="headerlink" title="初识 Dockerfile"></a>初识 Dockerfile</h2><p>Dockerfile 就是用来构建 docker 镜像的构建文件 ！ 命令脚本！</p>
+<p>通过这个脚本可以生成镜像，镜像是一层一层的，脚本一个个的命令，每个命令都是一层！</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 编写dockerfile脚本</span></span><br><span class="line">[root@localhost docker-test-<span class="keyword">volume</span><span class="language-bash">]# vi dockerfile1</span></span><br><span class="line">[root@localhost docker-test-<span class="keyword">volume</span><span class="language-bash">]# <span class="built_in">cat</span> dockerfile1</span></span><br><span class="line">FORM centos</span><br><span class="line"></span><br><span class="line"><span class="keyword">VOLUME</span><span class="language-bash"> [<span class="string">&quot;volume01&quot;</span>,<span class="string">&quot;volume02&quot;</span>]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> <span class="built_in">echo</span> <span class="string">&quot;------end------&quot;</span></span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> /bin/bash</span></span><br><span class="line"><span class="comment"># 构建镜像</span></span><br><span class="line">[root@localhost docker-test-<span class="keyword">volume</span><span class="language-bash">]# docker build -f dockerfile1 -t shawn/centos:1.0 .</span></span><br><span class="line">-f 指定dockerfile文件</span><br><span class="line">-t 指定镜像名以及版本</span><br><span class="line">. 在当前目录生成</span><br><span class="line"></span><br><span class="line"><span class="comment"># 数据卷同步</span></span><br><span class="line">docker <span class="keyword">run</span><span class="language-bash"> -it --name docker03 --volumes-from docker01 shawn/centos:1.0(镜像启动)</span></span><br></pre></td></tr></table></figure>
+
+<p>结论：</p>
+<p>容器之间配置信息的传递，数据卷容器的生命周期一直持续到没有容器使用为止。</p>
+<p>但是一旦你持久化到了本地，这个时候，本地的数据是不会删除的</p>
+<h2 id="DockerFile-构建过程"><a href="#DockerFile-构建过程" class="headerlink" title="DockerFile 构建过程"></a>DockerFile 构建过程</h2><h5 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h5><p>1、每个保留关键字（指令）都是必须是大写字母</p>
+<p>2、执行从上到下顺序执行</p>
+<p>3、#表示注释</p>
+<p>4、每个指令都会创建提交一个新的镜像层，并提交！</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">可写容器（<span class="attribute">container</span>）</span><br><span class="line">镜像（tomcat）</span><br><span class="line">镜像（jdk）</span><br><span class="line"><span class="function"><span class="title">rootfs</span><span class="params">(基础镜像 centos/ubuntu)</span></span></span><br><span class="line">bootfs</span><br></pre></td></tr></table></figure>
+
+<p>dockerfile 是面向开发的，我们以后要发布项目，做镜像，就需要编写 dockerfile 文件，这个文件十分简单！</p>
+<p>Docker 镜像逐渐成为企业交付的标准，必须要掌握 ！</p>
+<p>步骤：开发 部署 运维 缺一不可 ！</p>
+<p>DockerFile：构建文件，定义了一切的步骤，源代码</p>
+<p>DockerImages：通过 DockerFile 构建生成镜像，最终发布与运行的产品</p>
+<p>Docker 容器：容器就是镜像运行起来提供服务的</p>
+<h2 id="Dockerfile-指令"><a href="#Dockerfile-指令" class="headerlink" title="Dockerfile 指令"></a>Dockerfile 指令</h2><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span>       <span class="comment"># 基础镜像，一切从这里开始构建</span></span><br><span class="line"><span class="keyword">MAINTAINER</span> <span class="comment"># 镜像是谁写的，姓名+邮箱</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash">        <span class="comment"># 镜像构建的时候需要运行的命令</span></span></span><br><span class="line"><span class="keyword">ADD</span><span class="language-bash">        <span class="comment"># 步骤：tomcat镜像，这个tomcat压缩包！添加内容</span></span></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash">    <span class="comment"># 镜像的工作目录</span></span></span><br><span class="line"><span class="keyword">VOLUME</span><span class="language-bash">     <span class="comment"># 挂载的目录</span></span></span><br><span class="line"><span class="keyword">EXPOSE</span>     <span class="comment"># 保留端口配置</span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash">        <span class="comment"># 指定容器启动的时候要运行的命令，只有最后一个会生效，可被替代</span></span></span><br><span class="line"><span class="keyword">ENTRYPOINT</span><span class="language-bash"> <span class="comment"># 指定容器启动的时候要运行的命令，可以追加命令</span></span></span><br><span class="line"><span class="keyword">ONBUILD</span>    <span class="comment"># 当构建一个被继承DockerFile 这个时候就会运行 ONBUILD 的指令。触发指令。</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash">       <span class="comment"># 类似ADD，将我们文件拷贝到镜像中</span></span></span><br><span class="line"><span class="keyword">ENV</span>        <span class="comment"># 构建的时候设置环境变量！</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span></span><br><span class="line"></span><br><span class="line">功能为指定基础镜像，并且必须是第一条指令。</span><br><span class="line"></span><br><span class="line">如果不以任何镜像为基础，那么写法为：<span class="keyword">FROM</span> scratch。</span><br><span class="line"></span><br><span class="line">同时意味着接下来所写的指令将作为镜像的第一层开始</span><br><span class="line"></span><br><span class="line">语法：</span><br><span class="line"></span><br><span class="line"><span class="keyword">FROM</span> &lt;image&gt;</span><br><span class="line"><span class="keyword">FROM</span> &lt;image&gt;:&lt;tag&gt;</span><br><span class="line"><span class="keyword">FROM</span> &lt;image&gt;:&lt;digest&gt;</span><br><span class="line">三种写法，其中&lt;tag&gt;和&lt;digest&gt; 是可选项，如果没有选择，那么默认值为latest</span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"></span></span><br><span class="line"> 功能为运行指定的命令</span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash">命令有两种格式</span></span><br><span class="line"></span><br><span class="line"><span class="number">1</span>. <span class="keyword">RUN</span><span class="language-bash"> &lt;<span class="built_in">command</span>&gt;</span></span><br><span class="line"><span class="number">2</span>. <span class="keyword">RUN</span><span class="language-bash"> [<span class="string">&quot;executable&quot;</span>, <span class="string">&quot;param1&quot;</span>, <span class="string">&quot;param2&quot;</span>]</span></span><br><span class="line">第一种后边直接跟<span class="keyword">shell</span><span class="language-bash">命令</span></span><br><span class="line"></span><br><span class="line">在linux操作系统上默认 /bin/sh -c</span><br><span class="line"></span><br><span class="line">在windows操作系统上默认 <span class="keyword">cmd</span><span class="language-bash"> /S /C</span></span><br><span class="line"></span><br><span class="line">第二种是类似于函数调用。</span><br><span class="line"></span><br><span class="line">可将executable理解成为可执行文件，后面就是两个参数。</span><br><span class="line"></span><br><span class="line">两种写法比对：</span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> /bin/bash -c <span class="string">&#x27;source $HOME/.bashrc; echo $HOME</span></span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"><span class="string"> [&quot;/bin/bash&quot;, &quot;-c&quot;, &quot;echo hello&quot;]</span></span></span><br><span class="line">注意：多行命令不要写多个<span class="keyword">RUN</span><span class="language-bash"><span class="string">，原因是Dockerfile中每一个指令都会建立一层.</span></span></span><br><span class="line"></span><br><span class="line"> 多少个<span class="keyword">RUN</span><span class="language-bash"><span class="string">就构建了多少层镜像，会造成镜像的臃肿、多层，不仅仅增加了构件部署的时间，还容易出错。</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"><span class="string">书写时的换行符是\</span></span></span><br><span class="line"><span class="string"><span class="language-bash"></span></span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"><span class="string"></span></span></span><br><span class="line"><span class="string"><span class="language-bash"></span></span></span><br><span class="line">功能为容器启动时要运行的命令</span><br><span class="line"></span><br><span class="line">语法有三种写法</span><br><span class="line"></span><br><span class="line"><span class="number">1</span>. <span class="keyword">CMD</span><span class="language-bash"><span class="string"> [&quot;executable&quot;,&quot;param1&quot;,&quot;param2&quot;]</span></span></span><br><span class="line"><span class="number">2</span>. <span class="keyword">CMD</span><span class="language-bash"><span class="string"> [&quot;param1&quot;,&quot;param2&quot;]</span></span></span><br><span class="line"><span class="number">3</span>. <span class="keyword">CMD</span><span class="language-bash"><span class="string"> command param1 param2</span></span></span><br><span class="line">第三种比较好理解了，就时<span class="keyword">shell</span><span class="language-bash"><span class="string">这种执行方式和写法</span></span></span><br><span class="line"></span><br><span class="line">第一种和第二种其实都是可执行文件加上参数的形式</span><br><span class="line"></span><br><span class="line">举例说明两种写法：</span><br><span class="line"></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"><span class="string"> [ &quot;sh&quot;, &quot;-c&quot;, &quot;echo $HOME&quot;</span></span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"><span class="string"> [ &quot;echo&quot;, &quot;$HOME&quot; ]</span></span></span><br><span class="line">补充细节：这里边包括参数的一定要用双引号，就是<span class="string">&quot;,不能是单引号。千万不能写成单引号。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">原因是参数传递后，docker解析的是一个JSON array</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">RUN &amp; CMD</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">不要把RUN和CMD搞混了。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">RUN是构件容器时就运行的命令以及提交运行结果</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">CMD是容器启动时执行的命令，在构件时并不运行，构件时紧紧指定了这个命令到底是个什么样子</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">LABEL</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">功能是为镜像指定标签</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">语法：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">LABEL &lt;key&gt;=&lt;value&gt; &lt;key&gt;=&lt;value&gt; &lt;key&gt;=&lt;value&gt; ...</span></span><br><span class="line"><span class="string"> 一个Dockerfile种可以有多个LABEL，如下：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">LABEL &quot;</span>com.example.vendor<span class="string">&quot;=&quot;</span>ACME Incorporated<span class="string">&quot;</span></span><br><span class="line"><span class="string">LABEL com.example.label-with-value=&quot;</span>foo<span class="string">&quot;</span></span><br><span class="line"><span class="string">LABEL version=&quot;</span><span class="number">1.0</span><span class="string">&quot;</span></span><br><span class="line"><span class="string">LABEL description=&quot;</span>This text illustrates \</span><br><span class="line">that <span class="keyword">label</span><span class="language-bash"><span class="string">-values can span multiple lines.&quot;</span></span></span><br><span class="line"> 但是并不建议这样写，最好就写成一行，如太长需要换行的话则使用\符号</span><br><span class="line"></span><br><span class="line">如下：</span><br><span class="line"></span><br><span class="line"><span class="keyword">LABEL</span><span class="language-bash"><span class="string"> multi.label1=&quot;value1&quot; \</span></span></span><br><span class="line"><span class="string"><span class="language-bash">multi.label2=&quot;value2&quot; \</span></span></span><br><span class="line"><span class="string"><span class="language-bash">other=&quot;value3&quot;</span></span></span><br><span class="line">说明：<span class="keyword">LABEL</span><span class="language-bash"><span class="string">会继承基础镜像种的LABEL，如遇到key相同，则值覆盖</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">MAINTAINER</span></span><br><span class="line"></span><br><span class="line">指定作者</span><br><span class="line"></span><br><span class="line">语法：</span><br><span class="line"></span><br><span class="line"><span class="keyword">MAINTAINER</span> &lt;name&gt;</span><br><span class="line"><span class="keyword">EXPOSE</span></span><br><span class="line"></span><br><span class="line">功能为暴漏容器运行时的监听端口给外部</span><br><span class="line"></span><br><span class="line">但是<span class="keyword">EXPOSE</span>并不会使容器访问主机的端口</span><br><span class="line"></span><br><span class="line">如果想使得容器与主机的端口有映射关系，必须在容器启动的时候加上 -P参数</span><br><span class="line"></span><br><span class="line"><span class="keyword">ENV</span></span><br><span class="line"></span><br><span class="line">功能为设置环境变量</span><br><span class="line"></span><br><span class="line">语法有两种</span><br><span class="line"></span><br><span class="line"><span class="number">1</span>. <span class="keyword">ENV</span> &lt;key&gt; &lt;value&gt;</span><br><span class="line"><span class="number">2</span>. <span class="keyword">ENV</span> &lt;key&gt;=&lt;value&gt; ...</span><br><span class="line">两者的区别就是第一种是一次设置一个，第二种是一次设置多个</span><br><span class="line"></span><br><span class="line"><span class="keyword">ADD</span><span class="language-bash"><span class="string"></span></span></span><br><span class="line"><span class="string"><span class="language-bash"></span></span></span><br><span class="line"> 一个复制命令，把文件复制到景象中。</span><br><span class="line"></span><br><span class="line">如果把虚拟机与容器想象成两台linux服务器的话，那么这个命令就类似于scp，只是scp需要加用户名和密码的权限验证，而<span class="keyword">ADD</span><span class="language-bash"><span class="string">不用。</span></span></span><br><span class="line"></span><br><span class="line">语法如下：</span><br><span class="line"></span><br><span class="line"><span class="number">1</span>. <span class="keyword">ADD</span><span class="language-bash"><span class="string"> &lt;src&gt;... &lt;dest&gt;</span></span></span><br><span class="line"><span class="number">2</span>. <span class="keyword">ADD</span><span class="language-bash"><span class="string"> [&quot;&lt;src&gt;&quot;,... &quot;&lt;dest&gt;&quot;]</span></span></span><br><span class="line">&lt;dest&gt;路径的填写可以是容器内的绝对路径，也可以是相对于工作目录的相对路径</span><br><span class="line"></span><br><span class="line">&lt;src&gt;可以是一个本地文件或者是一个本地压缩文件，还可以是一个url</span><br><span class="line"></span><br><span class="line">如果把&lt;src&gt;写成一个url，那么<span class="keyword">ADD</span><span class="language-bash"><span class="string">就类似于wget命令</span></span></span><br><span class="line"></span><br><span class="line">如以下写法都是可以的：</span><br><span class="line"></span><br><span class="line"><span class="keyword">ADD</span><span class="language-bash"><span class="string"> test relativeDir/</span></span></span><br><span class="line"><span class="keyword">ADD</span><span class="language-bash"><span class="string"> test /relativeDir</span></span></span><br><span class="line"><span class="keyword">ADD</span><span class="language-bash"><span class="string"> http://example.com/foobar /</span></span></span><br><span class="line">尽量不要把&lt;scr&gt;写成一个文件夹，如果&lt;src&gt;是一个文件夹了，复制整个目录的内容,包括文件系统元数据</span><br><span class="line"></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"><span class="string"></span></span></span><br><span class="line"><span class="string"><span class="language-bash"></span></span></span><br><span class="line">看这个名字就知道，又是一个复制命令</span><br><span class="line"></span><br><span class="line">语法如下：</span><br><span class="line"></span><br><span class="line"><span class="number">1</span>. <span class="keyword">COPY</span><span class="language-bash"><span class="string"> &lt;src&gt;... &lt;dest&gt;</span></span></span><br><span class="line"><span class="number">2</span>. <span class="keyword">COPY</span><span class="language-bash"><span class="string"> [&quot;&lt;src&gt;&quot;,... &quot;&lt;dest&gt;&quot;]</span></span></span><br><span class="line">与<span class="keyword">ADD</span><span class="language-bash"><span class="string">的区别</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"><span class="string">的&lt;src&gt;只能是本地文件，其他用法一致</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">ENTRYPOINT</span><span class="language-bash"><span class="string"></span></span></span><br><span class="line"><span class="string"><span class="language-bash"></span></span></span><br><span class="line">功能是启动时的默认命令</span><br><span class="line"></span><br><span class="line">语法如下：</span><br><span class="line"></span><br><span class="line"><span class="number">1</span>. <span class="keyword">ENTRYPOINT</span><span class="language-bash"><span class="string"> [&quot;executable&quot;, &quot;param1&quot;, &quot;param2&quot;]</span></span></span><br><span class="line"><span class="number">2</span>. <span class="keyword">ENTRYPOINT</span><span class="language-bash"><span class="string"> command param1 param2</span></span></span><br><span class="line">如果从上到下看到这里的话，那么你应该对这两种语法很熟悉啦。</span><br><span class="line"></span><br><span class="line">第二种就是写<span class="keyword">shell</span><span class="language-bash"><span class="string"></span></span></span><br><span class="line"><span class="string"><span class="language-bash"></span></span></span><br><span class="line">第一种就是可执行文件加参数</span><br><span class="line"></span><br><span class="line">与<span class="keyword">CMD</span><span class="language-bash"><span class="string">比较说明（这俩命令太像了，而且还可以配合使用）：</span></span></span><br><span class="line"></span><br><span class="line"><span class="number">1</span>. 相同点：</span><br><span class="line"></span><br><span class="line">只能写一条，如果写了多条，那么只有最后一条生效</span><br><span class="line"></span><br><span class="line">容器启动时才运行，运行时机相同</span><br><span class="line"></span><br><span class="line"><span class="number">2</span>. 不同点：</span><br><span class="line"></span><br><span class="line"> <span class="keyword">ENTRYPOINT</span><span class="language-bash"><span class="string">不会被运行的command覆盖，而CMD则会被覆盖</span></span></span><br><span class="line"></span><br><span class="line"> 如果我们在Dockerfile种同时写了<span class="keyword">ENTRYPOINT</span><span class="language-bash"><span class="string">和CMD，并且CMD指令不是一个完整的可执行命令，那么CMD指定的内容将会作为ENTRYPOINT的参数</span></span></span><br><span class="line"></span><br><span class="line">如下：</span><br><span class="line"></span><br><span class="line"><span class="keyword">FROM</span> ubuntu</span><br><span class="line"><span class="keyword">ENTRYPOINT</span><span class="language-bash"><span class="string"> [&quot;top&quot;, &quot;-b&quot;]</span></span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"><span class="string"> [&quot;-c&quot;]</span></span></span><br><span class="line">如果我们在Dockerfile种同时写了<span class="keyword">ENTRYPOINT</span><span class="language-bash"><span class="string">和CMD，并且CMD是一个完整的指令，那么它们两个会互相覆盖，谁在最后谁生效</span></span></span><br><span class="line"></span><br><span class="line">如下：</span><br><span class="line"></span><br><span class="line"><span class="keyword">FROM</span> ubuntu</span><br><span class="line"><span class="keyword">ENTRYPOINT</span><span class="language-bash"><span class="string"> [&quot;top&quot;, &quot;-b&quot;]</span></span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"><span class="string"> ls -al</span></span></span><br><span class="line">那么将执行ls -al ,top -b不会执行。</span><br><span class="line"></span><br><span class="line">Docker官方使用一张表格来展示了<span class="keyword">ENTRYPOINT</span><span class="language-bash"><span class="string"> 和CMD不同组合的执行情况</span></span></span><br><span class="line"></span><br><span class="line">（下方表格来自docker官网）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">VOLUME</span><span class="language-bash"><span class="string"></span></span></span><br><span class="line"><span class="string"><span class="language-bash"></span></span></span><br><span class="line">可实现挂载功能，可以将内地文件夹或者其他容器种得文件夹挂在到这个容器种</span><br><span class="line"></span><br><span class="line">语法为：</span><br><span class="line"></span><br><span class="line"><span class="keyword">VOLUME</span><span class="language-bash"><span class="string"> [&quot;/data&quot;]</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">说明：</span><br><span class="line"></span><br><span class="line">   [<span class="string">&quot;/data&quot;</span>]可以是一个JsonArray ，也可以是多个值。所以如下几种写法都是正确的</span><br><span class="line"></span><br><span class="line"><span class="keyword">VOLUME</span><span class="language-bash"><span class="string"> [&quot;/var/log/&quot;]</span></span></span><br><span class="line"><span class="keyword">VOLUME</span><span class="language-bash"><span class="string"> /var/log</span></span></span><br><span class="line"><span class="keyword">VOLUME</span><span class="language-bash"><span class="string"> /var/log /var/db</span></span></span><br><span class="line">一般的使用场景为需要持久化存储数据时</span><br><span class="line"></span><br><span class="line">容器使用的是AUFS，这种文件系统不能持久化数据，当容器关闭后，所有的更改都会丢失。</span><br><span class="line"></span><br><span class="line">所以当数据需要持久化时用这个命令。</span><br><span class="line"></span><br><span class="line"><span class="keyword">USER</span></span><br><span class="line"></span><br><span class="line">设置启动容器的用户，可以是用户名或UID，所以，只有下面的两种写法是正确的</span><br><span class="line"></span><br><span class="line"><span class="keyword">USER</span> daemo</span><br><span class="line"><span class="keyword">USER</span> UID</span><br><span class="line">注意：如果设置了容器以daemon用户去运行，那么<span class="keyword">RUN</span><span class="language-bash"><span class="string">, CMD 和 ENTRYPOINT 都会以这个用户去运行</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"><span class="string"></span></span></span><br><span class="line"><span class="string"><span class="language-bash"></span></span></span><br><span class="line">语法：</span><br><span class="line"></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"><span class="string"> /path/to/workdir</span></span></span><br><span class="line">设置工作目录，对<span class="keyword">RUN</span><span class="language-bash"><span class="string">,CMD,ENTRYPOINT,COPY,ADD生效。如果不存在则会创建，也可以设置多次。</span></span></span><br><span class="line"></span><br><span class="line">如：</span><br><span class="line"></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"><span class="string"> /a</span></span></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"><span class="string"> b</span></span></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"><span class="string"> c</span></span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"><span class="string"> pwd</span></span></span><br><span class="line">pwd执行的结果是/a/b/c</span><br><span class="line"></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"><span class="string">也可以解析环境变量</span></span></span><br><span class="line"></span><br><span class="line">如：</span><br><span class="line"></span><br><span class="line"><span class="keyword">ENV</span> DIRPATH /path</span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"><span class="string"> $DIRPATH/$DIRNAME</span></span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"><span class="string"> pwd</span></span></span><br><span class="line">pwd的执行结果是/path/$DIRNAME</span><br><span class="line"></span><br><span class="line"><span class="keyword">ARG</span></span><br><span class="line"></span><br><span class="line">语法：</span><br><span class="line"></span><br><span class="line"><span class="keyword">ARG</span> &lt;name&gt;[=&lt;default value&gt;]</span><br><span class="line">设置变量命令，<span class="keyword">ARG</span>命令定义了一个变量，在docker build创建镜像的时候，使用 --build-<span class="keyword">arg</span> &lt;varname&gt;=&lt;value&gt;来指定参数</span><br><span class="line"></span><br><span class="line">如果用户在build镜像时指定了一个参数没有定义在Dockerfile种，那么将有一个Warning</span><br><span class="line"></span><br><span class="line">提示如下：</span><br><span class="line"></span><br><span class="line">[Warning] One or more build-args [foo] were not consumed.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">我们可以定义一个或多个参数，如下：</span><br><span class="line"></span><br><span class="line"><span class="keyword">FROM</span> busybox</span><br><span class="line"><span class="keyword">ARG</span> user1</span><br><span class="line"><span class="keyword">ARG</span> buildno</span><br><span class="line">...</span><br><span class="line">也可以给参数一个默认值：</span><br><span class="line"></span><br><span class="line"><span class="keyword">FROM</span> busybox</span><br><span class="line"><span class="keyword">ARG</span> user1=someuser</span><br><span class="line"><span class="keyword">ARG</span> buildno=<span class="number">1</span></span><br><span class="line">...</span><br><span class="line">如果我们给了<span class="keyword">ARG</span>定义的参数默认值，那么当build镜像时没有指定参数值，将会使用这个默认值</span><br><span class="line"></span><br><span class="line"><span class="keyword">ONBUILD</span></span><br><span class="line"></span><br><span class="line">语法：</span><br><span class="line"></span><br><span class="line"><span class="keyword">ONBUILD</span> [INSTRUCTION]</span><br><span class="line">这个命令只对当前镜像的子镜像生效。</span><br><span class="line"></span><br><span class="line">比如当前镜像为A，在Dockerfile种添加：</span><br><span class="line"></span><br><span class="line"><span class="keyword">ONBUILD</span> <span class="keyword">RUN</span><span class="language-bash"><span class="string"> ls -al</span></span></span><br><span class="line">这个 ls -al 命令不会在A镜像构建或启动的时候执行</span><br><span class="line"></span><br><span class="line">此时有一个镜像B是基于A镜像构建的，那么这个ls -al 命令会在B镜像构建的时候被执行。</span><br><span class="line"></span><br><span class="line"><span class="keyword">STOPSIGNAL</span></span><br><span class="line"></span><br><span class="line">语法：</span><br><span class="line"></span><br><span class="line"><span class="keyword">STOPSIGNAL</span> signal</span><br><span class="line"><span class="keyword">STOPSIGNAL</span>命令是的作用是当容器推出时给系统发送什么样的指令</span><br><span class="line"></span><br><span class="line"><span class="keyword">HEALTHCHECK</span><span class="language-bash"><span class="string"></span></span></span><br><span class="line"><span class="string"><span class="language-bash"></span></span></span><br><span class="line"> 容器健康状况检查命令</span><br><span class="line"></span><br><span class="line">语法有两种：</span><br><span class="line"></span><br><span class="line"><span class="number">1</span>. <span class="keyword">HEALTHCHECK</span><span class="language-bash"><span class="string"> [OPTIONS] CMD command</span></span></span><br><span class="line"><span class="number">2</span>. <span class="keyword">HEALTHCHECK</span><span class="language-bash"><span class="string"> NONE</span></span></span><br><span class="line">第一个的功能是在容器内部运行一个命令来检查容器的健康状况</span><br><span class="line"></span><br><span class="line">第二个的功能是在基础镜像中取消健康检查命令</span><br><span class="line"></span><br><span class="line">[OPTIONS]的选项支持以下三中选项：</span><br><span class="line"></span><br><span class="line">    --interval=DURATION 两次检查默认的时间间隔为<span class="number">30</span>秒</span><br><span class="line"></span><br><span class="line">    --timeout=DURATION 健康检查命令运行超时时长，默认<span class="number">30</span>秒</span><br><span class="line"></span><br><span class="line">    --retries=N 当连续失败指定次数后，则容器被认为是不健康的，状态为unhealthy，默认次数是<span class="number">3</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">注意：</span><br><span class="line"></span><br><span class="line"><span class="keyword">HEALTHCHECK</span><span class="language-bash"><span class="string">命令只能出现一次，如果出现了多次，只有最后一个生效。</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"><span class="string">后边的命令的返回值决定了本次健康检查是否成功，具体的返回值如下：</span></span></span><br><span class="line"></span><br><span class="line"><span class="number">0</span>: success - 表示容器是健康的</span><br><span class="line"></span><br><span class="line"><span class="number">1</span>: unhealthy - 表示容器已经不能工作了</span><br><span class="line"></span><br><span class="line"><span class="number">2</span>: reserved - 保留值</span><br><span class="line"></span><br><span class="line">例子：</span><br><span class="line"></span><br><span class="line"><span class="keyword">HEALTHCHECK</span><span class="language-bash"><span class="string"> --interval=5m --timeout=3s \</span></span></span><br><span class="line"><span class="string"><span class="language-bash">CMD curl -f http://localhost/ || exit 1</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">健康检查命令是：curl -f http://localhost/ || exit <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.shawnyoung.top/2022/06/28/database/docker%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ShawnYoung">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ShawnYoung's Blog">
+      <meta itemprop="description" content="陌上花开">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ShawnYoung's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/06/28/database/docker%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2/" class="post-title-link" itemprop="url">docker学习大纲</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-06-28 23:06:50" itemprop="dateCreated datePublished" datetime="2022-06-28T23:06:50+08:00">2022-06-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-04-24 12:20:58" itemprop="dateModified" datetime="2025-04-24T12:20:58+08:00">2025-04-24</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    <a title="docker学习大纲" href="/2022/06/28/database/docker%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::fb74820cc66ca7612e4a7fafa636c0a2" class="cy_cmt_count" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>92</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Docker-network-（容器网络）"><a href="#Docker-network-（容器网络）" class="headerlink" title="Docker network （容器网络）"></a>Docker network （容器网络）</h3><h3 id="Docker-compose（容器编排）"><a href="#Docker-compose（容器编排）" class="headerlink" title="Docker compose（容器编排）"></a>Docker compose（容器编排）</h3><h3 id="Docker-Swarm（集群）"><a href="#Docker-Swarm（集群）" class="headerlink" title="Docker Swarm（集群）"></a>Docker Swarm（集群）</h3><h3 id="CI-CD-jenkins-流水线"><a href="#CI-CD-jenkins-流水线" class="headerlink" title="CI&#x2F;CD jenkins (流水线)"></a>CI&#x2F;CD jenkins (流水线)</h3><h3 id="ansible-自动化工具，部署"><a href="#ansible-自动化工具，部署" class="headerlink" title="ansible (自动化工具，部署)"></a><a target="_blank" rel="noopener" href="http://ansible.com.cn/docs">ansible</a> (自动化工具，部署)</h3>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.shawnyoung.top/2022/06/28/database/docker%E9%95%9C%E5%83%8F%E8%AE%B2%E8%A7%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ShawnYoung">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ShawnYoung's Blog">
+      <meta itemprop="description" content="陌上花开">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ShawnYoung's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/06/28/database/docker%E9%95%9C%E5%83%8F%E8%AE%B2%E8%A7%A3/" class="post-title-link" itemprop="url">docker镜像讲解</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-06-28 21:29:24" itemprop="dateCreated datePublished" datetime="2022-06-28T21:29:24+08:00">2022-06-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-04-24 12:22:03" itemprop="dateModified" datetime="2025-04-24T12:22:03+08:00">2025-04-24</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    <a title="docker镜像讲解" href="/2022/06/28/database/docker%E9%95%9C%E5%83%8F%E8%AE%B2%E8%A7%A3/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::861622e038100767c6d7ac6a65053d40" class="cy_cmt_count" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Docker-镜像讲解"><a href="#Docker-镜像讲解" class="headerlink" title="Docker 镜像讲解"></a>Docker 镜像讲解</h1><h2 id="镜像是什么"><a href="#镜像是什么" class="headerlink" title="镜像是什么"></a>镜像是什么</h2><ul>
+<li>镜像是一种轻量级、可执行的独立软件包，用来打包软件运行环境和基于运行环境开发的软件，它包含运行某个软件所需的所有内容，包括代码，运行时，库、环境变量和配置文件。</li>
+<li>所有的应用，直接打包 docker 镜像，就可以直接跑起来！</li>
+<li>如何得到镜像：<ol>
+<li>从远程仓库下载</li>
+<li>朋友拷贝给你</li>
+<li>自己制作一个镜像 DockerFile</li>
+</ol>
+</li>
+</ul>
+<h2 id="Docker-镜像加载原理"><a href="#Docker-镜像加载原理" class="headerlink" title="Docker 镜像加载原理"></a>Docker 镜像加载原理</h2><blockquote>
+<p>UnionsFS( 联合文件系统 Union Filesystem) )</p>
+</blockquote>
+<p>联合文件系统：union 文件系统是一种分层、轻量级并且高性能的文件系统，它支持对文件系统的修改作为一次提交来一层层的叠加，同时可以将不同目录挂载到同一个虚拟文件系统下，union 文件系统是 docker 镜像的基础。镜像可以通过分层来继承，基于基础镜像（没有父镜像），可以制作各种具体的应用镜像。</p>
+<p>特性：一次同时加载多个文件系统，但在外面来看，只是看到一个文件系统，联合加载会把各层文件系统叠加，这样最终的文件系统会包含所有底层</p>
+<p>的文件和目录</p>
+<blockquote>
+<p>Docker 镜像加载原理</p>
+</blockquote>
+<p>docker 镜像实际上由一层一层的文件系统组成，这种层级的文件系统 UnionFS。</p>
+<p>bootfs(boot file system)主要包含 bootloader 和 kernel，bootloader 主要引导加载 kernel，Linux 刚启动会加载 bootfs 文件系统，Docker 镜像的最底层是 bootfs。这一层与我们典型的 Linux&#x2F;Unix 系统是一样的，包含 boot 加载器和内核，当 boot 加载完成之后整个内核就在内存中了，此时内存的使用权已经由 bootfs 转交给内核，此时系统也会卸载 bootfs。</p>
+<p>rootfs（root file system），在 bootfs 之上。包含的就是典型 linux 系统中&#x2F;dev,&#x2F;proc,&#x2F;bin&#x2F;etc 等标准目录和文件。rootfs 就是各种不同的操作系统发行版，比如 Ubuntu，Centos 等等。</p>
+<p><strong>虚拟机的 Centos 都是好几个 G，为什么 Docker 这里才 200M？</strong></p>
+<p>对于精简的 OS，rootfs 可以很小，只需要包含最基本的命令，工具和程序库就可以了，因为底层直接用 Host 的 kernel，自己只需要提供 rootfs 可以了。由此可见对于不同的 linux 发行版，bootfs 基本是一致的，rootfs 会有差别，因此不同发行版可以公用 bootfs。。</p>
+<p>虚拟机是分钟级，容器是秒级。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看镜像信息</span></span><br><span class="line">[root@localhost ~]# docker image inspect redis:latest</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>.分层理解</p>
+</blockquote>
+<p>Docker 镜像都是只读的，当容器启动时，一个新的可写层被加载到镜像顶部！</p>
+<p>这一层就是我们通常说的容器层，容器之下的都叫镜像层！</p>
+<h2 id="commit-镜像"><a href="#commit-镜像" class="headerlink" title="commit 镜像"></a>commit 镜像</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">docker commit 提交容器成为一个新的副本</span><br><span class="line">docker commit -m=&quot;提交的描述信息&quot; -a=&quot;作者&quot; 容器id 目标镜像名:[tag]</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看运行的容器</span></span><br><span class="line">[root@localhost ~]# docker ps</span><br><span class="line">CONTAINER ID   IMAGE                 COMMAND             CREATED        STATUS         PORTS                                       NAMES</span><br><span class="line">01f17edc0c92   tomcat                &quot;catalina.sh run&quot;   3 months ago   Up 5 minutes   0.0.0.0:8080-&gt;8080/tcp, :::8080-&gt;8080/tcp   tomcat01</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建自己的tomcat镜像</span></span><br><span class="line">[root@localhost ~]# docker commit -a=&quot;StephenShawn&quot; -m=&quot;add webapps&quot; 01f17edc0c92 tomcat01:0.1</span><br><span class="line">sha256:5da731531f9fea322cbf4cb2a971c5924672001746de2871171537faf4e6abe9</span><br><span class="line">[root@localhost ~]# docker images</span><br><span class="line">REPOSITORY            TAG       IMAGE ID       CREATED          SIZE</span><br><span class="line">tomcat01              0.1       5da731531f9f   14 seconds ago   684MB</span><br><span class="line">tomcat                9.0       b8e65a4d736d   6 months ago     680MB</span><br><span class="line">tomcat                latest    fb5657adc892   6 months ago     680MB</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
   <nav class="pagination">
-    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>
@@ -1407,13 +1603,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">68k</span>
+    <span title="站点总字数">43k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:02</span>
+    <span title="站点阅读时长">39 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
