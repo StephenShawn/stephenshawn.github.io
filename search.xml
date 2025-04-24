@@ -108,37 +108,6 @@
       </tags>
   </entry>
   <entry>
-    <title>git配置SSH密钥</title>
-    <url>/2025/01/31/git/git-rsa/</url>
-    <content><![CDATA[<h3 id="1-生成新的-SSH-密钥"><a href="#1-生成新的-SSH-密钥" class="headerlink" title="1.生成新的 SSH 密钥"></a>1.生成新的 SSH 密钥</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-测试-SSH-连接"><a href="#2-测试-SSH-连接" class="headerlink" title="2.测试 SSH 连接"></a>2.测试 SSH 连接</h3><p> 将 <code>your_email@example.com</code> 替换为你在 Git 服务提供商（如 GitHub）上注册的邮箱地址。</p>
-<p>执行命令后，会提示你选择密钥的保存位置和设置密码（密码可以为空）。一般情况下，直接按回车键使用默认设置即可。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git配置用户名和密码</title>
-    <url>/2022/05/14/git/git-username/</url>
-    <content><![CDATA[<h3 id="1-全局配置"><a href="#1-全局配置" class="headerlink" title="1.全局配置"></a>1.全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-全局配置删除"><a href="#2-全局配置删除" class="headerlink" title="2.全局配置删除"></a>2.全局配置删除</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --global --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-系统配置删除"><a href="#3-系统配置删除" class="headerlink" title="3.系统配置删除"></a>3.系统配置删除</h3><p>系统配置会影响系统上所有用户的所有 Git 仓库，操作时需谨慎。删除系统配置的用户和邮箱信息，使用以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --system --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-查看全局配置"><a href="#4-查看全局配置" class="headerlink" title="4.查看全局配置"></a>4.查看全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-查看系统配置"><a href="#5-查看系统配置" class="headerlink" title="5.查看系统配置"></a>5.查看系统配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --list</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数据库SQL语言</title>
     <url>/2022/07/14/database/MysqlSQL/</url>
     <content><![CDATA[<ol>
@@ -434,6 +403,16 @@
       </tags>
   </entry>
   <entry>
+    <title>Redhat Enterprise Linux</title>
+    <url>/2024/04/11/database/linux/</url>
+    <content><![CDATA[<h1 id="兼容-RHEL-的-linux-系统的现状"><a href="#兼容-RHEL-的-linux-系统的现状" class="headerlink" title="兼容 RHEL 的 linux 系统的现状"></a>兼容 RHEL 的 linux 系统的现状</h1><h3 id="RHEL（Redhat-Enterprise-Linux）的免费替代"><a href="#RHEL（Redhat-Enterprise-Linux）的免费替代" class="headerlink" title="RHEL（Redhat Enterprise Linux）的免费替代"></a>RHEL（Redhat Enterprise Linux）的免费替代</h3><p>国外较出名兼容 RHEL 有 RockyLinux 与 Amalinux</p>
+<h5 id="RHEL-常用的自-8-版本以后改为-DNF（与-yum-兼容）"><a href="#RHEL-常用的自-8-版本以后改为-DNF（与-yum-兼容）" class="headerlink" title="RHEL 常用的自 8 版本以后改为 DNF（与 yum 兼容）"></a>RHEL 常用的自 8 版本以后改为 DNF（与 yum 兼容）</h5><p><a href="https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/9/html-single/managing_software_with_the_dnf_tool/index#doc-wrapper">dnf 的使用</a></p>
+]]></content>
+      <tags>
+        <tag>RHEL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Kubernetes</title>
     <url>/2022/07/17/database/kubernetes/</url>
     <content><![CDATA[<h1 id="Kubernetes-镜像"><a href="#Kubernetes-镜像" class="headerlink" title="Kubernetes 镜像"></a>Kubernetes 镜像</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Kubernetes 是一个开源系统，用于容器化应用的自动部署、扩缩和管理。它将构成应用的容器按逻辑单位进行分组以便于管理和发现。</p>
@@ -449,16 +428,6 @@
 ]]></content>
       <tags>
         <tag>kubernetes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Redhat Enterprise Linux</title>
-    <url>/2024/04/11/database/linux/</url>
-    <content><![CDATA[<h1 id="兼容-RHEL-的-linux-系统的现状"><a href="#兼容-RHEL-的-linux-系统的现状" class="headerlink" title="兼容 RHEL 的 linux 系统的现状"></a>兼容 RHEL 的 linux 系统的现状</h1><h3 id="RHEL（Redhat-Enterprise-Linux）的免费替代"><a href="#RHEL（Redhat-Enterprise-Linux）的免费替代" class="headerlink" title="RHEL（Redhat Enterprise Linux）的免费替代"></a>RHEL（Redhat Enterprise Linux）的免费替代</h3><p>国外较出名兼容 RHEL 有 RockyLinux 与 Amalinux</p>
-<h5 id="RHEL-常用的自-8-版本以后改为-DNF（与-yum-兼容）"><a href="#RHEL-常用的自-8-版本以后改为-DNF（与-yum-兼容）" class="headerlink" title="RHEL 常用的自 8 版本以后改为 DNF（与 yum 兼容）"></a>RHEL 常用的自 8 版本以后改为 DNF（与 yum 兼容）</h5><p><a href="https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/9/html-single/managing_software_with_the_dnf_tool/index#doc-wrapper">dnf 的使用</a></p>
-]]></content>
-      <tags>
-        <tag>RHEL</tag>
       </tags>
   </entry>
   <entry>
@@ -521,6 +490,19 @@
       </tags>
   </entry>
   <entry>
+    <title>git配置SSH密钥</title>
+    <url>/2025/01/31/git/git-rsa/</url>
+    <content><![CDATA[<h3 id="1-生成新的-SSH-密钥"><a href="#1-生成新的-SSH-密钥" class="headerlink" title="1.生成新的 SSH 密钥"></a>1.生成新的 SSH 密钥</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-测试-SSH-连接"><a href="#2-测试-SSH-连接" class="headerlink" title="2.测试 SSH 连接"></a>2.测试 SSH 连接</h3><p> 将 <code>your_email@example.com</code> 替换为你在 Git 服务提供商（如 GitHub）上注册的邮箱地址。</p>
+<p>执行命令后，会提示你选择密钥的保存位置和设置密码（密码可以为空）。一般情况下，直接按回车键使用默认设置即可。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>容器数据卷</title>
     <url>/2022/06/28/database/%E5%AE%B9%E5%99%A8%E6%95%B0%E6%8D%AE%E5%8D%B7/</url>
     <content><![CDATA[<h2 id="Docker-容器数据卷"><a href="#Docker-容器数据卷" class="headerlink" title="Docker 容器数据卷"></a>Docker 容器数据卷</h2><p>原理：将容器目录挂载到 Linux 的目录</p>
@@ -564,49 +546,21 @@
       </tags>
   </entry>
   <entry>
-    <title>idea快捷键</title>
-    <url>/2022/07/11/idea/idea-shortcut-key/</url>
-    <content><![CDATA[<h2 id="常用快捷键-1"><a href="#常用快捷键-1" class="headerlink" title="常用快捷键 1"></a><a href="https://zhuanlan.zhihu.com/p/410613271">常用快捷键 1</a></h2><h2 id="常用快捷键-2"><a href="#常用快捷键-2" class="headerlink" title="常用快捷键 2"></a><a href="https://blog.csdn.net/weixin_45395059/article/details/125591122">常用快捷键 2</a></h2><ul>
-<li>ctrl + alt + o 代码优化(自动删除多余的包与变量)</li>
-<li>Alt + F12 打开 terminal(终端)</li>
-<li>ctrl+shift+(+&#x2F;-) 展开全部折叠全部</li>
-<li>ctrl+（+&#x2F;-） 展开折叠当前方法</li>
-<li>shift + f6 重命名(重构)</li>
-<li>ctrl + alt + l 代码格式化</li>
-<li>alt + insert 创建内容</li>
-<li>psvm main 方法</li>
-<li>sout 输出语句</li>
-<li>Ctrl + d 复制一行</li>
-<li>Ctrl + y 删除一行</li>
-<li>Ctrl + Shift + Up&#x2F;Down 代码向上&#x2F;下移动</li>
-<li>Ctrl + n 搜索类</li>
-<li>alt + insert 生成代码</li>
-<li>alt + Enter 导包，生成变量</li>
-<li>Ctrl + &#x2F; 或 Ctrl + Shift+ &#x2F; 单行注释或多行注释</li>
-<li>fori 回车即可 for 循环</li>
-<li>ctrl + alt + t 代码包围 try-catch,if,while 等</li>
-<li>ctrl + alt + -&gt; 向后 ctrl + alt + &lt;- 向前</li>
-<li>显示代码结构：alt + 7</li>
-<li>显示导航栏：alt + 1</li>
-<li>撤销 ctrl + Z</li>
-<li>REDO 操作 ctrl + shif + z</li>
-<li>Tab 缩进 shift+Tab 撤销缩进</li>
-<li>Ctrl + u 选择行</li>
-<li>alt + f8 查看变量值</li>
-<li>ctrl + alt +B 查找接口实现类</li>
-<li>ctrl + h 查看类或接口的继承关系</li>
-<li>ctrl + o 覆写方法</li>
-</ul>
-<h3 id="替换"><a href="#替换" class="headerlink" title="替换"></a>替换</h3><ul>
-<li>ctrl + r 替换</li>
-<li>ctrl + shift + r 路径中替换</li>
-</ul>
-<h2 id="调试debug"><a href="#调试debug" class="headerlink" title="调试debug"></a>调试<a href="https://blog.csdn.net/m0_37154839/article/details/107617122">debug</a></h2><ul>
-<li>F9 调试</li>
-</ul>
+    <title>git配置用户名和密码</title>
+    <url>/2022/05/14/git/git-username/</url>
+    <content><![CDATA[<h3 id="1-全局配置"><a href="#1-全局配置" class="headerlink" title="1.全局配置"></a>1.全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-全局配置删除"><a href="#2-全局配置删除" class="headerlink" title="2.全局配置删除"></a>2.全局配置删除</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --global --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-系统配置删除"><a href="#3-系统配置删除" class="headerlink" title="3.系统配置删除"></a>3.系统配置删除</h3><p>系统配置会影响系统上所有用户的所有 Git 仓库，操作时需谨慎。删除系统配置的用户和邮箱信息，使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --system --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-查看全局配置"><a href="#4-查看全局配置" class="headerlink" title="4.查看全局配置"></a>4.查看全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-查看系统配置"><a href="#5-查看系统配置" class="headerlink" title="5.查看系统配置"></a>5.查看系统配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --list</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
-        <tag>IntelliJ IDEA</tag>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -656,6 +610,52 @@
 ]]></content>
       <tags>
         <tag>jdbc</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>idea快捷键</title>
+    <url>/2022/07/11/idea/idea-shortcut-key/</url>
+    <content><![CDATA[<h2 id="常用快捷键-1"><a href="#常用快捷键-1" class="headerlink" title="常用快捷键 1"></a><a href="https://zhuanlan.zhihu.com/p/410613271">常用快捷键 1</a></h2><h2 id="常用快捷键-2"><a href="#常用快捷键-2" class="headerlink" title="常用快捷键 2"></a><a href="https://blog.csdn.net/weixin_45395059/article/details/125591122">常用快捷键 2</a></h2><ul>
+<li>ctrl + alt + o 代码优化(自动删除多余的包与变量)</li>
+<li>Alt + F12 打开 terminal(终端)</li>
+<li>ctrl+shift+(+&#x2F;-) 展开全部折叠全部</li>
+<li>ctrl+（+&#x2F;-） 展开折叠当前方法</li>
+<li>shift + f6 重命名(重构)</li>
+<li>ctrl + alt + l 代码格式化</li>
+<li>alt + insert 创建内容</li>
+<li>psvm main 方法</li>
+<li>sout 输出语句</li>
+<li>Ctrl + d 复制一行</li>
+<li>Ctrl + y 删除一行</li>
+<li>Ctrl + Shift + Up&#x2F;Down 代码向上&#x2F;下移动</li>
+<li>Ctrl + n 搜索类</li>
+<li>alt + insert 生成代码</li>
+<li>alt + Enter 导包，生成变量</li>
+<li>Ctrl + &#x2F; 或 Ctrl + Shift+ &#x2F; 单行注释或多行注释</li>
+<li>fori 回车即可 for 循环</li>
+<li>ctrl + alt + t 代码包围 try-catch,if,while 等</li>
+<li>ctrl + alt + -&gt; 向后 ctrl + alt + &lt;- 向前</li>
+<li>显示代码结构：alt + 7</li>
+<li>显示导航栏：alt + 1</li>
+<li>撤销 ctrl + Z</li>
+<li>REDO 操作 ctrl + shif + z</li>
+<li>Tab 缩进 shift+Tab 撤销缩进</li>
+<li>Ctrl + u 选择行</li>
+<li>alt + f8 查看变量值</li>
+<li>ctrl + alt +B 查找接口实现类</li>
+<li>ctrl + h 查看类或接口的继承关系</li>
+<li>ctrl + o 覆写方法</li>
+</ul>
+<h3 id="替换"><a href="#替换" class="headerlink" title="替换"></a>替换</h3><ul>
+<li>ctrl + r 替换</li>
+<li>ctrl + shift + r 路径中替换</li>
+</ul>
+<h2 id="调试debug"><a href="#调试debug" class="headerlink" title="调试debug"></a>调试<a href="https://blog.csdn.net/m0_37154839/article/details/107617122">debug</a></h2><ul>
+<li>F9 调试</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>IntelliJ IDEA</tag>
       </tags>
   </entry>
   <entry>
