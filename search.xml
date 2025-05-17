@@ -1,6 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>在Nodejs中使用 Playwright</title>
+    <url>/2025/02/03/automate/Playwright/</url>
+    <content><![CDATA[<p>首先，确保你已经安装了 <strong>Node.js</strong>。可以通过以下命令来检查是否已经安装 Node.js：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<p>如果没有安装 Node.js，你可以从 <a href="https://nodejs.org/">Node.js 官网</a> 下载并安装最新版本的 Node.js。</p>
+<h3 id="2-初始化-Node-js-项目"><a href="#2-初始化-Node-js-项目" class="headerlink" title="2. 初始化 Node.js 项目"></a>2. <strong>初始化 Node.js 项目</strong></h3><p>如果你还没有创建 Node.js 项目，可以通过以下命令初始化一个新的 Node.js 项目：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> my-playwright-project</span><br><span class="line"><span class="built_in">cd</span> my-playwright-project</span><br><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
+
+<p>这将会创建一个 <code>package.json</code> 文件，管理你的项目依赖。</p>
+<h3 id="3-安装-Playwright"><a href="#3-安装-Playwright" class="headerlink" title="3. 安装 Playwright"></a>3. <strong>安装 Playwright</strong></h3><p>你可以使用 <strong>npm</strong> 或 <strong>yarn</strong> 来安装 Playwright。执行以下命令安装 Playwright 和浏览器依赖：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright</span><br></pre></td></tr></table></figure>
+
+<p>默认情况下，Playwright 会安装必要的浏览器二进制文件（Chromium、Firefox 和 WebKit），因此它会比较大。如果你只需要安装特定的浏览器，你可以选择安装指定的浏览器包：</p>
+<ul>
+<li><p><strong>只安装 Chromium</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-chromium</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>只安装 Firefox</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-firefox</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>只安装 WebKit</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-webkit</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="4-验证安装"><a href="#4-验证安装" class="headerlink" title="4. 验证安装"></a>4. <strong>验证安装</strong></h3><p>安装完成后，你可以创建一个简单的脚本来测试 Playwright 是否工作正常：</p>
+<p>创建一个文件 <code>test.js</code>，并添加以下内容：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; chromium &#125; = <span class="built_in">require</span>(<span class="string">&quot;playwright&quot;</span>);</span><br><span class="line"></span><br><span class="line">(<span class="title function_">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="comment">// 启动浏览器</span></span><br><span class="line">  <span class="keyword">const</span> browser = <span class="keyword">await</span> chromium.<span class="title function_">launch</span>(&#123; <span class="attr">headless</span>: <span class="literal">false</span> &#125;);</span><br><span class="line">  <span class="keyword">const</span> page = <span class="keyword">await</span> browser.<span class="title function_">newPage</span>();</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 打开一个页面</span></span><br><span class="line">  <span class="keyword">await</span> page.<span class="title function_">goto</span>(<span class="string">&quot;https://example.com&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 截图保存</span></span><br><span class="line">  <span class="keyword">await</span> page.<span class="title function_">screenshot</span>(&#123; <span class="attr">path</span>: <span class="string">&quot;example.png&quot;</span> &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 关闭浏览器</span></span><br><span class="line">  <span class="keyword">await</span> browser.<span class="title function_">close</span>();</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+<p>然后，运行脚本：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node test.js</span><br></pre></td></tr></table></figure>
+
+<p>如果一切正常，Playwright 会启动一个 Chromium 浏览器实例并打开 <code>https://example.com</code>，然后保存页面截图为 <code>example.png</code>。</p>
+<h3 id="5-常见问题"><a href="#5-常见问题" class="headerlink" title="5. 常见问题"></a>5. <strong>常见问题</strong></h3><ul>
+<li>如果你在安装过程中遇到浏览器二进制文件下载失败的情况，确保你的网络连接正常，并且没有防火墙或代理阻止下载。</li>
+<li>Playwright 会在安装时自动下载 Chromium、Firefox 和 WebKit。如果你不需要某个浏览器，可以手动卸载它们，或者仅安装你需要的特定浏览器。</li>
+</ul>
+<hr>
+<p>通过这些步骤，你就可以在 Node.js 环境中成功安装并使用 Playwright 进行浏览器自动化操作。</p>
+]]></content>
+      <tags>
+        <tag>浏览器自动化测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>浏览器自动化测试</title>
+    <url>/2025/02/03/automate/automates/</url>
+    <content><![CDATA[<h3 id="一、Playwright"><a href="#一、Playwright" class="headerlink" title="一、Playwright"></a>一、Playwright</h3><p>Playwright 是用 <strong>TypeScript</strong>（JavaScript 的超集）编写的。TypeScript 提供了静态类型检查，增强了 Playwright 的可维护性和开发体验。Playwright 的核心代码和 API 基于 Node.js 环境，因此它是一个主要面向 <strong>JavaScript&#x2F;TypeScript</strong> 开发者的工具。</p>
+<p>然而，Playwright 并不仅仅限于 JavaScript 和 TypeScript，它提供了 <strong>多语言绑定</strong>，使得开发者可以使用其他编程语言来操作 Playwright。除了 TypeScript 和 JavaScript，Playwright 还支持以下语言：</p>
+<ul>
+<li><strong>Python</strong>：通过 Playwright 的 Python 库，你可以使用 Python 编写自动化脚本。</li>
+<li>**C#**：Playwright 为 C# 开发者提供了相应的库和接口。</li>
+<li><strong>Java</strong>：Playwright 也提供了 Java 语言的绑定，允许 Java 开发者使用 Playwright 进行浏览器自动化。</li>
+</ul>
+<h3 id="语言支持的绑定："><a href="#语言支持的绑定：" class="headerlink" title="语言支持的绑定："></a>语言支持的绑定：</h3><ol>
+<li><strong>TypeScript&#x2F;JavaScript</strong>：最原生的支持，因为 Playwright 本身是用 TypeScript 开发的。</li>
+<li><strong>Python</strong>：提供了 Python 绑定，可以方便地在 Python 环境中使用 Playwright。</li>
+<li>**C#**：Playwright 为 C# 开发者提供了 SDK 和 API。</li>
+<li><strong>Java</strong>：Playwright 同样支持 Java 环境的使用，提供了相应的 API。</li>
+</ol>
+<p>总结来说，Playwright 的核心是使用 <strong>TypeScript</strong> 编写的，但它的多语言支持使得开发者可以根据自己的需求选择不同的编程语言来使用该工具。</p>
+<h3 id="二、Selenium"><a href="#二、Selenium" class="headerlink" title="二、Selenium"></a>二、Selenium</h3><p>Selenium 是用 <strong>Java</strong> 编写的核心库，但它支持多种编程语言，包括 Java、Python、C#、Ruby、JavaScript（Node.js）等。Selenium 提供了多种语言的绑定（API），这样开发者可以使用自己熟悉的编程语言与 Selenium 进行交互。</p>
+<h3 id="主要组成部分："><a href="#主要组成部分：" class="headerlink" title="主要组成部分："></a>主要组成部分：</h3><ol>
+<li><strong>Selenium WebDriver</strong>：<ul>
+<li>这是 Selenium 最核心的部分，负责与浏览器进行交互。</li>
+<li>WebDriver 本身是用 Java 编写的，但可以通过语言绑定支持多种编程语言。</li>
+</ul>
+</li>
+<li><strong>Selenium Grid</strong>：<ul>
+<li>用于并行化测试和跨多个机器执行。</li>
+<li>Selenium Grid 也是用 Java 编写的。</li>
+</ul>
+</li>
+<li><strong>Selenium IDE</strong>：<ul>
+<li>一个用于录制和回放测试脚本的工具，最初是作为 Firefox 插件开发的，后来支持 Chrome。</li>
+<li>IDE 也是基于 JavaScript 和其他前端技术的。</li>
+</ul>
+</li>
+</ol>
+<h3 id="支持的编程语言："><a href="#支持的编程语言：" class="headerlink" title="支持的编程语言："></a>支持的编程语言：</h3><ul>
+<li><strong>Java</strong>：最早的 Selenium 版本是用 Java 开发的，提供了最完整的功能和最广泛的社区支持。</li>
+<li><strong>Python</strong>：提供了 Python 语言的绑定，适用于使用 Python 编写自动化脚本的开发者。</li>
+<li>**C#**：C# 开发者可以使用 Selenium 提供的 C# 语言绑定进行自动化操作。</li>
+<li><strong>Ruby</strong>：Selenium 同样提供了 Ruby 绑定，适合 Ruby 开发者。</li>
+<li>**JavaScript (Node.js)**：Selenium 也支持 JavaScript 和 Node.js 环境，适合现代 Web 开发的自动化测试。</li>
+</ul>
+<p>总结来说，<strong>Selenium WebDriver</strong> 的核心部分是用 Java 编写的，但它提供了多种语言的接口，使得开发者可以使用不同的编程语言进行自动化测试或爬虫开发。</p>
+]]></content>
+      <tags>
+        <tag>浏览器自动化测试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2025年微博图床失效解决方法</title>
     <url>/2025/04/11/blog/%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A%E5%A4%B1%E6%95%88%E8%A7%A3%E5%86%B3/</url>
     <content><![CDATA[<h2 id="2025年微博图床失效解决方法"><a href="#2025年微博图床失效解决方法" class="headerlink" title="2025年微博图床失效解决方法"></a>2025年微博图床失效解决方法</h2><h4 id="一、下载BlogHelper-Browse-1-0-30-at-SourceForge-net"><a href="#一、下载BlogHelper-Browse-1-0-30-at-SourceForge-net" class="headerlink" title="一、下载BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net"></a>一、下载<a href="https://sourceforge.net/projects/bloghelper.mirror/files/1.0.30/">BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net</a></h4><h4 id="二、登陆微博账号，再启动新浪图床如下"><a href="#二、登陆微博账号，再启动新浪图床如下" class="headerlink" title="二、登陆微博账号，再启动新浪图床如下"></a>二、登陆微博账号，再启动新浪图床如下</h4><p><img src="https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0eg6z69jdj308105374f.jpg" alt="新浪图床启动"></p>
@@ -55,19 +147,19 @@
 <li>text(clob):字符串类型；</li>
 </ul>
 <ol>
-<li>tinytext 2^8-1 Byte</li>
-<li>text 2^16-1 Byte</li>
-<li>mediumtext 2^24-1 Byte</li>
-<li>longtext 2^34-1 Byte</li>
+<li>tinytext 2<sup>8</sup> - 1 Byte</li>
+<li>text 2<sup>16</sup> - 1 Byte</li>
+<li>mediumtext 2<sup>24</sup> - 1 Byte</li>
+<li>longtext 2<sup>34</sup> - 11 Byte</li>
 </ol>
 <ul>
 <li>blob ：字节类型；</li>
 </ul>
 <ol>
-<li>tinyblob 2^8-1 Byte</li>
-<li>blob 2^16-1 Byte</li>
-<li>mediumblob 2^24-1 Byte</li>
-<li>longblob 2^34-1 Byte</li>
+<li>tinyblob 2<sup>8</sup> - 1 Byte</li>
+<li>blob 2<sup>16</sup> - 1 Byte</li>
+<li>mediumblob 2<sup>24</sup> - 1 Byte</li>
+<li>longblob 2<sup>34</sup> - 1 Byte</li>
 </ol>
 <ul>
 <li>date：日期类型，格式为：yyyy-MM-dd;</li>
@@ -144,29 +236,27 @@
 
 <h3 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">IFNUll(c1,v1);</span><br><span class="line">DATE_FORMAT(&quot;yyyy-MM-dd&quot;,&#x27;%Y-%m-%d&#x27;);</span><br><span class="line">CONCAT(v1,v2,v3);</span><br><span class="line">distinct;</span><br><span class="line">-- &#x27;_&#x27;匹配一个字符</span><br><span class="line">-- &#x27;%&#x27;匹配零个到N个字符</span><br><span class="line">like &#x27;_%&#x27;;</span><br><span class="line">-- （当前页-1）* 每页记录数</span><br><span class="line">limit (17-1)*8,8</span><br></pre></td></tr></table></figure>
 
-<h4 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h4><h4 id="联合查询"><a href="#联合查询" class="headerlink" title="联合查询"></a>联合查询</h4><h4 id="聚合函数-1"><a href="#聚合函数-1" class="headerlink" title="聚合函数"></a>聚合函数</h4>]]></content>
+<h4 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 统计 employees 表中的记录数量</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">FROM</span> employees;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 统计 employees 表中 department_id 列不为空的记录数量</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="built_in">COUNT</span>(department_id) <span class="keyword">FROM</span> employees;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 计算 employees 表中 salary 列的平均值</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="built_in">AVG</span>(salary) <span class="keyword">FROM</span> employees;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 找出 employees 表中 salary 列的最大值</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="built_in">MAX</span>(salary) <span class="keyword">FROM</span> employees;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 找出 employees 表中 salary 列的最小值</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="built_in">MIN</span>(salary) <span class="keyword">FROM</span> employees;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 按 department_id 分组，统计每个部门的员工数量</span></span><br><span class="line"><span class="keyword">SELECT</span> department_id, <span class="built_in">COUNT</span>(<span class="operator">*</span>) </span><br><span class="line"><span class="keyword">FROM</span> employees</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> department_id;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 按 department_id 分组，计算每个部门的平均工资</span></span><br><span class="line"><span class="keyword">SELECT</span> department_id, <span class="built_in">AVG</span>(salary) </span><br><span class="line"><span class="keyword">FROM</span> employees</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> department_id;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 按 department_id 分组，计算每个部门的平均工资，筛选出平均工资大于 5000 的部门</span></span><br><span class="line"><span class="keyword">SELECT</span> department_id, <span class="built_in">AVG</span>(salary) </span><br><span class="line"><span class="keyword">FROM</span> employees</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> department_id</span><br><span class="line"><span class="keyword">HAVING</span> <span class="built_in">AVG</span>(salary) <span class="operator">&gt;</span> <span class="number">5000</span>;</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="联合查询"><a href="#联合查询" class="headerlink" title="联合查询"></a>联合查询</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 查询 table1 和 table2 的 column1 列，去除重复行</span></span><br><span class="line"><span class="keyword">SELECT</span> column1 <span class="keyword">FROM</span> table1</span><br><span class="line"><span class="keyword">UNION</span></span><br><span class="line"><span class="keyword">SELECT</span> column1 <span class="keyword">FROM</span> table2;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 查询 table1 和 table2 的 column1 列，保留所有行</span></span><br><span class="line"><span class="keyword">SELECT</span> column1 <span class="keyword">FROM</span> table1</span><br><span class="line"><span class="keyword">UNION</span> <span class="keyword">ALL</span></span><br><span class="line"><span class="keyword">SELECT</span> column1 <span class="keyword">FROM</span> table2;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 查询订单信息及对应的客户信息</span></span><br><span class="line"><span class="keyword">SELECT</span> orders.order_id, customers.customer_name</span><br><span class="line"><span class="keyword">FROM</span> orders</span><br><span class="line"><span class="keyword">INNER</span> <span class="keyword">JOIN</span> customers</span><br><span class="line"><span class="keyword">ON</span> orders.customer_id <span class="operator">=</span> customers.id;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 查询所有客户信息及他们的订单信息，如果客户没有订单，订单信息为 NULL</span></span><br><span class="line"><span class="keyword">SELECT</span> customers.customer_name, orders.order_id</span><br><span class="line"><span class="keyword">FROM</span> customers</span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">JOIN</span> orders</span><br><span class="line"><span class="keyword">ON</span> customers.id <span class="operator">=</span> orders.customer_id;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 查询所有订单信息及对应的客户信息，如果订单没有对应的客户，客户信息为 NULL</span></span><br><span class="line"><span class="keyword">SELECT</span> orders.order_id, customers.customer_name</span><br><span class="line"><span class="keyword">FROM</span> orders</span><br><span class="line"><span class="keyword">RIGHT</span> <span class="keyword">JOIN</span> customers</span><br><span class="line"><span class="keyword">ON</span> orders.customer_id <span class="operator">=</span> customers.id;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 模拟 FULL OUTER JOIN，查询所有客户和订单信息，不管是否匹配</span></span><br><span class="line"><span class="keyword">SELECT</span> customers.customer_name, orders.order_id</span><br><span class="line"><span class="keyword">FROM</span> customers</span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">JOIN</span> orders</span><br><span class="line"><span class="keyword">ON</span> customers.id <span class="operator">=</span> orders.customer_id</span><br><span class="line"><span class="keyword">UNION</span></span><br><span class="line"><span class="keyword">SELECT</span> customers.customer_name, orders.order_id</span><br><span class="line"><span class="keyword">FROM</span> customers</span><br><span class="line"><span class="keyword">RIGHT</span> <span class="keyword">JOIN</span> orders</span><br><span class="line"><span class="keyword">ON</span> customers.id <span class="operator">=</span> orders.customer_id;</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>database</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2025/04/24/database/demo/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>docker安装mysql</title>
-    <url>/2022/07/15/database/docker%E5%AE%89%E8%A3%85mysql/</url>
-    <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> docker run -d -p 3306:3306 \</span><br><span class="line">--privileged=<span class="literal">true</span> \</span><br><span class="line">-v /opt/mysql/conf:/etc/mysql/conf.d \</span><br><span class="line">-v /opt/mysql/data:/var/lib/mysql \</span><br><span class="line">-v /opt/mysql/log:/var/log/mysql \</span><br><span class="line">-e MYSQL_ROOT_PASSWORD=123456 \</span><br><span class="line">--name mysql01 mysql:5.7 \</span><br><span class="line">--character-set-server=utf8mb4 \</span><br><span class="line">--collation-server=utf8mb4_unicode_ci</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>docker</tag>
       </tags>
   </entry>
   <entry>
     <title>docker学习大纲</title>
     <url>/2022/06/28/database/docker%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2/</url>
     <content><![CDATA[<h3 id="Docker-network-（容器网络）"><a href="#Docker-network-（容器网络）" class="headerlink" title="Docker network （容器网络）"></a>Docker network （容器网络）</h3><h3 id="Docker-compose（容器编排）"><a href="#Docker-compose（容器编排）" class="headerlink" title="Docker compose（容器编排）"></a>Docker compose（容器编排）</h3><h3 id="Docker-Swarm（集群）"><a href="#Docker-Swarm（集群）" class="headerlink" title="Docker Swarm（集群）"></a>Docker Swarm（集群）</h3><h3 id="CI-CD-jenkins-流水线"><a href="#CI-CD-jenkins-流水线" class="headerlink" title="CI&#x2F;CD jenkins (流水线)"></a>CI&#x2F;CD jenkins (流水线)</h3><h3 id="ansible-自动化工具，部署"><a href="#ansible-自动化工具，部署" class="headerlink" title="ansible (自动化工具，部署)"></a><a href="http://ansible.com.cn/docs">ansible</a> (自动化工具，部署)</h3>]]></content>
+      <tags>
+        <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker安装mysql</title>
+    <url>/2022/07/15/database/docker%E5%AE%89%E8%A3%85mysql/</url>
+    <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> docker run -d -p 3306:3306 \</span><br><span class="line">--privileged=<span class="literal">true</span> \</span><br><span class="line">-v /opt/mysql/conf:/etc/mysql/conf.d \</span><br><span class="line">-v /opt/mysql/data:/var/lib/mysql \</span><br><span class="line">-v /opt/mysql/log:/var/log/mysql \</span><br><span class="line">-e MYSQL_ROOT_PASSWORD=123456 \</span><br><span class="line">--name mysql01 mysql:5.7 \</span><br><span class="line">--character-set-server=utf8mb4 \</span><br><span class="line">--collation-server=utf8mb4_unicode_ci</span><br></pre></td></tr></table></figure>
+]]></content>
       <tags>
         <tag>docker</tag>
       </tags>
@@ -231,50 +321,6 @@
       </tags>
   </entry>
   <entry>
-    <title>在Nodejs中使用 Playwright</title>
-    <url>/2025/02/03/automate/Playwright/</url>
-    <content><![CDATA[<p>首先，确保你已经安装了 <strong>Node.js</strong>。可以通过以下命令来检查是否已经安装 Node.js：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-
-<p>如果没有安装 Node.js，你可以从 <a href="https://nodejs.org/">Node.js 官网</a> 下载并安装最新版本的 Node.js。</p>
-<h3 id="2-初始化-Node-js-项目"><a href="#2-初始化-Node-js-项目" class="headerlink" title="2. 初始化 Node.js 项目"></a>2. <strong>初始化 Node.js 项目</strong></h3><p>如果你还没有创建 Node.js 项目，可以通过以下命令初始化一个新的 Node.js 项目：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> my-playwright-project</span><br><span class="line"><span class="built_in">cd</span> my-playwright-project</span><br><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
-
-<p>这将会创建一个 <code>package.json</code> 文件，管理你的项目依赖。</p>
-<h3 id="3-安装-Playwright"><a href="#3-安装-Playwright" class="headerlink" title="3. 安装 Playwright"></a>3. <strong>安装 Playwright</strong></h3><p>你可以使用 <strong>npm</strong> 或 <strong>yarn</strong> 来安装 Playwright。执行以下命令安装 Playwright 和浏览器依赖：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright</span><br></pre></td></tr></table></figure>
-
-<p>默认情况下，Playwright 会安装必要的浏览器二进制文件（Chromium、Firefox 和 WebKit），因此它会比较大。如果你只需要安装特定的浏览器，你可以选择安装指定的浏览器包：</p>
-<ul>
-<li><p><strong>只安装 Chromium</strong>:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-chromium</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>只安装 Firefox</strong>:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-firefox</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>只安装 WebKit</strong>:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-webkit</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="4-验证安装"><a href="#4-验证安装" class="headerlink" title="4. 验证安装"></a>4. <strong>验证安装</strong></h3><p>安装完成后，你可以创建一个简单的脚本来测试 Playwright 是否工作正常：</p>
-<p>创建一个文件 <code>test.js</code>，并添加以下内容：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; chromium &#125; = <span class="built_in">require</span>(<span class="string">&quot;playwright&quot;</span>);</span><br><span class="line"></span><br><span class="line">(<span class="title function_">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="comment">// 启动浏览器</span></span><br><span class="line">  <span class="keyword">const</span> browser = <span class="keyword">await</span> chromium.<span class="title function_">launch</span>(&#123; <span class="attr">headless</span>: <span class="literal">false</span> &#125;);</span><br><span class="line">  <span class="keyword">const</span> page = <span class="keyword">await</span> browser.<span class="title function_">newPage</span>();</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 打开一个页面</span></span><br><span class="line">  <span class="keyword">await</span> page.<span class="title function_">goto</span>(<span class="string">&quot;https://example.com&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 截图保存</span></span><br><span class="line">  <span class="keyword">await</span> page.<span class="title function_">screenshot</span>(&#123; <span class="attr">path</span>: <span class="string">&quot;example.png&quot;</span> &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 关闭浏览器</span></span><br><span class="line">  <span class="keyword">await</span> browser.<span class="title function_">close</span>();</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-
-<p>然后，运行脚本：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node test.js</span><br></pre></td></tr></table></figure>
-
-<p>如果一切正常，Playwright 会启动一个 Chromium 浏览器实例并打开 <code>https://example.com</code>，然后保存页面截图为 <code>example.png</code>。</p>
-<h3 id="5-常见问题"><a href="#5-常见问题" class="headerlink" title="5. 常见问题"></a>5. <strong>常见问题</strong></h3><ul>
-<li>如果你在安装过程中遇到浏览器二进制文件下载失败的情况，确保你的网络连接正常，并且没有防火墙或代理阻止下载。</li>
-<li>Playwright 会在安装时自动下载 Chromium、Firefox 和 WebKit。如果你不需要某个浏览器，可以手动卸载它们，或者仅安装你需要的特定浏览器。</li>
-</ul>
-<hr>
-<p>通过这些步骤，你就可以在 Node.js 环境中成功安装并使用 Playwright 进行浏览器自动化操作。</p>
-]]></content>
-      <tags>
-        <tag>浏览器自动化测试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>docker的基本命令</title>
     <url>/2022/06/27/database/docker%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h2 id="Docker-的常用命令"><a href="#Docker-的常用命令" class="headerlink" title="Docker 的常用命令"></a>Docker 的常用命令</h2><h3 id="一、帮助命令"><a href="#一、帮助命令" class="headerlink" title="一、帮助命令"></a>一、帮助命令</h3><hr>
@@ -319,51 +365,21 @@
       </tags>
   </entry>
   <entry>
-    <title>浏览器自动化测试</title>
-    <url>/2025/02/03/automate/automates/</url>
-    <content><![CDATA[<h3 id="一、Playwright"><a href="#一、Playwright" class="headerlink" title="一、Playwright"></a>一、Playwright</h3><p>Playwright 是用 <strong>TypeScript</strong>（JavaScript 的超集）编写的。TypeScript 提供了静态类型检查，增强了 Playwright 的可维护性和开发体验。Playwright 的核心代码和 API 基于 Node.js 环境，因此它是一个主要面向 <strong>JavaScript&#x2F;TypeScript</strong> 开发者的工具。</p>
-<p>然而，Playwright 并不仅仅限于 JavaScript 和 TypeScript，它提供了 <strong>多语言绑定</strong>，使得开发者可以使用其他编程语言来操作 Playwright。除了 TypeScript 和 JavaScript，Playwright 还支持以下语言：</p>
-<ul>
-<li><strong>Python</strong>：通过 Playwright 的 Python 库，你可以使用 Python 编写自动化脚本。</li>
-<li>**C#**：Playwright 为 C# 开发者提供了相应的库和接口。</li>
-<li><strong>Java</strong>：Playwright 也提供了 Java 语言的绑定，允许 Java 开发者使用 Playwright 进行浏览器自动化。</li>
+    <title>Kubernetes</title>
+    <url>/2022/07/17/database/kubernetes/</url>
+    <content><![CDATA[<h1 id="Kubernetes-镜像"><a href="#Kubernetes-镜像" class="headerlink" title="Kubernetes 镜像"></a>Kubernetes 镜像</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Kubernetes 是一个开源系统，用于容器化应用的自动部署、扩缩和管理。它将构成应用的容器按逻辑单位进行分组以便于管理和发现。</p>
+<p>下载地址：<a href="https://mirrors.aliyun.com/kubernetes/">https://mirrors.aliyun.com/kubernetes/</a></p>
+<h2 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h2><h3 id="Debian-Ubuntu"><a href="#Debian-Ubuntu" class="headerlink" title="Debian &#x2F; Ubuntu"></a>Debian &#x2F; Ubuntu</h3><figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">apt-<span class="built_in">get</span> <span class="keyword">update</span> &amp;&amp; apt-<span class="built_in">get</span> install -<span class="keyword">y</span> apt-transport-https</span><br><span class="line">curl https://mirrors.aliyun.<span class="keyword">com</span>/kubernetes/apt/doc/apt-key.gpg | apt-key <span class="built_in">add</span> -</span><br><span class="line"><span class="keyword">cat</span> &lt;&lt;EOF &gt;/etc/apt/sources.<span class="keyword">list</span>.d/kubernetes.<span class="keyword">list</span></span><br><span class="line"><span class="keyword">deb</span> https://mirrors.aliyun.<span class="keyword">com</span>/kubernetes/apt/ kubernetes-xenial main</span><br><span class="line">EOF</span><br><span class="line">apt-<span class="built_in">get</span> <span class="keyword">update</span></span><br><span class="line">apt-<span class="built_in">get</span> install -<span class="keyword">y</span> kubelet kubeadm kubectl</span><br></pre></td></tr></table></figure>
+
+<h3 id="CentOS-RHEL-Fedora"><a href="#CentOS-RHEL-Fedora" class="headerlink" title="CentOS &#x2F; RHEL &#x2F; Fedora"></a>CentOS &#x2F; RHEL &#x2F; Fedora</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">cat &lt;&lt;EOF &gt; <span class="regexp">/etc/yum</span>.repos.d/kubernetes.repo</span><br><span class="line">[kubernetes]</span><br><span class="line">name=Kubernetes</span><br><span class="line">baseurl=https:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/kubernetes/yum</span><span class="regexp">/repos/</span>kubernetes-el7-x86_64/</span><br><span class="line">enabled=<span class="number">1</span></span><br><span class="line">gpgcheck=<span class="number">1</span></span><br><span class="line">repo_gpgcheck=<span class="number">1</span></span><br><span class="line">gpgkey=https:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/kubernetes/yum</span><span class="regexp">/doc/yum</span>-key.gpg https:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/kubernetes/yum</span><span class="regexp">/doc/</span>rpm-package-key.gpg</span><br><span class="line">EOF</span><br><span class="line">setenforce <span class="number">0</span></span><br><span class="line">yum install -y kubelet kubeadm kubectl</span><br><span class="line">systemctl enable kubelet &amp;&amp; systemctl start kubelet</span><br></pre></td></tr></table></figure>
+
+<p>ps: 由于官网未开放同步方式, 可能会有索引 gpg 检查失败的情况, 这时请用 <code>yum install -y --nogpgcheck kubelet kubeadm kubectl</code> 安装</p>
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ul>
+<li>官方主页：<a href="https://kubernetes.io/">https://kubernetes.io/</a></li>
 </ul>
-<h3 id="语言支持的绑定："><a href="#语言支持的绑定：" class="headerlink" title="语言支持的绑定："></a>语言支持的绑定：</h3><ol>
-<li><strong>TypeScript&#x2F;JavaScript</strong>：最原生的支持，因为 Playwright 本身是用 TypeScript 开发的。</li>
-<li><strong>Python</strong>：提供了 Python 绑定，可以方便地在 Python 环境中使用 Playwright。</li>
-<li>**C#**：Playwright 为 C# 开发者提供了 SDK 和 API。</li>
-<li><strong>Java</strong>：Playwright 同样支持 Java 环境的使用，提供了相应的 API。</li>
-</ol>
-<p>总结来说，Playwright 的核心是使用 <strong>TypeScript</strong> 编写的，但它的多语言支持使得开发者可以根据自己的需求选择不同的编程语言来使用该工具。</p>
-<h3 id="二、Selenium"><a href="#二、Selenium" class="headerlink" title="二、Selenium"></a>二、Selenium</h3><p>Selenium 是用 <strong>Java</strong> 编写的核心库，但它支持多种编程语言，包括 Java、Python、C#、Ruby、JavaScript（Node.js）等。Selenium 提供了多种语言的绑定（API），这样开发者可以使用自己熟悉的编程语言与 Selenium 进行交互。</p>
-<h3 id="主要组成部分："><a href="#主要组成部分：" class="headerlink" title="主要组成部分："></a>主要组成部分：</h3><ol>
-<li><strong>Selenium WebDriver</strong>：<ul>
-<li>这是 Selenium 最核心的部分，负责与浏览器进行交互。</li>
-<li>WebDriver 本身是用 Java 编写的，但可以通过语言绑定支持多种编程语言。</li>
-</ul>
-</li>
-<li><strong>Selenium Grid</strong>：<ul>
-<li>用于并行化测试和跨多个机器执行。</li>
-<li>Selenium Grid 也是用 Java 编写的。</li>
-</ul>
-</li>
-<li><strong>Selenium IDE</strong>：<ul>
-<li>一个用于录制和回放测试脚本的工具，最初是作为 Firefox 插件开发的，后来支持 Chrome。</li>
-<li>IDE 也是基于 JavaScript 和其他前端技术的。</li>
-</ul>
-</li>
-</ol>
-<h3 id="支持的编程语言："><a href="#支持的编程语言：" class="headerlink" title="支持的编程语言："></a>支持的编程语言：</h3><ul>
-<li><strong>Java</strong>：最早的 Selenium 版本是用 Java 开发的，提供了最完整的功能和最广泛的社区支持。</li>
-<li><strong>Python</strong>：提供了 Python 语言的绑定，适用于使用 Python 编写自动化脚本的开发者。</li>
-<li>**C#**：C# 开发者可以使用 Selenium 提供的 C# 语言绑定进行自动化操作。</li>
-<li><strong>Ruby</strong>：Selenium 同样提供了 Ruby 绑定，适合 Ruby 开发者。</li>
-<li>**JavaScript (Node.js)**：Selenium 也支持 JavaScript 和 Node.js 环境，适合现代 Web 开发的自动化测试。</li>
-</ul>
-<p>总结来说，<strong>Selenium WebDriver</strong> 的核心部分是用 Java 编写的，但它提供了多种语言的接口，使得开发者可以使用不同的编程语言进行自动化测试或爬虫开发。</p>
 ]]></content>
       <tags>
-        <tag>浏览器自动化测试</tag>
+        <tag>kubernetes</tag>
       </tags>
   </entry>
   <entry>
@@ -408,24 +424,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Kubernetes</title>
-    <url>/2022/07/17/database/kubernetes/</url>
-    <content><![CDATA[<h1 id="Kubernetes-镜像"><a href="#Kubernetes-镜像" class="headerlink" title="Kubernetes 镜像"></a>Kubernetes 镜像</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Kubernetes 是一个开源系统，用于容器化应用的自动部署、扩缩和管理。它将构成应用的容器按逻辑单位进行分组以便于管理和发现。</p>
-<p>下载地址：<a href="https://mirrors.aliyun.com/kubernetes/">https://mirrors.aliyun.com/kubernetes/</a></p>
-<h2 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h2><h3 id="Debian-Ubuntu"><a href="#Debian-Ubuntu" class="headerlink" title="Debian &#x2F; Ubuntu"></a>Debian &#x2F; Ubuntu</h3><figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">apt-<span class="built_in">get</span> <span class="keyword">update</span> &amp;&amp; apt-<span class="built_in">get</span> install -<span class="keyword">y</span> apt-transport-https</span><br><span class="line">curl https://mirrors.aliyun.<span class="keyword">com</span>/kubernetes/apt/doc/apt-key.gpg | apt-key <span class="built_in">add</span> -</span><br><span class="line"><span class="keyword">cat</span> &lt;&lt;EOF &gt;/etc/apt/sources.<span class="keyword">list</span>.d/kubernetes.<span class="keyword">list</span></span><br><span class="line"><span class="keyword">deb</span> https://mirrors.aliyun.<span class="keyword">com</span>/kubernetes/apt/ kubernetes-xenial main</span><br><span class="line">EOF</span><br><span class="line">apt-<span class="built_in">get</span> <span class="keyword">update</span></span><br><span class="line">apt-<span class="built_in">get</span> install -<span class="keyword">y</span> kubelet kubeadm kubectl</span><br></pre></td></tr></table></figure>
-
-<h3 id="CentOS-RHEL-Fedora"><a href="#CentOS-RHEL-Fedora" class="headerlink" title="CentOS &#x2F; RHEL &#x2F; Fedora"></a>CentOS &#x2F; RHEL &#x2F; Fedora</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">cat &lt;&lt;EOF &gt; <span class="regexp">/etc/yum</span>.repos.d/kubernetes.repo</span><br><span class="line">[kubernetes]</span><br><span class="line">name=Kubernetes</span><br><span class="line">baseurl=https:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/kubernetes/yum</span><span class="regexp">/repos/</span>kubernetes-el7-x86_64/</span><br><span class="line">enabled=<span class="number">1</span></span><br><span class="line">gpgcheck=<span class="number">1</span></span><br><span class="line">repo_gpgcheck=<span class="number">1</span></span><br><span class="line">gpgkey=https:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/kubernetes/yum</span><span class="regexp">/doc/yum</span>-key.gpg https:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/kubernetes/yum</span><span class="regexp">/doc/</span>rpm-package-key.gpg</span><br><span class="line">EOF</span><br><span class="line">setenforce <span class="number">0</span></span><br><span class="line">yum install -y kubelet kubeadm kubectl</span><br><span class="line">systemctl enable kubelet &amp;&amp; systemctl start kubelet</span><br></pre></td></tr></table></figure>
-
-<p>ps: 由于官网未开放同步方式, 可能会有索引 gpg 检查失败的情况, 这时请用 <code>yum install -y --nogpgcheck kubelet kubeadm kubectl</code> 安装</p>
-<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ul>
-<li>官方主页：<a href="https://kubernetes.io/">https://kubernetes.io/</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>kubernetes</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Redhat Enterprise Linux</title>
     <url>/2024/04/11/database/linux/</url>
     <content><![CDATA[<h1 id="兼容-RHEL-的-linux-系统的现状"><a href="#兼容-RHEL-的-linux-系统的现状" class="headerlink" title="兼容 RHEL 的 linux 系统的现状"></a>兼容 RHEL 的 linux 系统的现状</h1><h3 id="RHEL（Redhat-Enterprise-Linux）的免费替代"><a href="#RHEL（Redhat-Enterprise-Linux）的免费替代" class="headerlink" title="RHEL（Redhat Enterprise Linux）的免费替代"></a>RHEL（Redhat Enterprise Linux）的免费替代</h3><p>国外较出名兼容 RHEL 有 RockyLinux 与 Amalinux</p>
@@ -433,23 +431,6 @@
 ]]></content>
       <tags>
         <tag>RHEL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>rockylinux8-network-config</title>
-    <url>/2023/12/17/database/rockylinux8-network-config/</url>
-    <content><![CDATA[<h4 id="查看-linux-内核信息"><a href="#查看-linux-内核信息" class="headerlink" title="查看 linux 内核信息"></a>查看 linux 内核信息</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">uname</span> -a</span><br></pre></td></tr></table></figure>
-
-<h4 id="查看-linux-发行版信息"><a href="#查看-linux-发行版信息" class="headerlink" title="查看 linux 发行版信息"></a>查看 linux 发行版信息</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> /etc/os-release</span><br></pre></td></tr></table></figure>
-
-<h4 id="配置静态网路"><a href="#配置静态网路" class="headerlink" title="配置静态网路"></a>配置静态网路</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/sysconfig/network-scripts/ifcfg-ens160</span><br><span class="line"></span><br><span class="line">TYPE=Ethernet</span><br><span class="line">PROXY_METHOD=none</span><br><span class="line">BROWSER_ONLY=no</span><br><span class="line"><span class="comment"># 静态IP地址</span></span><br><span class="line">BOOTPROTO=static</span><br><span class="line">DEFROUTE=<span class="built_in">yes</span></span><br><span class="line">IPV4_FAILURE_FATAL=no</span><br><span class="line">IPV6INIT=<span class="built_in">yes</span></span><br><span class="line">IPV6_AUTOCONF=<span class="built_in">yes</span></span><br><span class="line">IPV6_DEFROUTE=<span class="built_in">yes</span></span><br><span class="line">IPV6_FAILURE_FATAL=no</span><br><span class="line">NAME=ens160</span><br><span class="line">UUID=293f1d04-332e-4de2-8f19-4910bca6672c</span><br><span class="line">DEVICE=ens160</span><br><span class="line"><span class="comment"># 开启</span></span><br><span class="line">ONBOOT=<span class="built_in">yes</span></span><br><span class="line"><span class="comment"># 本机地址</span></span><br><span class="line">IPADDR=192.168.166.6</span><br><span class="line"><span class="comment"># 子网掩码</span></span><br><span class="line">NETMASK=255.255.255.0</span><br><span class="line"><span class="comment"># 虚拟VM8网卡 NAT 网关</span></span><br><span class="line">GATEWAY=192.168.166.2</span><br><span class="line"><span class="comment"># DNS 域名解析服务器IP地址</span></span><br><span class="line">DNS1=114.114.114.114</span><br><span class="line">DNS2=223.5.5.5</span><br><span class="line">DNS3=8.8.8.8</span><br></pre></td></tr></table></figure>
-
-<h4 id="重启网络"><a href="#重启网络" class="headerlink" title="重启网络"></a>重启网络</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nmcli c reload</span><br></pre></td></tr></table></figure>
-
-<h4 id="SSH-连接问题-网络不可达-怀疑是-VMware-软件问题，配置-SSH-映射就好了"><a href="#SSH-连接问题-网络不可达-怀疑是-VMware-软件问题，配置-SSH-映射就好了" class="headerlink" title="SSH 连接问题 网络不可达(怀疑是 VMware 软件问题，配置 SSH 映射就好了)"></a>SSH 连接问题 网络不可达(怀疑是 VMware 软件问题，配置 SSH 映射就好了)</h4><p>网络也能 ping 外网了，具体操作见<a href="https://blog.csdn.net/YiRan_Zhao/article/details/110121526">地址</a></p>
-]]></content>
-      <tags>
-        <tag>rockylinux8</tag>
       </tags>
   </entry>
   <entry>
@@ -468,6 +449,23 @@
 ]]></content>
       <tags>
         <tag>dnf</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>rockylinux8-network-config</title>
+    <url>/2023/12/17/database/rockylinux8-network-config/</url>
+    <content><![CDATA[<h4 id="查看-linux-内核信息"><a href="#查看-linux-内核信息" class="headerlink" title="查看 linux 内核信息"></a>查看 linux 内核信息</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">uname</span> -a</span><br></pre></td></tr></table></figure>
+
+<h4 id="查看-linux-发行版信息"><a href="#查看-linux-发行版信息" class="headerlink" title="查看 linux 发行版信息"></a>查看 linux 发行版信息</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> /etc/os-release</span><br></pre></td></tr></table></figure>
+
+<h4 id="配置静态网路"><a href="#配置静态网路" class="headerlink" title="配置静态网路"></a>配置静态网路</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/sysconfig/network-scripts/ifcfg-ens160</span><br><span class="line"></span><br><span class="line">TYPE=Ethernet</span><br><span class="line">PROXY_METHOD=none</span><br><span class="line">BROWSER_ONLY=no</span><br><span class="line"><span class="comment"># 静态IP地址</span></span><br><span class="line">BOOTPROTO=static</span><br><span class="line">DEFROUTE=<span class="built_in">yes</span></span><br><span class="line">IPV4_FAILURE_FATAL=no</span><br><span class="line">IPV6INIT=<span class="built_in">yes</span></span><br><span class="line">IPV6_AUTOCONF=<span class="built_in">yes</span></span><br><span class="line">IPV6_DEFROUTE=<span class="built_in">yes</span></span><br><span class="line">IPV6_FAILURE_FATAL=no</span><br><span class="line">NAME=ens160</span><br><span class="line">UUID=293f1d04-332e-4de2-8f19-4910bca6672c</span><br><span class="line">DEVICE=ens160</span><br><span class="line"><span class="comment"># 开启</span></span><br><span class="line">ONBOOT=<span class="built_in">yes</span></span><br><span class="line"><span class="comment"># 本机地址</span></span><br><span class="line">IPADDR=192.168.166.6</span><br><span class="line"><span class="comment"># 子网掩码</span></span><br><span class="line">NETMASK=255.255.255.0</span><br><span class="line"><span class="comment"># 虚拟VM8网卡 NAT 网关</span></span><br><span class="line">GATEWAY=192.168.166.2</span><br><span class="line"><span class="comment"># DNS 域名解析服务器IP地址</span></span><br><span class="line">DNS1=114.114.114.114</span><br><span class="line">DNS2=223.5.5.5</span><br><span class="line">DNS3=8.8.8.8</span><br></pre></td></tr></table></figure>
+
+<h4 id="重启网络"><a href="#重启网络" class="headerlink" title="重启网络"></a>重启网络</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nmcli c reload</span><br></pre></td></tr></table></figure>
+
+<h4 id="SSH-连接问题-网络不可达-怀疑是-VMware-软件问题，配置-SSH-映射就好了"><a href="#SSH-连接问题-网络不可达-怀疑是-VMware-软件问题，配置-SSH-映射就好了" class="headerlink" title="SSH 连接问题 网络不可达(怀疑是 VMware 软件问题，配置 SSH 映射就好了)"></a>SSH 连接问题 网络不可达(怀疑是 VMware 软件问题，配置 SSH 映射就好了)</h4><p>网络也能 ping 外网了，具体操作见<a href="https://blog.csdn.net/YiRan_Zhao/article/details/110121526">地址</a></p>
+]]></content>
+      <tags>
+        <tag>rockylinux8</tag>
       </tags>
   </entry>
   <entry>
@@ -492,37 +490,6 @@
 ]]></content>
       <tags>
         <tag>docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git配置SSH密钥</title>
-    <url>/2025/01/31/git/git-rsa/</url>
-    <content><![CDATA[<h3 id="1-生成新的-SSH-密钥"><a href="#1-生成新的-SSH-密钥" class="headerlink" title="1.生成新的 SSH 密钥"></a>1.生成新的 SSH 密钥</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-测试-SSH-连接"><a href="#2-测试-SSH-连接" class="headerlink" title="2.测试 SSH 连接"></a>2.测试 SSH 连接</h3><p> 将 <code>your_email@example.com</code> 替换为你在 Git 服务提供商（如 GitHub）上注册的邮箱地址。</p>
-<p>执行命令后，会提示你选择密钥的保存位置和设置密码（密码可以为空）。一般情况下，直接按回车键使用默认设置即可。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git配置用户名和密码</title>
-    <url>/2022/05/14/git/git-username/</url>
-    <content><![CDATA[<h3 id="1-全局配置"><a href="#1-全局配置" class="headerlink" title="1.全局配置"></a>1.全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-全局配置删除"><a href="#2-全局配置删除" class="headerlink" title="2.全局配置删除"></a>2.全局配置删除</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --global --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-系统配置删除"><a href="#3-系统配置删除" class="headerlink" title="3.系统配置删除"></a>3.系统配置删除</h3><p>系统配置会影响系统上所有用户的所有 Git 仓库，操作时需谨慎。删除系统配置的用户和邮箱信息，使用以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --system --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-查看全局配置"><a href="#4-查看全局配置" class="headerlink" title="4.查看全局配置"></a>4.查看全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-查看系统配置"><a href="#5-查看系统配置" class="headerlink" title="5.查看系统配置"></a>5.查看系统配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --list</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -566,6 +533,39 @@
 ]]></content>
       <tags>
         <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>nvm切换失败与pnpm windows安装配置</title>
+    <url>/2025/02/07/node/nvm-pnpm/</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/m0_73991249/article/details/141418185">nvm 在 vscode 中切换失败问题</a></p>
+<p><a href="https://blog.csdn.net/qq_47753695/article/details/140617373">pnpm 的安装与使用_pnpm 环境变量设置-CSDN 博客</a></p>
+]]></content>
+      <tags>
+        <tag>node</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>idea配置</title>
+    <url>/2025/04/24/idea/idea%E4%BB%A3%E7%A0%81%E7%83%AD%E9%83%A8%E7%BD%B2%E4%B8%8E%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/</url>
+    <content><![CDATA[<ol>
+<li><p><a href="https://blog.51cto.com/u_16175465/13145904">idea springboot修改完java代码自动重启</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/qq_36268452/article/details/139185162">如何让社区版IDEA变得好用_idea社区版</a></p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>IntelliJ IDEA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>国家漏洞数据库</title>
+    <url>/2025/04/25/nvd/nvd/</url>
+    <content><![CDATA[<h3 id="修复代码漏洞"><a href="#修复代码漏洞" class="headerlink" title="修复代码漏洞"></a>修复代码漏洞</h3><p><a href="https://blog.csdn.net/guzhangyu12345/article/details/143178484">maven依赖安全检查插件dependency-check-maven</a></p>
+]]></content>
+      <tags>
+        <tag>nvd</tag>
       </tags>
   </entry>
   <entry>
@@ -638,39 +638,6 @@
 ]]></content>
       <tags>
         <tag>jdbc</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>idea配置</title>
-    <url>/2025/04/24/idea/idea%E4%BB%A3%E7%A0%81%E7%83%AD%E9%83%A8%E7%BD%B2%E4%B8%8E%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/</url>
-    <content><![CDATA[<ol>
-<li><p><a href="https://blog.51cto.com/u_16175465/13145904">idea springboot修改完java代码自动重启</a></p>
-</li>
-<li><p><a href="https://blog.csdn.net/qq_36268452/article/details/139185162">如何让社区版IDEA变得好用_idea社区版</a></p>
-</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>IntelliJ IDEA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Mybatis-Plus</title>
-    <url>/2024/04/11/java/mybatis/</url>
-    <content><![CDATA[<h1 id="Mybatis-Plus-常规用法"><a href="#Mybatis-Plus-常规用法" class="headerlink" title="Mybatis-Plus 常规用法"></a>Mybatis-Plus 常规用法</h1><p><a href="https://baomidou.com/pages/24112f/">Mybatis-Plus 使用文档</a></p>
-]]></content>
-      <tags>
-        <tag>jdbc</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>nvm切换失败与pnpm windows安装配置</title>
-    <url>/2025/02/07/node/nvm-pnpm/</url>
-    <content><![CDATA[<p><a href="https://blog.csdn.net/m0_73991249/article/details/141418185">nvm 在 vscode 中切换失败问题</a></p>
-<p><a href="https://blog.csdn.net/qq_47753695/article/details/140617373">pnpm 的安装与使用_pnpm 环境变量设置-CSDN 博客</a></p>
-]]></content>
-      <tags>
-        <tag>node</tag>
       </tags>
   </entry>
   <entry>
@@ -800,12 +767,43 @@
       </tags>
   </entry>
   <entry>
-    <title>国家漏洞数据库</title>
-    <url>/2025/04/25/nvd/nvd/</url>
-    <content><![CDATA[<h3 id="修复代码漏洞"><a href="#修复代码漏洞" class="headerlink" title="修复代码漏洞"></a>修复代码漏洞</h3><p><a href="https://blog.csdn.net/guzhangyu12345/article/details/143178484">maven依赖安全检查插件dependency-check-maven</a></p>
+    <title>Mybatis-Plus</title>
+    <url>/2024/04/11/java/mybatis/</url>
+    <content><![CDATA[<h1 id="Mybatis-Plus-常规用法"><a href="#Mybatis-Plus-常规用法" class="headerlink" title="Mybatis-Plus 常规用法"></a>Mybatis-Plus 常规用法</h1><p><a href="https://baomidou.com/pages/24112f/">Mybatis-Plus 使用文档</a></p>
 ]]></content>
       <tags>
-        <tag>nvd</tag>
+        <tag>jdbc</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git配置用户名和密码</title>
+    <url>/2022/05/14/git/git-username/</url>
+    <content><![CDATA[<h3 id="1-全局配置"><a href="#1-全局配置" class="headerlink" title="1.全局配置"></a>1.全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-全局配置删除"><a href="#2-全局配置删除" class="headerlink" title="2.全局配置删除"></a>2.全局配置删除</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --global --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-系统配置删除"><a href="#3-系统配置删除" class="headerlink" title="3.系统配置删除"></a>3.系统配置删除</h3><p>系统配置会影响系统上所有用户的所有 Git 仓库，操作时需谨慎。删除系统配置的用户和邮箱信息，使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --system --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-查看全局配置"><a href="#4-查看全局配置" class="headerlink" title="4.查看全局配置"></a>4.查看全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-查看系统配置"><a href="#5-查看系统配置" class="headerlink" title="5.查看系统配置"></a>5.查看系统配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --list</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git配置SSH密钥</title>
+    <url>/2025/01/31/git/git-rsa/</url>
+    <content><![CDATA[<h3 id="1-生成新的-SSH-密钥"><a href="#1-生成新的-SSH-密钥" class="headerlink" title="1.生成新的 SSH 密钥"></a>1.生成新的 SSH 密钥</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-测试-SSH-连接"><a href="#2-测试-SSH-连接" class="headerlink" title="2.测试 SSH 连接"></a>2.测试 SSH 连接</h3><p> 将 <code>your_email@example.com</code> 替换为你在 Git 服务提供商（如 GitHub）上注册的邮箱地址。</p>
+<p>执行命令后，会提示你选择密钥的保存位置和设置密码（密码可以为空）。一般情况下，直接按回车键使用默认设置即可。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>git</tag>
       </tags>
   </entry>
 </search>
