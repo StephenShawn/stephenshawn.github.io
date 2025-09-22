@@ -3,18 +3,30 @@
   <entry>
     <title>在Nodejs中使用 Playwright</title>
     <url>/2025/02/03/automate/Playwright/</url>
-    <content><![CDATA[<p>首先，确保你已经安装了 <strong>Node.js</strong>。可以通过以下命令来检查是否已经安装 Node.js：</p>
+    <content><![CDATA[<h3 id="1-安装-Playwright"><a href="#1-安装-Playwright" class="headerlink" title="1. 安装 Playwright"></a>1. 安装 Playwright</h3><blockquote>
+<p>首先，确保你已经安装了 <strong>Node.js</strong>。可以通过以下命令来检查是否已经安装 Node.js：</p>
+</blockquote>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
 
+<span id="more"></span>
+
+<blockquote>
 <p>如果没有安装 Node.js，你可以从 <a href="https://nodejs.org/">Node.js 官网</a> 下载并安装最新版本的 Node.js。</p>
-<h3 id="2-初始化-Node-js-项目"><a href="#2-初始化-Node-js-项目" class="headerlink" title="2. 初始化 Node.js 项目"></a>2. <strong>初始化 Node.js 项目</strong></h3><p>如果你还没有创建 Node.js 项目，可以通过以下命令初始化一个新的 Node.js 项目：</p>
+</blockquote>
+<h3 id="2-初始化-Node-js-项目"><a href="#2-初始化-Node-js-项目" class="headerlink" title="2. 初始化 Node.js 项目"></a>2. <strong>初始化 Node.js 项目</strong></h3><blockquote>
+<p>如果你还没有创建 Node.js 项目，可以通过以下命令初始化一个新的 Node.js 项目：</p>
+</blockquote>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> my-playwright-project</span><br><span class="line"><span class="built_in">cd</span> my-playwright-project</span><br><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
 
+<blockquote>
 <p>这将会创建一个 <code>package.json</code> 文件，管理你的项目依赖。</p>
+</blockquote>
 <h3 id="3-安装-Playwright"><a href="#3-安装-Playwright" class="headerlink" title="3. 安装 Playwright"></a>3. <strong>安装 Playwright</strong></h3><p>你可以使用 <strong>npm</strong> 或 <strong>yarn</strong> 来安装 Playwright。执行以下命令安装 Playwright 和浏览器依赖：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright</span><br></pre></td></tr></table></figure>
 
+<blockquote>
 <p>默认情况下，Playwright 会安装必要的浏览器二进制文件（Chromium、Firefox 和 WebKit），因此它会比较大。如果你只需要安装特定的浏览器，你可以选择安装指定的浏览器包：</p>
+</blockquote>
 <ul>
 <li><p><strong>只安装 Chromium</strong>:</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-chromium</span><br></pre></td></tr></table></figure>
@@ -25,31 +37,58 @@
 <li><p><strong>只安装 WebKit</strong>:</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-webkit</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h3 id="4-验证安装"><a href="#4-验证安装" class="headerlink" title="4. 验证安装"></a>4. <strong>验证安装</strong></h3><p>安装完成后，你可以创建一个简单的脚本来测试 Playwright 是否工作正常：</p>
-<p>创建一个文件 <code>test.js</code>，并添加以下内容：</p>
+<h3 id="4-验证安装"><a href="#4-验证安装" class="headerlink" title="4. 验证安装"></a>4. <strong>验证安装</strong></h3><blockquote>
+<p>安装完成后，你可以创建一个简单的脚本来测试 Playwright 是否工作正常：</p>
+</blockquote>
+<blockquote>
+<p>你可以创建一个文件 <code>test.js</code>，并添加以下内容：</p>
+</blockquote>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; chromium &#125; = <span class="built_in">require</span>(<span class="string">&quot;playwright&quot;</span>);</span><br><span class="line"></span><br><span class="line">(<span class="title function_">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="comment">// 启动浏览器</span></span><br><span class="line">  <span class="keyword">const</span> browser = <span class="keyword">await</span> chromium.<span class="title function_">launch</span>(&#123; <span class="attr">headless</span>: <span class="literal">false</span> &#125;);</span><br><span class="line">  <span class="keyword">const</span> page = <span class="keyword">await</span> browser.<span class="title function_">newPage</span>();</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 打开一个页面</span></span><br><span class="line">  <span class="keyword">await</span> page.<span class="title function_">goto</span>(<span class="string">&quot;https://example.com&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 截图保存</span></span><br><span class="line">  <span class="keyword">await</span> page.<span class="title function_">screenshot</span>(&#123; <span class="attr">path</span>: <span class="string">&quot;example.png&quot;</span> &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 关闭浏览器</span></span><br><span class="line">  <span class="keyword">await</span> browser.<span class="title function_">close</span>();</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
 
+<blockquote>
 <p>然后，运行脚本：</p>
+</blockquote>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node test.js</span><br></pre></td></tr></table></figure>
 
+<blockquote>
 <p>如果一切正常，Playwright 会启动一个 Chromium 浏览器实例并打开 <code>https://example.com</code>，然后保存页面截图为 <code>example.png</code>。</p>
+</blockquote>
 <h3 id="5-常见问题"><a href="#5-常见问题" class="headerlink" title="5. 常见问题"></a>5. <strong>常见问题</strong></h3><ul>
 <li>如果你在安装过程中遇到浏览器二进制文件下载失败的情况，确保你的网络连接正常，并且没有防火墙或代理阻止下载。</li>
 <li>Playwright 会在安装时自动下载 Chromium、Firefox 和 WebKit。如果你不需要某个浏览器，可以手动卸载它们，或者仅安装你需要的特定浏览器。</li>
 </ul>
 <hr>
+<blockquote>
 <p>通过这些步骤，你就可以在 Node.js 环境中成功安装并使用 Playwright 进行浏览器自动化操作。</p>
+</blockquote>
 ]]></content>
       <tags>
         <tag>浏览器自动化测试</tag>
       </tags>
   </entry>
   <entry>
-    <title>2025年微博图床失效解决方法</title>
-    <url>/2025/04/11/blog/%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A%E5%A4%B1%E6%95%88%E8%A7%A3%E5%86%B3/</url>
-    <content><![CDATA[<h2 id="2025年微博图床失效解决方法"><a href="#2025年微博图床失效解决方法" class="headerlink" title="2025年微博图床失效解决方法"></a>2025年微博图床失效解决方法</h2><h4 id="一、下载BlogHelper-Browse-1-0-30-at-SourceForge-net"><a href="#一、下载BlogHelper-Browse-1-0-30-at-SourceForge-net" class="headerlink" title="一、下载BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net"></a>一、下载<a href="https://sourceforge.net/projects/bloghelper.mirror/files/1.0.30/">BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net</a></h4><h4 id="二、登陆微博账号，再启动新浪图床如下"><a href="#二、登陆微博账号，再启动新浪图床如下" class="headerlink" title="二、登陆微博账号，再启动新浪图床如下"></a>二、登陆微博账号，再启动新浪图床如下</h4><p><img src="https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0eg6z69jdj308105374f.jpg" alt="新浪图床启动"></p>
-<h4 id="三、上传包含本地图片的md文件-先用Typora-编辑好md文件-，得到替换图片连接后的md文件"><a href="#三、上传包含本地图片的md文件-先用Typora-编辑好md文件-，得到替换图片连接后的md文件" class="headerlink" title="三、上传包含本地图片的md文件(先用Typora 编辑好md文件)，得到替换图片连接后的md文件"></a>三、上传包含本地图片的md文件(先用<a href="https://typoraio.cn/">Typora </a>编辑好md文件)，得到替换图片连接后的md文件</h4><p><img src="https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0eg6zboy0j306t05fgls.jpg" alt="新浪图床图片上传"></p>
-<h4 id="四、将得到的md文件中图片地址修改"><a href="#四、将得到的md文件中图片地址修改" class="headerlink" title="四、将得到的md文件中图片地址修改"></a>四、将得到的md文件中图片地址修改</h4><blockquote>
+    <title>git配置SSH密钥</title>
+    <url>/2025/01/31/git/GitRSA/</url>
+    <content><![CDATA[<h3 id="1-生成新的-SSH-密钥"><a href="#1-生成新的-SSH-密钥" class="headerlink" title="1.生成新的 SSH 密钥"></a>1.生成新的 SSH 密钥</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h3 id="2-测试-SSH-连接"><a href="#2-测试-SSH-连接" class="headerlink" title="2.测试 SSH 连接"></a>2.测试 SSH 连接</h3><p>将 <code>your_email@example.com</code> 替换为你在 Git 服务提供商（如 GitHub）上注册的邮箱地址。</p>
+<p>执行命令后，会提示你选择密钥的保存位置和设置密码（密码可以为空）。一般情况下，直接按回车键使用默认设置即可。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微博图床失效解决方法</title>
+    <url>/2025/04/11/blog/ImageHost/</url>
+    <content><![CDATA[<h4 id="一、下载BlogHelper-Browse-1-0-30-at-SourceForge-net"><a href="#一、下载BlogHelper-Browse-1-0-30-at-SourceForge-net" class="headerlink" title="一、下载BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net"></a>一、下载<a href="https://sourceforge.net/projects/bloghelper.mirror/files/1.0.30/">BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net</a></h4><span id="more"></span>
+
+<h4 id="二、登陆微博账号，再启动新浪图床如下"><a href="#二、登陆微博账号，再启动新浪图床如下" class="headerlink" title="二、登陆微博账号，再启动新浪图床如下"></a>二、登陆微博账号，再启动新浪图床如下</h4><p><img src="https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0eg6z69jdj308105374f.jpg" alt="新浪图床启动"></p>
+<h4 id="三、上传包含本地图片的-md-文件-先用Typora-编辑好-md-文件-，得到替换图片连接后的-md-文件"><a href="#三、上传包含本地图片的-md-文件-先用Typora-编辑好-md-文件-，得到替换图片连接后的-md-文件" class="headerlink" title="三、上传包含本地图片的 md 文件(先用Typora 编辑好 md 文件)，得到替换图片连接后的 md 文件"></a>三、上传包含本地图片的 md 文件(先用<a href="https://typoraio.cn/">Typora </a>编辑好 md 文件)，得到替换图片连接后的 md 文件</h4><p><img src="https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0eg6zboy0j306t05fgls.jpg" alt="新浪图床图片上传"></p>
+<h4 id="四、将得到的-md-文件中图片地址修改"><a href="#四、将得到的-md-文件中图片地址修改" class="headerlink" title="四、将得到的 md 文件中图片地址修改"></a>四、将得到的 md 文件中图片地址修改</h4><blockquote>
 <p>例如得到的图片地址为: <code>http://ww3.sinaimg.cn/large/008qTdeRly1i0edw9eafdj31ao0t6q42.jpg</code>该地址不能正常访问</p>
 <p>将其改为<code>https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0edw9eafdj31ao0t6q42.jpg</code></p>
 <p>就是将前缀<code>http://ww3.sinaimg.cn</code>改为<code>https://cdn.cdnjson.com/tvax3.sinaimg.cn</code></p>
@@ -61,8 +100,10 @@
   </entry>
   <entry>
     <title>git配置用户名和密码</title>
-    <url>/2022/05/14/git/git-username/</url>
+    <url>/2025/05/14/git/GitUser/</url>
     <content><![CDATA[<h3 id="1-全局配置"><a href="#1-全局配置" class="headerlink" title="1.全局配置"></a>1.全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
 
 <h3 id="2-全局配置删除"><a href="#2-全局配置删除" class="headerlink" title="2.全局配置删除"></a>2.全局配置删除</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --global --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
 
@@ -75,145 +116,6 @@
 ]]></content>
       <tags>
         <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git配置SSH密钥</title>
-    <url>/2025/01/31/git/git-rsa/</url>
-    <content><![CDATA[<h3 id="1-生成新的-SSH-密钥"><a href="#1-生成新的-SSH-密钥" class="headerlink" title="1.生成新的 SSH 密钥"></a>1.生成新的 SSH 密钥</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-测试-SSH-连接"><a href="#2-测试-SSH-连接" class="headerlink" title="2.测试 SSH 连接"></a>2.测试 SSH 连接</h3><p> 将 <code>your_email@example.com</code> 替换为你在 Git 服务提供商（如 GitHub）上注册的邮箱地址。</p>
-<p>执行命令后，会提示你选择密钥的保存位置和设置密码（密码可以为空）。一般情况下，直接按回车键使用默认设置即可。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>搜索引擎高级搜索技巧</title>
-    <url>/2022/06/03/others/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/</url>
-    <content><![CDATA[<h5 id="逻辑与-或"><a href="#逻辑与-或" class="headerlink" title="逻辑与&#x2F;或"></a><em><strong>逻辑与&#x2F;或</strong></em></h5><hr>
-<ul>
-<li>注意 AND、OR 必须大写，否则会被认为是普通的单词，而不是搜索指令</li>
-<li>与普通编程语言不一样的是，OR 指令优先于 AND 指令</li>
-<li>简写：AND 指令一般以空格代替，不明确写出。另外 AND 指令还可以用+代替。OR 指令可用|代替</li>
-</ul>
-<h5 id="逻辑非："><a href="#逻辑非：" class="headerlink" title="逻辑非：-"></a><em><strong>逻辑非：-</strong></em></h5><hr>
-<ul>
-<li>样例：搜索引擎 历史 -文化 -中国历史 -世界历史</li>
-</ul>
-<h5 id="完整匹配-“-“"><a href="#完整匹配-“-“" class="headerlink" title="完整匹配 “ “"></a><em><strong>完整匹配 “ “</strong></em></h5><hr>
-<ul>
-<li>样例：”world war I” 表示搜索一次世界大战</li>
-</ul>
-<h5 id="通配符："><a href="#通配符：" class="headerlink" title="通配符：*?"></a><em><strong>通配符：*?</strong></em></h5><hr>
-<ul>
-<li>与我们通常的习惯一致，“*”代表一连串字符，“?”代表单个字符</li>
-</ul>
-<h5 id="site-在某个网站或域名下搜索"><a href="#site-在某个网站或域名下搜索" class="headerlink" title="site: 在某个网站或域名下搜索"></a><em><strong>site: 在某个网站或域名下搜索</strong></em></h5><hr>
-<ul>
-<li>样例：搜索引擎 技巧 site:edu.cn</li>
-<li>这表示要在中文教育科研网站（edu.cn）上关于搜索引擎技巧的页面</li>
-</ul>
-<h5 id="filetype-搜索某种类型的文件"><a href="#filetype-搜索某种类型的文件" class="headerlink" title="filetype: 搜索某种类型的文件"></a><em><strong>filetype: 搜索某种类型的文件</strong></em></h5><hr>
-<ul>
-<li>样例：天文学 filetype:pdf</li>
-<li>简写: 天文学:pdf</li>
-<li>这表示只搜索 pdf 文件</li>
-<li>tips：样例 天文学三个字位置任意写</li>
-</ul>
-<h5 id="in-指令-位置关键词查找"><a href="#in-指令-位置关键词查找" class="headerlink" title="in 指令: 位置关键词查找"></a><em><strong>in 指令: 位置关键词查找</strong></em></h5><hr>
-<ul>
-<li>intitle: 在网页标题中查找。这通常对讨论比较多的热门话题很有效。例如：intitle:”GeForce 7800”+测试</li>
-<li>例如：allintitile:”GeForce 7800” 测试 与 intitle:”GeForce 7800”+测试 的含义一致。但是，allintitile 是排他的，不能加上其他非 intitle 方面的限制条件</li>
-<li>inurl: 在网页的 url 地址中查找。例如：inurl:dowload 表示查找 url 中包含 download 的网页</li>
-<li>allinurl: inurl 的排他指令</li>
-<li>inanchor: 在网页的链接锚中查找</li>
-</ul>
-<h5 id="link-搜索所有链接到某个-URL-地址的网页"><a href="#link-搜索所有链接到某个-URL-地址的网页" class="headerlink" title="link: 搜索所有链接到某个 URL 地址的网页"></a><em><strong>link: 搜索所有链接到某个 URL 地址的网页</strong></em></h5><hr>
-<ul>
-<li>例如：link:<a href="http://www.newhua.com/">www.newhua.com</a> 表示所有指向“华军软件园”外部链接。</li>
-</ul>
-<h5 id="related-寻找某网页的“类似网页”"><a href="#related-寻找某网页的“类似网页”" class="headerlink" title="related: 寻找某网页的“类似网页”"></a><em><strong>related: 寻找某网页的“类似网页”</strong></em></h5><hr>
-<ul>
-<li>例如：related:<a href="http://www.newhua.com/">www.newhua.com</a> 表示找和“华军软件园”类似的网页。</li>
-</ul>
-<h5 id="cache-网页快照（略"><a href="#cache-网页快照（略" class="headerlink" title="cache: 网页快照（略)"></a><em><strong>cache: 网页快照（略)</strong></em></h5><hr>
-<ul>
-<li>查看网站的 Google 缓存版本，会直接显示缓存页面</li>
-<li>cache:weibo.com 查看微博的谷歌快照</li>
-</ul>
-<h5 id="daterange-查找特定时间网页"><a href="#daterange-查找特定时间网页" class="headerlink" title="daterange 查找特定时间网页"></a><em><strong>daterange 查找特定时间网页</strong></em></h5><hr>
-<ul>
-<li>例如：”Spice Girls“ daterange:2450958-2450968。这里时间日期的格式是按天文学的儒略日</li>
-<li>儒略日数（Julian Day Number，JDN）的计算是从格林威治标准时间的中午开始，包含一个整天的时间，起点的时间（0 日）回溯至儒略历的公元前 4713 年 1 月 1 日中午 12 点（在格里历是公元前 4714 年 11 月 24 日），这个日期是三种多年周期的共同起点，且是历史上最接近现代的一个起点。例如，2000 年 1 月 1 日的 UT12:00 是儒略日 2,451,545。</li>
-<li>世界时 UT 即格林尼治平太阳时间，是指格林尼治所在地的标准时间，也是表示地球自转速率的一种形式。以地球自转为基础的时间计量系统。</li>
-<li>格林尼治（Greenwich），是英国伦敦的一个区，位于伦敦东南、泰晤士河南岸</li>
-</ul>
-<h5 id="表示数值范围"><a href="#表示数值范围" class="headerlink" title=".. 表示数值范围"></a><em><strong>.. 表示数值范围</strong></em></h5><hr>
-<ul>
-<li>例如：数码相机 600..900 万像素 3000..4000 元</li>
-<li>注意：“900”与“万”之间必须有空格。</li>
-</ul>
-<h5 id=""><a href="#" class="headerlink" title="@"></a><em><strong>@</strong></em></h5><hr>
-<ul>
-<li>在用于搜索社交媒体的字词前加上@ trump @twitter 搜索 trump 的 twitter</li>
-</ul>
-<h5 id="-1"><a href="#-1" class="headerlink" title="$"></a><em><strong>$</strong></em></h5><hr>
-<ul>
-<li>在数字前加上$搜索特定价格 camera $400 搜索 400$的 camera</li>
-</ul>
-<h5 id="-2"><a href="#-2" class="headerlink" title="#"></a><em><strong>#</strong></em></h5><hr>
-<ul>
-<li>搜索 # 标签 #throwbackthursday</li>
-<li>搜索标签 throwbackthursday</li>
-</ul>
-<h5 id="info"><a href="#info" class="headerlink" title="info"></a><em><strong>info</strong></em></h5><hr>
-<ul>
-<li>在网址前加 info:，获取网站详情 info:github.com 搜索 github 网站详情</li>
-</ul>
-<h5 id="intext"><a href="#intext" class="headerlink" title="intext"></a><em><strong>intext</strong></em></h5><hr>
-<ul>
-<li>搜索查询词出现在页面正文(title)中的页面，支持中文和英文 SEO intext:搜索引擎 在正文包含【搜索引擎】的网页中搜索【SEO】</li>
-</ul>
-<h5 id="allintext"><a href="#allintext" class="headerlink" title="allintext"></a><em><strong>allintext</strong></em></h5><hr>
-<ul>
-<li>即 all+inanchor 页面正文包含多个关键词的页面 allintext:SEO 搜索引擎优化 相当于：intext:SEO intext:搜索引擎优化</li>
-</ul>
-<h5 id="inanchor"><a href="#inanchor" class="headerlink" title="inanchor"></a><em><strong>inanchor</strong></em></h5><hr>
-<ul>
-<li>搜索链接锚文字(即链接显示的文字)中包含搜索词的页面 inanchor:前端 搜索链接锚文字中包含【前端】的页面</li>
-</ul>
-<h5 id="allinanchor"><a href="#allinanchor" class="headerlink" title="allinanchor"></a><em><strong>allinanchor</strong></em></h5><hr>
-<ul>
-<li><pre><code>即all+inanchor 页面链接锚文字包含多个关键词的页面	allinanchor:SEO 搜索引擎优化	相当于：inanchor:SEO inanchor:搜索引擎优化
-</code></pre>
-</li>
-</ul>
-<h5 id="weather"><a href="#weather" class="headerlink" title="weather"></a><em><strong>weather</strong></em></h5><hr>
-<ul>
-<li>weather&#x2F;time&#x2F;sunrise&#x2F;sundown+城市名，返回城市的天气&#x2F;时间&#x2F;日出时间&#x2F;日落时间</li>
-<li>weather:beijing 显示北京的天气</li>
-</ul>
-<h5 id="music"><a href="#music" class="headerlink" title="music"></a><em><strong>music</strong></em></h5><hr>
-<ul>
-<li>music 或者用 songs，歌手名字+music&#x2F;songs 周杰伦 music 返回周杰伦的各首歌曲</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>高级搜索技巧</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>资讯、多媒体订阅</title>
-    <url>/2023/09/25/others/%E8%B5%84%E8%AE%AF%E3%80%81%E5%8D%9A%E5%AE%A2%E8%AE%A2%E9%98%85/</url>
-    <content><![CDATA[<h3 id="消息-资讯-订阅"><a href="#消息-资讯-订阅" class="headerlink" title="消息|资讯 订阅"></a>消息|资讯 订阅</h3><p><a href="https://sspai.com/post/57498">Tiny Tiny RSS 部署</a></p>
-<hr>
-<h3 id="多媒体-播客订阅服务"><a href="#多媒体-播客订阅服务" class="headerlink" title="多媒体 播客订阅服务"></a>多媒体 播客订阅服务</h3><p><a href="https://sspai.com/post/63610">Airsonic 部署</a></p>
-]]></content>
-      <tags>
-        <tag>订阅</tag>
       </tags>
   </entry>
 </search>

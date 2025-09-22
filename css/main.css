@@ -1183,7 +1183,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #a2ff40;
+    background: #e725ff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2771,7 +2771,6 @@ header.header {
   }
 }
 body {
-  background-image: url("/images/background.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
