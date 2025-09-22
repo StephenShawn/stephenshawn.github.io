@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>git配置用户名和密码</title>
+    <url>/2025/05/14/git/GitUser/</url>
+    <content><![CDATA[<h3 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h3 id="全局配置删除"><a href="#全局配置删除" class="headerlink" title="全局配置删除"></a>全局配置删除</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --global --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
+
+<h3 id="系统全局配置删除"><a href="#系统全局配置删除" class="headerlink" title="系统全局配置删除"></a>系统全局配置删除</h3><p>系统配置会影响系统上所有用户的所有 Git 仓库，操作时需谨慎。删除系统配置的用户和邮箱信息，使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --system --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
+
+<h3 id="全局配置查看"><a href="#全局配置查看" class="headerlink" title="全局配置查看"></a>全局配置查看</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
+
+<h3 id="系统全局配置查看"><a href="#系统全局配置查看" class="headerlink" title="系统全局配置查看"></a>系统全局配置查看</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --list</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>在Nodejs中使用 Playwright</title>
     <url>/2025/02/03/automate/Playwright/</url>
-    <content><![CDATA[<h3 id="1-安装-Playwright"><a href="#1-安装-Playwright" class="headerlink" title="1. 安装 Playwright"></a>1. 安装 Playwright</h3><blockquote>
+    <content><![CDATA[<h3 id="安装-Playwright"><a href="#安装-Playwright" class="headerlink" title="安装 Playwright"></a>安装 Playwright</h3><blockquote>
 <p>首先，确保你已经安装了 <strong>Node.js</strong>。可以通过以下命令来检查是否已经安装 Node.js：</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
@@ -13,7 +33,7 @@
 <blockquote>
 <p>如果没有安装 Node.js，你可以从 <a href="https://nodejs.org/">Node.js 官网</a> 下载并安装最新版本的 Node.js。</p>
 </blockquote>
-<h3 id="2-初始化-Node-js-项目"><a href="#2-初始化-Node-js-项目" class="headerlink" title="2. 初始化 Node.js 项目"></a>2. <strong>初始化 Node.js 项目</strong></h3><blockquote>
+<h3 id="初始化-Node-js-项目"><a href="#初始化-Node-js-项目" class="headerlink" title="初始化 Node.js 项目"></a><strong>初始化 Node.js 项目</strong></h3><blockquote>
 <p>如果你还没有创建 Node.js 项目，可以通过以下命令初始化一个新的 Node.js 项目：</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> my-playwright-project</span><br><span class="line"><span class="built_in">cd</span> my-playwright-project</span><br><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
@@ -21,7 +41,7 @@
 <blockquote>
 <p>这将会创建一个 <code>package.json</code> 文件，管理你的项目依赖。</p>
 </blockquote>
-<h3 id="3-安装-Playwright"><a href="#3-安装-Playwright" class="headerlink" title="3. 安装 Playwright"></a>3. <strong>安装 Playwright</strong></h3><p>你可以使用 <strong>npm</strong> 或 <strong>yarn</strong> 来安装 Playwright。执行以下命令安装 Playwright 和浏览器依赖：</p>
+<h3 id="安装-Playwright-1"><a href="#安装-Playwright-1" class="headerlink" title="安装 Playwright"></a><strong>安装 Playwright</strong></h3><p>你可以使用 <strong>npm</strong> 或 <strong>yarn</strong> 来安装 Playwright。执行以下命令安装 Playwright 和浏览器依赖：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright</span><br></pre></td></tr></table></figure>
 
 <blockquote>
@@ -37,7 +57,7 @@
 <li><p><strong>只安装 WebKit</strong>:</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-webkit</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h3 id="4-验证安装"><a href="#4-验证安装" class="headerlink" title="4. 验证安装"></a>4. <strong>验证安装</strong></h3><blockquote>
+<h3 id="验证安装"><a href="#验证安装" class="headerlink" title="验证安装"></a><strong>验证安装</strong></h3><blockquote>
 <p>安装完成后，你可以创建一个简单的脚本来测试 Playwright 是否工作正常：</p>
 </blockquote>
 <blockquote>
@@ -53,7 +73,7 @@
 <blockquote>
 <p>如果一切正常，Playwright 会启动一个 Chromium 浏览器实例并打开 <code>https://example.com</code>，然后保存页面截图为 <code>example.png</code>。</p>
 </blockquote>
-<h3 id="5-常见问题"><a href="#5-常见问题" class="headerlink" title="5. 常见问题"></a>5. <strong>常见问题</strong></h3><ul>
+<h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a><strong>常见问题</strong></h3><ul>
 <li>如果你在安装过程中遇到浏览器二进制文件下载失败的情况，确保你的网络连接正常，并且没有防火墙或代理阻止下载。</li>
 <li>Playwright 会在安装时自动下载 Chromium、Firefox 和 WebKit。如果你不需要某个浏览器，可以手动卸载它们，或者仅安装你需要的特定浏览器。</li>
 </ul>
@@ -67,13 +87,28 @@
       </tags>
   </entry>
   <entry>
+    <title>git配置SSH密钥</title>
+    <url>/2025/01/31/git/GitRSA/</url>
+    <content><![CDATA[<h3 id="生成新的-SSH-密钥"><a href="#生成新的-SSH-密钥" class="headerlink" title="生成新的 SSH 密钥"></a>生成新的 SSH 密钥</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h3 id="测试-SSH-连接"><a href="#测试-SSH-连接" class="headerlink" title="测试 SSH 连接"></a>测试 SSH 连接</h3><p>将 <code>your_email@example.com</code> 替换为你在 Git 服务提供商（如 GitHub）上注册的邮箱地址。</p>
+<p>执行命令后，会提示你选择密钥的保存位置和设置密码（密码可以为空）。一般情况下，直接按回车键使用默认设置即可。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>微博图床失效解决方法</title>
     <url>/2025/04/11/blog/ImageHost/</url>
-    <content><![CDATA[<h4 id="1-下载BlogHelper-Browse-1-0-30-at-SourceForge-net"><a href="#1-下载BlogHelper-Browse-1-0-30-at-SourceForge-net" class="headerlink" title="1.下载BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net"></a>1.下载<a href="https://sourceforge.net/projects/bloghelper.mirror/files/1.0.30/">BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net</a></h4><span id="more"></span>
+    <content><![CDATA[<h4 id="下载BlogHelper-Browse-1-0-30-at-SourceForge-net"><a href="#下载BlogHelper-Browse-1-0-30-at-SourceForge-net" class="headerlink" title="下载BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net"></a>下载<a href="https://sourceforge.net/projects/bloghelper.mirror/files/1.0.30/">BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net</a></h4><span id="more"></span>
 
-<h4 id="2-登陆微博账号，再启动新浪图床如下"><a href="#2-登陆微博账号，再启动新浪图床如下" class="headerlink" title="2.登陆微博账号，再启动新浪图床如下"></a>2.登陆微博账号，再启动新浪图床如下</h4><p><img src="https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0eg6z69jdj308105374f.jpg" alt="新浪图床启动"></p>
-<h4 id="3-上传包含本地图片的-md-文件-先用Typora-编辑好-md-文件-，得到替换图片连接后的-md-文件"><a href="#3-上传包含本地图片的-md-文件-先用Typora-编辑好-md-文件-，得到替换图片连接后的-md-文件" class="headerlink" title="3.上传包含本地图片的 md 文件(先用Typora 编辑好 md 文件)，得到替换图片连接后的 md 文件"></a>3.上传包含本地图片的 md 文件(先用<a href="https://typoraio.cn/">Typora </a>编辑好 md 文件)，得到替换图片连接后的 md 文件</h4><p><img src="https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0eg6zboy0j306t05fgls.jpg" alt="新浪图床图片上传"></p>
-<h4 id="4-将得到的-md-文件中图片地址修改"><a href="#4-将得到的-md-文件中图片地址修改" class="headerlink" title="4.将得到的 md 文件中图片地址修改"></a>4.将得到的 md 文件中图片地址修改</h4><blockquote>
+<h4 id="登陆微博账号，再启动新浪图床如下"><a href="#登陆微博账号，再启动新浪图床如下" class="headerlink" title="登陆微博账号，再启动新浪图床如下"></a>登陆微博账号，再启动新浪图床如下</h4><p><img src="https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0eg6z69jdj308105374f.jpg" alt="新浪图床启动"></p>
+<h4 id="上传包含本地图片的-md-文件-先用Typora-编辑好-md-文件-，得到替换图片连接后的-md-文件"><a href="#上传包含本地图片的-md-文件-先用Typora-编辑好-md-文件-，得到替换图片连接后的-md-文件" class="headerlink" title="上传包含本地图片的 md 文件(先用Typora 编辑好 md 文件)，得到替换图片连接后的 md 文件"></a>上传包含本地图片的 md 文件(先用<a href="https://typoraio.cn/">Typora </a>编辑好 md 文件)，得到替换图片连接后的 md 文件</h4><p><img src="https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0eg6zboy0j306t05fgls.jpg" alt="新浪图床图片上传"></p>
+<h4 id="将得到的-md-文件中图片地址修改"><a href="#将得到的-md-文件中图片地址修改" class="headerlink" title="将得到的 md 文件中图片地址修改"></a>将得到的 md 文件中图片地址修改</h4><blockquote>
 <p>例如得到的图片地址为: <code>http://ww3.sinaimg.cn/large/008qTdeRly1i0edw9eafdj31ao0t6q42.jpg</code>该地址不能正常访问</p>
 <p>将其改为<code>https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0edw9eafdj31ao0t6q42.jpg</code></p>
 <p>就是将前缀<code>http://ww3.sinaimg.cn</code>改为<code>https://cdn.cdnjson.com/tvax3.sinaimg.cn</code></p>
@@ -81,41 +116,6 @@
 ]]></content>
       <tags>
         <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git配置用户名和密码</title>
-    <url>/2025/05/14/git/GitUser/</url>
-    <content><![CDATA[<h3 id="1-全局配置"><a href="#1-全局配置" class="headerlink" title="1.全局配置"></a>1.全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h3 id="2-全局配置删除"><a href="#2-全局配置删除" class="headerlink" title="2.全局配置删除"></a>2.全局配置删除</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --global --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-系统配置删除"><a href="#3-系统配置删除" class="headerlink" title="3.系统配置删除"></a>3.系统配置删除</h3><p>系统配置会影响系统上所有用户的所有 Git 仓库，操作时需谨慎。删除系统配置的用户和邮箱信息，使用以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --system --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-查看全局配置"><a href="#4-查看全局配置" class="headerlink" title="4.查看全局配置"></a>4.查看全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-查看系统配置"><a href="#5-查看系统配置" class="headerlink" title="5.查看系统配置"></a>5.查看系统配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --list</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git配置SSH密钥</title>
-    <url>/2025/01/31/git/GitRSA/</url>
-    <content><![CDATA[<h3 id="1-生成新的-SSH-密钥"><a href="#1-生成新的-SSH-密钥" class="headerlink" title="1.生成新的 SSH 密钥"></a>1.生成新的 SSH 密钥</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h3 id="2-测试-SSH-连接"><a href="#2-测试-SSH-连接" class="headerlink" title="2.测试 SSH 连接"></a>2.测试 SSH 连接</h3><p>将 <code>your_email@example.com</code> 替换为你在 Git 服务提供商（如 GitHub）上注册的邮箱地址。</p>
-<p>执行命令后，会提示你选择密钥的保存位置和设置密码（密码可以为空）。一般情况下，直接按回车键使用默认设置即可。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>git</tag>
       </tags>
   </entry>
 </search>
