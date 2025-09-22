@@ -63,7 +63,7 @@
 </blockquote>
 ]]></content>
       <tags>
-        <tag>浏览器自动化测试</tag>
+        <tag>BrowserAutomation</tag>
       </tags>
   </entry>
   <entry>
@@ -84,21 +84,6 @@
       </tags>
   </entry>
   <entry>
-    <title>git配置SSH密钥</title>
-    <url>/2025/01/31/git/GitRSA/</url>
-    <content><![CDATA[<h3 id="1-生成新的-SSH-密钥"><a href="#1-生成新的-SSH-密钥" class="headerlink" title="1.生成新的 SSH 密钥"></a>1.生成新的 SSH 密钥</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h3 id="2-测试-SSH-连接"><a href="#2-测试-SSH-连接" class="headerlink" title="2.测试 SSH 连接"></a>2.测试 SSH 连接</h3><p>将 <code>your_email@example.com</code> 替换为你在 Git 服务提供商（如 GitHub）上注册的邮箱地址。</p>
-<p>执行命令后，会提示你选择密钥的保存位置和设置密码（密码可以为空）。一般情况下，直接按回车键使用默认设置即可。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>git配置用户名和密码</title>
     <url>/2025/05/14/git/GitUser/</url>
     <content><![CDATA[<h3 id="1-全局配置"><a href="#1-全局配置" class="headerlink" title="1.全局配置"></a>1.全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
@@ -113,6 +98,21 @@
 <h3 id="4-查看全局配置"><a href="#4-查看全局配置" class="headerlink" title="4.查看全局配置"></a>4.查看全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
 
 <h3 id="5-查看系统配置"><a href="#5-查看系统配置" class="headerlink" title="5.查看系统配置"></a>5.查看系统配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --list</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git配置SSH密钥</title>
+    <url>/2025/01/31/git/GitRSA/</url>
+    <content><![CDATA[<h3 id="1-生成新的-SSH-密钥"><a href="#1-生成新的-SSH-密钥" class="headerlink" title="1.生成新的 SSH 密钥"></a>1.生成新的 SSH 密钥</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h3 id="2-测试-SSH-连接"><a href="#2-测试-SSH-连接" class="headerlink" title="2.测试 SSH 连接"></a>2.测试 SSH 连接</h3><p>将 <code>your_email@example.com</code> 替换为你在 Git 服务提供商（如 GitHub）上注册的邮箱地址。</p>
+<p>执行命令后，会提示你选择密钥的保存位置和设置密码（密码可以为空）。一般情况下，直接按回车键使用默认设置即可。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>git</tag>
