@@ -1,23 +1,206 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>git配置用户名和密码</title>
-    <url>/2025/05/14/git/GitUser/</url>
-    <content><![CDATA[<h3 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-
+    <title>高级搜索技巧</title>
+    <url>/2025/09/30/automate/SearchSkills/</url>
+    <content><![CDATA[<p>以下是链接中提到的谷歌高级搜索命令表格的整理版本：</p>
 <span id="more"></span>
 
-<h3 id="全局配置删除"><a href="#全局配置删除" class="headerlink" title="全局配置删除"></a>全局配置删除</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --global --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
-
-<h3 id="系统全局配置删除"><a href="#系统全局配置删除" class="headerlink" title="系统全局配置删除"></a>系统全局配置删除</h3><p>系统配置会影响系统上所有用户的所有 Git 仓库，操作时需谨慎。删除系统配置的用户和邮箱信息，使用以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --system --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
-
-<h3 id="全局配置查看"><a href="#全局配置查看" class="headerlink" title="全局配置查看"></a>全局配置查看</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
-
-<h3 id="系统全局配置查看"><a href="#系统全局配置查看" class="headerlink" title="系统全局配置查看"></a>系统全局配置查看</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --list</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>语法</th>
+<th>语法说明</th>
+<th>示例</th>
+<th>示例说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>+</td>
+<td>AND（必须同时包含）</td>
+<td>搜索 + 引擎</td>
+<td>包含”搜索”和”引擎”的页面</td>
+</tr>
+<tr>
+<td>2</td>
+<td>OR</td>
+<td>OR（包含任意一个）</td>
+<td>搜索 OR 引擎</td>
+<td>包含”搜索”或”引擎”的页面</td>
+</tr>
+<tr>
+<td>3</td>
+<td>-</td>
+<td>排除特定词</td>
+<td>搜索引擎 -百度</td>
+<td>不包含”百度”的”搜索引擎”相关页面</td>
+</tr>
+<tr>
+<td>4</td>
+<td>“ “</td>
+<td>精确匹配短语</td>
+<td>“搜索引擎”</td>
+<td>完整匹配”搜索引擎”短语的页面</td>
+</tr>
+<tr>
+<td>5</td>
+<td>*</td>
+<td>通配符（替代任意字符）</td>
+<td>搜*引擎</td>
+<td>替代任意字符的模糊搜索</td>
+</tr>
+<tr>
+<td>6</td>
+<td>@</td>
+<td>社交媒体账号搜索</td>
+<td>trump @twitter</td>
+<td>搜索Twitter上@trump的内容</td>
+</tr>
+<tr>
+<td>7</td>
+<td>$</td>
+<td>价格范围搜索</td>
+<td>camera $400</td>
+<td>价格400美元的相机相关页面</td>
+</tr>
+<tr>
+<td>8</td>
+<td>#</td>
+<td>标签搜索</td>
+<td>#throwbackthursday</td>
+<td>包含指定话题标签的页面</td>
+</tr>
+<tr>
+<td>9</td>
+<td>..</td>
+<td>数值范围搜索</td>
+<td>camera $500..$1000</td>
+<td>价格500-1000美元的相机页面</td>
+</tr>
+<tr>
+<td>10</td>
+<td>filetype:</td>
+<td>指定文件类型</td>
+<td>C++ filetype:pdf</td>
+<td>PDF格式的C++教程</td>
+</tr>
+<tr>
+<td>11</td>
+<td>site:</td>
+<td>限定网站搜索</td>
+<td>C++ site:zhihu.com</td>
+<td>知乎网站内的C++相关页面</td>
+</tr>
+<tr>
+<td>12</td>
+<td>cache:</td>
+<td>查看网页缓存版本</td>
+<td>cache:weibo.com</td>
+<td>微博的Google缓存页面</td>
+</tr>
+<tr>
+<td>13</td>
+<td>info:</td>
+<td>获取网站详细信息</td>
+<td>info:github.com</td>
+<td>GitHub网站的基本信息</td>
+</tr>
+<tr>
+<td>14</td>
+<td>related:</td>
+<td>查找关联网站</td>
+<td>related:sina.com</td>
+<td>与新浪结构相似的网站</td>
+</tr>
+<tr>
+<td>15</td>
+<td>link:</td>
+<td>查找反向链接</td>
+<td>link:csdn.net</td>
+<td>所有链接到CSDN的页面</td>
+</tr>
+<tr>
+<td>16</td>
+<td>inurl:</td>
+<td>URL中包含关键词</td>
+<td>inurl:搜索引擎</td>
+<td>URL含”搜索引擎”的页面</td>
+</tr>
+<tr>
+<td>17</td>
+<td>intitle:</td>
+<td>标题中包含关键词</td>
+<td>intitle:搜索引擎</td>
+<td>标题含”搜索引擎”的页面</td>
+</tr>
+<tr>
+<td>18</td>
+<td>intext:</td>
+<td>正文中包含关键词</td>
+<td>SEO intext:搜索引擎</td>
+<td>正文含”搜索引擎”的SEO相关页面</td>
+</tr>
+<tr>
+<td>19</td>
+<td>inanchor:</td>
+<td>锚文本中包含关键词</td>
+<td>inanchor:前端</td>
+<td>链接文字含”前端”的页面</td>
+</tr>
+<tr>
+<td>20</td>
+<td>allinurl:</td>
+<td>URL包含多个关键词</td>
+<td>allinurl:SEO 优化</td>
+<td>URL含SEO和优化的页面</td>
+</tr>
+<tr>
+<td>21</td>
+<td>allintitle:</td>
+<td>标题包含多个关键词</td>
+<td>allintitle:SEO 优化</td>
+<td>标题含SEO和优化的页面</td>
+</tr>
+<tr>
+<td>22</td>
+<td>allintext:</td>
+<td>正文包含多个关键词</td>
+<td>allintext:SEO 优化</td>
+<td>正文含SEO和优化的页面</td>
+</tr>
+<tr>
+<td>23</td>
+<td>allinanchor:</td>
+<td>锚文本包含多个关键词</td>
+<td>allinanchor:SEO 优化</td>
+<td>锚文本含SEO和优化的页面</td>
+</tr>
+<tr>
+<td>24</td>
+<td>weather:</td>
+<td>天气&#x2F;时间查询</td>
+<td>weather:beijing</td>
+<td>北京天气信息</td>
+</tr>
+<tr>
+<td>25</td>
+<td>music&#x2F;songs:</td>
+<td>音乐搜索</td>
+<td>周杰伦 music</td>
+<td>周杰伦的音乐列表</td>
+</tr>
+</tbody></table>
+<p>注：</p>
+<ol>
+<li>冒号为英文状态，后面不带空格</li>
+<li>命令需与关键词用空格分隔（如 <code>C++ filetype:pdf</code>）</li>
+<li>支持组合使用（如 <code>allintitle:机器学习 入门 site:zhihu.com</code>）                                               | &#96;</li>
+</ol>
 ]]></content>
       <tags>
-        <tag>git</tag>
+        <tag>SearchSkills</tag>
       </tags>
   </entry>
   <entry>
@@ -87,6 +270,23 @@
       </tags>
   </entry>
   <entry>
+    <title>微博图床失效解决方法</title>
+    <url>/2025/04/11/blog/ImageHost/</url>
+    <content><![CDATA[<h4 id="下载BlogHelper-Browse-1-0-30-at-SourceForge-net"><a href="#下载BlogHelper-Browse-1-0-30-at-SourceForge-net" class="headerlink" title="下载BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net"></a>下载<a href="https://sourceforge.net/projects/bloghelper.mirror/files/1.0.30/">BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net</a></h4><span id="more"></span>
+
+<h4 id="登陆微博账号，再启动新浪图床如下"><a href="#登陆微博账号，再启动新浪图床如下" class="headerlink" title="登陆微博账号，再启动新浪图床如下"></a>登陆微博账号，再启动新浪图床如下</h4><p><img src="https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0eg6z69jdj308105374f.jpg" alt="新浪图床启动"></p>
+<h4 id="上传包含本地图片的-md-文件-先用Typora-编辑好-md-文件-，得到替换图片连接后的-md-文件"><a href="#上传包含本地图片的-md-文件-先用Typora-编辑好-md-文件-，得到替换图片连接后的-md-文件" class="headerlink" title="上传包含本地图片的 md 文件(先用Typora 编辑好 md 文件)，得到替换图片连接后的 md 文件"></a>上传包含本地图片的 md 文件(先用<a href="https://typoraio.cn/">Typora </a>编辑好 md 文件)，得到替换图片连接后的 md 文件</h4><p><img src="https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0eg6zboy0j306t05fgls.jpg" alt="新浪图床图片上传"></p>
+<h4 id="将得到的-md-文件中图片地址修改"><a href="#将得到的-md-文件中图片地址修改" class="headerlink" title="将得到的 md 文件中图片地址修改"></a>将得到的 md 文件中图片地址修改</h4><blockquote>
+<p>例如得到的图片地址为: <code>http://ww3.sinaimg.cn/large/008qTdeRly1i0edw9eafdj31ao0t6q42.jpg</code>该地址不能正常访问</p>
+<p>将其改为<code>https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0edw9eafdj31ao0t6q42.jpg</code></p>
+<p>就是将前缀<code>http://ww3.sinaimg.cn</code>改为<code>https://cdn.cdnjson.com/tvax3.sinaimg.cn</code></p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>git配置SSH密钥</title>
     <url>/2025/01/31/git/GitRSA/</url>
     <content><![CDATA[<h3 id="生成新的-SSH-密钥"><a href="#生成新的-SSH-密钥" class="headerlink" title="生成新的 SSH 密钥"></a>生成新的 SSH 密钥</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
@@ -102,20 +302,272 @@
       </tags>
   </entry>
   <entry>
-    <title>微博图床失效解决方法</title>
-    <url>/2025/04/11/blog/ImageHost/</url>
-    <content><![CDATA[<h4 id="下载BlogHelper-Browse-1-0-30-at-SourceForge-net"><a href="#下载BlogHelper-Browse-1-0-30-at-SourceForge-net" class="headerlink" title="下载BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net"></a>下载<a href="https://sourceforge.net/projects/bloghelper.mirror/files/1.0.30/">BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net</a></h4><span id="more"></span>
-
-<h4 id="登陆微博账号，再启动新浪图床如下"><a href="#登陆微博账号，再启动新浪图床如下" class="headerlink" title="登陆微博账号，再启动新浪图床如下"></a>登陆微博账号，再启动新浪图床如下</h4><p><img src="https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0eg6z69jdj308105374f.jpg" alt="新浪图床启动"></p>
-<h4 id="上传包含本地图片的-md-文件-先用Typora-编辑好-md-文件-，得到替换图片连接后的-md-文件"><a href="#上传包含本地图片的-md-文件-先用Typora-编辑好-md-文件-，得到替换图片连接后的-md-文件" class="headerlink" title="上传包含本地图片的 md 文件(先用Typora 编辑好 md 文件)，得到替换图片连接后的 md 文件"></a>上传包含本地图片的 md 文件(先用<a href="https://typoraio.cn/">Typora </a>编辑好 md 文件)，得到替换图片连接后的 md 文件</h4><p><img src="https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0eg6zboy0j306t05fgls.jpg" alt="新浪图床图片上传"></p>
-<h4 id="将得到的-md-文件中图片地址修改"><a href="#将得到的-md-文件中图片地址修改" class="headerlink" title="将得到的 md 文件中图片地址修改"></a>将得到的 md 文件中图片地址修改</h4><blockquote>
-<p>例如得到的图片地址为: <code>http://ww3.sinaimg.cn/large/008qTdeRly1i0edw9eafdj31ao0t6q42.jpg</code>该地址不能正常访问</p>
-<p>将其改为<code>https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0edw9eafdj31ao0t6q42.jpg</code></p>
-<p>就是将前缀<code>http://ww3.sinaimg.cn</code>改为<code>https://cdn.cdnjson.com/tvax3.sinaimg.cn</code></p>
-</blockquote>
+    <title>IntelliJ idea 常用快捷键</title>
+    <url>/2025/10/01/idea/keyshort/</url>
+    <content><![CDATA[<h2 id="IntelliJ-常用快捷键表格，涵盖代码编辑、导航搜索、重构调试等核心场景，按功能模块分类呈现："><a href="#IntelliJ-常用快捷键表格，涵盖代码编辑、导航搜索、重构调试等核心场景，按功能模块分类呈现：" class="headerlink" title="IntelliJ 常用快捷键表格，涵盖代码编辑、导航搜索、重构调试等核心场景，按功能模块分类呈现："></a>IntelliJ 常用快捷键表格，涵盖代码编辑、导航搜索、重构调试等核心场景，按功能模块分类呈现：</h2><span id="more"></span>
+<h3 id="一、基础编辑快捷键"><a href="#一、基础编辑快捷键" class="headerlink" title="一、基础编辑快捷键"></a><strong>一、基础编辑快捷键</strong></h3><table>
+<thead>
+<tr>
+<th><strong>快捷键组合</strong></th>
+<th><strong>功能描述</strong></th>
+<th><strong>适用场景</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Ctrl + C</code></td>
+<td>复制光标所在行或选中内容</td>
+<td>快速复制代码块</td>
+</tr>
+<tr>
+<td><code>Ctrl + V</code></td>
+<td>粘贴内容</td>
+<td>粘贴复制的代码或文本</td>
+</tr>
+<tr>
+<td><code>Ctrl + X</code></td>
+<td>剪切光标所在行或选中内容</td>
+<td>移动代码行</td>
+</tr>
+<tr>
+<td><code>Ctrl + D</code></td>
+<td>复制并粘贴当前行或选中内容到下方</td>
+<td>快速复制多行重复代码</td>
+</tr>
+<tr>
+<td><code>Ctrl + Y</code></td>
+<td>删除光标所在行或选中行</td>
+<td>快速删除整行</td>
+</tr>
+<tr>
+<td><code>Ctrl + Z</code></td>
+<td>撤销上一步操作</td>
+<td>恢复误操作</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + Z</code></td>
+<td>取消撤销（重做）</td>
+<td>恢复被撤销的操作</td>
+</tr>
+<tr>
+<td><code>Shift + Enter</code></td>
+<td>在当前行下方插入空行并定位光标</td>
+<td>快速开始新行</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + Enter</code></td>
+<td>自动补全代码末尾分号并换行</td>
+<td>快速结束当前语句</td>
+</tr>
+</tbody></table>
+<h3 id="二、代码格式化与重构"><a href="#二、代码格式化与重构" class="headerlink" title="二、代码格式化与重构"></a><strong>二、代码格式化与重构</strong></h3><table>
+<thead>
+<tr>
+<th><strong>快捷键组合</strong></th>
+<th><strong>功能描述</strong></th>
+<th><strong>适用场景</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Ctrl + Alt + L</code></td>
+<td>格式化代码（支持当前文件或目录）</td>
+<td>统一代码风格</td>
+</tr>
+<tr>
+<td><code>Ctrl + Alt + O</code></td>
+<td>优化导入（移除未使用的类）</td>
+<td>清理冗余导入</td>
+</tr>
+<tr>
+<td><code>Shift + F6</code></td>
+<td>重命名文件、类、方法或变量</td>
+<td>重构变量名或方法名</td>
+</tr>
+<tr>
+<td><code>Ctrl + Alt + V</code></td>
+<td>自动创建变量（如 <code>new Object()</code> 后生成变量）</td>
+<td>简化对象实例化代码</td>
+</tr>
+<tr>
+<td><code>Alt + Insert</code></td>
+<td>生成代码（构造函数、getter&#x2F;setter等）</td>
+<td>快速创建JavaBean模板代码</td>
+</tr>
+<tr>
+<td><code>Ctrl + Alt + T</code></td>
+<td>用 <code>if/try/catch</code> 等语句包裹选中代码</td>
+<td>快速添加异常处理或条件判断</td>
+</tr>
+</tbody></table>
+<h3 id="三、导航与搜索"><a href="#三、导航与搜索" class="headerlink" title="三、导航与搜索"></a><strong>三、导航与搜索</strong></h3><table>
+<thead>
+<tr>
+<th><strong>快捷键组合</strong></th>
+<th><strong>功能描述</strong></th>
+<th><strong>适用场景</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Ctrl + N</code></td>
+<td>根据类名查找类文件</td>
+<td>快速定位Java</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + N</code></td>
+<td>根据文件名查找文件（支持目录，需加 <code>/</code>）</td>
+<td>搜索非Java文件（如XML、配置文件）</td>
+</tr>
+<tr>
+<td><code>Ctrl + F</code></td>
+<td>在当前文件内搜索文本</td>
+<td>查找局部变量或方法引用</td>
+</tr>
+<tr>
+<td><code>Ctrl + R</code></td>
+<td>在当前文件内替换文本</td>
+<td>修改局部代码中的关键词</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + F</code></td>
+<td>在整个项目中搜索文本</td>
+<td>跨文件查找全局变量或接口</td>
+</tr>
+<tr>
+<td><code>Ctrl + B</code> &#x2F; <code>Ctrl + 左键单击</code></td>
+<td>跳转到方法&#x2F;变量的定义处</td>
+<td>查看底层实现逻辑</td>
+</tr>
+<tr>
+<td><code>Ctrl + E</code></td>
+<td>显示最近打开的文件列表</td>
+<td>快速切换频繁编辑的文件</td>
+</tr>
+<tr>
+<td><code>Alt + ←</code> &#x2F; <code>Alt + →</code></td>
+<td>切换上一个&#x2F;下一个编辑窗口</td>
+<td>在多文件间快速切换</td>
+</tr>
+</tbody></table>
+<h3 id="四、调试与运行"><a href="#四、调试与运行" class="headerlink" title="四、调试与运行"></a><strong>四、调试与运行</strong></h3><table>
+<thead>
+<tr>
+<th><strong>快捷键组合</strong></th>
+<th><strong>功能描述</strong></th>
+<th><strong>适用场景</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Shift + F9</code></td>
+<td>启动Debug模式</td>
+<td>调试程序</td>
+</tr>
+<tr>
+<td><code>Shift + F10</code></td>
+<td>运行程序（非调试模式）</td>
+<td>快速执行当前项目</td>
+</tr>
+<tr>
+<td><code>F8</code></td>
+<td>Debug模式下逐行执行（不进入方法）</td>
+<td>跳过无关方法，查看流程</td>
+</tr>
+<tr>
+<td><code>F7</code></td>
+<td>Debug模式下逐行执行（进入方法）</td>
+<td>深入查看方法内部逻辑</td>
+</tr>
+<tr>
+<td><code>F9</code></td>
+<td>Debug模式下恢复程序运行（直到下一个断点）</td>
+<td>快速跳转到下一个断点</td>
+</tr>
+<tr>
+<td><code>Ctrl + F8</code></td>
+<td>在当前行设置&#x2F;取消断点</td>
+<td>标记调试关键点</td>
+</tr>
+</tbody></table>
+<h3 id="五、代码生成与模板"><a href="#五、代码生成与模板" class="headerlink" title="五、代码生成与模板"></a><strong>五、代码生成与模板</strong></h3><table>
+<thead>
+<tr>
+<th><strong>快捷键组合&#x2F;输入</strong></th>
+<th><strong>功能描述</strong></th>
+<th><strong>示例</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>fori</code> + <code>Tab</code></td>
+<td>生成普通for循环</td>
+<td><code>for (int i = 0; i &lt; ; i++) &#123;&#125;</code></td>
+</tr>
+<tr>
+<td><code>Ctrl + J</code></td>
+<td>插入自定义动态代码模板</td>
+<td>快速生成预设代码片段（如 <code>if-else</code>）</td>
+</tr>
+<tr>
+<td><code>/**</code> + <code>Enter</code></td>
+<td>生成文档注释模板（类或方法）</td>
+<td>自动添加 <code>@param</code> <code>@return</code> 等标签</td>
+</tr>
+<tr>
+<td><strong>快捷键组合</strong></td>
+<td><strong>功能描述</strong></td>
+<td><strong>优势</strong></td>
+</tr>
+<tr>
+<td>—————</td>
+<td>———————</td>
+<td>—————</td>
+</tr>
+<tr>
+<td><code>Ctrl + W</code></td>
+<td>递进式选择代码块（连续按扩大范围）</td>
+<td>快速选中方法、类或表达式</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + U</code></td>
+<td>切换选中内容的大小写</td>
+<td>快速转换变量名格式（如 <code>userId</code> ↔ <code>USER_ID</code>）</td>
+</tr>
+<tr>
+<td><code>Ctrl + /</code></td>
+<td>单行注释（&#x2F;&#x2F;）</td>
+<td>快速注释单行代码</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + /</code></td>
+<td>块注释（&#x2F;* *&#x2F;）</td>
+<td>注释多行代码块</td>
+</tr>
+<tr>
+<td><code>Alt + Enter</code></td>
+<td>自动修复代码错误（如导入类、创建变量）</td>
+<td>解决语法错误或优化建议</td>
+</tr>
+</tbody></table>
 ]]></content>
       <tags>
-        <tag>blog</tag>
+        <tag>keyshort</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git配置用户名和密码</title>
+    <url>/2025/05/14/git/GitUser/</url>
+    <content><![CDATA[<h3 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h3 id="全局配置删除"><a href="#全局配置删除" class="headerlink" title="全局配置删除"></a>全局配置删除</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --global --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
+
+<h3 id="系统全局配置删除"><a href="#系统全局配置删除" class="headerlink" title="系统全局配置删除"></a>系统全局配置删除</h3><p>系统配置会影响系统上所有用户的所有 Git 仓库，操作时需谨慎。删除系统配置的用户和邮箱信息，使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --system --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
+
+<h3 id="全局配置查看"><a href="#全局配置查看" class="headerlink" title="全局配置查看"></a>全局配置查看</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
+
+<h3 id="系统全局配置查看"><a href="#系统全局配置查看" class="headerlink" title="系统全局配置查看"></a>系统全局配置查看</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --list</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>git</tag>
       </tags>
   </entry>
 </search>
