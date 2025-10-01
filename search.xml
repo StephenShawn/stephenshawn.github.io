@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>微博图床失效解决方法</title>
+    <url>/2025/04/11/blog/ImageHost/</url>
+    <content><![CDATA[<h4 id="下载BlogHelper-Browse-1-0-30-at-SourceForge-net"><a href="#下载BlogHelper-Browse-1-0-30-at-SourceForge-net" class="headerlink" title="下载BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net"></a>下载<a href="https://sourceforge.net/projects/bloghelper.mirror/files/1.0.30/">BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net</a></h4><span id="more"></span>
+
+<h4 id="登陆微博账号，再启动新浪图床如下"><a href="#登陆微博账号，再启动新浪图床如下" class="headerlink" title="登陆微博账号，再启动新浪图床如下"></a>登陆微博账号，再启动新浪图床如下</h4><p><img src="https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0eg6z69jdj308105374f.jpg" alt="新浪图床启动"></p>
+<h4 id="上传包含本地图片的-md-文件-先用Typora-编辑好-md-文件-，得到替换图片连接后的-md-文件"><a href="#上传包含本地图片的-md-文件-先用Typora-编辑好-md-文件-，得到替换图片连接后的-md-文件" class="headerlink" title="上传包含本地图片的 md 文件(先用Typora 编辑好 md 文件)，得到替换图片连接后的 md 文件"></a>上传包含本地图片的 md 文件(先用<a href="https://typoraio.cn/">Typora </a>编辑好 md 文件)，得到替换图片连接后的 md 文件</h4><p><img src="https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0eg6zboy0j306t05fgls.jpg" alt="新浪图床图片上传"></p>
+<h4 id="将得到的-md-文件中图片地址修改"><a href="#将得到的-md-文件中图片地址修改" class="headerlink" title="将得到的 md 文件中图片地址修改"></a>将得到的 md 文件中图片地址修改</h4><blockquote>
+<p>例如得到的图片地址为: <code>http://ww3.sinaimg.cn/large/008qTdeRly1i0edw9eafdj31ao0t6q42.jpg</code>该地址不能正常访问</p>
+<p>将其改为<code>https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0edw9eafdj31ao0t6q42.jpg</code></p>
+<p>就是将前缀<code>http://ww3.sinaimg.cn</code>改为<code>https://cdn.cdnjson.com/tvax3.sinaimg.cn</code></p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>高级搜索技巧</title>
     <url>/2025/09/30/automate/SearchSkills/</url>
     <content><![CDATA[<p>以下是链接中提到的谷歌高级搜索命令表格的整理版本：</p>
@@ -270,23 +287,6 @@
       </tags>
   </entry>
   <entry>
-    <title>微博图床失效解决方法</title>
-    <url>/2025/04/11/blog/ImageHost/</url>
-    <content><![CDATA[<h4 id="下载BlogHelper-Browse-1-0-30-at-SourceForge-net"><a href="#下载BlogHelper-Browse-1-0-30-at-SourceForge-net" class="headerlink" title="下载BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net"></a>下载<a href="https://sourceforge.net/projects/bloghelper.mirror/files/1.0.30/">BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net</a></h4><span id="more"></span>
-
-<h4 id="登陆微博账号，再启动新浪图床如下"><a href="#登陆微博账号，再启动新浪图床如下" class="headerlink" title="登陆微博账号，再启动新浪图床如下"></a>登陆微博账号，再启动新浪图床如下</h4><p><img src="https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0eg6z69jdj308105374f.jpg" alt="新浪图床启动"></p>
-<h4 id="上传包含本地图片的-md-文件-先用Typora-编辑好-md-文件-，得到替换图片连接后的-md-文件"><a href="#上传包含本地图片的-md-文件-先用Typora-编辑好-md-文件-，得到替换图片连接后的-md-文件" class="headerlink" title="上传包含本地图片的 md 文件(先用Typora 编辑好 md 文件)，得到替换图片连接后的 md 文件"></a>上传包含本地图片的 md 文件(先用<a href="https://typoraio.cn/">Typora </a>编辑好 md 文件)，得到替换图片连接后的 md 文件</h4><p><img src="https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0eg6zboy0j306t05fgls.jpg" alt="新浪图床图片上传"></p>
-<h4 id="将得到的-md-文件中图片地址修改"><a href="#将得到的-md-文件中图片地址修改" class="headerlink" title="将得到的 md 文件中图片地址修改"></a>将得到的 md 文件中图片地址修改</h4><blockquote>
-<p>例如得到的图片地址为: <code>http://ww3.sinaimg.cn/large/008qTdeRly1i0edw9eafdj31ao0t6q42.jpg</code>该地址不能正常访问</p>
-<p>将其改为<code>https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0edw9eafdj31ao0t6q42.jpg</code></p>
-<p>就是将前缀<code>http://ww3.sinaimg.cn</code>改为<code>https://cdn.cdnjson.com/tvax3.sinaimg.cn</code></p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>git配置SSH密钥</title>
     <url>/2025/01/31/git/GitRSA/</url>
     <content><![CDATA[<h3 id="生成新的-SSH-密钥"><a href="#生成新的-SSH-密钥" class="headerlink" title="生成新的 SSH 密钥"></a>生成新的 SSH 密钥</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
@@ -545,6 +545,317 @@
 <td>解决语法错误或优化建议</td>
 </tr>
 </tbody></table>
+<hr>
+<h3 id="常用代码生成快捷键"><a href="#常用代码生成快捷键" class="headerlink" title="常用代码生成快捷键"></a><strong>常用代码生成快捷键</strong></h3><table>
+<thead>
+<tr>
+<th align="left">快捷键组合</th>
+<th align="left">实现效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>Ctrl + X</code></td>
+<td align="left">删除当前行</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + D</code></td>
+<td align="left">复制当前行</td>
+</tr>
+<tr>
+<td align="left"><code>Alt + Insert</code> (或右键 Generate)</td>
+<td align="left">生成代码（如 get、set 方法、构造函数等）</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Alt + T</code></td>
+<td align="left">生成 try catch（或者 <code>Alt + Enter</code> 选择）</td>
+</tr>
+<tr>
+<td align="left"><code>CTRL + ALT + T</code></td>
+<td align="left">把选中的代码放在 <code>TRY&#123;&#125; IF&#123;&#125; ELSE&#123;&#125;</code> 里</td>
+</tr>
+<tr>
+<td align="left"><code>Ctr + shift + U</code></td>
+<td align="left">实现大小写之间的转化</td>
+</tr>
+<tr>
+<td align="left"><code>ALT + 回车</code></td>
+<td align="left">导入包，自动修正</td>
+</tr>
+<tr>
+<td align="left"><code>CTRL + ALT + L</code></td>
+<td align="left">格式化代码</td>
+</tr>
+<tr>
+<td align="left"><code>CTRL + ALT + I</code></td>
+<td align="left">自动缩进</td>
+</tr>
+<tr>
+<td align="left"><code>CTRL + E</code></td>
+<td align="left">最近更改的代码</td>
+</tr>
+<tr>
+<td align="left"><code>fori</code></td>
+<td align="left">生成 <code>for (int i = 0; i &lt; ; i++) &#123;&#125;</code></td>
+</tr>
+<tr>
+<td align="left"><code>Alt + ←/→ 键</code></td>
+<td align="left">实现窗口左右更换（多窗口）</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + 鼠标点击</code></td>
+<td align="left">快速找到成员变量的出处</td>
+</tr>
+<tr>
+<td align="left"><code>Shift + F6</code></td>
+<td align="left">重构 &#x2F; 重命名（包、类、方法、变量、甚至注释等）</td>
+</tr>
+<tr>
+<td align="left"><code>CTRL + Q</code></td>
+<td align="left">查看当前方法的声明</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Alt + V</code></td>
+<td align="left">自动创建变量（<code>new 对象();</code> 之后选择按快捷键）</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + O</code></td>
+<td align="left">重写方法</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + I</code></td>
+<td align="left">实现方法</td>
+</tr>
+<tr>
+<td align="left"><code>ALT + /</code></td>
+<td align="left">代码提示</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Shift + R</code></td>
+<td align="left">在当前项目中替换指定内容</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + E</code></td>
+<td align="left">最近编辑的文件列表</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + P</code></td>
+<td align="left">显示方法参数信息</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Shift + Insert</code></td>
+<td align="left">查看历史复制记录（IDEA 可保留 100 条）</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="查找相关快捷键"><a href="#查找相关快捷键" class="headerlink" title="查找相关快捷键"></a><strong>查找相关快捷键</strong></h3><table>
+<thead>
+<tr>
+<th align="left">快捷键</th>
+<th align="left">介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>Ctrl + F</code></td>
+<td align="left">在当前文件进行文本查找</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + R</code></td>
+<td align="left">在当前文件进行文本替换</td>
+</tr>
+<tr>
+<td align="left"><code>Shift + Ctrl + F</code></td>
+<td align="left">在项目中进行文本查找</td>
+</tr>
+<tr>
+<td align="left"><code>Shift + Ctrl + R</code></td>
+<td align="left">在项目中进行文本替换</td>
+</tr>
+<tr>
+<td align="left"><code>Shift + Shift</code></td>
+<td align="left">快速搜索</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + N</code></td>
+<td align="left">查找 class</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Shift + N</code></td>
+<td align="left">查找文件</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Shift + Alt + N</code></td>
+<td align="left">查找 symbol（查找某个方法名）</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="跳转与切换相关快捷键"><a href="#跳转与切换相关快捷键" class="headerlink" title="跳转与切换相关快捷键"></a><strong>跳转与切换相关快捷键</strong></h3><table>
+<thead>
+<tr>
+<th align="left">快捷键</th>
+<th align="left">介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>Ctrl + E</code></td>
+<td align="left">最近文件</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Tab</code></td>
+<td align="left">切换文件</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Alt + ←/→</code></td>
+<td align="left">跳转历史光标所在处</td>
+</tr>
+<tr>
+<td align="left"><code>Alt + ←/→ 方向键</code></td>
+<td align="left">切换子 tab</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + G</code></td>
+<td align="left">跳转到指定行号（Go to）</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="编码相关快捷键"><a href="#编码相关快捷键" class="headerlink" title="编码相关快捷键"></a><strong>编码相关快捷键</strong></h3><table>
+<thead>
+<tr>
+<th align="left">快捷键</th>
+<th align="left">介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>Ctrl + W</code></td>
+<td align="left">快速选中</td>
+</tr>
+<tr>
+<td align="left"><code>(Shift + Ctrl) + Alt + J</code></td>
+<td align="left">快速选中同文本</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + C</code> &#x2F; <code>Ctrl + X</code> &#x2F; <code>Ctrl + D</code></td>
+<td align="left">快速复制或剪切</td>
+</tr>
+<tr>
+<td align="left">多行选中 <code>Tab</code> &#x2F; <code>Shift + Tab</code></td>
+<td align="left">缩进 &#x2F; 反缩进</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Y</code></td>
+<td align="left">删除整行</td>
+</tr>
+<tr>
+<td align="left">滚轮点击变量&#x2F;方法&#x2F;类</td>
+<td align="left">快速进入定义处</td>
+</tr>
+<tr>
+<td align="left"><code>Shift + 点击 Tab</code></td>
+<td align="left">快速关闭 tab</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Z</code> &#x2F; <code>Ctrl + Shift + Z</code></td>
+<td align="left">撤销 &#x2F; 取消撤销</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Shift + Enter</code></td>
+<td align="left">自动收尾，代码自动补全</td>
+</tr>
+<tr>
+<td align="left"><code>Alt + Enter</code></td>
+<td align="left">快速修复（根据上下文提供修复建议）</td>
+</tr>
+<tr>
+<td align="left"><code>Alt + ↑/↓</code></td>
+<td align="left">方法快速跳转</td>
+</tr>
+<tr>
+<td align="left"><code>F2</code></td>
+<td align="left">跳转到下一个高亮错误或警告位置</td>
+</tr>
+<tr>
+<td align="left"><code>Alt + Insert</code></td>
+<td align="left">代码自动生成（set&#x2F;get、构造函数、toString 等）</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Shift + L</code></td>
+<td align="left">格式化代码</td>
+</tr>
+<tr>
+<td align="left"><code>Shift + F6</code></td>
+<td align="left">快速修改方法名、变量名、文件名、类名等</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + F6</code></td>
+<td align="left">快速修改方法签名</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="代码阅读相关快捷键"><a href="#代码阅读相关快捷键" class="headerlink" title="代码阅读相关快捷键"></a><strong>代码阅读相关快捷键</strong></h3><table>
+<thead>
+<tr>
+<th align="left">快捷键</th>
+<th align="left">介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>Ctrl + P</code></td>
+<td align="left">方法参数提示显示</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Shift + i</code></td>
+<td align="left">在当前类中弹出一个查看窗口</td>
+</tr>
+<tr>
+<td align="left"><code>Alt + F7</code></td>
+<td align="left">列出变量在哪些地方被使用</td>
+</tr>
+<tr>
+<td align="left">光标在子类接口名，<code>Ctrl + U</code></td>
+<td align="left">跳到父类接口</td>
+</tr>
+<tr>
+<td align="left"><code>Alt + F1 + 1</code>，<code>Esc</code></td>
+<td align="left">（未提供具体描述）</td>
+</tr>
+<tr>
+<td align="left"><code>(Shift) + Ctrl + +/-</code></td>
+<td align="left">代码块折叠 &#x2F; 展开</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Shift + ←/→</code></td>
+<td align="left">移动窗口分割线</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + (Alt) + B</code></td>
+<td align="left">跳转到方法定义 &#x2F; 实现</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + H</code></td>
+<td align="left">查看类的层级关系</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + F12</code></td>
+<td align="left">Show Members（类成员快速显示）</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="版本管理相关快捷键"><a href="#版本管理相关快捷键" class="headerlink" title="版本管理相关快捷键"></a><strong>版本管理相关快捷键</strong></h3><table>
+<thead>
+<tr>
+<th align="left">快捷键</th>
+<th align="left">介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>Ctrl + D</code></td>
+<td align="left">Show Diff（显示差异）</td>
+</tr>
+<tr>
+<td align="left"><code>(Shift) + F7</code></td>
+<td align="left">（上）下一处修改</td>
+</tr>
+</tbody></table>
+<hr>
 ]]></content>
       <tags>
         <tag>keyshort</tag>
