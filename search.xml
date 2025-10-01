@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>git配置用户名和密码</title>
+    <url>/2025/05/14/git/GitUser/</url>
+    <content><![CDATA[<h3 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h3 id="全局配置删除"><a href="#全局配置删除" class="headerlink" title="全局配置删除"></a>全局配置删除</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --global --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
+
+<h3 id="系统全局配置删除"><a href="#系统全局配置删除" class="headerlink" title="系统全局配置删除"></a>系统全局配置删除</h3><p>系统配置会影响系统上所有用户的所有 Git 仓库，操作时需谨慎。删除系统配置的用户和邮箱信息，使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --system --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
+
+<h3 id="全局配置查看"><a href="#全局配置查看" class="headerlink" title="全局配置查看"></a>全局配置查看</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
+
+<h3 id="系统全局配置查看"><a href="#系统全局配置查看" class="headerlink" title="系统全局配置查看"></a>系统全局配置查看</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --list</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>在Nodejs中使用 Playwright</title>
     <url>/2025/02/03/automate/Playwright/</url>
     <content><![CDATA[<h3 id="安装-Playwright"><a href="#安装-Playwright" class="headerlink" title="安装 Playwright"></a>安装 Playwright</h3><blockquote>
@@ -67,209 +87,6 @@
       </tags>
   </entry>
   <entry>
-    <title>高级搜索技巧</title>
-    <url>/2025/09/30/automate/SearchSkills/</url>
-    <content><![CDATA[<p>以下是链接中提到的谷歌高级搜索命令表格的整理版本：</p>
-<span id="more"></span>
-
-<table>
-<thead>
-<tr>
-<th>序号</th>
-<th>语法</th>
-<th>语法说明</th>
-<th>示例</th>
-<th>示例说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1</td>
-<td>+</td>
-<td>AND（必须同时包含）</td>
-<td>搜索 + 引擎</td>
-<td>包含”搜索”和”引擎”的页面</td>
-</tr>
-<tr>
-<td>2</td>
-<td>OR</td>
-<td>OR（包含任意一个）</td>
-<td>搜索 OR 引擎</td>
-<td>包含”搜索”或”引擎”的页面</td>
-</tr>
-<tr>
-<td>3</td>
-<td>-</td>
-<td>排除特定词</td>
-<td>搜索引擎 -百度</td>
-<td>不包含”百度”的”搜索引擎”相关页面</td>
-</tr>
-<tr>
-<td>4</td>
-<td>“ “</td>
-<td>精确匹配短语</td>
-<td>“搜索引擎”</td>
-<td>完整匹配”搜索引擎”短语的页面</td>
-</tr>
-<tr>
-<td>5</td>
-<td>*</td>
-<td>通配符（替代任意字符）</td>
-<td>搜*引擎</td>
-<td>替代任意字符的模糊搜索</td>
-</tr>
-<tr>
-<td>6</td>
-<td>@</td>
-<td>社交媒体账号搜索</td>
-<td>trump @twitter</td>
-<td>搜索Twitter上@trump的内容</td>
-</tr>
-<tr>
-<td>7</td>
-<td>$</td>
-<td>价格范围搜索</td>
-<td>camera $400</td>
-<td>价格400美元的相机相关页面</td>
-</tr>
-<tr>
-<td>8</td>
-<td>#</td>
-<td>标签搜索</td>
-<td>#throwbackthursday</td>
-<td>包含指定话题标签的页面</td>
-</tr>
-<tr>
-<td>9</td>
-<td>..</td>
-<td>数值范围搜索</td>
-<td>camera $500..$1000</td>
-<td>价格500-1000美元的相机页面</td>
-</tr>
-<tr>
-<td>10</td>
-<td>filetype:</td>
-<td>指定文件类型</td>
-<td>C++ filetype:pdf</td>
-<td>PDF格式的C++教程</td>
-</tr>
-<tr>
-<td>11</td>
-<td>site:</td>
-<td>限定网站搜索</td>
-<td>C++ site:zhihu.com</td>
-<td>知乎网站内的C++相关页面</td>
-</tr>
-<tr>
-<td>12</td>
-<td>cache:</td>
-<td>查看网页缓存版本</td>
-<td>cache:weibo.com</td>
-<td>微博的Google缓存页面</td>
-</tr>
-<tr>
-<td>13</td>
-<td>info:</td>
-<td>获取网站详细信息</td>
-<td>info:github.com</td>
-<td>GitHub网站的基本信息</td>
-</tr>
-<tr>
-<td>14</td>
-<td>related:</td>
-<td>查找关联网站</td>
-<td>related:sina.com</td>
-<td>与新浪结构相似的网站</td>
-</tr>
-<tr>
-<td>15</td>
-<td>link:</td>
-<td>查找反向链接</td>
-<td>link:csdn.net</td>
-<td>所有链接到CSDN的页面</td>
-</tr>
-<tr>
-<td>16</td>
-<td>inurl:</td>
-<td>URL中包含关键词</td>
-<td>inurl:搜索引擎</td>
-<td>URL含”搜索引擎”的页面</td>
-</tr>
-<tr>
-<td>17</td>
-<td>intitle:</td>
-<td>标题中包含关键词</td>
-<td>intitle:搜索引擎</td>
-<td>标题含”搜索引擎”的页面</td>
-</tr>
-<tr>
-<td>18</td>
-<td>intext:</td>
-<td>正文中包含关键词</td>
-<td>SEO intext:搜索引擎</td>
-<td>正文含”搜索引擎”的SEO相关页面</td>
-</tr>
-<tr>
-<td>19</td>
-<td>inanchor:</td>
-<td>锚文本中包含关键词</td>
-<td>inanchor:前端</td>
-<td>链接文字含”前端”的页面</td>
-</tr>
-<tr>
-<td>20</td>
-<td>allinurl:</td>
-<td>URL包含多个关键词</td>
-<td>allinurl:SEO 优化</td>
-<td>URL含SEO和优化的页面</td>
-</tr>
-<tr>
-<td>21</td>
-<td>allintitle:</td>
-<td>标题包含多个关键词</td>
-<td>allintitle:SEO 优化</td>
-<td>标题含SEO和优化的页面</td>
-</tr>
-<tr>
-<td>22</td>
-<td>allintext:</td>
-<td>正文包含多个关键词</td>
-<td>allintext:SEO 优化</td>
-<td>正文含SEO和优化的页面</td>
-</tr>
-<tr>
-<td>23</td>
-<td>allinanchor:</td>
-<td>锚文本包含多个关键词</td>
-<td>allinanchor:SEO 优化</td>
-<td>锚文本含SEO和优化的页面</td>
-</tr>
-<tr>
-<td>24</td>
-<td>weather:</td>
-<td>天气&#x2F;时间查询</td>
-<td>weather:beijing</td>
-<td>北京天气信息</td>
-</tr>
-<tr>
-<td>25</td>
-<td>music&#x2F;songs:</td>
-<td>音乐搜索</td>
-<td>周杰伦 music</td>
-<td>周杰伦的音乐列表</td>
-</tr>
-</tbody></table>
-<p>注：</p>
-<ol>
-<li>冒号为英文状态，后面不带空格</li>
-<li>命令需与关键词用空格分隔（如 <code>C++ filetype:pdf</code>）</li>
-<li>支持组合使用（如 <code>allintitle:机器学习 入门 site:zhihu.com</code>）                                               | &#96;</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>SearchSkills</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>微博图床失效解决方法</title>
     <url>/2025/04/11/blog/ImageHost/</url>
     <content><![CDATA[<h4 id="下载BlogHelper-Browse-1-0-30-at-SourceForge-net"><a href="#下载BlogHelper-Browse-1-0-30-at-SourceForge-net" class="headerlink" title="下载BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net"></a>下载<a href="https://sourceforge.net/projects/bloghelper.mirror/files/1.0.30/">BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net</a></h4><span id="more"></span>
@@ -284,26 +101,6 @@
 ]]></content>
       <tags>
         <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git配置用户名和密码</title>
-    <url>/2025/05/14/git/GitUser/</url>
-    <content><![CDATA[<h3 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h3 id="全局配置删除"><a href="#全局配置删除" class="headerlink" title="全局配置删除"></a>全局配置删除</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --global --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
-
-<h3 id="系统全局配置删除"><a href="#系统全局配置删除" class="headerlink" title="系统全局配置删除"></a>系统全局配置删除</h3><p>系统配置会影响系统上所有用户的所有 Git 仓库，操作时需谨慎。删除系统配置的用户和邮箱信息，使用以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --system --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
-
-<h3 id="全局配置查看"><a href="#全局配置查看" class="headerlink" title="全局配置查看"></a>全局配置查看</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
-
-<h3 id="系统全局配置查看"><a href="#系统全局配置查看" class="headerlink" title="系统全局配置查看"></a>系统全局配置查看</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --list</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -879,6 +676,209 @@
 ]]></content>
       <tags>
         <tag>keyshort</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>高级搜索技巧</title>
+    <url>/2025/09/30/automate/SearchSkills/</url>
+    <content><![CDATA[<p>以下是链接中提到的谷歌高级搜索命令表格的整理版本：</p>
+<span id="more"></span>
+
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>语法</th>
+<th>语法说明</th>
+<th>示例</th>
+<th>示例说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>+</td>
+<td>AND（必须同时包含）</td>
+<td>搜索 + 引擎</td>
+<td>包含”搜索”和”引擎”的页面</td>
+</tr>
+<tr>
+<td>2</td>
+<td>OR</td>
+<td>OR（包含任意一个）</td>
+<td>搜索 OR 引擎</td>
+<td>包含”搜索”或”引擎”的页面</td>
+</tr>
+<tr>
+<td>3</td>
+<td>-</td>
+<td>排除特定词</td>
+<td>搜索引擎 -百度</td>
+<td>不包含”百度”的”搜索引擎”相关页面</td>
+</tr>
+<tr>
+<td>4</td>
+<td>“ “</td>
+<td>精确匹配短语</td>
+<td>“搜索引擎”</td>
+<td>完整匹配”搜索引擎”短语的页面</td>
+</tr>
+<tr>
+<td>5</td>
+<td>*</td>
+<td>通配符（替代任意字符）</td>
+<td>搜*引擎</td>
+<td>替代任意字符的模糊搜索</td>
+</tr>
+<tr>
+<td>6</td>
+<td>@</td>
+<td>社交媒体账号搜索</td>
+<td>trump @twitter</td>
+<td>搜索Twitter上@trump的内容</td>
+</tr>
+<tr>
+<td>7</td>
+<td>$</td>
+<td>价格范围搜索</td>
+<td>camera $400</td>
+<td>价格400美元的相机相关页面</td>
+</tr>
+<tr>
+<td>8</td>
+<td>#</td>
+<td>标签搜索</td>
+<td>#throwbackthursday</td>
+<td>包含指定话题标签的页面</td>
+</tr>
+<tr>
+<td>9</td>
+<td>..</td>
+<td>数值范围搜索</td>
+<td>camera $500..$1000</td>
+<td>价格500-1000美元的相机页面</td>
+</tr>
+<tr>
+<td>10</td>
+<td>filetype:</td>
+<td>指定文件类型</td>
+<td>C++ filetype:pdf</td>
+<td>PDF格式的C++教程</td>
+</tr>
+<tr>
+<td>11</td>
+<td>site:</td>
+<td>限定网站搜索</td>
+<td>C++ site:zhihu.com</td>
+<td>知乎网站内的C++相关页面</td>
+</tr>
+<tr>
+<td>12</td>
+<td>cache:</td>
+<td>查看网页缓存版本</td>
+<td>cache:weibo.com</td>
+<td>微博的Google缓存页面</td>
+</tr>
+<tr>
+<td>13</td>
+<td>info:</td>
+<td>获取网站详细信息</td>
+<td>info:github.com</td>
+<td>GitHub网站的基本信息</td>
+</tr>
+<tr>
+<td>14</td>
+<td>related:</td>
+<td>查找关联网站</td>
+<td>related:sina.com</td>
+<td>与新浪结构相似的网站</td>
+</tr>
+<tr>
+<td>15</td>
+<td>link:</td>
+<td>查找反向链接</td>
+<td>link:csdn.net</td>
+<td>所有链接到CSDN的页面</td>
+</tr>
+<tr>
+<td>16</td>
+<td>inurl:</td>
+<td>URL中包含关键词</td>
+<td>inurl:搜索引擎</td>
+<td>URL含”搜索引擎”的页面</td>
+</tr>
+<tr>
+<td>17</td>
+<td>intitle:</td>
+<td>标题中包含关键词</td>
+<td>intitle:搜索引擎</td>
+<td>标题含”搜索引擎”的页面</td>
+</tr>
+<tr>
+<td>18</td>
+<td>intext:</td>
+<td>正文中包含关键词</td>
+<td>SEO intext:搜索引擎</td>
+<td>正文含”搜索引擎”的SEO相关页面</td>
+</tr>
+<tr>
+<td>19</td>
+<td>inanchor:</td>
+<td>锚文本中包含关键词</td>
+<td>inanchor:前端</td>
+<td>链接文字含”前端”的页面</td>
+</tr>
+<tr>
+<td>20</td>
+<td>allinurl:</td>
+<td>URL包含多个关键词</td>
+<td>allinurl:SEO 优化</td>
+<td>URL含SEO和优化的页面</td>
+</tr>
+<tr>
+<td>21</td>
+<td>allintitle:</td>
+<td>标题包含多个关键词</td>
+<td>allintitle:SEO 优化</td>
+<td>标题含SEO和优化的页面</td>
+</tr>
+<tr>
+<td>22</td>
+<td>allintext:</td>
+<td>正文包含多个关键词</td>
+<td>allintext:SEO 优化</td>
+<td>正文含SEO和优化的页面</td>
+</tr>
+<tr>
+<td>23</td>
+<td>allinanchor:</td>
+<td>锚文本包含多个关键词</td>
+<td>allinanchor:SEO 优化</td>
+<td>锚文本含SEO和优化的页面</td>
+</tr>
+<tr>
+<td>24</td>
+<td>weather:</td>
+<td>天气&#x2F;时间查询</td>
+<td>weather:beijing</td>
+<td>北京天气信息</td>
+</tr>
+<tr>
+<td>25</td>
+<td>music&#x2F;songs:</td>
+<td>音乐搜索</td>
+<td>周杰伦 music</td>
+<td>周杰伦的音乐列表</td>
+</tr>
+</tbody></table>
+<p>注：</p>
+<ol>
+<li>冒号为英文状态，后面不带空格</li>
+<li>命令需与关键词用空格分隔（如 <code>C++ filetype:pdf</code>）</li>
+<li>支持组合使用（如 <code>allintitle:机器学习 入门 site:zhihu.com</code>）                                               | &#96;</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>SearchSkills</tag>
       </tags>
   </entry>
 </search>
