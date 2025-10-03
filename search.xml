@@ -1,6 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>在Nodejs中使用 Playwright</title>
+    <url>/2025/02/03/automate/Playwright/</url>
+    <content><![CDATA[<h3 id="安装-Playwright"><a href="#安装-Playwright" class="headerlink" title="安装 Playwright"></a>安装 Playwright</h3><blockquote>
+<p>首先，确保你已经安装了 <strong>Node.js</strong>。可以通过以下命令来检查是否已经安装 Node.js：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<blockquote>
+<p>如果没有安装 Node.js，你可以从 <a href="https://nodejs.org/">Node.js 官网</a> 下载并安装最新版本的 Node.js。</p>
+</blockquote>
+<h3 id="初始化-Node-js-项目"><a href="#初始化-Node-js-项目" class="headerlink" title="初始化 Node.js 项目"></a><strong>初始化 Node.js 项目</strong></h3><blockquote>
+<p>如果你还没有创建 Node.js 项目，可以通过以下命令初始化一个新的 Node.js 项目：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> my-playwright-project</span><br><span class="line"><span class="built_in">cd</span> my-playwright-project</span><br><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这将会创建一个 <code>package.json</code> 文件，管理你的项目依赖。</p>
+</blockquote>
+<h3 id="安装-Playwright-1"><a href="#安装-Playwright-1" class="headerlink" title="安装 Playwright"></a><strong>安装 Playwright</strong></h3><p>你可以使用 <strong>npm</strong> 或 <strong>yarn</strong> 来安装 Playwright。执行以下命令安装 Playwright 和浏览器依赖：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>默认情况下，Playwright 会安装必要的浏览器二进制文件（Chromium、Firefox 和 WebKit），因此它会比较大。如果你只需要安装特定的浏览器，你可以选择安装指定的浏览器包：</p>
+</blockquote>
+<ul>
+<li><p><strong>只安装 Chromium</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-chromium</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>只安装 Firefox</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-firefox</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>只安装 WebKit</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-webkit</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="验证安装"><a href="#验证安装" class="headerlink" title="验证安装"></a><strong>验证安装</strong></h3><blockquote>
+<p>安装完成后，你可以创建一个简单的脚本来测试 Playwright 是否工作正常：</p>
+</blockquote>
+<blockquote>
+<p>你可以创建一个文件 <code>test.js</code>，并添加以下内容：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; chromium &#125; = <span class="built_in">require</span>(<span class="string">&quot;playwright&quot;</span>);</span><br><span class="line"></span><br><span class="line">(<span class="title function_">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="comment">// 启动浏览器</span></span><br><span class="line">  <span class="keyword">const</span> browser = <span class="keyword">await</span> chromium.<span class="title function_">launch</span>(&#123; <span class="attr">headless</span>: <span class="literal">false</span> &#125;);</span><br><span class="line">  <span class="keyword">const</span> page = <span class="keyword">await</span> browser.<span class="title function_">newPage</span>();</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 打开一个页面</span></span><br><span class="line">  <span class="keyword">await</span> page.<span class="title function_">goto</span>(<span class="string">&quot;https://example.com&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 截图保存</span></span><br><span class="line">  <span class="keyword">await</span> page.<span class="title function_">screenshot</span>(&#123; <span class="attr">path</span>: <span class="string">&quot;example.png&quot;</span> &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 关闭浏览器</span></span><br><span class="line">  <span class="keyword">await</span> browser.<span class="title function_">close</span>();</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>然后，运行脚本：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node test.js</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果一切正常，Playwright 会启动一个 Chromium 浏览器实例并打开 <code>https://example.com</code>，然后保存页面截图为 <code>example.png</code>。</p>
+</blockquote>
+<h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a><strong>常见问题</strong></h3><ul>
+<li>如果你在安装过程中遇到浏览器二进制文件下载失败的情况，确保你的网络连接正常，并且没有防火墙或代理阻止下载。</li>
+<li>Playwright 会在安装时自动下载 Chromium、Firefox 和 WebKit。如果你不需要某个浏览器，可以手动卸载它们，或者仅安装你需要的特定浏览器。</li>
+</ul>
+<hr>
+<blockquote>
+<p>通过这些步骤，你就可以在 Node.js 环境中成功安装并使用 Playwright 进行浏览器自动化操作。</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>BrowserAutomation</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>高级搜索技巧</title>
     <url>/2025/09/30/automate/SearchSkills/</url>
     <content><![CDATA[<h2 id="谷歌高级搜索命令表格："><a href="#谷歌高级搜索命令表格：" class="headerlink" title="谷歌高级搜索命令表格："></a>谷歌高级搜索命令表格：</h2><span id="more"></span>
@@ -203,72 +269,6 @@
       </tags>
   </entry>
   <entry>
-    <title>在Nodejs中使用 Playwright</title>
-    <url>/2025/02/03/automate/Playwright/</url>
-    <content><![CDATA[<h3 id="安装-Playwright"><a href="#安装-Playwright" class="headerlink" title="安装 Playwright"></a>安装 Playwright</h3><blockquote>
-<p>首先，确保你已经安装了 <strong>Node.js</strong>。可以通过以下命令来检查是否已经安装 Node.js：</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<blockquote>
-<p>如果没有安装 Node.js，你可以从 <a href="https://nodejs.org/">Node.js 官网</a> 下载并安装最新版本的 Node.js。</p>
-</blockquote>
-<h3 id="初始化-Node-js-项目"><a href="#初始化-Node-js-项目" class="headerlink" title="初始化 Node.js 项目"></a><strong>初始化 Node.js 项目</strong></h3><blockquote>
-<p>如果你还没有创建 Node.js 项目，可以通过以下命令初始化一个新的 Node.js 项目：</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> my-playwright-project</span><br><span class="line"><span class="built_in">cd</span> my-playwright-project</span><br><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>这将会创建一个 <code>package.json</code> 文件，管理你的项目依赖。</p>
-</blockquote>
-<h3 id="安装-Playwright-1"><a href="#安装-Playwright-1" class="headerlink" title="安装 Playwright"></a><strong>安装 Playwright</strong></h3><p>你可以使用 <strong>npm</strong> 或 <strong>yarn</strong> 来安装 Playwright。执行以下命令安装 Playwright 和浏览器依赖：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>默认情况下，Playwright 会安装必要的浏览器二进制文件（Chromium、Firefox 和 WebKit），因此它会比较大。如果你只需要安装特定的浏览器，你可以选择安装指定的浏览器包：</p>
-</blockquote>
-<ul>
-<li><p><strong>只安装 Chromium</strong>:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-chromium</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>只安装 Firefox</strong>:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-firefox</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>只安装 WebKit</strong>:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install playwright-webkit</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="验证安装"><a href="#验证安装" class="headerlink" title="验证安装"></a><strong>验证安装</strong></h3><blockquote>
-<p>安装完成后，你可以创建一个简单的脚本来测试 Playwright 是否工作正常：</p>
-</blockquote>
-<blockquote>
-<p>你可以创建一个文件 <code>test.js</code>，并添加以下内容：</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; chromium &#125; = <span class="built_in">require</span>(<span class="string">&quot;playwright&quot;</span>);</span><br><span class="line"></span><br><span class="line">(<span class="title function_">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="comment">// 启动浏览器</span></span><br><span class="line">  <span class="keyword">const</span> browser = <span class="keyword">await</span> chromium.<span class="title function_">launch</span>(&#123; <span class="attr">headless</span>: <span class="literal">false</span> &#125;);</span><br><span class="line">  <span class="keyword">const</span> page = <span class="keyword">await</span> browser.<span class="title function_">newPage</span>();</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 打开一个页面</span></span><br><span class="line">  <span class="keyword">await</span> page.<span class="title function_">goto</span>(<span class="string">&quot;https://example.com&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 截图保存</span></span><br><span class="line">  <span class="keyword">await</span> page.<span class="title function_">screenshot</span>(&#123; <span class="attr">path</span>: <span class="string">&quot;example.png&quot;</span> &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 关闭浏览器</span></span><br><span class="line">  <span class="keyword">await</span> browser.<span class="title function_">close</span>();</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>然后，运行脚本：</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node test.js</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>如果一切正常，Playwright 会启动一个 Chromium 浏览器实例并打开 <code>https://example.com</code>，然后保存页面截图为 <code>example.png</code>。</p>
-</blockquote>
-<h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a><strong>常见问题</strong></h3><ul>
-<li>如果你在安装过程中遇到浏览器二进制文件下载失败的情况，确保你的网络连接正常，并且没有防火墙或代理阻止下载。</li>
-<li>Playwright 会在安装时自动下载 Chromium、Firefox 和 WebKit。如果你不需要某个浏览器，可以手动卸载它们，或者仅安装你需要的特定浏览器。</li>
-</ul>
-<hr>
-<blockquote>
-<p>通过这些步骤，你就可以在 Node.js 环境中成功安装并使用 Playwright 进行浏览器自动化操作。</p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>BrowserAutomation</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>微博图床失效解决方法</title>
     <url>/2025/04/11/blog/ImageHost/</url>
     <content><![CDATA[<h4 id="下载BlogHelper-Browse-1-0-30-at-SourceForge-net"><a href="#下载BlogHelper-Browse-1-0-30-at-SourceForge-net" class="headerlink" title="下载BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net"></a>下载<a href="https://sourceforge.net/projects/bloghelper.mirror/files/1.0.30/">BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net</a></h4><span id="more"></span>
@@ -283,117 +283,6 @@
 ]]></content>
       <tags>
         <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git配置SSH密钥</title>
-    <url>/2025/01/31/git/GitRSA/</url>
-    <content><![CDATA[<h3 id="生成新的-SSH-密钥"><a href="#生成新的-SSH-密钥" class="headerlink" title="生成新的 SSH 密钥"></a>生成新的 SSH 密钥</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h3 id="测试-SSH-连接"><a href="#测试-SSH-连接" class="headerlink" title="测试 SSH 连接"></a>测试 SSH 连接</h3><p>将 <code>your_email@example.com</code> 替换为你在 Git 服务提供商（如 GitHub）上注册的邮箱地址。</p>
-<p>执行命令后，会提示你选择密钥的保存位置和设置密码（密码可以为空）。一般情况下，直接按回车键使用默认设置即可。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git配置用户名和密码</title>
-    <url>/2025/05/14/git/GitUser/</url>
-    <content><![CDATA[<h3 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h3 id="全局配置删除"><a href="#全局配置删除" class="headerlink" title="全局配置删除"></a>全局配置删除</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --global --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
-
-<h3 id="系统全局配置删除"><a href="#系统全局配置删除" class="headerlink" title="系统全局配置删除"></a>系统全局配置删除</h3><p>系统配置会影响系统上所有用户的所有 Git 仓库，操作时需谨慎。删除系统配置的用户和邮箱信息，使用以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --system --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
-
-<h3 id="全局配置查看"><a href="#全局配置查看" class="headerlink" title="全局配置查看"></a>全局配置查看</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
-
-<h3 id="系统全局配置查看"><a href="#系统全局配置查看" class="headerlink" title="系统全局配置查看"></a>系统全局配置查看</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --list</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>windows安装scoop</title>
-    <url>/2025/10/03/scoop/scoop/</url>
-    <content><![CDATA[<h2 id="步骤一：设置自定义安装目录的环境变量"><a href="#步骤一：设置自定义安装目录的环境变量" class="headerlink" title="步骤一：设置自定义安装目录的环境变量"></a>步骤一：设置自定义安装目录的环境变量</h2><p>在安装 Scoop 之前，你需要定义一个名为 <code>$SCOOP</code> 的环境变量，它将指定所有 Scoop 应用程序的安装根目录。</p>
-<ol>
-<li><p><u><strong>管理员</strong></u>身份打开 <strong>PowerShell</strong>。</p>
-<span id="more"></span></li>
-<li><p>运行以下命令来设置环境变量。这里我们以将 Scoop 安装在 <code>D:\Scoop</code> 为例。你可以将 <code>&#39;D:\Scoop&#39;</code> 替换为你想要的任何路径。</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这一行设置了所有应用的安装根目录，例如 D:\Scoop</span></span><br><span class="line">[<span class="type">Environment</span>]::SetEnvironmentVariable(<span class="string">&#x27;SCOOP&#x27;</span>, <span class="string">&#x27;D:\Scoop&#x27;</span>, <span class="string">&#x27;User&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><em>(可选) 如果你也希望全局安装（供所有用户使用）的目录不同，可以设置 <code>SCOOP_GLOBAL</code>：</em></p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这一行设置了全局应用的安装根目录，例如 D:\GlobalScoop</span></span><br><span class="line">[<span class="type">Environment</span>]::SetEnvironmentVariable(<span class="string">&#x27;SCOOP_GLOBAL&#x27;</span>, <span class="string">&#x27;D:\GlobalScoop&#x27;</span>, <span class="string">&#x27;User&#x27;</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>关闭并重新打开</strong>一个新的 <strong>PowerShell</strong> 窗口，以确保环境变量的更改生效。</p>
-</li>
-</ol>
-<hr>
-<h2 id="步骤二：安装-Scoop"><a href="#步骤二：安装-Scoop" class="headerlink" title="步骤二：安装 Scoop"></a>步骤二：安装 Scoop</h2><p>在新打开<u><strong>普通用户</strong></u>的 PowerShell 窗口中，执行 Scoop 的安装脚本。</p>
-<ol>
-<li><p><strong>允许本地脚本执行</strong>：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Set-ExecutionPolicy</span> RemoteSigned <span class="literal">-Scope</span> CurrentUser</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>安装 Scoop</strong>：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">iwr</span> <span class="literal">-useb</span> https://gitee.com/scoop<span class="literal">-installer</span>/scoop/tree/master/bin/install.ps1 | <span class="built_in">iex</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-<p><strong>安装结果：</strong></p>
-<ul>
-<li><strong>Scoop 的核心文件</strong>会被安装在你自定义的 <code>$SCOOP</code> 路径下，例如 <code>D:\Scoop\shims</code>。</li>
-<li>在安装过程中，Scoop 会自动将 <strong><code>D:\Scoop\shims</code></strong> 添加到你的用户 <strong><code>Path</code></strong> 环境变量中。这个 <code>shims</code> 目录包含了所有通过 Scoop 安装的应用程序的快捷方式（可执行文件），使得你可以在任何地方直接运行它们。</li>
-</ul>
-<hr>
-<h2 id="步骤三：验证安装和-Path-环境变量"><a href="#步骤三：验证安装和-Path-环境变量" class="headerlink" title="步骤三：验证安装和 Path 环境变量"></a>步骤三：验证安装和 Path 环境变量</h2><p>你可以通过以下步骤来确认一切都已正确设置。</p>
-<ol>
-<li><p><strong>验证安装目录</strong>：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$env:SCOOP</span></span><br></pre></td></tr></table></figure>
-
-<p>输出应该显示你设置的自定义路径，例如 <code>D:\Scoop</code>。</p>
-</li>
-<li><p><strong>验证 Path 变量</strong>：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$env:Path</span></span><br></pre></td></tr></table></figure>
-
-<p>在输出的一长串路径中，你应该能找到你自定义的 <strong><code>D:\Scoop\shims</code></strong> 路径。</p>
-</li>
-<li><p><strong>验证 Scoop 命令</strong>：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop help</span><br></pre></td></tr></table></figure>
-
-<p>如果显示 Scoop 的帮助信息，则说明安装成功，并且 <code>Path</code> 环境变量已正确配置。</p>
-</li>
-</ol>
-<hr>
-<h2 id="步骤四：将-Scoop-的源更改为-Gitee"><a href="#步骤四：将-Scoop-的源更改为-Gitee" class="headerlink" title="步骤四：将 Scoop 的源更改为 Gitee"></a>步骤四：将 Scoop 的源更改为 Gitee</h2><h3 id="1-更改-Scoop-安装源"><a href="#1-更改-Scoop-安装源" class="headerlink" title="1. 更改 Scoop 安装源"></a>1. 更改 Scoop 安装源</h3><p>首先，使用以下命令将 Scoop 的默认源更改为 Gitee 镜像：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop config SCOOP_REPO https://gitee.com/scoop<span class="literal">-installer</span>/scoop</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-更改应用源"><a href="#2-更改应用源" class="headerlink" title="2. 更改应用源"></a>2. 更改应用源</h3><p>然后，更新 Scoop 应用的默认源为 Gitee 的镜像：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop bucket add main https://gitee.com/scoop<span class="literal">-installer</span>/main.git</span><br><span class="line">scoop bucket add extras https://gitee.com/scoop<span class="literal">-installer</span>/extras.git</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-重新安装-Scoop"><a href="#3-重新安装-Scoop" class="headerlink" title="3. 重新安装 Scoop"></a>3. 重新安装 Scoop</h3><p>如果你已经安装过 Scoop，可以执行以下命令来确保 Scoop 使用的是新的源：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">irm</span> get.scoop.sh | <span class="built_in">iex</span></span><br></pre></td></tr></table></figure>
-
-<p>该命令会从 Gitee 上拉取 Scoop 的安装脚本。</p>
-<h3 id="4-确认源是否修改成功"><a href="#4-确认源是否修改成功" class="headerlink" title="4. 确认源是否修改成功"></a>4. 确认源是否修改成功</h3><p>你可以通过以下命令来查看当前的 Scoop 源：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop config</span><br></pre></td></tr></table></figure>
-
-<p>你应该能看到 <code>SCOOP_REPO</code> 被设置为 Gitee 镜像的地址，类似这样：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">SCOOP_REPO = https://gitee.com/scoop<span class="literal">-installer</span>/scoop</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-安装-更新应用"><a href="#5-安装-更新应用" class="headerlink" title="5. 安装&#x2F;更新应用"></a>5. 安装&#x2F;更新应用</h3><p>现在你可以使用 Gitee 镜像来安装和更新应用：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop update</span><br><span class="line">scoop install &lt;app_name&gt;</span><br></pre></td></tr></table></figure>
-
-<p>这样就将 Scoop 配置为使用 Gitee 镜像了。</p>
-<hr>
-]]></content>
-      <tags>
-        <tag>scoop</tag>
       </tags>
   </entry>
   <entry>
@@ -936,6 +825,117 @@
 ]]></content>
       <tags>
         <tag>keyshort</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git配置用户名和密码</title>
+    <url>/2025/05/14/git/GitUser/</url>
+    <content><![CDATA[<h3 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h3 id="全局配置删除"><a href="#全局配置删除" class="headerlink" title="全局配置删除"></a>全局配置删除</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --global --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
+
+<h3 id="系统全局配置删除"><a href="#系统全局配置删除" class="headerlink" title="系统全局配置删除"></a>系统全局配置删除</h3><p>系统配置会影响系统上所有用户的所有 Git 仓库，操作时需谨慎。删除系统配置的用户和邮箱信息，使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --system --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
+
+<h3 id="全局配置查看"><a href="#全局配置查看" class="headerlink" title="全局配置查看"></a>全局配置查看</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
+
+<h3 id="系统全局配置查看"><a href="#系统全局配置查看" class="headerlink" title="系统全局配置查看"></a>系统全局配置查看</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --list</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>windows安装scoop</title>
+    <url>/2025/10/03/scoop/scoop/</url>
+    <content><![CDATA[<h2 id="步骤一：设置自定义安装目录的环境变量"><a href="#步骤一：设置自定义安装目录的环境变量" class="headerlink" title="步骤一：设置自定义安装目录的环境变量"></a>步骤一：设置自定义安装目录的环境变量</h2><p>在安装 Scoop 之前，你需要定义一个名为 <code>$SCOOP</code> 的环境变量，它将指定所有 Scoop 应用程序的安装根目录。</p>
+<ol>
+<li><p><u><strong>管理员</strong></u>身份打开 <strong>PowerShell</strong>。</p>
+<span id="more"></span></li>
+<li><p>运行以下命令来设置环境变量。这里我们以将 Scoop 安装在 <code>D:\Scoop</code> 为例。你可以将 <code>&#39;D:\Scoop&#39;</code> 替换为你想要的任何路径。</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这一行设置了所有应用的安装根目录，例如 D:\Scoop</span></span><br><span class="line">[<span class="type">Environment</span>]::SetEnvironmentVariable(<span class="string">&#x27;SCOOP&#x27;</span>, <span class="string">&#x27;D:\Scoop&#x27;</span>, <span class="string">&#x27;User&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><em>(可选) 如果你也希望全局安装（供所有用户使用）的目录不同，可以设置 <code>SCOOP_GLOBAL</code>：</em></p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这一行设置了全局应用的安装根目录，例如 D:\GlobalScoop</span></span><br><span class="line">[<span class="type">Environment</span>]::SetEnvironmentVariable(<span class="string">&#x27;SCOOP_GLOBAL&#x27;</span>, <span class="string">&#x27;D:\GlobalScoop&#x27;</span>, <span class="string">&#x27;User&#x27;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>关闭并重新打开</strong>一个新的 <strong>PowerShell</strong> 窗口，以确保环境变量的更改生效。</p>
+</li>
+</ol>
+<hr>
+<h2 id="步骤二：安装-Scoop"><a href="#步骤二：安装-Scoop" class="headerlink" title="步骤二：安装 Scoop"></a>步骤二：安装 Scoop</h2><p>在新打开<u><strong>普通用户</strong></u>的 PowerShell 窗口中，执行 Scoop 的安装脚本。</p>
+<ol>
+<li><p><strong>允许本地脚本执行</strong>：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Set-ExecutionPolicy</span> RemoteSigned <span class="literal">-Scope</span> CurrentUser</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>安装 Scoop</strong>：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">iwr</span> <span class="literal">-useb</span> https://gitee.com/scoop<span class="literal">-installer</span>/scoop/tree/master/bin/install.ps1 | <span class="built_in">iex</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><strong>安装结果：</strong></p>
+<ul>
+<li><strong>Scoop 的核心文件</strong>会被安装在你自定义的 <code>$SCOOP</code> 路径下，例如 <code>D:\Scoop\shims</code>。</li>
+<li>在安装过程中，Scoop 会自动将 <strong><code>D:\Scoop\shims</code></strong> 添加到你的用户 <strong><code>Path</code></strong> 环境变量中。这个 <code>shims</code> 目录包含了所有通过 Scoop 安装的应用程序的快捷方式（可执行文件），使得你可以在任何地方直接运行它们。</li>
+</ul>
+<hr>
+<h2 id="步骤三：验证安装和-Path-环境变量"><a href="#步骤三：验证安装和-Path-环境变量" class="headerlink" title="步骤三：验证安装和 Path 环境变量"></a>步骤三：验证安装和 Path 环境变量</h2><p>你可以通过以下步骤来确认一切都已正确设置。</p>
+<ol>
+<li><p><strong>验证安装目录</strong>：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$env:SCOOP</span></span><br></pre></td></tr></table></figure>
+
+<p>输出应该显示你设置的自定义路径，例如 <code>D:\Scoop</code>。</p>
+</li>
+<li><p><strong>验证 Path 变量</strong>：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$env:Path</span></span><br></pre></td></tr></table></figure>
+
+<p>在输出的一长串路径中，你应该能找到你自定义的 <strong><code>D:\Scoop\shims</code></strong> 路径。</p>
+</li>
+<li><p><strong>验证 Scoop 命令</strong>：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop help</span><br></pre></td></tr></table></figure>
+
+<p>如果显示 Scoop 的帮助信息，则说明安装成功，并且 <code>Path</code> 环境变量已正确配置。</p>
+</li>
+</ol>
+<hr>
+<h2 id="步骤四：将-Scoop-的源更改为-Gitee"><a href="#步骤四：将-Scoop-的源更改为-Gitee" class="headerlink" title="步骤四：将 Scoop 的源更改为 Gitee"></a>步骤四：将 Scoop 的源更改为 Gitee</h2><h3 id="1-更改-Scoop-安装源"><a href="#1-更改-Scoop-安装源" class="headerlink" title="1. 更改 Scoop 安装源"></a>1. 更改 Scoop 安装源</h3><p>首先，使用以下命令将 Scoop 的默认源更改为 Gitee 镜像：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop config SCOOP_REPO https://gitee.com/scoop<span class="literal">-installer</span>/scoop</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-更改应用源"><a href="#2-更改应用源" class="headerlink" title="2. 更改应用源"></a>2. 更改应用源</h3><p>然后，更新 Scoop 应用的默认源为 Gitee 的镜像：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop bucket add main https://gitee.com/scoop<span class="literal">-installer</span>/main.git</span><br><span class="line">scoop bucket add extras https://gitee.com/scoop<span class="literal">-installer</span>/extras.git</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-重新安装-Scoop"><a href="#3-重新安装-Scoop" class="headerlink" title="3. 重新安装 Scoop"></a>3. 重新安装 Scoop</h3><p>如果你已经安装过 Scoop，可以执行以下命令来确保 Scoop 使用的是新的源：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">irm</span> get.scoop.sh | <span class="built_in">iex</span></span><br></pre></td></tr></table></figure>
+
+<p>该命令会从 Gitee 上拉取 Scoop 的安装脚本。</p>
+<h3 id="4-确认源是否修改成功"><a href="#4-确认源是否修改成功" class="headerlink" title="4. 确认源是否修改成功"></a>4. 确认源是否修改成功</h3><p>你可以通过以下命令来查看当前的 Scoop 源：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop config</span><br></pre></td></tr></table></figure>
+
+<p>你应该能看到 <code>SCOOP_REPO</code> 被设置为 Gitee 镜像的地址，类似这样：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">SCOOP_REPO = https://gitee.com/scoop<span class="literal">-installer</span>/scoop</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-安装-更新应用"><a href="#5-安装-更新应用" class="headerlink" title="5. 安装&#x2F;更新应用"></a>5. 安装&#x2F;更新应用</h3><p>现在你可以使用 Gitee 镜像来安装和更新应用：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop update</span><br><span class="line">scoop install &lt;app_name&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这样就将 Scoop 配置为使用 Gitee 镜像了。</p>
+<hr>
+]]></content>
+      <tags>
+        <tag>scoop</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git配置SSH密钥</title>
+    <url>/2025/01/31/git/GitRSA/</url>
+    <content><![CDATA[<h3 id="生成新的-SSH-密钥"><a href="#生成新的-SSH-密钥" class="headerlink" title="生成新的 SSH 密钥"></a>生成新的 SSH 密钥</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h3 id="测试-SSH-连接"><a href="#测试-SSH-连接" class="headerlink" title="测试 SSH 连接"></a>测试 SSH 连接</h3><p>将 <code>your_email@example.com</code> 替换为你在 Git 服务提供商（如 GitHub）上注册的邮箱地址。</p>
+<p>执行命令后，会提示你选择密钥的保存位置和设置密码（密码可以为空）。一般情况下，直接按回车键使用默认设置即可。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>git</tag>
       </tags>
   </entry>
 </search>
