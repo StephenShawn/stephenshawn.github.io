@@ -269,6 +269,23 @@
       </tags>
   </entry>
   <entry>
+    <title>微博图床失效解决方法</title>
+    <url>/2025/04/11/blog/ImageHost/</url>
+    <content><![CDATA[<h4 id="下载BlogHelper-Browse-1-0-30-at-SourceForge-net"><a href="#下载BlogHelper-Browse-1-0-30-at-SourceForge-net" class="headerlink" title="下载BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net"></a>下载<a href="https://sourceforge.net/projects/bloghelper.mirror/files/1.0.30/">BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net</a></h4><span id="more"></span>
+
+<h4 id="登陆微博账号，再启动新浪图床如下"><a href="#登陆微博账号，再启动新浪图床如下" class="headerlink" title="登陆微博账号，再启动新浪图床如下"></a>登陆微博账号，再启动新浪图床如下</h4><p><img src="https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0eg6z69jdj308105374f.jpg" alt="新浪图床启动"></p>
+<h4 id="上传包含本地图片的-md-文件-先用Typora-编辑好-md-文件-，得到替换图片连接后的-md-文件"><a href="#上传包含本地图片的-md-文件-先用Typora-编辑好-md-文件-，得到替换图片连接后的-md-文件" class="headerlink" title="上传包含本地图片的 md 文件(先用Typora 编辑好 md 文件)，得到替换图片连接后的 md 文件"></a>上传包含本地图片的 md 文件(先用<a href="https://typoraio.cn/">Typora </a>编辑好 md 文件)，得到替换图片连接后的 md 文件</h4><p><img src="https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0eg6zboy0j306t05fgls.jpg" alt="新浪图床图片上传"></p>
+<h4 id="将得到的-md-文件中图片地址修改"><a href="#将得到的-md-文件中图片地址修改" class="headerlink" title="将得到的 md 文件中图片地址修改"></a>将得到的 md 文件中图片地址修改</h4><blockquote>
+<p>例如得到的图片地址为: <code>http://ww3.sinaimg.cn/large/008qTdeRly1i0edw9eafdj31ao0t6q42.jpg</code>该地址不能正常访问</p>
+<p>将其改为<code>https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0edw9eafdj31ao0t6q42.jpg</code></p>
+<p>就是将前缀<code>http://ww3.sinaimg.cn</code>改为<code>https://cdn.cdnjson.com/tvax3.sinaimg.cn</code></p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>git配置SSH密钥</title>
     <url>/2025/01/31/git/GitRSA/</url>
     <content><![CDATA[<h3 id="生成新的-SSH-密钥"><a href="#生成新的-SSH-密钥" class="headerlink" title="生成新的 SSH 密钥"></a>生成新的 SSH 密钥</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
@@ -301,6 +318,82 @@
 ]]></content>
       <tags>
         <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>windows安装scoop</title>
+    <url>/2025/10/03/scoop/scoop/</url>
+    <content><![CDATA[<h2 id="步骤一：设置自定义安装目录的环境变量"><a href="#步骤一：设置自定义安装目录的环境变量" class="headerlink" title="步骤一：设置自定义安装目录的环境变量"></a>步骤一：设置自定义安装目录的环境变量</h2><p>在安装 Scoop 之前，你需要定义一个名为 <code>$SCOOP</code> 的环境变量，它将指定所有 Scoop 应用程序的安装根目录。</p>
+<ol>
+<li><p><u><strong>管理员</strong></u>身份打开 <strong>PowerShell</strong>。</p>
+<span id="more"></span></li>
+<li><p>运行以下命令来设置环境变量。这里我们以将 Scoop 安装在 <code>D:\Scoop</code> 为例。你可以将 <code>&#39;D:\Scoop&#39;</code> 替换为你想要的任何路径。</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这一行设置了所有应用的安装根目录，例如 D:\Scoop</span></span><br><span class="line">[<span class="type">Environment</span>]::SetEnvironmentVariable(<span class="string">&#x27;SCOOP&#x27;</span>, <span class="string">&#x27;D:\Scoop&#x27;</span>, <span class="string">&#x27;User&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><em>(可选) 如果你也希望全局安装（供所有用户使用）的目录不同，可以设置 <code>SCOOP_GLOBAL</code>：</em></p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这一行设置了全局应用的安装根目录，例如 D:\GlobalScoop</span></span><br><span class="line">[<span class="type">Environment</span>]::SetEnvironmentVariable(<span class="string">&#x27;SCOOP_GLOBAL&#x27;</span>, <span class="string">&#x27;D:\GlobalScoop&#x27;</span>, <span class="string">&#x27;User&#x27;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>关闭并重新打开</strong>一个新的 <strong>PowerShell</strong> 窗口，以确保环境变量的更改生效。</p>
+</li>
+</ol>
+<hr>
+<h2 id="步骤二：安装-Scoop"><a href="#步骤二：安装-Scoop" class="headerlink" title="步骤二：安装 Scoop"></a>步骤二：安装 Scoop</h2><p>在新打开<u><strong>普通用户</strong></u>的 PowerShell 窗口中，执行 Scoop 的安装脚本。</p>
+<ol>
+<li><p><strong>允许本地脚本执行</strong>：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Set-ExecutionPolicy</span> RemoteSigned <span class="literal">-Scope</span> CurrentUser</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>安装 Scoop</strong>：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">iwr</span> <span class="literal">-useb</span> https://gitee.com/scoop<span class="literal">-installer</span>/scoop/tree/master/bin/install.ps1 | <span class="built_in">iex</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><strong>安装结果：</strong></p>
+<ul>
+<li><strong>Scoop 的核心文件</strong>会被安装在你自定义的 <code>$SCOOP</code> 路径下，例如 <code>D:\Scoop\shims</code>。</li>
+<li>在安装过程中，Scoop 会自动将 <strong><code>D:\Scoop\shims</code></strong> 添加到你的用户 <strong><code>Path</code></strong> 环境变量中。这个 <code>shims</code> 目录包含了所有通过 Scoop 安装的应用程序的快捷方式（可执行文件），使得你可以在任何地方直接运行它们。</li>
+</ul>
+<hr>
+<h2 id="步骤三：验证安装和-Path-环境变量"><a href="#步骤三：验证安装和-Path-环境变量" class="headerlink" title="步骤三：验证安装和 Path 环境变量"></a>步骤三：验证安装和 Path 环境变量</h2><p>你可以通过以下步骤来确认一切都已正确设置。</p>
+<ol>
+<li><p><strong>验证安装目录</strong>：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$env:SCOOP</span></span><br></pre></td></tr></table></figure>
+
+<p>输出应该显示你设置的自定义路径，例如 <code>D:\Scoop</code>。</p>
+</li>
+<li><p><strong>验证 Path 变量</strong>：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$env:Path</span></span><br></pre></td></tr></table></figure>
+
+<p>在输出的一长串路径中，你应该能找到你自定义的 <strong><code>D:\Scoop\shims</code></strong> 路径。</p>
+</li>
+<li><p><strong>验证 Scoop 命令</strong>：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop help</span><br></pre></td></tr></table></figure>
+
+<p>如果显示 Scoop 的帮助信息，则说明安装成功，并且 <code>Path</code> 环境变量已正确配置。</p>
+</li>
+</ol>
+<hr>
+<h2 id="步骤四：将-Scoop-的源更改为-Gitee"><a href="#步骤四：将-Scoop-的源更改为-Gitee" class="headerlink" title="步骤四：将 Scoop 的源更改为 Gitee"></a>步骤四：将 Scoop 的源更改为 Gitee</h2><h3 id="1-更改-Scoop-安装源"><a href="#1-更改-Scoop-安装源" class="headerlink" title="1. 更改 Scoop 安装源"></a>1. 更改 Scoop 安装源</h3><p>首先，使用以下命令将 Scoop 的默认源更改为 Gitee 镜像：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop config SCOOP_REPO https://gitee.com/scoop<span class="literal">-installer</span>/scoop</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-更改应用源"><a href="#2-更改应用源" class="headerlink" title="2. 更改应用源"></a>2. 更改应用源</h3><p>然后，更新 Scoop 应用的默认源为 Gitee 的镜像：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop bucket add main https://gitee.com/scoop<span class="literal">-installer</span>/main.git</span><br><span class="line">scoop bucket add extras https://gitee.com/scoop<span class="literal">-installer</span>/extras.git</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-重新安装-Scoop"><a href="#3-重新安装-Scoop" class="headerlink" title="3. 重新安装 Scoop"></a>3. 重新安装 Scoop</h3><p>如果你已经安装过 Scoop，可以执行以下命令来确保 Scoop 使用的是新的源：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">irm</span> get.scoop.sh | <span class="built_in">iex</span></span><br></pre></td></tr></table></figure>
+
+<p>该命令会从 Gitee 上拉取 Scoop 的安装脚本。</p>
+<h3 id="4-确认源是否修改成功"><a href="#4-确认源是否修改成功" class="headerlink" title="4. 确认源是否修改成功"></a>4. 确认源是否修改成功</h3><p>你可以通过以下命令来查看当前的 Scoop 源：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop config</span><br></pre></td></tr></table></figure>
+
+<p>你应该能看到 <code>SCOOP_REPO</code> 被设置为 Gitee 镜像的地址，类似这样：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">SCOOP_REPO = https://gitee.com/scoop<span class="literal">-installer</span>/scoop</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-安装-更新应用"><a href="#5-安装-更新应用" class="headerlink" title="5. 安装&#x2F;更新应用"></a>5. 安装&#x2F;更新应用</h3><p>现在你可以使用 Gitee 镜像来安装和更新应用：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop update</span><br><span class="line">scoop install &lt;app_name&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这样就将 Scoop 配置为使用 Gitee 镜像了。</p>
+<hr>
+]]></content>
+      <tags>
+        <tag>scoop</tag>
       </tags>
   </entry>
   <entry>
@@ -843,23 +936,6 @@
 ]]></content>
       <tags>
         <tag>keyshort</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>微博图床失效解决方法</title>
-    <url>/2025/04/11/blog/ImageHost/</url>
-    <content><![CDATA[<h4 id="下载BlogHelper-Browse-1-0-30-at-SourceForge-net"><a href="#下载BlogHelper-Browse-1-0-30-at-SourceForge-net" class="headerlink" title="下载BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net"></a>下载<a href="https://sourceforge.net/projects/bloghelper.mirror/files/1.0.30/">BlogHelper - Browse &#x2F;1.0.30 at SourceForge.net</a></h4><span id="more"></span>
-
-<h4 id="登陆微博账号，再启动新浪图床如下"><a href="#登陆微博账号，再启动新浪图床如下" class="headerlink" title="登陆微博账号，再启动新浪图床如下"></a>登陆微博账号，再启动新浪图床如下</h4><p><img src="https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0eg6z69jdj308105374f.jpg" alt="新浪图床启动"></p>
-<h4 id="上传包含本地图片的-md-文件-先用Typora-编辑好-md-文件-，得到替换图片连接后的-md-文件"><a href="#上传包含本地图片的-md-文件-先用Typora-编辑好-md-文件-，得到替换图片连接后的-md-文件" class="headerlink" title="上传包含本地图片的 md 文件(先用Typora 编辑好 md 文件)，得到替换图片连接后的 md 文件"></a>上传包含本地图片的 md 文件(先用<a href="https://typoraio.cn/">Typora </a>编辑好 md 文件)，得到替换图片连接后的 md 文件</h4><p><img src="https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0eg6zboy0j306t05fgls.jpg" alt="新浪图床图片上传"></p>
-<h4 id="将得到的-md-文件中图片地址修改"><a href="#将得到的-md-文件中图片地址修改" class="headerlink" title="将得到的 md 文件中图片地址修改"></a>将得到的 md 文件中图片地址修改</h4><blockquote>
-<p>例如得到的图片地址为: <code>http://ww3.sinaimg.cn/large/008qTdeRly1i0edw9eafdj31ao0t6q42.jpg</code>该地址不能正常访问</p>
-<p>将其改为<code>https://cdn.cdnjson.com/tvax3.sinaimg.cn/large/008qTdeRly1i0edw9eafdj31ao0t6q42.jpg</code></p>
-<p>就是将前缀<code>http://ww3.sinaimg.cn</code>改为<code>https://cdn.cdnjson.com/tvax3.sinaimg.cn</code></p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>blog</tag>
       </tags>
   </entry>
 </search>
