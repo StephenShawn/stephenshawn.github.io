@@ -1,208 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>高级搜索技巧</title>
-    <url>/2025/09/30/automate/SearchSkills/</url>
-    <content><![CDATA[<h2 id="谷歌高级搜索命令表格："><a href="#谷歌高级搜索命令表格：" class="headerlink" title="谷歌高级搜索命令表格："></a>谷歌高级搜索命令表格：</h2><span id="more"></span>
-
-<table>
-<thead>
-<tr>
-<th>序号</th>
-<th>语法</th>
-<th>语法说明</th>
-<th>示例</th>
-<th>示例说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1</td>
-<td>+</td>
-<td>AND（必须同时包含）</td>
-<td>搜索 + 引擎</td>
-<td>包含”搜索”和”引擎”的页面</td>
-</tr>
-<tr>
-<td>2</td>
-<td>OR</td>
-<td>OR（包含任意一个）</td>
-<td>搜索 OR 引擎</td>
-<td>包含”搜索”或”引擎”的页面</td>
-</tr>
-<tr>
-<td>3</td>
-<td>-</td>
-<td>排除特定词</td>
-<td>搜索引擎 -百度</td>
-<td>不包含”百度”的”搜索引擎”相关页面</td>
-</tr>
-<tr>
-<td>4</td>
-<td>“ “</td>
-<td>精确匹配短语</td>
-<td>“搜索引擎”</td>
-<td>完整匹配”搜索引擎”短语的页面</td>
-</tr>
-<tr>
-<td>5</td>
-<td>*</td>
-<td>通配符（替代任意字符）</td>
-<td>搜*引擎</td>
-<td>替代任意字符的模糊搜索</td>
-</tr>
-<tr>
-<td>6</td>
-<td>@</td>
-<td>社交媒体账号搜索</td>
-<td>trump @twitter</td>
-<td>搜索Twitter上@trump的内容</td>
-</tr>
-<tr>
-<td>7</td>
-<td>$</td>
-<td>价格范围搜索</td>
-<td>camera $400</td>
-<td>价格400美元的相机相关页面</td>
-</tr>
-<tr>
-<td>8</td>
-<td>#</td>
-<td>标签搜索</td>
-<td>#throwbackthursday</td>
-<td>包含指定话题标签的页面</td>
-</tr>
-<tr>
-<td>9</td>
-<td>..</td>
-<td>数值范围搜索</td>
-<td>camera $500..$1000</td>
-<td>价格500-1000美元的相机页面</td>
-</tr>
-<tr>
-<td>10</td>
-<td>filetype:</td>
-<td>指定文件类型</td>
-<td>C++ filetype:pdf</td>
-<td>PDF格式的C++教程</td>
-</tr>
-<tr>
-<td>11</td>
-<td>site:</td>
-<td>限定网站搜索</td>
-<td>C++ site:zhihu.com</td>
-<td>知乎网站内的C++相关页面</td>
-</tr>
-<tr>
-<td>12</td>
-<td>cache:</td>
-<td>查看网页缓存版本</td>
-<td>cache:weibo.com</td>
-<td>微博的Google缓存页面</td>
-</tr>
-<tr>
-<td>13</td>
-<td>info:</td>
-<td>获取网站详细信息</td>
-<td>info:github.com</td>
-<td>GitHub网站的基本信息</td>
-</tr>
-<tr>
-<td>14</td>
-<td>related:</td>
-<td>查找关联网站</td>
-<td>related:sina.com</td>
-<td>与新浪结构相似的网站</td>
-</tr>
-<tr>
-<td>15</td>
-<td>link:</td>
-<td>查找反向链接</td>
-<td>link:csdn.net</td>
-<td>所有链接到CSDN的页面</td>
-</tr>
-<tr>
-<td>16</td>
-<td>inurl:</td>
-<td>URL中包含关键词</td>
-<td>inurl:搜索引擎</td>
-<td>URL含”搜索引擎”的页面</td>
-</tr>
-<tr>
-<td>17</td>
-<td>intitle:</td>
-<td>标题中包含关键词</td>
-<td>intitle:搜索引擎</td>
-<td>标题含”搜索引擎”的页面</td>
-</tr>
-<tr>
-<td>18</td>
-<td>intext:</td>
-<td>正文中包含关键词</td>
-<td>SEO intext:搜索引擎</td>
-<td>正文含”搜索引擎”的SEO相关页面</td>
-</tr>
-<tr>
-<td>19</td>
-<td>inanchor:</td>
-<td>锚文本中包含关键词</td>
-<td>inanchor:前端</td>
-<td>链接文字含”前端”的页面</td>
-</tr>
-<tr>
-<td>20</td>
-<td>allinurl:</td>
-<td>URL包含多个关键词</td>
-<td>allinurl:SEO 优化</td>
-<td>URL含SEO和优化的页面</td>
-</tr>
-<tr>
-<td>21</td>
-<td>allintitle:</td>
-<td>标题包含多个关键词</td>
-<td>allintitle:SEO 优化</td>
-<td>标题含SEO和优化的页面</td>
-</tr>
-<tr>
-<td>22</td>
-<td>allintext:</td>
-<td>正文包含多个关键词</td>
-<td>allintext:SEO 优化</td>
-<td>正文含SEO和优化的页面</td>
-</tr>
-<tr>
-<td>23</td>
-<td>allinanchor:</td>
-<td>锚文本包含多个关键词</td>
-<td>allinanchor:SEO 优化</td>
-<td>锚文本含SEO和优化的页面</td>
-</tr>
-<tr>
-<td>24</td>
-<td>weather:</td>
-<td>天气&#x2F;时间查询</td>
-<td>weather:beijing</td>
-<td>北京天气信息</td>
-</tr>
-<tr>
-<td>25</td>
-<td>music&#x2F;songs:</td>
-<td>音乐搜索</td>
-<td>周杰伦 music</td>
-<td>周杰伦的音乐列表</td>
-</tr>
-</tbody></table>
-<p>注：</p>
-<ol>
-<li>冒号为英文状态，后面不带空格</li>
-<li>命令需与关键词用空格分隔（如 <code>C++ filetype:pdf</code>）</li>
-<li>支持组合使用（如 <code>allintitle:机器学习 入门 site:zhihu.com</code>）                                               | &#96;</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>SearchSkills</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>在Nodejs中使用 Playwright</title>
     <url>/2025/02/03/automate/Playwright/</url>
     <content><![CDATA[<h3 id="安装-Playwright"><a href="#安装-Playwright" class="headerlink" title="安装 Playwright"></a>安装 Playwright</h3><blockquote>
@@ -283,83 +81,6 @@
 ]]></content>
       <tags>
         <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>windows安装scoop</title>
-    <url>/2025/10/03/scoop/scoop/</url>
-    <content><![CDATA[<h2 id="步骤一：设置自定义安装目录的环境变量"><a href="#步骤一：设置自定义安装目录的环境变量" class="headerlink" title="步骤一：设置自定义安装目录的环境变量"></a>步骤一：设置自定义安装目录的环境变量</h2><p>在安装 Scoop 之前，你需要定义一个名为 <code>$SCOOP</code> 的环境变量，它将指定所有 Scoop 应用程序的安装根目录。</p>
-<ol>
-<li><p><u><strong>管理员</strong></u>身份打开 <strong>PowerShell</strong>。</p>
-<span id="more"></span></li>
-<li><p>运行以下命令来设置环境变量。这里我们以将 Scoop 安装在 <code>D:\Scoop</code> 为例。你可以将 <code>&#39;D:\Scoop&#39;</code> 替换为你想要的任何路径。</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这一行设置了所有应用的安装根目录，例如 D:\Scoop</span></span><br><span class="line">[<span class="type">Environment</span>]::SetEnvironmentVariable(<span class="string">&#x27;SCOOP&#x27;</span>, <span class="string">&#x27;D:\Scoop&#x27;</span>, <span class="string">&#x27;User&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><em>(可选) 如果你也希望全局安装（供所有用户使用）的目录不同，可以设置 <code>SCOOP_GLOBAL</code>：</em></p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这一行设置了全局应用的安装根目录，例如 D:\GlobalScoop</span></span><br><span class="line">[<span class="type">Environment</span>]::SetEnvironmentVariable(<span class="string">&#x27;SCOOP_GLOBAL&#x27;</span>, <span class="string">&#x27;D:\GlobalScoop&#x27;</span>, <span class="string">&#x27;User&#x27;</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>关闭并重新打开</strong>一个新的 <strong>PowerShell</strong> 窗口，以确保环境变量的更改生效。</p>
-</li>
-</ol>
-<hr>
-<h2 id="步骤二：安装-Scoop"><a href="#步骤二：安装-Scoop" class="headerlink" title="步骤二：安装 Scoop"></a>步骤二：安装 Scoop</h2><p>在新打开<u><strong>普通用户</strong></u>的 PowerShell 窗口中，执行 Scoop 的安装脚本。</p>
-<ol>
-<li><p><strong>允许本地脚本执行</strong>：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Set-ExecutionPolicy</span> RemoteSigned <span class="literal">-Scope</span> CurrentUser</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>安装 Scoop</strong>：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">iwr</span> <span class="literal">-useb</span> https://gitee.com/scoop<span class="literal">-installer</span>/scoop/tree/master/bin/install.ps1 | <span class="built_in">iex</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-<p><strong>安装结果：</strong></p>
-<ul>
-<li><strong>Scoop 的核心文件</strong>会被安装在你自定义的 <code>$SCOOP</code> 路径下，例如 <code>D:\Scoop\shims</code>。</li>
-<li>在安装过程中，Scoop 会自动将 <strong><code>D:\Scoop\shims</code></strong> 添加到你的用户 <strong><code>Path</code></strong> 环境变量中。这个 <code>shims</code> 目录包含了所有通过 Scoop 安装的应用程序的快捷方式（可执行文件），使得你可以在任何地方直接运行它们。</li>
-</ul>
-<hr>
-<h2 id="步骤三：验证安装和-Path-环境变量"><a href="#步骤三：验证安装和-Path-环境变量" class="headerlink" title="步骤三：验证安装和 Path 环境变量"></a>步骤三：验证安装和 Path 环境变量</h2><p>你可以通过以下步骤来确认一切都已正确设置。</p>
-<ol>
-<li><p><strong>验证安装目录</strong>：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$env:SCOOP</span></span><br></pre></td></tr></table></figure>
-
-<p>输出应该显示你设置的自定义路径，例如 <code>D:\Scoop</code>。</p>
-</li>
-<li><p><strong>验证 Path 变量</strong>：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$env:Path</span></span><br></pre></td></tr></table></figure>
-
-<p>在输出的一长串路径中，你应该能找到你自定义的 <strong><code>D:\Scoop\shims</code></strong> 路径。</p>
-</li>
-<li><p><strong>验证 Scoop 命令</strong>：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop help</span><br></pre></td></tr></table></figure>
-
-<p>如果显示 Scoop 的帮助信息，则说明安装成功，并且 <code>Path</code> 环境变量已正确配置。</p>
-</li>
-</ol>
-<hr>
-<h2 id="步骤四：将-Scoop-的源更改为-Gitee"><a href="#步骤四：将-Scoop-的源更改为-Gitee" class="headerlink" title="步骤四：将 Scoop 的源更改为 Gitee"></a>步骤四：将 Scoop 的源更改为 Gitee</h2><h3 id="1-更改-Scoop-安装源"><a href="#1-更改-Scoop-安装源" class="headerlink" title="1. 更改 Scoop 安装源"></a>1. 更改 Scoop 安装源</h3><p>首先，使用以下命令将 Scoop 的默认源更改为 Gitee 镜像：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop config SCOOP_REPO https://gitee.com/scoop<span class="literal">-installer</span>/scoop</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-更改应用源"><a href="#2-更改应用源" class="headerlink" title="2. 更改应用源"></a>2. 更改应用源</h3><p>然后，更新 Scoop 应用的默认源为 Gitee 的镜像：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop bucket add main https://gitee.com/scoop<span class="literal">-installer</span>/main.git</span><br><span class="line">scoop bucket add extras https://gitee.com/scoop<span class="literal">-installer</span>/extras.git</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-重新安装-Scoop"><a href="#3-重新安装-Scoop" class="headerlink" title="3. 重新安装 Scoop"></a>3. 重新安装 Scoop</h3><p>如果你已经安装过 Scoop，可以执行以下命令来确保 Scoop 使用的是新的源：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">irm</span> get.scoop.sh | <span class="built_in">iex</span></span><br></pre></td></tr></table></figure>
-
-<p>该命令会从 Gitee 上拉取 Scoop 的安装脚本。</p>
-<h3 id="4-确认源是否修改成功"><a href="#4-确认源是否修改成功" class="headerlink" title="4. 确认源是否修改成功"></a>4. 确认源是否修改成功</h3><p>你可以通过以下命令来查看当前的 Scoop 源：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop config</span><br></pre></td></tr></table></figure>
-
-<p>你应该能看到 <code>SCOOP_REPO</code> 被设置为 Gitee 镜像的地址，类似这样：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">SCOOP_REPO = https://gitee.com/scoop<span class="literal">-installer</span>/scoop</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-安装-更新应用"><a href="#5-安装-更新应用" class="headerlink" title="5. 安装&#x2F;更新应用"></a>5. 安装&#x2F;更新应用</h3><p>现在你可以使用 Gitee 镜像来安装和更新应用：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop update</span><br><span class="line">scoop install &lt;app_name&gt;</span><br></pre></td></tr></table></figure>
-
-<p>这样就将 Scoop 配置为使用 Gitee 镜像了。</p>
-<h3 id="6-查找相关应用"><a href="#6-查找相关应用" class="headerlink" title="6. 查找相关应用"></a>6. 查找相关应用</h3><p>你可以在 <a href="https://scoop.sh/">Scoop 官方网站</a> 上查找相关应用。</p>
-<hr>
-]]></content>
-      <tags>
-        <tag>scoop</tag>
       </tags>
   </entry>
   <entry>
@@ -917,6 +638,285 @@
 ]]></content>
       <tags>
         <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>高级搜索技巧</title>
+    <url>/2025/09/30/automate/SearchSkills/</url>
+    <content><![CDATA[<h2 id="谷歌高级搜索命令表格："><a href="#谷歌高级搜索命令表格：" class="headerlink" title="谷歌高级搜索命令表格："></a>谷歌高级搜索命令表格：</h2><span id="more"></span>
+
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>语法</th>
+<th>语法说明</th>
+<th>示例</th>
+<th>示例说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>+</td>
+<td>AND（必须同时包含）</td>
+<td>搜索 + 引擎</td>
+<td>包含”搜索”和”引擎”的页面</td>
+</tr>
+<tr>
+<td>2</td>
+<td>OR</td>
+<td>OR（包含任意一个）</td>
+<td>搜索 OR 引擎</td>
+<td>包含”搜索”或”引擎”的页面</td>
+</tr>
+<tr>
+<td>3</td>
+<td>-</td>
+<td>排除特定词</td>
+<td>搜索引擎 -百度</td>
+<td>不包含”百度”的”搜索引擎”相关页面</td>
+</tr>
+<tr>
+<td>4</td>
+<td>“ “</td>
+<td>精确匹配短语</td>
+<td>“搜索引擎”</td>
+<td>完整匹配”搜索引擎”短语的页面</td>
+</tr>
+<tr>
+<td>5</td>
+<td>*</td>
+<td>通配符（替代任意字符）</td>
+<td>搜*引擎</td>
+<td>替代任意字符的模糊搜索</td>
+</tr>
+<tr>
+<td>6</td>
+<td>@</td>
+<td>社交媒体账号搜索</td>
+<td>trump @twitter</td>
+<td>搜索Twitter上@trump的内容</td>
+</tr>
+<tr>
+<td>7</td>
+<td>$</td>
+<td>价格范围搜索</td>
+<td>camera $400</td>
+<td>价格400美元的相机相关页面</td>
+</tr>
+<tr>
+<td>8</td>
+<td>#</td>
+<td>标签搜索</td>
+<td>#throwbackthursday</td>
+<td>包含指定话题标签的页面</td>
+</tr>
+<tr>
+<td>9</td>
+<td>..</td>
+<td>数值范围搜索</td>
+<td>camera $500..$1000</td>
+<td>价格500-1000美元的相机页面</td>
+</tr>
+<tr>
+<td>10</td>
+<td>filetype:</td>
+<td>指定文件类型</td>
+<td>C++ filetype:pdf</td>
+<td>PDF格式的C++教程</td>
+</tr>
+<tr>
+<td>11</td>
+<td>site:</td>
+<td>限定网站搜索</td>
+<td>C++ site:zhihu.com</td>
+<td>知乎网站内的C++相关页面</td>
+</tr>
+<tr>
+<td>12</td>
+<td>cache:</td>
+<td>查看网页缓存版本</td>
+<td>cache:weibo.com</td>
+<td>微博的Google缓存页面</td>
+</tr>
+<tr>
+<td>13</td>
+<td>info:</td>
+<td>获取网站详细信息</td>
+<td>info:github.com</td>
+<td>GitHub网站的基本信息</td>
+</tr>
+<tr>
+<td>14</td>
+<td>related:</td>
+<td>查找关联网站</td>
+<td>related:sina.com</td>
+<td>与新浪结构相似的网站</td>
+</tr>
+<tr>
+<td>15</td>
+<td>link:</td>
+<td>查找反向链接</td>
+<td>link:csdn.net</td>
+<td>所有链接到CSDN的页面</td>
+</tr>
+<tr>
+<td>16</td>
+<td>inurl:</td>
+<td>URL中包含关键词</td>
+<td>inurl:搜索引擎</td>
+<td>URL含”搜索引擎”的页面</td>
+</tr>
+<tr>
+<td>17</td>
+<td>intitle:</td>
+<td>标题中包含关键词</td>
+<td>intitle:搜索引擎</td>
+<td>标题含”搜索引擎”的页面</td>
+</tr>
+<tr>
+<td>18</td>
+<td>intext:</td>
+<td>正文中包含关键词</td>
+<td>SEO intext:搜索引擎</td>
+<td>正文含”搜索引擎”的SEO相关页面</td>
+</tr>
+<tr>
+<td>19</td>
+<td>inanchor:</td>
+<td>锚文本中包含关键词</td>
+<td>inanchor:前端</td>
+<td>链接文字含”前端”的页面</td>
+</tr>
+<tr>
+<td>20</td>
+<td>allinurl:</td>
+<td>URL包含多个关键词</td>
+<td>allinurl:SEO 优化</td>
+<td>URL含SEO和优化的页面</td>
+</tr>
+<tr>
+<td>21</td>
+<td>allintitle:</td>
+<td>标题包含多个关键词</td>
+<td>allintitle:SEO 优化</td>
+<td>标题含SEO和优化的页面</td>
+</tr>
+<tr>
+<td>22</td>
+<td>allintext:</td>
+<td>正文包含多个关键词</td>
+<td>allintext:SEO 优化</td>
+<td>正文含SEO和优化的页面</td>
+</tr>
+<tr>
+<td>23</td>
+<td>allinanchor:</td>
+<td>锚文本包含多个关键词</td>
+<td>allinanchor:SEO 优化</td>
+<td>锚文本含SEO和优化的页面</td>
+</tr>
+<tr>
+<td>24</td>
+<td>weather:</td>
+<td>天气&#x2F;时间查询</td>
+<td>weather:beijing</td>
+<td>北京天气信息</td>
+</tr>
+<tr>
+<td>25</td>
+<td>music&#x2F;songs:</td>
+<td>音乐搜索</td>
+<td>周杰伦 music</td>
+<td>周杰伦的音乐列表</td>
+</tr>
+</tbody></table>
+<p>注：</p>
+<ol>
+<li>冒号为英文状态，后面不带空格</li>
+<li>命令需与关键词用空格分隔（如 <code>C++ filetype:pdf</code>）</li>
+<li>支持组合使用（如 <code>allintitle:机器学习 入门 site:zhihu.com</code>）                                               | &#96;</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>SearchSkills</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>windows安装scoop</title>
+    <url>/2025/10/03/scoop/scoop/</url>
+    <content><![CDATA[<h2 id="步骤一：设置自定义安装目录的环境变量"><a href="#步骤一：设置自定义安装目录的环境变量" class="headerlink" title="步骤一：设置自定义安装目录的环境变量"></a>步骤一：设置自定义安装目录的环境变量</h2><p>在安装 Scoop 之前，你需要定义一个名为 <code>$SCOOP</code> 的环境变量，它将指定所有 Scoop 应用程序的安装根目录。</p>
+<ol>
+<li><p><u><strong>管理员</strong></u>身份打开 <strong>PowerShell</strong>。</p>
+<span id="more"></span></li>
+<li><p>运行以下命令来设置环境变量。这里我们以将 Scoop 安装在 <code>D:\Scoop</code> 为例。你可以将 <code>&#39;D:\Scoop&#39;</code> 替换为你想要的任何路径。</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这一行设置了所有应用的安装根目录，例如 D:\Scoop</span></span><br><span class="line">[<span class="type">Environment</span>]::SetEnvironmentVariable(<span class="string">&#x27;SCOOP&#x27;</span>, <span class="string">&#x27;D:\Scoop&#x27;</span>, <span class="string">&#x27;User&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><em>(可选) 如果你也希望全局安装（供所有用户使用）的目录不同，可以设置 <code>SCOOP_GLOBAL</code>：</em></p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这一行设置了全局应用的安装根目录，例如 D:\GlobalScoop</span></span><br><span class="line">[<span class="type">Environment</span>]::SetEnvironmentVariable(<span class="string">&#x27;SCOOP_GLOBAL&#x27;</span>, <span class="string">&#x27;D:\GlobalScoop&#x27;</span>, <span class="string">&#x27;User&#x27;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>关闭并重新打开</strong>一个新的 <strong>PowerShell</strong> 窗口，以确保环境变量的更改生效。</p>
+</li>
+</ol>
+<hr>
+<h2 id="步骤二：安装-Scoop"><a href="#步骤二：安装-Scoop" class="headerlink" title="步骤二：安装 Scoop"></a>步骤二：安装 Scoop</h2><p>在新打开<u><strong>普通用户</strong></u>的 PowerShell 窗口中，执行 Scoop 的安装脚本。</p>
+<ol>
+<li><p><strong>允许本地脚本执行</strong>：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Set-ExecutionPolicy</span> RemoteSigned <span class="literal">-Scope</span> CurrentUser</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>安装 Scoop</strong>：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">iwr</span> <span class="literal">-useb</span> https://gitee.com/scoop<span class="literal">-installer</span>/scoop/tree/master/bin/install.ps1 | <span class="built_in">iex</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><strong>安装结果：</strong></p>
+<ul>
+<li><strong>Scoop 的核心文件</strong>会被安装在你自定义的 <code>$SCOOP</code> 路径下，例如 <code>D:\Scoop\shims</code>。</li>
+<li>在安装过程中，Scoop 会自动将 <strong><code>D:\Scoop\shims</code></strong> 添加到你的用户 <strong><code>Path</code></strong> 环境变量中。这个 <code>shims</code> 目录包含了所有通过 Scoop 安装的应用程序的快捷方式（可执行文件），使得你可以在任何地方直接运行它们。</li>
+</ul>
+<hr>
+<h2 id="步骤三：验证安装和-Path-环境变量"><a href="#步骤三：验证安装和-Path-环境变量" class="headerlink" title="步骤三：验证安装和 Path 环境变量"></a>步骤三：验证安装和 Path 环境变量</h2><p>你可以通过以下步骤来确认一切都已正确设置。</p>
+<ol>
+<li><p><strong>验证安装目录</strong>：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$env:SCOOP</span></span><br></pre></td></tr></table></figure>
+
+<p>输出应该显示你设置的自定义路径，例如 <code>D:\Scoop</code>。</p>
+</li>
+<li><p><strong>验证 Path 变量</strong>：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$env:Path</span></span><br></pre></td></tr></table></figure>
+
+<p>在输出的一长串路径中，你应该能找到你自定义的 <strong><code>D:\Scoop\shims</code></strong> 路径。</p>
+</li>
+<li><p><strong>验证 Scoop 命令</strong>：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop help</span><br></pre></td></tr></table></figure>
+
+<p>如果显示 Scoop 的帮助信息，则说明安装成功，并且 <code>Path</code> 环境变量已正确配置。</p>
+</li>
+</ol>
+<hr>
+<h2 id="步骤四：将-Scoop-的源更改为-Gitee"><a href="#步骤四：将-Scoop-的源更改为-Gitee" class="headerlink" title="步骤四：将 Scoop 的源更改为 Gitee"></a>步骤四：将 Scoop 的源更改为 Gitee</h2><h3 id="1-更改-Scoop-安装源"><a href="#1-更改-Scoop-安装源" class="headerlink" title="1. 更改 Scoop 安装源"></a>1. 更改 Scoop 安装源</h3><p>首先，使用以下命令将 Scoop 的默认源更改为 Gitee 镜像：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop config SCOOP_REPO https://gitee.com/scoop<span class="literal">-installer</span>/scoop</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-更改应用源"><a href="#2-更改应用源" class="headerlink" title="2. 更改应用源"></a>2. 更改应用源</h3><p>然后，更新 Scoop 应用的默认源为 Gitee 的镜像：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop bucket add main https://gitee.com/scoop<span class="literal">-installer</span>/main.git</span><br><span class="line">scoop bucket add extras https://gitee.com/scoop<span class="literal">-installer</span>/extras.git</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-重新安装-Scoop"><a href="#3-重新安装-Scoop" class="headerlink" title="3. 重新安装 Scoop"></a>3. 重新安装 Scoop</h3><p>如果你已经安装过 Scoop，可以执行以下命令来确保 Scoop 使用的是新的源：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">irm</span> get.scoop.sh | <span class="built_in">iex</span></span><br></pre></td></tr></table></figure>
+
+<p>该命令会从 Gitee 上拉取 Scoop 的安装脚本。</p>
+<h3 id="4-确认源是否修改成功"><a href="#4-确认源是否修改成功" class="headerlink" title="4. 确认源是否修改成功"></a>4. 确认源是否修改成功</h3><p>你可以通过以下命令来查看当前的 Scoop 源：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop config</span><br></pre></td></tr></table></figure>
+
+<p>你应该能看到 <code>SCOOP_REPO</code> 被设置为 Gitee 镜像的地址，类似这样：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">SCOOP_REPO = https://gitee.com/scoop<span class="literal">-installer</span>/scoop</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-安装-更新应用"><a href="#5-安装-更新应用" class="headerlink" title="5. 安装&#x2F;更新应用"></a>5. 安装&#x2F;更新应用</h3><p>现在你可以使用 Gitee 镜像来安装和更新应用：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop update</span><br><span class="line">scoop install &lt;app_name&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这样就将 Scoop 配置为使用 Gitee 镜像了。</p>
+<h3 id="6-查找相关应用"><a href="#6-查找相关应用" class="headerlink" title="6. 查找相关应用"></a>6. 查找相关应用</h3><p>你可以在 <a href="https://scoop.sh/">Scoop 官方网站</a> 上查找相关应用。</p>
+<hr>
+]]></content>
+      <tags>
+        <tag>scoop</tag>
       </tags>
   </entry>
   <entry>
