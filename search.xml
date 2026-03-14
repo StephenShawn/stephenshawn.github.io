@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>git配置用户名和密码</title>
-    <url>/2025/05/14/git/GitUser/</url>
-    <content><![CDATA[<h3 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h3 id="全局配置删除"><a href="#全局配置删除" class="headerlink" title="全局配置删除"></a>全局配置删除</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --global --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
-
-<h3 id="系统全局配置删除"><a href="#系统全局配置删除" class="headerlink" title="系统全局配置删除"></a>系统全局配置删除</h3><p>系统配置会影响系统上所有用户的所有 Git 仓库，操作时需谨慎。删除系统配置的用户和邮箱信息，使用以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --system --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
-
-<h3 id="全局配置查看"><a href="#全局配置查看" class="headerlink" title="全局配置查看"></a>全局配置查看</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
-
-<h3 id="系统全局配置查看"><a href="#系统全局配置查看" class="headerlink" title="系统全局配置查看"></a>系统全局配置查看</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --list</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>git配置SSH密钥</title>
     <url>/2025/01/31/git/GitRSA/</url>
     <content><![CDATA[<h3 id="生成新的-SSH-密钥"><a href="#生成新的-SSH-密钥" class="headerlink" title="生成新的 SSH 密钥"></a>生成新的 SSH 密钥</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
@@ -33,16 +13,6 @@
 ]]></content>
       <tags>
         <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>题目</title>
-    <url>/2025/08/14/demo/</url>
-    <content><![CDATA[<p>测试2</p>
-<span id="more"></span>
-]]></content>
-      <tags>
-        <tag>标签</tag>
       </tags>
   </entry>
   <entry>
@@ -109,6 +79,26 @@
 ]]></content>
       <tags>
         <tag>BrowserAutomation</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git配置用户名和密码</title>
+    <url>/2025/05/14/git/GitUser/</url>
+    <content><![CDATA[<h3 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h3 id="全局配置删除"><a href="#全局配置删除" class="headerlink" title="全局配置删除"></a>全局配置删除</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --global --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
+
+<h3 id="系统全局配置删除"><a href="#系统全局配置删除" class="headerlink" title="系统全局配置删除"></a>系统全局配置删除</h3><p>系统配置会影响系统上所有用户的所有 Git 仓库，操作时需谨慎。删除系统配置的用户和邮箱信息，使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --system --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
+
+<h3 id="全局配置查看"><a href="#全局配置查看" class="headerlink" title="全局配置查看"></a>全局配置查看</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
+
+<h3 id="系统全局配置查看"><a href="#系统全局配置查看" class="headerlink" title="系统全局配置查看"></a>系统全局配置查看</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --system --list</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
