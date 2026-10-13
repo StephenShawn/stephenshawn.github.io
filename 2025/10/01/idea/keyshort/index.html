@@ -1,0 +1,755 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>IntelliJ idea 常用快捷键 | Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="IntelliJ 常用快捷键表格，涵盖代码编辑、导航搜索、重构调试等核心场景，按功能模块分类呈现：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IntelliJ idea 常用快捷键">
+<meta property="og:url" content="http://example.com/2025/10/01/idea/keyshort/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="IntelliJ 常用快捷键表格，涵盖代码编辑、导航搜索、重构调试等核心场景，按功能模块分类呈现：">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/butterfly-icon.png">
+<meta property="article:published_time" content="2025-09-30T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-10-01T06:06:27.934Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="keyshort">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/butterfly-icon.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "IntelliJ idea 常用快捷键",
+  "url": "http://example.com/2025/10/01/idea/keyshort/",
+  "image": "http://example.com/img/butterfly-icon.png",
+  "datePublished": "2025-09-30T16:00:00.000Z",
+  "dateModified": "2025-10-01T06:06:27.934Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "John Doe",
+      "url": "http://example.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2025/10/01/idea/keyshort/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.5"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'IntelliJ idea 常用快捷键',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.1.2"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Hexo</span></a><a class="nav-page-title" href="/"><span class="site-name">IntelliJ idea 常用快捷键</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">IntelliJ idea 常用快捷键</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-09-30T16:00:00.000Z" title="发表于 2025-10-01 00:00:00">2025-10-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-10-01T06:06:27.934Z" title="更新于 2025-10-01 14:06:27">2025-10-01</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="twikoo_visitors"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h2 id="IntelliJ-常用快捷键表格，涵盖代码编辑、导航搜索、重构调试等核心场景，按功能模块分类呈现："><a href="#IntelliJ-常用快捷键表格，涵盖代码编辑、导航搜索、重构调试等核心场景，按功能模块分类呈现：" class="headerlink" title="IntelliJ 常用快捷键表格，涵盖代码编辑、导航搜索、重构调试等核心场景，按功能模块分类呈现："></a>IntelliJ 常用快捷键表格，涵盖代码编辑、导航搜索、重构调试等核心场景，按功能模块分类呈现：</h2><span id="more"></span>
+<h3 id="一、基础编辑快捷键"><a href="#一、基础编辑快捷键" class="headerlink" title="一、基础编辑快捷键"></a><strong>一、基础编辑快捷键</strong></h3><table>
+<thead>
+<tr>
+<th><strong>快捷键组合</strong></th>
+<th><strong>功能描述</strong></th>
+<th><strong>适用场景</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Ctrl + C</code></td>
+<td>复制光标所在行或选中内容</td>
+<td>快速复制代码块</td>
+</tr>
+<tr>
+<td><code>Ctrl + V</code></td>
+<td>粘贴内容</td>
+<td>粘贴复制的代码或文本</td>
+</tr>
+<tr>
+<td><code>Ctrl + X</code></td>
+<td>剪切光标所在行或选中内容</td>
+<td>移动代码行</td>
+</tr>
+<tr>
+<td><code>Ctrl + D</code></td>
+<td>复制并粘贴当前行或选中内容到下方</td>
+<td>快速复制多行重复代码</td>
+</tr>
+<tr>
+<td><code>Ctrl + Y</code></td>
+<td>删除光标所在行或选中行</td>
+<td>快速删除整行</td>
+</tr>
+<tr>
+<td><code>Ctrl + Z</code></td>
+<td>撤销上一步操作</td>
+<td>恢复误操作</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + Z</code></td>
+<td>取消撤销（重做）</td>
+<td>恢复被撤销的操作</td>
+</tr>
+<tr>
+<td><code>Shift + Enter</code></td>
+<td>在当前行下方插入空行并定位光标</td>
+<td>快速开始新行</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + Enter</code></td>
+<td>自动补全代码末尾分号并换行</td>
+<td>快速结束当前语句</td>
+</tr>
+</tbody></table>
+<h3 id="二、代码格式化与重构"><a href="#二、代码格式化与重构" class="headerlink" title="二、代码格式化与重构"></a><strong>二、代码格式化与重构</strong></h3><table>
+<thead>
+<tr>
+<th><strong>快捷键组合</strong></th>
+<th><strong>功能描述</strong></th>
+<th><strong>适用场景</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Ctrl + Alt + L</code></td>
+<td>格式化代码（支持当前文件或目录）</td>
+<td>统一代码风格</td>
+</tr>
+<tr>
+<td><code>Ctrl + Alt + O</code></td>
+<td>优化导入（移除未使用的类）</td>
+<td>清理冗余导入</td>
+</tr>
+<tr>
+<td><code>Shift + F6</code></td>
+<td>重命名文件、类、方法或变量</td>
+<td>重构变量名或方法名</td>
+</tr>
+<tr>
+<td><code>Ctrl + Alt + V</code></td>
+<td>自动创建变量（如 <code>new Object()</code> 后生成变量）</td>
+<td>简化对象实例化代码</td>
+</tr>
+<tr>
+<td><code>Alt + Insert</code></td>
+<td>生成代码（构造函数、getter&#x2F;setter等）</td>
+<td>快速创建JavaBean模板代码</td>
+</tr>
+<tr>
+<td><code>Ctrl + Alt + T</code></td>
+<td>用 <code>if/try/catch</code> 等语句包裹选中代码</td>
+<td>快速添加异常处理或条件判断</td>
+</tr>
+</tbody></table>
+<h3 id="三、导航与搜索"><a href="#三、导航与搜索" class="headerlink" title="三、导航与搜索"></a><strong>三、导航与搜索</strong></h3><table>
+<thead>
+<tr>
+<th><strong>快捷键组合</strong></th>
+<th><strong>功能描述</strong></th>
+<th><strong>适用场景</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Ctrl + N</code></td>
+<td>根据类名查找类文件</td>
+<td>快速定位Java</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + N</code></td>
+<td>根据文件名查找文件（支持目录，需加 <code>/</code>）</td>
+<td>搜索非Java文件（如XML、配置文件）</td>
+</tr>
+<tr>
+<td><code>Ctrl + F</code></td>
+<td>在当前文件内搜索文本</td>
+<td>查找局部变量或方法引用</td>
+</tr>
+<tr>
+<td><code>Ctrl + R</code></td>
+<td>在当前文件内替换文本</td>
+<td>修改局部代码中的关键词</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + F</code></td>
+<td>在整个项目中搜索文本</td>
+<td>跨文件查找全局变量或接口</td>
+</tr>
+<tr>
+<td><code>Ctrl + B</code> &#x2F; <code>Ctrl + 左键单击</code></td>
+<td>跳转到方法&#x2F;变量的定义处</td>
+<td>查看底层实现逻辑</td>
+</tr>
+<tr>
+<td><code>Ctrl + E</code></td>
+<td>显示最近打开的文件列表</td>
+<td>快速切换频繁编辑的文件</td>
+</tr>
+<tr>
+<td><code>Alt + ←</code> &#x2F; <code>Alt + →</code></td>
+<td>切换上一个&#x2F;下一个编辑窗口</td>
+<td>在多文件间快速切换</td>
+</tr>
+</tbody></table>
+<h3 id="四、调试与运行"><a href="#四、调试与运行" class="headerlink" title="四、调试与运行"></a><strong>四、调试与运行</strong></h3><table>
+<thead>
+<tr>
+<th><strong>快捷键组合</strong></th>
+<th><strong>功能描述</strong></th>
+<th><strong>适用场景</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Shift + F9</code></td>
+<td>启动Debug模式</td>
+<td>调试程序</td>
+</tr>
+<tr>
+<td><code>Shift + F10</code></td>
+<td>运行程序（非调试模式）</td>
+<td>快速执行当前项目</td>
+</tr>
+<tr>
+<td><code>F8</code></td>
+<td>Debug模式下逐行执行（不进入方法）</td>
+<td>跳过无关方法，查看流程</td>
+</tr>
+<tr>
+<td><code>F7</code></td>
+<td>Debug模式下逐行执行（进入方法）</td>
+<td>深入查看方法内部逻辑</td>
+</tr>
+<tr>
+<td><code>F9</code></td>
+<td>Debug模式下恢复程序运行（直到下一个断点）</td>
+<td>快速跳转到下一个断点</td>
+</tr>
+<tr>
+<td><code>Ctrl + F8</code></td>
+<td>在当前行设置&#x2F;取消断点</td>
+<td>标记调试关键点</td>
+</tr>
+</tbody></table>
+<h3 id="五、代码生成与模板"><a href="#五、代码生成与模板" class="headerlink" title="五、代码生成与模板"></a><strong>五、代码生成与模板</strong></h3><table>
+<thead>
+<tr>
+<th><strong>快捷键组合&#x2F;输入</strong></th>
+<th><strong>功能描述</strong></th>
+<th><strong>示例</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>fori</code> + <code>Tab</code></td>
+<td>生成普通for循环</td>
+<td><code>for (int i = 0; i &lt; ; i++) {}</code></td>
+</tr>
+<tr>
+<td><code>Ctrl + J</code></td>
+<td>插入自定义动态代码模板</td>
+<td>快速生成预设代码片段（如 <code>if-else</code>）</td>
+</tr>
+<tr>
+<td><code>/**</code> + <code>Enter</code></td>
+<td>生成文档注释模板（类或方法）</td>
+<td>自动添加 <code>@param</code> <code>@return</code> 等标签</td>
+</tr>
+</tbody></table>
+<h3 id="六、效率提升快捷键"><a href="#六、效率提升快捷键" class="headerlink" title="六、效率提升快捷键"></a><strong>六、效率提升快捷键</strong></h3><table>
+<thead>
+<tr>
+<th><strong>快捷键组合</strong></th>
+<th><strong>功能描述</strong></th>
+<th><strong>优势</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Ctrl + W</code></td>
+<td>递进式选择代码块（连续按扩大范围）</td>
+<td>快速选中方法、类或表达式</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + U</code></td>
+<td>切换选中内容的大小写</td>
+<td>快速转换变量名格式（如 <code>userId</code> ↔ <code>USER_ID</code>）</td>
+</tr>
+<tr>
+<td><code>Ctrl + /</code></td>
+<td>单行注释（&#x2F;&#x2F;）</td>
+<td>快速注释单行代码</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + /</code></td>
+<td>块注释（&#x2F;* *&#x2F;）</td>
+<td>注释多行代码块</td>
+</tr>
+<tr>
+<td><code>Alt + Enter</code></td>
+<td>自动修复代码错误（如导入类、创建变量）</td>
+<td>解决语法错误或优化建议</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="常用代码生成快捷键"><a href="#常用代码生成快捷键" class="headerlink" title="常用代码生成快捷键"></a><strong>常用代码生成快捷键</strong></h3><table>
+<thead>
+<tr>
+<th align="left">快捷键组合</th>
+<th align="left">实现效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>Ctrl + X</code></td>
+<td align="left">删除当前行</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + D</code></td>
+<td align="left">复制当前行</td>
+</tr>
+<tr>
+<td align="left"><code>Alt + Insert</code> (或右键 Generate)</td>
+<td align="left">生成代码（如 get、set 方法、构造函数等）</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Alt + T</code></td>
+<td align="left">生成 try catch（或者 <code>Alt + Enter</code> 选择）</td>
+</tr>
+<tr>
+<td align="left"><code>CTRL + ALT + T</code></td>
+<td align="left">把选中的代码放在 <code>TRY{} IF{} ELSE{}</code> 里</td>
+</tr>
+<tr>
+<td align="left"><code>Ctr + shift + U</code></td>
+<td align="left">实现大小写之间的转化</td>
+</tr>
+<tr>
+<td align="left"><code>ALT + 回车</code></td>
+<td align="left">导入包，自动修正</td>
+</tr>
+<tr>
+<td align="left"><code>CTRL + ALT + L</code></td>
+<td align="left">格式化代码</td>
+</tr>
+<tr>
+<td align="left"><code>CTRL + ALT + I</code></td>
+<td align="left">自动缩进</td>
+</tr>
+<tr>
+<td align="left"><code>CTRL + E</code></td>
+<td align="left">最近更改的代码</td>
+</tr>
+<tr>
+<td align="left"><code>fori</code></td>
+<td align="left">生成 <code>for (int i = 0; i &lt; ; i++) {}</code></td>
+</tr>
+<tr>
+<td align="left"><code>Alt + ←/→ 键</code></td>
+<td align="left">实现窗口左右更换（多窗口）</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + 鼠标点击</code></td>
+<td align="left">快速找到成员变量的出处</td>
+</tr>
+<tr>
+<td align="left"><code>Shift + F6</code></td>
+<td align="left">重构 &#x2F; 重命名（包、类、方法、变量、甚至注释等）</td>
+</tr>
+<tr>
+<td align="left"><code>CTRL + Q</code></td>
+<td align="left">查看当前方法的声明</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Alt + V</code></td>
+<td align="left">自动创建变量（<code>new 对象();</code> 之后选择按快捷键）</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + O</code></td>
+<td align="left">重写方法</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + I</code></td>
+<td align="left">实现方法</td>
+</tr>
+<tr>
+<td align="left"><code>ALT + /</code></td>
+<td align="left">代码提示</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Shift + R</code></td>
+<td align="left">在当前项目中替换指定内容</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + E</code></td>
+<td align="left">最近编辑的文件列表</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + P</code></td>
+<td align="left">显示方法参数信息</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Shift + Insert</code></td>
+<td align="left">查看历史复制记录（IDEA 可保留 100 条）</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="查找相关快捷键"><a href="#查找相关快捷键" class="headerlink" title="查找相关快捷键"></a><strong>查找相关快捷键</strong></h3><table>
+<thead>
+<tr>
+<th align="left">快捷键</th>
+<th align="left">介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>Ctrl + F</code></td>
+<td align="left">在当前文件进行文本查找</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + R</code></td>
+<td align="left">在当前文件进行文本替换</td>
+</tr>
+<tr>
+<td align="left"><code>Shift + Ctrl + F</code></td>
+<td align="left">在项目中进行文本查找</td>
+</tr>
+<tr>
+<td align="left"><code>Shift + Ctrl + R</code></td>
+<td align="left">在项目中进行文本替换</td>
+</tr>
+<tr>
+<td align="left"><code>Shift + Shift</code></td>
+<td align="left">快速搜索</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + N</code></td>
+<td align="left">查找 class</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Shift + N</code></td>
+<td align="left">查找文件</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Shift + Alt + N</code></td>
+<td align="left">查找 symbol（查找某个方法名）</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="跳转与切换相关快捷键"><a href="#跳转与切换相关快捷键" class="headerlink" title="跳转与切换相关快捷键"></a><strong>跳转与切换相关快捷键</strong></h3><table>
+<thead>
+<tr>
+<th align="left">快捷键</th>
+<th align="left">介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>Ctrl + E</code></td>
+<td align="left">最近文件</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Tab</code></td>
+<td align="left">切换文件</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Alt + ←/→</code></td>
+<td align="left">跳转历史光标所在处</td>
+</tr>
+<tr>
+<td align="left"><code>Alt + ←/→ 方向键</code></td>
+<td align="left">切换子 tab</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + G</code></td>
+<td align="left">跳转到指定行号（Go to）</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="编码相关快捷键"><a href="#编码相关快捷键" class="headerlink" title="编码相关快捷键"></a><strong>编码相关快捷键</strong></h3><table>
+<thead>
+<tr>
+<th align="left">快捷键</th>
+<th align="left">介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>Ctrl + W</code></td>
+<td align="left">快速选中</td>
+</tr>
+<tr>
+<td align="left"><code>(Shift + Ctrl) + Alt + J</code></td>
+<td align="left">快速选中同文本</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + C</code> &#x2F; <code>Ctrl + X</code> &#x2F; <code>Ctrl + D</code></td>
+<td align="left">快速复制或剪切</td>
+</tr>
+<tr>
+<td align="left">多行选中 <code>Tab</code> &#x2F; <code>Shift + Tab</code></td>
+<td align="left">缩进 &#x2F; 反缩进</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Y</code></td>
+<td align="left">删除整行</td>
+</tr>
+<tr>
+<td align="left">滚轮点击变量&#x2F;方法&#x2F;类</td>
+<td align="left">快速进入定义处</td>
+</tr>
+<tr>
+<td align="left"><code>Shift + 点击 Tab</code></td>
+<td align="left">快速关闭 tab</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Z</code> &#x2F; <code>Ctrl + Shift + Z</code></td>
+<td align="left">撤销 &#x2F; 取消撤销</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Shift + Enter</code></td>
+<td align="left">自动收尾，代码自动补全</td>
+</tr>
+<tr>
+<td align="left"><code>Alt + Enter</code></td>
+<td align="left">快速修复（根据上下文提供修复建议）</td>
+</tr>
+<tr>
+<td align="left"><code>Alt + ↑/↓</code></td>
+<td align="left">方法快速跳转</td>
+</tr>
+<tr>
+<td align="left"><code>F2</code></td>
+<td align="left">跳转到下一个高亮错误或警告位置</td>
+</tr>
+<tr>
+<td align="left"><code>Alt + Insert</code></td>
+<td align="left">代码自动生成（set&#x2F;get、构造函数、toString 等）</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Shift + L</code></td>
+<td align="left">格式化代码</td>
+</tr>
+<tr>
+<td align="left"><code>Shift + F6</code></td>
+<td align="left">快速修改方法名、变量名、文件名、类名等</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + F6</code></td>
+<td align="left">快速修改方法签名</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="代码阅读相关快捷键"><a href="#代码阅读相关快捷键" class="headerlink" title="代码阅读相关快捷键"></a><strong>代码阅读相关快捷键</strong></h3><table>
+<thead>
+<tr>
+<th align="left">快捷键</th>
+<th align="left">介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>Ctrl + P</code></td>
+<td align="left">方法参数提示显示</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Shift + i</code></td>
+<td align="left">在当前类中弹出一个查看窗口</td>
+</tr>
+<tr>
+<td align="left"><code>Alt + F7</code></td>
+<td align="left">列出变量在哪些地方被使用</td>
+</tr>
+<tr>
+<td align="left">光标在子类接口名，<code>Ctrl + U</code></td>
+<td align="left">跳到父类接口</td>
+</tr>
+<tr>
+<td align="left"><code>Alt + F1 + 1</code>，<code>Esc</code></td>
+<td align="left">（未提供具体描述）</td>
+</tr>
+<tr>
+<td align="left"><code>(Shift) + Ctrl + +/-</code></td>
+<td align="left">代码块折叠 &#x2F; 展开</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Shift + ←/→</code></td>
+<td align="left">移动窗口分割线</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + (Alt) + B</code></td>
+<td align="left">跳转到方法定义 &#x2F; 实现</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + H</code></td>
+<td align="left">查看类的层级关系</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + F12</code></td>
+<td align="left">Show Members（类成员快速显示）</td>
+</tr>
+</tbody></table>
+<hr>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">John Doe</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2025/10/01/idea/keyshort/">http://example.com/2025/10/01/idea/keyshort/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">Hexo</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/keyshort/">keyshort</a></div><div class="post-share"><div class="social-share" data-image="/img/butterfly-icon.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2025/10/03/scoop/scoop/" title="windows安装scoop"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">windows安装scoop</div></div><div class="info-2"><div class="info-item-1">步骤一：设置自定义安装目录的环境变量在安装 Scoop 之前，你需要定义一个名为 $SCOOP 的环境变量，它将指定所有 Scoop 应用程序的安装根目录。  管理员身份打开 PowerShell。    运行以下命令来设置环境变量。这里我们以将 Scoop 安装在 D:\Scoop 为例。你可以将 &#39;D:\Scoop&#39; 替换为你想要的任何路径。 12# 这一行设置了所有应用的安装根目录，例如 D:\Scoop[Environment]::SetEnvironmentVariable(&#x27;SCOOP&#x27;, &#x27;D:\Scoop&#x27;, &#x27;User&#x27;)  (可选) 如果你也希望全局安装（供所有用户使用）的目录不同，可以设置 SCOOP_GLOBAL： 12# 这一行设置了全局应用的安装根目录，例如 D:\GlobalScoop[Environment]::SetEnvironmentVariable(&#x27;SCOOP_GLOBAL&#x27;, &#x27;D:\GlobalScoop&#x27;, &#x27...</div></div></div></a><a class="pagination-related" href="/2025/09/30/automate/SearchSkills/" title="高级搜索技巧"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">高级搜索技巧</div></div><div class="info-2"><div class="info-item-1">谷歌高级搜索命令表格：     序号 语法 语法说明 示例 示例说明    1 + AND（必须同时包含） 搜索 + 引擎 包含”搜索”和”引擎”的页面   2 OR OR（包含任意一个） 搜索 OR 引擎 包含”搜索”或”引擎”的页面   3 - 排除特定词 搜索引擎 -百度 不包含”百度”的”搜索引擎”相关页面   4 “ “ 精确匹配短语 “搜索引擎” 完整匹配”搜索引擎”短语的页面   5 * 通配符（替代任意字符） 搜*引擎 替代任意字符的模糊搜索   6 @ 社交媒体账号搜索 trump @twitter 搜索Twitter上@trump的内容   7 $ 价格范围搜索 camera $400 价格400美元的相机相关页面   8 # 标签搜索 #throwbackthursday 包含指定话题标签的页面   9 .. 数值范围搜索 camera $500..$1000 价格500-1000美元的相机页面   10 filetype: 指定文件类型 C++ filetype:pdf PDF格式的C++教程   11 site: 限定网站搜索 C++ site:zhih...</div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">John Doe</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/stephenshawn" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:stephenshawn@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#IntelliJ-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E8%A1%A8%E6%A0%BC%EF%BC%8C%E6%B6%B5%E7%9B%96%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E3%80%81%E5%AF%BC%E8%88%AA%E6%90%9C%E7%B4%A2%E3%80%81%E9%87%8D%E6%9E%84%E8%B0%83%E8%AF%95%E7%AD%89%E6%A0%B8%E5%BF%83%E5%9C%BA%E6%99%AF%EF%BC%8C%E6%8C%89%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97%E5%88%86%E7%B1%BB%E5%91%88%E7%8E%B0%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">IntelliJ 常用快捷键表格，涵盖代码编辑、导航搜索、重构调试等核心场景，按功能模块分类呈现：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E7%A1%80%E7%BC%96%E8%BE%91%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">1.1.</span> <span class="toc-text">一、基础编辑快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%B8%8E%E9%87%8D%E6%9E%84"><span class="toc-number">1.2.</span> <span class="toc-text">二、代码格式化与重构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%AF%BC%E8%88%AA%E4%B8%8E%E6%90%9C%E7%B4%A2"><span class="toc-number">1.3.</span> <span class="toc-text">三、导航与搜索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E8%B0%83%E8%AF%95%E4%B8%8E%E8%BF%90%E8%A1%8C"><span class="toc-number">1.4.</span> <span class="toc-text">四、调试与运行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E4%B8%8E%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.5.</span> <span class="toc-text">五、代码生成与模板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">1.6.</span> <span class="toc-text">六、效率提升快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">1.7.</span> <span class="toc-text">常用代码生成快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E7%9B%B8%E5%85%B3%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">1.8.</span> <span class="toc-text">查找相关快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%B3%E8%BD%AC%E4%B8%8E%E5%88%87%E6%8D%A2%E7%9B%B8%E5%85%B3%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">1.9.</span> <span class="toc-text">跳转与切换相关快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E7%A0%81%E7%9B%B8%E5%85%B3%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">1.10.</span> <span class="toc-text">编码相关快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E9%98%85%E8%AF%BB%E7%9B%B8%E5%85%B3%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">1.11.</span> <span class="toc-text">代码阅读相关快捷键</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/03/scoop/scoop/" title="windows安装scoop">windows安装scoop</a><time datetime="2025-10-02T16:00:00.000Z" title="发表于 2025-10-03 00:00:00">2025-10-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/01/idea/keyshort/" title="IntelliJ idea 常用快捷键">IntelliJ idea 常用快捷键</a><time datetime="2025-09-30T16:00:00.000Z" title="发表于 2025-10-01 00:00:00">2025-10-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/30/automate/SearchSkills/" title="高级搜索技巧">高级搜索技巧</a><time datetime="2025-09-29T16:00:00.000Z" title="发表于 2025-09-30 00:00:00">2025-09-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/05/14/git/GitUser/" title="git配置用户名和密码">git配置用户名和密码</a><time datetime="2025-05-14T02:14:00.000Z" title="发表于 2025-05-14 10:14:00">2025-05-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/04/11/blog/ImageHost/" title="微博图床失效解决方法">微博图床失效解决方法</a><time datetime="2025-04-11T12:35:02.000Z" title="发表于 2025-04-11 20:35:02">2025-04-11</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By John Doe</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.5</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.5"></script><script src="/js/main.js?v=5.5.5"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://shawn-twikoo.netlify.app/.netlify/functions/twikoo',
+      region: 'ap-chengdu',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = (el = document, path = location.pathname) => {
+    twikoo.init({
+      el: el.querySelector('#twikoo-wrap'),
+      envId: 'https://shawn-twikoo.netlify.app/.netlify/functions/twikoo',
+      region: 'ap-chengdu',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      },
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    
+
+    isShuoshuo && (window.shuoshuoComment.destroyTwikoo = () => {
+      if (el.children.length) {
+        el.innerHTML = ''
+        el.classList.add('no-comment')
+      }
+    })
+  }
+
+  const loadTwikoo = (el, path) => {
+    if (typeof twikoo === 'object') setTimeout(() => init(el, path), 0)
+    else btf.getScript('https://cdn.jsdelivr.net/npm/twikoo@1.7.11/dist/twikoo.all.min.js').then(() => init(el, path))
+  }
+
+  if (isShuoshuo) {
+    'Twikoo' === 'Twikoo'
+      ? window.shuoshuoComment = { loadComment: loadTwikoo }
+      : window.loadOtherComment = loadTwikoo
+    return
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
